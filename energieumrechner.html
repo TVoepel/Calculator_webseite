@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energieumrechner – Joule, kWh, Kalorien, BTU & mehr</title>
+  <meta name="description" content="Energieeinheiten kostenlos umrechnen: Joule, Kilojoule, Wattstunden, Kilowattstunden, Kalorien, Elektronenvolt und BTU." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root {
+      --color-primary: #0d47a1;
+      --color-primary-hover: #082f6b;
+      --color-primary-soft: #dce7f7;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">E</span>
+        <span>Energieumrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Physik &amp; Technik</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Energie schnell umrechnen</h1>
+      <p>Rechne zwischen Joule, Kilowattstunden, Kalorien, Elektronenvolt und BTU um – für Strom, Ernährung und Technik.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Umrechner</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Wert</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Von</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Einheiten tauschen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Ergebnis</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Nach</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 kWh = 3.600.000 Joule</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Werbefläche</h2>
+        <div class="ad-slot">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Beliebte Umrechnungen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="kilowatt_hour,joule,1">kWh in Joule</button>
+        <button type="button" data-preset="joule,kilowatt_hour,3600000">Joule in kWh</button>
+        <button type="button" data-preset="kilocalorie,kilojoule,1">kcal in kJ</button>
+        <button type="button" data-preset="kilojoule,kilocalorie,1">kJ in kcal</button>
+        <button type="button" data-preset="watt_hour,joule,1">Wh in Joule</button>
+        <button type="button" data-preset="btu,kilojoule,1">BTU in kJ</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Referenzwerte</h2>
+      <div class="formula">Ergebnis = Wert × Faktor(von) ÷ Faktor(nach), Basiseinheit = 1 Joule (J)
+
+1 kWh              = 3.600.000 J
+1 Wh               = 3600 J
+1 cal (thermochemisch) = 4,184 J
+1 kcal             = 4184 J
+1 eV               = 1,602176634 × 10⁻¹⁹ J (exakt, SI-Definition seit 2019)
+1 BTU (int. Table) = 1055,05585262 J
+1 ft·lb            = 1,3558179483314004 J</div>
+      <p class="note">Bei Nährwertangaben wird „Kalorie“ umgangssprachlich für Kilokalorie (kcal) verwendet – dieser Rechner unterscheidet korrekt zwischen cal und kcal.</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle unterstützten Energieeinheiten</h2>
+      <div class="seo-text">
+        <p>Mit diesem Energieumrechner kannst du Joule, Kilojoule, Wattstunden, Kilowattstunden, Kalorien, Kilokalorien, Elektronenvolt, BTU und Foot-Pound direkt umrechnen.</p>
+        <p>Kilowattstunden (kWh) sind die gängige Abrechnungseinheit für Strom in Deutschland, BTU wird häufig bei Klimaanlagen- und Heizleistungen im angloamerikanischen Raum verwendet.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const units = {
+      joule: { label: 'Joule (J)', factor: 1 },
+      kilojoule: { label: 'Kilojoule (kJ)', factor: 1000 },
+      calorie: { label: 'Kalorie (cal)', factor: 4.184 },
+      kilocalorie: { label: 'Kilokalorie (kcal)', factor: 4184 },
+      watt_hour: { label: 'Wattstunde (Wh)', factor: 3600 },
+      kilowatt_hour: { label: 'Kilowattstunde (kWh)', factor: 3600000 },
+      electronvolt: { label: 'Elektronenvolt (eV)', factor: 1.602176634e-19 },
+      btu: { label: 'BTU (International Table)', factor: 1055.05585262 },
+      foot_pound: { label: 'Foot-Pound (ft·lb)', factor: 1.3558179483314004 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'kilowatt_hour',
+      defaultTo: 'joule',
+      decimals: 8
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

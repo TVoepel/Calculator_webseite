@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Einheitenrechner</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root { --color-primary: #01696f; --color-primary-hover: #0c4e54; --color-primary-soft: #dceceb; }
+  </style>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">∑</span>
+        <span>Einheitenrechner</span>
+      </a>
+      <div class="meta"><a class="nav-home" href="index.html">← Alle Umrechner</a></div>
+    </div>
+
+    <section class="hero">
+      <h1>Impressum</h1>
+      <p>Angaben gemäß § 5 TMG / § 18 Abs. 2 MStV.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">⚠️ Platzhalter – bitte ausfüllen</h2>
+      <div class="seo-text">
+        <p><strong>Diese Seite ist noch nicht vollständig und rechtlich noch nicht gültig.</strong> Bevor die Website veröffentlicht oder mit Werbung (z. B. Google AdSense) monetarisiert wird, müssen die folgenden Angaben durch die tatsächlichen, korrekten Daten ersetzt werden.</p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Angaben gemäß § 5 TMG</h2>
+      <div class="formula">[Vor- und Nachname bzw. Firmenname]
+[Straße und Hausnummer]
+[Postleitzahl und Ort]
+[Land]</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Kontakt</h2>
+      <div class="formula">Telefon: [Telefonnummer]
+E-Mail: [E-Mail-Adresse]</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <div class="formula">[Vor- und Nachname]
+[Anschrift wie oben]</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Hinweis</h2>
+      <div class="seo-text">
+        <p>Ein Impressum ist in Deutschland für praktisch jede geschäftsmäßige Website – auch private Projekte mit Werbeeinnahmen – gesetzlich vorgeschrieben. Nutze bei Unsicherheit einen anerkannten Impressum-Generator (z. B. von einer Verbraucherzentrale oder einem Rechtsanwalt) und lass die Angaben im Zweifel juristisch prüfen.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbrenner vs. Elektro – Energie &amp; Kosten pro 100 km</title>
+  <meta name="description" content="Vergleiche den Energieverbrauch und die Kosten pro 100 km von Verbrenner-Autos (Benzin, Diesel) mit Elektroautos in kWh/100 km und Euro/100 km." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-hover: #0d3711;
+      --color-primary-soft: #e8f5e9;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">EV</span>
+        <span>Antriebsvergleich</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Energie &amp; Kosten / 100 km</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Verbrenner und Elektroauto fair vergleichen</h1>
+      <p>Gib den Verbrauch deines Verbrenners in L/100 km und deines Elektroautos in kWh/100 km ein sowie aktuelle Sprit- und Strompreise. Der Rechner zeigt dir Energieverbrauch und Kosten pro 100 km nebeneinander.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Eingaben &amp; Ergebnisse</h2>
+        <div class="subgrid">
+          <div class="two-col">
+            <div>
+              <h3>Verbrenner</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="iceFuelType">Kraftstoff</label>
+                  <select id="iceFuelType">
+                    <option value="super_e5">Benzin Super (E5/E10)</option>
+                    <option value="super_plus">Benzin Super Plus (E5)</option>
+                    <option value="diesel">Diesel</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iceConsumption">Verbrauch (L/100 km)</label>
+                  <input id="iceConsumption" type="number" step="0.1" min="0" value="6.5" />
+                </div>
+                <div>
+                  <label for="icePrice">Spritpreis (€/L)</label>
+                  <input id="icePrice" type="number" step="0.01" min="0" value="1.85" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Elektroauto</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="evConsumption">Verbrauch (kWh/100 km)</label>
+                  <input id="evConsumption" type="number" step="0.1" min="0" value="18" />
+                </div>
+                <div>
+                  <label for="evPrice">Strompreis (€/kWh)</label>
+                  <input id="evPrice" type="number" step="0.01" min="0" value="0.35" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Ergebnis Verbrenner</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="iceKwhDisplay">– kWh/100 km</span>
+                  <span>Energieverbrauch Verbrenner</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="iceCostDisplay">– €/100 km</span>
+                  <span>Kraftstoffkosten pro 100 km</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Ergebnis Elektro</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="evKwhDisplay">– kWh/100 km</span>
+                  <span>Energieverbrauch Elektro</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="evCostDisplay">– €/100 km</span>
+                  <span>Stromkosten pro 100 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare" id="compareText">
+            Gib oben deine Werte ein, um den Vergleich zu sehen.
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Werbefläche: Platz für Anzeige (AdSense, Direktvermarktung oder Affiliate-Banner).</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Annahmen &amp; Formeln</h2>
+        <div class="formula">Wir rechnen mit typischen Energiegehalten (unterer Heizwert, gerundete Mittelwerte):
+
+- Benzin Super (E5/E10/Super Plus): ca. 8,9–9,0 kWh pro Liter
+- Diesel: ca. 9,8 kWh pro Liter
+
+Formeln:
+
+1) Energieverbrauch Verbrenner:
+   kWh/100 km = Verbrauch (L/100 km) × kWh/L
+
+2) Kosten Verbrenner:
+   €/100 km = Verbrauch (L/100 km) × Spritpreis (€/L)
+
+3) Kosten Elektro:
+   €/100 km = Verbrauch (kWh/100 km) × Strompreis (€/kWh)</div>
+        <p class="note">
+          Die tatsächlichen Energiegehalte von Kraftstoffen schwanken je nach Zusammensetzung leicht (Benzin ca. 8,7–9,1 kWh/L, Diesel ca. 9,7–9,9 kWh/L). Die hier verwendeten Mittelwerte dienen dem groben Vergleich und ersetzen keine exakte Herstellerangabe. Ladeverluste beim Elektroauto (üblicherweise einige Prozent) sind in der Stromkostenrechnung nicht separat ausgewiesen.
+        </p>
+      </aside>
+    </div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Hinweise zum Antriebsvergleich</h2>
+      <div class="seo-text">
+        <p>Mit diesem Rechner kannst du den Energieverbrauch und die reinen Energiekosten von Verbrenner-Fahrzeugen und Elektroautos direkt gegenüberstellen. Gib dazu den Verbrauch in L/100 km und kWh/100 km sowie aktuelle Preise für Kraftstoff und Strom ein.</p>
+        <p>So erkennst du auf einen Blick, wie sich ein Wechsel von Benzin oder Diesel auf ein Elektroauto bei deinen individuellen Rahmenbedingungen auswirkt. Gerade bei schwankenden Energiepreisen ist ein transparenter Vergleich pro 100 km hilfreich, um Kaufentscheidungen besser einschätzen zu können.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script>
+    const fuelTypes = {
+      super_e5:   { kwhPerLiter: 8.9 },
+      super_plus: { kwhPerLiter: 9.0 },
+      diesel:     { kwhPerLiter: 9.8 }
+    };
+
+    const iceFuelType    = document.getElementById('iceFuelType');
+    const iceConsumption = document.getElementById('iceConsumption');
+    const icePrice       = document.getElementById('icePrice');
+    const evConsumption  = document.getElementById('evConsumption');
+    const evPrice        = document.getElementById('evPrice');
+
+    const iceKwhDisplay  = document.getElementById('iceKwhDisplay');
+    const iceCostDisplay = document.getElementById('iceCostDisplay');
+    const evKwhDisplay   = document.getElementById('evKwhDisplay');
+    const evCostDisplay  = document.getElementById('evCostDisplay');
+    const compareText    = document.getElementById('compareText');
+
+    function fmt(num, decimals = 2) {
+      if (!Number.isFinite(num)) return '–';
+      return new Intl.NumberFormat('de-DE', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(num);
+    }
+
+    function recalc() {
+      const fuel = fuelTypes[iceFuelType.value];
+      const iceCons = parseFloat(iceConsumption.value);
+      const iceP    = parseFloat(icePrice.value);
+      const evCons  = parseFloat(evConsumption.value);
+      const evP     = parseFloat(evPrice.value);
+
+      if (Number.isNaN(iceCons) || Number.isNaN(iceP) ||
+          Number.isNaN(evCons) || Number.isNaN(evP)) {
+        compareText.textContent = 'Bitte alle Eingabefelder mit gültigen Zahlenwerten ausfüllen.';
+        return;
+      }
+
+      const iceKwhPer100  = iceCons * fuel.kwhPerLiter;
+      const iceCostPer100 = iceCons * iceP;
+      const evKwhPer100   = evCons;
+      const evCostPer100  = evCons * evP;
+
+      iceKwhDisplay.textContent  = `${fmt(iceKwhPer100)} kWh/100 km`;
+      iceCostDisplay.textContent = `${fmt(iceCostPer100)} €/100 km`;
+      evKwhDisplay.textContent   = `${fmt(evKwhPer100)} kWh/100 km`;
+      evCostDisplay.textContent  = `${fmt(evCostPer100)} €/100 km`;
+
+      let text = '';
+      const kwhRatio  = iceKwhPer100 / evKwhPer100;
+      const costRatio = iceCostPer100 / evCostPer100;
+
+      if (Number.isFinite(kwhRatio) && Number.isFinite(costRatio) && evKwhPer100 > 0 && evCostPer100 > 0) {
+        if (kwhRatio > 1) {
+          text += `Der <strong>Verbrenner</strong> benötigt etwa ${fmt(kwhRatio, 1)}‑mal so viel Energie wie das <strong>Elektroauto</strong> pro 100 km. `;
+        } else {
+          text += `Das <strong>Elektroauto</strong> benötigt etwa ${fmt(1 / kwhRatio, 1)}‑mal so viel Energie wie der <strong>Verbrenner</strong> pro 100 km (bei den eingegebenen Werten). `;
+        }
+
+        if (costRatio > 1) {
+          text += `Kostenmäßig ist der <strong>Verbrenner</strong> etwa ${fmt(costRatio, 1)}‑mal teurer pro 100 km.`;
+        } else {
+          text += `Kostenmäßig ist das <strong>Elektroauto</strong> etwa ${fmt(1 / costRatio, 1)}‑mal teurer pro 100 km.`;
+        }
+      } else {
+        text = 'Die Eingaben führen zu keinem sinnvollen Vergleich (prüfe 0‑Werte).';
+      }
+
+      compareText.innerHTML = text;
+    }
+
+    [iceFuelType, iceConsumption, icePrice, evConsumption, evPrice]
+      .forEach(el => el.addEventListener('input', recalc));
+
+    recalc();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

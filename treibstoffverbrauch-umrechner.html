@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kraftstoffverbrauch-Umrechner – L/100km, km/L, mpg</title>
+  <meta name="description" content="Kraftstoffverbrauch kostenlos umrechnen: Liter pro 100 km, Kilometer pro Liter, mpg (US) und mpg (UK) für Pkw, Transporter und Flotte." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root {
+      --color-primary: #00695c;
+      --color-primary-hover: #003d33;
+      --color-primary-soft: #d7ece8;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">F</span>
+        <span>Kraftstoffverbrauch-Umrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Auto &amp; Flotte</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Kraftstoffverbrauch schnell umrechnen</h1>
+      <p>Rechne zwischen L/100&nbsp;km, km/L, mi/L, mpg (US) und mpg (UK) um. Nützlich beim Vergleich von deutschen Verbrauchsangaben mit US- oder UK-Fahrzeugdaten.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Umrechner</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Wert</label>
+              <input id="fromValue" type="number" value="6.5" step="any" min="0.0001" />
+            </div>
+            <div>
+              <label for="fromUnit">Von</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Einheiten tauschen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Ergebnis</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Nach</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">6,5 L/100 km = 15,38 km/L</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Werbefläche</h2>
+        <div class="ad-slot">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Beliebte Umrechnungen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="l_100km,km_l,6.5">L/100 km in km/L</button>
+        <button type="button" data-preset="km_l,l_100km,15">km/L in L/100 km</button>
+        <button type="button" data-preset="l_100km,mpg_us,7">L/100 km in mpg (US)</button>
+        <button type="button" data-preset="mpg_us,l_100km,30">mpg (US) in L/100 km</button>
+        <button type="button" data-preset="l_100km,mpg_uk,7">L/100 km in mpg (UK)</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Referenzwerte</h2>
+      <div class="formula">Diese Kennzahlen sind reziprok zueinander, es gibt daher keinen festen Faktor:
+
+km/L        = 100 ÷ (L/100 km)
+mi/L        = km/L ÷ 1,609344
+mpg (US)    = 235,214583 ÷ (L/100 km)
+mpg (UK)    = 282,480936 ÷ (L/100 km)
+
+Herleitung mpg (US): 100 km ÷ 1,609344 km/mi = Meilen je (L/100km) Liter;
+1 US-Gallone = 3,785411784 L ⇒ Konstante = 100 × 3,785411784 ÷ 1,609344 ≈ 235,214583
+Herleitung mpg (UK): 1 Imperial-Gallone = 4,54609 L ⇒ Konstante = 100 × 4,54609 ÷ 1,609344 ≈ 282,480936</div>
+      <p class="note">Ein niedrigerer L/100km-Wert bedeutet weniger Verbrauch, ein höherer mpg-Wert bedeutet ebenfalls weniger Verbrauch (mpg zählt gefahrene Strecke je Kraftstoffmenge) – die Skalen laufen also gegenläufig.</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle unterstützten Verbrauchseinheiten</h2>
+      <div class="seo-text">
+        <p>Mit diesem Kraftstoffverbrauch-Umrechner kannst du Liter pro 100 Kilometer (L/100 km), Kilometer pro Liter (km/L), Meilen pro Liter (mi/L), Miles per US-Gallon (mpg US) und Miles per UK-Gallon (mpg UK) direkt umrechnen.</p>
+        <p>L/100 km ist die in Deutschland und der EU übliche Verbrauchsangabe, mpg wird in den USA und Großbritannien verwendet – wobei US- und UK-Gallonen unterschiedlich groß sind (3,785 L vs. 4,546 L).</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    // Basiseinheit: Liter pro 100 km (L/100km)
+    const units = {
+      l_100km: { label: 'Liter/100 km (L/100km)', toBase: v => v, fromBase: v => v },
+      km_l: { label: 'Kilometer/Liter (km/L)', toBase: v => 100 / v, fromBase: v => 100 / v },
+      mi_l: { label: 'Meilen/Liter (mi/L)', toBase: v => 100 / (v * 1.609344), fromBase: v => (100 / v) / 1.609344 },
+      mpg_us: { label: 'Miles per US-Gallon (mpg US)', toBase: v => 235.214583 / v, fromBase: v => 235.214583 / v },
+      mpg_uk: { label: 'Miles per UK-Gallon (mpg UK)', toBase: v => 282.480936 / v, fromBase: v => 282.480936 / v }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromBase(from.toBase(value)),
+      defaultFrom: 'l_100km',
+      defaultTo: 'km_l',
+      decimals: 2
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

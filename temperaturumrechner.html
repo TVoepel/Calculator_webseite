@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperaturumrechner – Celsius, Fahrenheit, Kelvin & mehr</title>
+  <meta name="description" content="Temperatureinheiten kostenlos umrechnen: Celsius, Fahrenheit, Kelvin, Rankine und Réaumur – mit Formeln und Beispielen." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root {
+      --color-primary: #7b1fa2;
+      --color-primary-hover: #4a148c;
+      --color-primary-soft: #ede7f6;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">T</span>
+        <span>Temperaturumrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Alltag &amp; Wissenschaft</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Temperatur schnell umrechnen</h1>
+      <p>Rechne zwischen Celsius, Fahrenheit, Kelvin, Rankine und Réaumur um – für Wetter, Kochen, Physik und Technik.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Umrechner</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Wert</label>
+              <input id="fromValue" type="number" value="0" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Von</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Einheiten tauschen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Ergebnis</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Nach</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">0 °C = 32 °F</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Werbefläche</h2>
+        <div class="ad-slot">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Beliebte Umrechnungen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="celsius,fahrenheit,0">Celsius in Fahrenheit</button>
+        <button type="button" data-preset="fahrenheit,celsius,32">Fahrenheit in Celsius</button>
+        <button type="button" data-preset="celsius,kelvin,25">Celsius in Kelvin</button>
+        <button type="button" data-preset="kelvin,celsius,300">Kelvin in Celsius</button>
+        <button type="button" data-preset="fahrenheit,kelvin,68">Fahrenheit in Kelvin</button>
+        <button type="button" data-preset="kelvin,fahrenheit,293.15">Kelvin in Fahrenheit</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formeln</h2>
+      <div class="formula">
+Celsius → Fahrenheit: (°C × 9/5) + 32
+Fahrenheit → Celsius: (°F − 32) × 5/9
+Celsius → Kelvin: °C + 273,15
+Kelvin → Celsius: K − 273,15
+Kelvin → Rankine: K × 9/5
+Rankine → Kelvin: °R × 5/9
+Celsius → Réaumur: °C × 4/5
+Réaumur → Celsius: °Ré × 5/4</div>
+      <p class="footer-note">Kelvin ist die SI-Basiseinheit der Temperatur; alle anderen Skalen werden intern über Kelvin ineinander umgerechnet, um Rundungsfehler zu vermeiden.</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle unterstützten Temperatureinheiten</h2>
+      <div class="seo-text">
+        <p>Mit diesem Temperaturumrechner wandelst du Celsius (°C), Fahrenheit (°F), Kelvin (K), Rankine (°R) und Réaumur (°Ré) direkt ineinander um.</p>
+        <p>0 °C entsprechen 32 °F und 273,15 K – der Gefrierpunkt von Wasser. 100 °C entsprechen 212 °F und 373,15 K – der Siedepunkt von Wasser bei Normaldruck.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const units = {
+      kelvin: { label: 'Kelvin (K)', toK: v => v, fromK: v => v },
+      celsius: { label: 'Celsius (°C)', toK: v => v + 273.15, fromK: v => v - 273.15 },
+      fahrenheit: { label: 'Fahrenheit (°F)', toK: v => (v - 32) * 5 / 9 + 273.15, fromK: v => (v - 273.15) * 9 / 5 + 32 },
+      rankine: { label: 'Rankine (°R)', toK: v => v * 5 / 9, fromK: v => v * 9 / 5 },
+      reaumur: { label: 'Réaumur (°Ré)', toK: v => v * 5 / 4 + 273.15, fromK: v => (v - 273.15) * 4 / 5 }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromK(from.toK(value)),
+      defaultFrom: 'celsius',
+      defaultTo: 'fahrenheit',
+      decimals: 4
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

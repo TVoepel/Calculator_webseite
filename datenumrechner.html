@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenmengen-Umrechner – Byte, KB, MB, GB & mehr</title>
+  <meta name="description" content="Digitale Datenmengen kostenlos umrechnen: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte – inklusive binärer Einheiten (KiB, MiB, GiB, TiB)." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    :root {
+      --color-primary: #37474f;
+      --color-primary-hover: #1c262b;
+      --color-primary-soft: #dfe4e6;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">D</span>
+        <span>Datenmengen-Umrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">IT &amp; Internet</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Datenmengen schnell umrechnen</h1>
+      <p>Rechne zwischen Bit, Byte, Kilobyte, Megabyte, Gigabyte und Terabyte um – inklusive der binären Einheiten KiB, MiB, GiB und TiB sowie Bitraten für Downloadgeschwindigkeiten.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Umrechner</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Wert</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Von</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Einheiten tauschen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Ergebnis</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Nach</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 Gigabyte = 1.000 Megabyte</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Werbefläche</h2>
+        <div class="ad-slot">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Beliebte Umrechnungen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="gigabyte,megabyte,1">GB in MB</button>
+        <button type="button" data-preset="megabyte,gigabyte,1000">MB in GB</button>
+        <button type="button" data-preset="gigabyte,gibibyte,1">GB in GiB</button>
+        <button type="button" data-preset="megabit,megabyte,100">Mbit in MB (Downloadgeschwindigkeit)</button>
+        <button type="button" data-preset="byte,bit,1">Byte in Bit</button>
+        <button type="button" data-preset="terabyte,gigabyte,1">TB in GB</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Referenzwerte</h2>
+      <div class="formula">Ergebnis = Wert × Faktor(von) ÷ Faktor(nach), Basiseinheit = 1 Byte
+
+Dezimal (SI, Basis 1000):  1 kB = 1000 B, 1 MB = 1000 kB, 1 GB = 1000 MB
+Binär (IEC, Basis 1024):   1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB
+1 Byte = 8 Bit</div>
+      <p class="note">Betriebssysteme und Hersteller verwenden diese Präfixe uneinheitlich: Festplattenhersteller rechnen meist dezimal (1 TB = 1000 GB), während z. B. der Arbeitsspeicher traditionell binär angegeben wird. Dieser Rechner unterscheidet beide Systeme klar (kB/MB/GB = dezimal, KiB/MiB/GiB = binär).</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle unterstützten Dateneinheiten</h2>
+      <div class="seo-text">
+        <p>Mit diesem Datenmengen-Umrechner kannst du Bit, Byte, Kilobit, Kilobyte, Kibibyte, Megabit, Megabyte, Mebibyte, Gigabit, Gigabyte, Gibibyte, Terabyte und Tebibyte direkt umrechnen.</p>
+        <p>Bit-Einheiten (kbit, Mbit, Gbit) werden meist für Übertragungsgeschwindigkeiten (Internet, Netzwerk) genutzt, Byte-Einheiten (kB, MB, GB) für Dateigrößen und Speicherplatz.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const units = {
+      bit: { label: 'Bit (b)', factor: 0.125 },
+      byte: { label: 'Byte (B)', factor: 1 },
+      kilobit: { label: 'Kilobit (kbit)', factor: 125 },
+      kilobyte: { label: 'Kilobyte (kB, dezimal)', factor: 1000 },
+      kibibyte: { label: 'Kibibyte (KiB, binär)', factor: 1024 },
+      megabit: { label: 'Megabit (Mbit)', factor: 125000 },
+      megabyte: { label: 'Megabyte (MB, dezimal)', factor: 1000000 },
+      mebibyte: { label: 'Mebibyte (MiB, binär)', factor: 1048576 },
+      gigabit: { label: 'Gigabit (Gbit)', factor: 125000000 },
+      gigabyte: { label: 'Gigabyte (GB, dezimal)', factor: 1000000000 },
+      gibibyte: { label: 'Gibibyte (GiB, binär)', factor: 1073741824 },
+      terabyte: { label: 'Terabyte (TB, dezimal)', factor: 1000000000000 },
+      tebibyte: { label: 'Tebibyte (TiB, binär)', factor: 1099511627776 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'gigabyte',
+      defaultTo: 'megabyte',
+      decimals: 8
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
