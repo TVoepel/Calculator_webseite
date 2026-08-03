@@ -2,11 +2,32 @@
 <html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Datenmengen-Umrechner – Byte, KB, MB, GB & mehr</title>
   <meta name="description" content="Digitale Datenmengen kostenlos umrechnen: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte – inklusive binärer Einheiten (KiB, MiB, GiB, TiB)." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <meta name="theme-color" content="#37474f" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Datenmengen-Umrechner – Byte, KB, MB, GB & mehr" />
+  <meta property="og:description" content="Digitale Datenmengen kostenlos umrechnen: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte – inklusive binärer Einheiten (KiB, MiB, GiB, TiB)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Datenmengen-Umrechner – Byte, KB, MB, GB & mehr" />
+  <meta name="twitter:description" content="Digitale Datenmengen kostenlos umrechnen: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte – inklusive binärer Einheiten (KiB, MiB, GiB, TiB)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
       --color-primary: #37474f;
@@ -14,6 +35,94 @@
       --color-primary-soft: #dfe4e6;
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Datenmengen-Umrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/datenumrechner.html",
+      "description": "Digitale Datenmengen kostenlos umrechnen: Bit, Byte, Kilobyte, Megabyte, Gigabyte, Terabyte – inklusive binärer Einheiten (KiB, MiB, GiB, TiB).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Einheitenrechner",
+        "url": "https://tvoepel.github.io/Calculator_webseite/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://tvoepel.github.io/Calculator_webseite/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Datenmengen-Umrechner",
+          "item": "https://tvoepel.github.io/Calculator_webseite/datenumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Warum ist meine Festplatte kleiner als angegeben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hersteller rechnen 1 TB = 1000 GB (dezimal, SI-Präfixe), Windows zeigt Speicher aber in GiB (binär, 1024-Basis) an. Eine 1-TB-Festplatte zeigt im Explorer daher nur rund 931 GiB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Mbit und MB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 Byte entspricht 8 Bit. Internetgeschwindigkeiten werden in Mbit/s (Megabit) angegeben, Dateigrößen in MB (Megabyte) – 100 Mbit/s entsprechen also nur 12,5 MB/s Downloadgeschwindigkeit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist ein Kibibyte (KiB)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Kibibyte (KiB) entspricht exakt 1024 Byte (2¹⁰) und wurde von der IEC eingeführt, um binäre von dezimalen Präfixen (1 kB = 1000 Byte) klar zu unterscheiden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert ein Download bei 100 Mbit/s?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei 100 Mbit/s (= 12,5 MB/s theoretisch, praktisch etwas weniger) dauert der Download einer 5-GB-Datei rechnerisch rund 400 Sekunden bzw. etwa 6–7 Minuten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel GB hat ein Terabyte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 Terabyte (TB, dezimal) entspricht 1000 GB. Die binäre Entsprechung Tebibyte (TiB) hat dagegen 1024 GiB."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <main class="wrap wrap--narrow">
@@ -97,6 +206,7 @@ Dezimal (SI, Basis 1000):  1 kB = 1000 B, 1 MB = 1000 kB, 1 GB = 1000 MB
 Binär (IEC, Basis 1024):   1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB
 1 Byte = 8 Bit</div>
       <p class="note">Betriebssysteme und Hersteller verwenden diese Präfixe uneinheitlich: Festplattenhersteller rechnen meist dezimal (1 TB = 1000 GB), während z. B. der Arbeitsspeicher traditionell binär angegeben wird. Dieser Rechner unterscheidet beide Systeme klar (kB/MB/GB = dezimal, KiB/MiB/GiB = binär).</p>
+          <p class="source-links">Quellen: <a href="https://physics.nist.gov/cuu/Units/binary.html" target="_blank" rel="noopener noreferrer">NIST – Referenz zu binären Präfixen</a>, <a href="https://www.iec.ch/prefixes-binary-multiples" target="_blank" rel="noopener noreferrer">IEC – Prefixes for binary multiples</a>, <a href="https://de.wikipedia.org/wiki/Byte" target="_blank" rel="noopener noreferrer">Wikipedia – Byte</a></p>
     </section>
 
     <section class="card seo-card">
@@ -104,6 +214,34 @@ Binär (IEC, Basis 1024):   1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB
       <div class="seo-text">
         <p>Mit diesem Datenmengen-Umrechner kannst du Bit, Byte, Kilobit, Kilobyte, Kibibyte, Megabit, Megabyte, Mebibyte, Gigabit, Gigabyte, Gibibyte, Terabyte und Tebibyte direkt umrechnen.</p>
         <p>Bit-Einheiten (kbit, Mbit, Gbit) werden meist für Übertragungsgeschwindigkeiten (Internet, Netzwerk) genutzt, Byte-Einheiten (kB, MB, GB) für Dateigrößen und Speicherplatz.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug: Wann du Datenmengen umrechnen musst</h2>
+      <div class="seo-text">
+        <p>Internetanbieter werben mit Downloadgeschwindigkeiten in Mbit/s – die tatsächliche Downloadzeit einer Datei berechnest du aber über MB oder GB, was leicht zu Verwechslungen führt.</p>
+        <p>Speicherhersteller rechnen bei Festplatten und SSDs dezimal (1 TB = 1000 GB), Betriebssysteme zeigen den freien Speicher aber oft binär (GiB) an – deshalb wirkt eine neue Festplatte im Explorer kleiner als auf der Verpackung angegeben.</p>
+        <p>Bei Streaming, Cloud-Speicher und mobilen Datentarifen hilft die Umrechnung, das eigene Datenvolumen realistisch einzuschätzen.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Warum ist meine Festplatte kleiner als angegeben?</summary><p>Hersteller rechnen 1 TB = 1000 GB (dezimal, SI-Präfixe), Windows zeigt Speicher aber in GiB (binär, 1024-Basis) an. Eine 1-TB-Festplatte zeigt im Explorer daher nur rund 931 GiB.</p></details>
+        <details class="faq-item"><summary>Was ist der Unterschied zwischen Mbit und MB?</summary><p>1 Byte entspricht 8 Bit. Internetgeschwindigkeiten werden in Mbit/s (Megabit) angegeben, Dateigrößen in MB (Megabyte) – 100 Mbit/s entsprechen also nur 12,5 MB/s Downloadgeschwindigkeit.</p></details>
+        <details class="faq-item"><summary>Was ist ein Kibibyte (KiB)?</summary><p>Ein Kibibyte (KiB) entspricht exakt 1024 Byte (2¹⁰) und wurde von der IEC eingeführt, um binäre von dezimalen Präfixen (1 kB = 1000 Byte) klar zu unterscheiden.</p></details>
+        <details class="faq-item"><summary>Wie lange dauert ein Download bei 100 Mbit/s?</summary><p>Bei 100 Mbit/s (= 12,5 MB/s theoretisch, praktisch etwas weniger) dauert der Download einer 5-GB-Datei rechnerisch rund 400 Sekunden bzw. etwa 6–7 Minuten.</p></details>
+        <details class="faq-item"><summary>Wie viel GB hat ein Terabyte?</summary><p>1 Terabyte (TB, dezimal) entspricht 1000 GB. Die binäre Entsprechung Tebibyte (TiB) hat dagegen 1024 GiB.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="energieumrechner.html">Energieumrechner →</a>
+        <a href="geschwindigkeitumrechner.html">Geschwindigkeitsumrechner →</a>
       </div>
     </section>
 

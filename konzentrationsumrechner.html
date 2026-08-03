@@ -2,11 +2,32 @@
 <html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr</title>
   <meta name="description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <meta name="theme-color" content="#ad1457" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr" />
+  <meta property="og:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr" />
+  <meta name="twitter:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
       --color-primary: #ad1457;
@@ -32,6 +53,94 @@
       border-bottom: 1px solid var(--color-border);
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Konzentrationsumrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html",
+      "description": "Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Einheitenrechner",
+        "url": "https://tvoepel.github.io/Calculator_webseite/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://tvoepel.github.io/Calculator_webseite/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Konzentrationsumrechner",
+          "item": "https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie berechnet man die Molmasse einer Verbindung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Molmasse ergibt sich aus der Summe der Atommassen aller Atome in der chemischen Formel, z. B. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen mol/L und mg/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "mol/L (Stoffmengenkonzentration) zählt Teilchen unabhängig von ihrer Masse, mg/L (Massenkonzentration) misst das Gewicht pro Liter. Die Umrechnung erfolgt über die Molmasse: Masse = Stoffmenge × Molmasse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bedeutet ppm bei Wasserwerten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ppm (parts per million) entspricht bei verdünnten wässrigen Lösungen näherungsweise mg/L, da die Dichte von Wasser nahe 1 kg/L liegt. Bei anderen Lösungsmitteln oder hohen Konzentrationen gilt diese Näherung nicht mehr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie berechnet man die Molmasse eines Hydrats wie MgSO4·7H2O?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Man addiert die Molmasse der Grundverbindung (MgSO₄) und die Molmasse des Kristallwassers, multipliziert mit der Anzahl der Wassermoleküle (hier 7 × 18,015 g/mol für 7 H₂O)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ändert die Ladung eines Ions (z. B. SO4²⁻) die Molmasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Praktisch nicht: Die Elektronenmasse ist im Vergleich zur Gesamtmasse eines Ions vernachlässigbar klein, weshalb Molmassen von Ionen wie üblich aus der Summe der Atommassen berechnet werden."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <main class="wrap">
@@ -136,6 +245,7 @@ Formel-Syntax:
 - Ladungen optional mit ^, z. B. SO4^2-, NH4^+ (Ladung ändert die Molmasse nicht)</div>
       <p class="note">Für ppm/ppb wird die für verdünnte wässrige Lösungen übliche Näherung 1 ppm ≈ 1 mg/L (Dichte der Lösung ≈ 1 kg/L) verwendet. Bei stark konzentrierten Lösungen, anderen Lösungsmitteln oder Gasgemischen (ppm nach Volumen) gilt diese Näherung nicht.</p>
       <p class="note">Kontrollrechnung: Für Kreatinin (M = 113,12 g/mol) ergibt sich der in der Klinischen Chemie bekannte Umrechnungsfaktor µmol/L = mg/dL × 88,4 – stimmt mit diesem Rechner exakt überein.</p>
+          <p class="source-links">Quellen: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Periodensystem & Standard-Atomgewichte</a>, <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI-Broschüre (Mol-Definition)</a>, <a href="https://de.wikipedia.org/wiki/Stoffmengenkonzentration" target="_blank" rel="noopener noreferrer">Wikipedia – Stoffmengenkonzentration</a></p>
     </section>
 
     <section class="card seo-card">
@@ -143,6 +253,35 @@ Formel-Syntax:
       <div class="seo-text">
         <p>Molare Einheiten: mol/L, mmol/L, µmol/L, nmol/L. Masseeinheiten: g/L, mg/L, µg/L, mg/dL, mg/mL, µg/mL, ppm, ppb.</p>
         <p>Eingebaute Verbindungen: Nitrat, Nitrit, Sulfat, Phosphat, Ammonium, Glutamat, Glutamin, Kreatinin, Kreatin. Alle weiteren Stoffe lassen sich als chemische Formel (z. B. NaCl, C6H12O6, CaCO3) oder direkt als Zahlenwert der Molmasse eingeben.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug: Wann du Konzentrationen umrechnen musst</h2>
+      <div class="seo-text">
+        <p>Im Aquarium werden Nitrat-, Nitrit-, Phosphat- und Ammoniumwerte meist in mg/L gemessen – wissenschaftliche Grenzwerte oder Laboranalysen geben dieselben Werte aber oft in mmol/L an.</p>
+        <p>Laborbefunde (z. B. Elektrolyte, Kreatinin) werden je nach Land und Labor entweder in mg/dL oder in mmol/L bzw. µmol/L ausgegeben, was den Vergleich von Werten erschwert.</p>
+        <p>In Chemie-Unterricht und Labor ist die Umrechnung zwischen Stoffmengenkonzentration (mol/L) und Massenkonzentration (g/L) über die Molmasse eine der grundlegendsten Rechenaufgaben.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Wie berechnet man die Molmasse einer Verbindung?</summary><p>Die Molmasse ergibt sich aus der Summe der Atommassen aller Atome in der chemischen Formel, z. B. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol.</p></details>
+        <details class="faq-item"><summary>Was ist der Unterschied zwischen mol/L und mg/L?</summary><p>mol/L (Stoffmengenkonzentration) zählt Teilchen unabhängig von ihrer Masse, mg/L (Massenkonzentration) misst das Gewicht pro Liter. Die Umrechnung erfolgt über die Molmasse: Masse = Stoffmenge × Molmasse.</p></details>
+        <details class="faq-item"><summary>Was bedeutet ppm bei Wasserwerten?</summary><p>ppm (parts per million) entspricht bei verdünnten wässrigen Lösungen näherungsweise mg/L, da die Dichte von Wasser nahe 1 kg/L liegt. Bei anderen Lösungsmitteln oder hohen Konzentrationen gilt diese Näherung nicht mehr.</p></details>
+        <details class="faq-item"><summary>Wie berechnet man die Molmasse eines Hydrats wie MgSO4·7H2O?</summary><p>Man addiert die Molmasse der Grundverbindung (MgSO₄) und die Molmasse des Kristallwassers, multipliziert mit der Anzahl der Wassermoleküle (hier 7 × 18,015 g/mol für 7 H₂O).</p></details>
+        <details class="faq-item"><summary>Ändert die Ladung eines Ions (z. B. SO4²⁻) die Molmasse?</summary><p>Praktisch nicht: Die Elektronenmasse ist im Vergleich zur Gesamtmasse eines Ions vernachlässigbar klein, weshalb Molmassen von Ionen wie üblich aus der Summe der Atommassen berechnet werden.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Volumenumrechner →</a>
+        <a href="gewichtumrechner.html">Gewichtsumrechner →</a>
+        <a href="blutzuckerumrechner.html">Blutzucker-Umrechner →</a>
       </div>
     </section>
 

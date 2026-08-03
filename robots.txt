@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tvoepel.github.io/Calculator_webseite/sitemap.xml

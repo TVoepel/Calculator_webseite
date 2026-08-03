@@ -2,11 +2,32 @@
 <html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Verbrenner vs. Elektro – Energie &amp; Kosten pro 100 km</title>
   <meta name="description" content="Vergleiche den Energieverbrauch und die Kosten pro 100 km von Verbrenner-Autos (Benzin, Diesel) mit Elektroautos in kWh/100 km und Euro/100 km." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Verbrenner vs. Elektro – Energie &amp; Kosten pro 100 km" />
+  <meta property="og:description" content="Vergleiche den Energieverbrauch und die Kosten pro 100 km von Verbrenner-Autos (Benzin, Diesel) mit Elektroautos in kWh/100 km und Euro/100 km." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Verbrenner vs. Elektro – Energie &amp; Kosten pro 100 km" />
+  <meta name="twitter:description" content="Vergleiche den Energieverbrauch und die Kosten pro 100 km von Verbrenner-Autos (Benzin, Diesel) mit Elektroautos in kWh/100 km und Euro/100 km." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
       --color-primary: #1b5e20;
@@ -14,6 +35,94 @@
       --color-primary-soft: #e8f5e9;
     }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Antriebsvergleich Verbrenner vs. Elektro",
+      "url": "https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html",
+      "description": "Vergleiche den Energieverbrauch und die Kosten pro 100 km von Verbrenner-Autos (Benzin, Diesel) mit Elektroautos in kWh/100 km und Euro/100 km.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Einheitenrechner",
+        "url": "https://tvoepel.github.io/Calculator_webseite/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://tvoepel.github.io/Calculator_webseite/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Antriebsvergleich Verbrenner vs. Elektro",
+          "item": "https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist ein Elektroauto günstiger im Unterhalt als ein Verbrenner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei den reinen Energiekosten pro 100 km liegt ein Elektroauto beim Laden zuhause meist deutlich unter einem vergleichbaren Verbrenner. Werden jedoch überwiegend teure öffentliche Schnelllader genutzt, kann sich der Vorteil deutlich verringern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel kWh verbraucht ein Elektroauto pro 100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die meisten Elektro-Pkw liegen zwischen 15 und 22 kWh/100 km, abhängig von Fahrzeuggröße, Fahrweise, Außentemperatur und Geschwindigkeit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum verbraucht ein E-Auto im Winter mehr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kälte verringert die Batterieeffizienz und die Innenraumheizung benötigt zusätzliche Energie, was den Verbrauch pro 100 km im Winter spürbar erhöhen kann."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel kWh braucht 1 Liter Benzin energetisch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Liter Benzin enthält energetisch etwa 8,9–9,0 kWh, ein Liter Diesel etwa 9,8 kWh – deutlich mehr als ein Elektroauto für dieselbe Strecke an elektrischer Energie benötigt, allerdings mit geringerem Wirkungsgrad beim Verbrennungsmotor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Ladeverluste beim Elektroauto in diesem Rechner enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein, dieser Rechner vergleicht die reinen Energiekosten anhand des angegebenen Verbrauchs. Ladeverluste (üblicherweise einige Prozent) sind nicht separat ausgewiesen und würden die realen Kosten leicht erhöhen."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <main class="wrap">
@@ -132,6 +241,7 @@ Formeln:
         <p class="note">
           Die tatsächlichen Energiegehalte von Kraftstoffen schwanken je nach Zusammensetzung leicht (Benzin ca. 8,7–9,1 kWh/L, Diesel ca. 9,7–9,9 kWh/L). Die hier verwendeten Mittelwerte dienen dem groben Vergleich und ersetzen keine exakte Herstellerangabe. Ladeverluste beim Elektroauto (üblicherweise einige Prozent) sind in der Stromkostenrechnung nicht separat ausgewiesen.
         </p>
+        <p class="source-links">Quellen: <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – Publikationen zu Kraftstoffen &amp; Emissionen</a>, <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/neuwagenkauf/co2-label-pkw-effizienzklassen/" target="_blank" rel="noopener noreferrer">ADAC – Elektroauto-Ratgeber</a>, <a href="https://de.wikipedia.org/wiki/Elektroauto" target="_blank" rel="noopener noreferrer">Wikipedia – Elektroauto</a></p>
       </aside>
     </div>
 
@@ -140,6 +250,35 @@ Formeln:
       <div class="seo-text">
         <p>Mit diesem Rechner kannst du den Energieverbrauch und die reinen Energiekosten von Verbrenner-Fahrzeugen und Elektroautos direkt gegenüberstellen. Gib dazu den Verbrauch in L/100 km und kWh/100 km sowie aktuelle Preise für Kraftstoff und Strom ein.</p>
         <p>So erkennst du auf einen Blick, wie sich ein Wechsel von Benzin oder Diesel auf ein Elektroauto bei deinen individuellen Rahmenbedingungen auswirkt. Gerade bei schwankenden Energiepreisen ist ein transparenter Vergleich pro 100 km hilfreich, um Kaufentscheidungen besser einschätzen zu können.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug: Verbrenner oder Elektro – worauf es ankommt</h2>
+      <div class="seo-text">
+        <p>Ob sich ein Elektroauto finanziell lohnt, hängt stark vom eigenen Strompreis (Wallbox zuhause vs. teure Schnellladesäule unterwegs) und dem Spritpreis am Wohnort ab – dieser Rechner macht den reinen Energiekostenvergleich transparent.</p>
+        <p>Wer viel zuhause mit günstigem Nachtstrom oder eigener Solaranlage lädt, kommt auf deutlich niedrigere Kosten pro 100 km als beim Laden an öffentlichen Schnellladern.</p>
+        <p>Für eine vollständige Kostenrechnung (Total Cost of Ownership) sollten neben Energiekosten auch Anschaffungspreis, Wertverlust, Wartung und Versicherung berücksichtigt werden – dieser Rechner deckt bewusst nur die Energiekosten pro 100 km ab.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Ist ein Elektroauto günstiger im Unterhalt als ein Verbrenner?</summary><p>Bei den reinen Energiekosten pro 100 km liegt ein Elektroauto beim Laden zuhause meist deutlich unter einem vergleichbaren Verbrenner. Werden jedoch überwiegend teure öffentliche Schnelllader genutzt, kann sich der Vorteil deutlich verringern.</p></details>
+        <details class="faq-item"><summary>Wie viel kWh verbraucht ein Elektroauto pro 100 km?</summary><p>Die meisten Elektro-Pkw liegen zwischen 15 und 22 kWh/100 km, abhängig von Fahrzeuggröße, Fahrweise, Außentemperatur und Geschwindigkeit.</p></details>
+        <details class="faq-item"><summary>Warum verbraucht ein E-Auto im Winter mehr?</summary><p>Kälte verringert die Batterieeffizienz und die Innenraumheizung benötigt zusätzliche Energie, was den Verbrauch pro 100 km im Winter spürbar erhöhen kann.</p></details>
+        <details class="faq-item"><summary>Wie viel kWh braucht 1 Liter Benzin energetisch?</summary><p>Ein Liter Benzin enthält energetisch etwa 8,9–9,0 kWh, ein Liter Diesel etwa 9,8 kWh – deutlich mehr als ein Elektroauto für dieselbe Strecke an elektrischer Energie benötigt, allerdings mit geringerem Wirkungsgrad beim Verbrennungsmotor.</p></details>
+        <details class="faq-item"><summary>Sind Ladeverluste beim Elektroauto in diesem Rechner enthalten?</summary><p>Nein, dieser Rechner vergleicht die reinen Energiekosten anhand des angegebenen Verbrauchs. Ladeverluste (üblicherweise einige Prozent) sind nicht separat ausgewiesen und würden die realen Kosten leicht erhöhen.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Kraftstoffverbrauch-Umrechner →</a>
+        <a href="energieumrechner.html">Energieumrechner →</a>
+        <a href="geschwindigkeitumrechner.html">Geschwindigkeitsumrechner →</a>
       </div>
     </section>
 
