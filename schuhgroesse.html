@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Schuhgrößen-Umrechner – EU, UK, US & cm Tabelle</title>
+  <meta name="description" content="Schuhgrößen umrechnen: EU in UK, US (Damen/Herren) und Fußlänge in cm – mit Umrechnungstabelle und Schnellschätzung aus der Fußlänge." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html" />
+  <meta name="theme-color" content="#bf360c" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Schuhgrößen-Umrechner – EU, UK, US & cm Tabelle" />
+  <meta property="og:description" content="Schuhgrößen umrechnen: EU in UK, US (Damen/Herren) und Fußlänge in cm – mit Umrechnungstabelle und Schnellschätzung." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Schuhgrößen-Umrechner – EU, UK, US & cm Tabelle" />
+  <meta name="twitter:description" content="Schuhgrößen umrechnen: EU in UK, US (Damen/Herren) und Fußlänge in cm." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #bf360c;
+      --color-primary-hover: #7f2208;
+      --color-primary-soft: #fbe0d3;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .ref-table tr.hit { background: var(--color-primary-soft); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Schuhgrößen-Umrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html",
+      "description": "Schuhgrößen umrechnen: EU in UK, US (Damen/Herren) und Fußlänge in cm.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": { "@type": "WebSite", "name": "Einheitenrechner", "url": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Schuhgrößen-Umrechner", "item": "https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Schuhgröße 38 EU entspricht welcher US-Größe?", "acceptedAnswer": { "@type": "Answer", "text": "EU 38 entspricht ungefähr US Damen 7,5 bzw. US Herren 6 – die genaue Größe hängt aber vom Hersteller ab, da es keine einheitliche weltweite Norm für Schuhgrößen gibt." } },
+        { "@type": "Question", "name": "Warum sind US-Schuhgrößen anders nummeriert als EU-Größen?", "acceptedAnswer": { "@type": "Answer", "text": "Historisch nutzt Europa das Pariser Punktesystem (1 Punkt = 2/3 cm Leistenlänge), die USA das Barleycorn-System (1 Einheit = 1/3 Zoll ≈ 8,47 mm) mit eigenem Nullpunkt – daher ergeben sich unterschiedliche Zahlenreihen für dieselbe Fußlänge." } },
+        { "@type": "Question", "name": "Warum fällt eine Marke größer aus als eine andere bei gleicher Größenangabe?", "acceptedAnswer": { "@type": "Answer", "text": "Es gibt keine verbindliche internationale Norm, der sich alle Hersteller unterwerfen müssen. Jede Marke verwendet einen eigenen Leisten (die Grundform des Schuhs), wodurch dieselbe angegebene Größe je nach Hersteller unterschiedlich ausfallen kann." } },
+        { "@type": "Question", "name": "Wie messe ich meine Fußlänge richtig?", "acceptedAnswer": { "@type": "Answer", "text": "Stelle dich auf ein Blatt Papier, markiere die Position von Ferse und längster Zehenspitze und miss den Abstand in Zentimetern – am besten abends, da Füße im Tagesverlauf leicht anschwellen. Miss beide Füße, da sie oft unterschiedlich groß sind, und richte dich nach dem größeren." } },
+        { "@type": "Question", "name": "Wie ändert sich die Kinderschuhgröße mit dem Alter?", "acceptedAnswer": { "@type": "Answer", "text": "Kinderfüße wachsen unregelmäßig, grob werden alle 2-4 Monate neue Schuhe nötig. Es ist sinnvoller, regelmäßig die aktuelle Fußlänge zu messen, als sich auf feste Altersgrößen zu verlassen." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">Sc</span>
+        <span>Schuhgrößen-Umrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Mode &amp; Alltag</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Schuhgrößen umrechnen: EU, UK, US &amp; cm</h1>
+      <p>Wähle eine EU-Größe oder gib deine Fußlänge in cm ein, um die ungefähre Entsprechung in UK- und US-Größen zu sehen. Da es keine einheitliche weltweite Norm gibt, sind alle Werte Richtwerte – Marken können abweichen.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Schnellschätzung aus Fußlänge</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="footLength">Fußlänge (cm)</label>
+              <input id="footLength" type="number" value="26.5" step="0.1" min="10" max="35" />
+            </div>
+            <div>
+              <label for="euSelect">oder EU-Größe wählen</label>
+              <select id="euSelect"></select>
+            </div>
+          </div>
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Werbefläche</h2>
+        <div class="ad-slot">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Umrechnungstabelle (Richtwerte)</h2>
+      <div style="overflow-x:auto;">
+        <table class="ref-table" id="sizeTable">
+          <thead><tr><th>EU</th><th>UK</th><th>US Herren</th><th>US Damen</th><th>Fußlänge (cm)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note">Richtwerte basierend auf gängigen Umrechnungstabellen – tatsächliche Passform variiert je nach Marke, Leisten und Schuhmodell. Miss im Zweifel die Fußlänge und probiere vor dem Kauf, wenn möglich.</p>
+      <p class="source-links">Quellen: <a href="https://de.wikipedia.org/wiki/Schuhgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Schuhgröße</a>, gängige Herstellerangaben (Nike, Adidas u.a.)</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug</h2>
+      <div class="seo-text">
+        <p>Beim Online-Shopping bei US-Versendern (z. B. Zappos, US-Amazon) hilft die Umrechnung, die richtige Bestellgröße zu finden, ohne den Schuh vorher anprobieren zu können.</p>
+        <p>Auf Reisen oder beim Import von Sportschuhen (Nike, Adidas) sind Größenangaben oft nur in US-Größen verfügbar – die EU-Umrechnung erleichtert den Vergleich mit bereits bekannten Größen.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Schuhgröße 38 EU entspricht welcher US-Größe?</summary><p>EU 38 entspricht ungefähr US Damen 7,5 bzw. US Herren 6 – die genaue Größe hängt aber vom Hersteller ab, da es keine einheitliche weltweite Norm für Schuhgrößen gibt.</p></details>
+        <details class="faq-item"><summary>Warum sind US-Schuhgrößen anders nummeriert als EU-Größen?</summary><p>Historisch nutzt Europa das Pariser Punktesystem (1 Punkt = 2/3 cm Leistenlänge), die USA das Barleycorn-System (1 Einheit = 1/3 Zoll ≈ 8,47 mm) mit eigenem Nullpunkt – daher ergeben sich unterschiedliche Zahlenreihen für dieselbe Fußlänge.</p></details>
+        <details class="faq-item"><summary>Warum fällt eine Marke größer aus als eine andere bei gleicher Größenangabe?</summary><p>Es gibt keine verbindliche internationale Norm, der sich alle Hersteller unterwerfen müssen. Jede Marke verwendet einen eigenen Leisten (die Grundform des Schuhs), wodurch dieselbe angegebene Größe je nach Hersteller unterschiedlich ausfallen kann.</p></details>
+        <details class="faq-item"><summary>Wie messe ich meine Fußlänge richtig?</summary><p>Stelle dich auf ein Blatt Papier, markiere die Position von Ferse und längster Zehenspitze und miss den Abstand in Zentimetern – am besten abends, da Füße im Tagesverlauf leicht anschwellen. Miss beide Füße, da sie oft unterschiedlich groß sind, und richte dich nach dem größeren.</p></details>
+        <details class="faq-item"><summary>Wie ändert sich die Kinderschuhgröße mit dem Alter?</summary><p>Kinderfüße wachsen unregelmäßig, grob werden alle 2-4 Monate neue Schuhe nötig. Es ist sinnvoller, regelmäßig die aktuelle Fußlänge zu messen, als sich auf feste Altersgrößen zu verlassen.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="kleidergroesse.html">Kleidergrößen-Umrechner →</a>
+        <a href="laengenumrechner.html">Längenumrechner →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    // Richtwerte-Tabelle (gängige Umrechnungscharts, keine verbindliche Norm)
+    const sizes = [
+      { eu: 35, uk: 2.5, usM: 3.5, usW: 5,    cm: 22.0 },
+      { eu: 36, uk: 3.5, usM: 4.5, usW: 6,    cm: 22.5 },
+      { eu: 37, uk: 4,   usM: 5,   usW: 6.5,  cm: 23.0 },
+      { eu: 38, uk: 5,   usM: 6,   usW: 7.5,  cm: 24.0 },
+      { eu: 39, uk: 6,   usM: 6.5, usW: 8,    cm: 24.5 },
+      { eu: 40, uk: 6.5, usM: 7.5, usW: 9,    cm: 25.0 },
+      { eu: 41, uk: 7.5, usM: 8,   usW: 9.5,  cm: 25.5 },
+      { eu: 42, uk: 8,   usM: 9,   usW: 10.5, cm: 26.5 },
+      { eu: 43, uk: 9,   usM: 9.5, usW: 11,   cm: 27.0 },
+      { eu: 44, uk: 9.5, usM: 10.5, usW: 12,  cm: 27.5 },
+      { eu: 45, uk: 10.5, usM: 11, usW: null, cm: 29.0 },
+      { eu: 46, uk: 11,  usM: 12,  usW: null, cm: 29.5 },
+      { eu: 47, uk: 12,  usM: 13,  usW: null, cm: 30.5 }
+    ];
+
+    const footLength = document.getElementById('footLength');
+    const euSelect = document.getElementById('euSelect');
+    const resultText = document.getElementById('resultText');
+    const tableBody = document.querySelector('#sizeTable tbody');
+
+    function fmtSize(v) { return v === null ? '–' : formatNumber(v, 1); }
+
+    function populate() {
+      sizes.forEach(s => euSelect.add(new Option('EU ' + s.eu, s.eu)));
+      sizes.forEach(s => {
+        const row = document.createElement('tr');
+        row.dataset.eu = s.eu;
+        row.innerHTML = `<td>${s.eu}</td><td>${fmtSize(s.uk)}</td><td>${fmtSize(s.usM)}</td><td>${fmtSize(s.usW)}</td><td>${fmtSize(s.cm)}</td>`;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function highlightRow(eu) {
+      document.querySelectorAll('#sizeTable tbody tr').forEach(tr => {
+        tr.classList.toggle('hit', Number(tr.dataset.eu) === eu);
+      });
+    }
+
+    function nearestSize(cm) {
+      let best = sizes[0];
+      let bestDiff = Math.abs(sizes[0].cm - cm);
+      sizes.forEach(s => {
+        const diff = Math.abs(s.cm - cm);
+        if (diff < bestDiff) { best = s; bestDiff = diff; }
+      });
+      return best;
+    }
+
+    function updateFromFoot() {
+      const cm = parseFloat(footLength.value);
+      if (!Number.isFinite(cm) || cm <= 0) {
+        resultText.textContent = 'Bitte eine gültige Fußlänge eingeben.';
+        return;
+      }
+      const s = nearestSize(cm);
+      euSelect.value = s.eu;
+      highlightRow(s.eu);
+      resultText.textContent = `${formatNumber(cm, 1)} cm ≈ EU ${s.eu} · UK ${fmtSize(s.uk)} · US Herren ${fmtSize(s.usM)} · US Damen ${fmtSize(s.usW)}`;
+    }
+
+    function updateFromSelect() {
+      const eu = Number(euSelect.value);
+      const s = sizes.find(x => x.eu === eu);
+      if (!s) return;
+      footLength.value = s.cm;
+      highlightRow(s.eu);
+      resultText.textContent = `EU ${s.eu} ≈ ${formatNumber(s.cm, 1)} cm · UK ${fmtSize(s.uk)} · US Herren ${fmtSize(s.usM)} · US Damen ${fmtSize(s.usW)}`;
+    }
+
+    footLength.addEventListener('input', updateFromFoot);
+    euSelect.addEventListener('change', updateFromSelect);
+
+    populate();
+    updateFromFoot();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="sw-register.js" defer></script>
+</body>
+</html>

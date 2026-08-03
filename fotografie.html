@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fotografie-Belichtungsrechner – EV, Blende, Zeit & ISO</title>
+  <meta name="description" content="Belichtungswert (EV) aus Blende, Verschlusszeit und ISO berechnen. Plus Rechner für äquivalente Belichtung bei geänderter Blende oder ISO." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <meta name="theme-color" content="#212121" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Fotografie-Belichtungsrechner – EV, Blende, Zeit & ISO" />
+  <meta property="og:description" content="Belichtungswert (EV) berechnen und äquivalente Belichtung bei geänderter Blende oder ISO ermitteln." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fotografie-Belichtungsrechner – EV, Blende, Zeit & ISO" />
+  <meta name="twitter:description" content="Belichtungswert und äquivalente Belichtung berechnen." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #212121;
+      --color-primary-hover: #000000;
+      --color-primary-soft: #e0e0e0;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Fotografie-Belichtungsrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fotografie.html",
+      "description": "Belichtungswert (EV) berechnen und äquivalente Belichtung bei geänderter Blende oder ISO ermitteln.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": { "@type": "WebSite", "name": "Einheitenrechner", "url": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Fotografie-Belichtungsrechner", "item": "https://tvoepel.github.io/Calculator_webseite/fotografie.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist der Belichtungswert (EV)?", "acceptedAnswer": { "@type": "Answer", "text": "Der Belichtungswert (Exposure Value) fasst Blende und Verschlusszeit zu einer Zahl zusammen, die die Lichtmenge einer Aufnahme beschreibt. EV 15 entspricht z. B. einem sonnigen Tag, EV 5 einem dunklen Innenraum." } },
+        { "@type": "Question", "name": "Wie viel mehr Licht lässt Blende f/2.8 gegenüber f/5.6 durch?", "acceptedAnswer": { "@type": "Answer", "text": "f/2.8 lässt bei gleicher Zeit etwa 4× so viel Licht durch wie f/5.6 (2 Blendenstufen Unterschied, jede Stufe verdoppelt oder halbiert die Lichtmenge)." } },
+        { "@type": "Question", "name": "Wie hängen ISO 100 und ISO 1600 zusammen?", "acceptedAnswer": { "@type": "Answer", "text": "ISO 1600 ist 4 Blendenstufen (2⁴ = 16-fach) empfindlicher als ISO 100, benötigt also nur ein Sechzehntel der Lichtmenge für dieselbe Belichtung – allerdings meist mit deutlich mehr Bildrauschen." } },
+        { "@type": "Question", "name": "Was ist eine äquivalente Belichtung?", "acceptedAnswer": { "@type": "Answer", "text": "Zwei Kombinationen aus Blende, Zeit und ISO sind äquivalent, wenn sie dieselbe Lichtmenge auf den Sensor lassen (gleicher EV). Wird die Blende geschlossen (mehr Tiefenschärfe), muss die Verschlusszeit verlängert oder die ISO erhöht werden, um dieselbe Belichtung zu erhalten." } },
+        { "@type": "Question", "name": "Was ist das Belichtungsdreieck?", "acceptedAnswer": { "@type": "Answer", "text": "Blende, Verschlusszeit und ISO bilden zusammen das Belichtungsdreieck: Jede Änderung eines Werts erfordert eine Anpassung der anderen, um dieselbe Belichtung zu erhalten – gleichzeitig beeinflusst jeder Wert auch Tiefenschärfe (Blende), Bewegungsunschärfe (Zeit) und Bildrauschen (ISO)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">EV</span>
+        <span>Belichtungsrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Fotografie</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Belichtungswert &amp; äquivalente Belichtung berechnen</h1>
+      <p>Berechne den Belichtungswert (EV) aus Blende, Verschlusszeit und ISO, und ermittle die passende neue Verschlusszeit, wenn du Blende oder ISO änderst.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Belichtungswert (EV) berechnen</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="apertureInput">Blende (f/)</label>
+              <input id="apertureInput" type="number" value="8" step="any" min="0.5" />
+            </div>
+            <div>
+              <label for="shutterInput">Verschlusszeit (Sekunden)</label>
+              <input id="shutterInput" type="number" value="0.01" step="any" min="0.00001" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="isoInput">ISO</label>
+              <input id="isoInput" type="number" value="100" step="any" min="1" />
+            </div>
+            <div></div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="evResult">–</span>
+            <span id="evCondition">Belichtungswert (EV, bezogen auf ISO 100)</span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Ungefähre EV-Richtwerte</h2>
+        <table class="ref-table">
+          <thead><tr><th>EV</th><th>Lichtsituation</th></tr></thead>
+          <tbody>
+            <tr><td>−6</td><td>Sternenlicht</td></tr>
+            <tr><td>0</td><td>Vollmond</td></tr>
+            <tr><td>5</td><td>Innenraum, normal beleuchtet</td></tr>
+            <tr><td>9</td><td>Sonnenuntergang</td></tr>
+            <tr><td>12</td><td>Bewölkter Tag</td></tr>
+            <tr><td>15</td><td>Sonniger Tag (Sunny-16)</td></tr>
+            <tr><td>16</td><td>Strand/Schnee, pralle Sonne</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Grobe Richtwerte zur Einordnung – tatsächliche Lichtverhältnisse variieren stark.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Äquivalente Belichtung berechnen</h2>
+      <p class="note" style="margin-top:0;">Gib deine aktuellen Einstellungen ein und ändere Blende oder ISO – die passende neue Verschlusszeit für dieselbe Belichtung wird berechnet.</p>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="curAperture">Aktuelle Blende (f/)</label>
+            <input id="curAperture" type="number" value="8" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="curShutter">Aktuelle Zeit (s)</label>
+            <input id="curShutter" type="number" value="0.01" step="any" min="0.00001" />
+          </div>
+          <div>
+            <label for="curIso">Aktuelle ISO</label>
+            <input id="curIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="newAperture">Neue Blende (f/)</label>
+            <input id="newAperture" type="number" value="11" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="newIso">Neue ISO</label>
+            <input id="newIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="equivResult">–</span>
+          <span>Benötigte neue Verschlusszeit für gleiche Belichtung</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Quellen</h2>
+      <div class="formula">EV (bezogen auf ISO 100) = log₂(Blendenzahl² ÷ Verschlusszeit ÷ (ISO ÷ 100))
+
+Äquivalente Belichtung (gleicher EV):
+Neue Zeit = Alte Zeit × (Neue Blende² ÷ Alte Blende²) × (Alte ISO ÷ Neue ISO)</div>
+      <p class="note">Die klassische Blendenreihe folgt Schritten von √2: f/1.0 – 1.4 – 2 – 2.8 – 4 – 5.6 – 8 – 11 – 16 – 22 – 32. Jede Stufe halbiert bzw. verdoppelt die durchgelassene Lichtmenge.</p>
+      <p class="source-links">Quellen: <a href="https://de.wikipedia.org/wiki/Lichtwert" target="_blank" rel="noopener noreferrer">Wikipedia – Lichtwert (EV)</a>, <a href="https://de.wikipedia.org/wiki/Blendenzahl" target="_blank" rel="noopener noreferrer">Wikipedia – Blendenzahl</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug</h2>
+      <div class="seo-text">
+        <p>Beim Wechsel von einem Objektiv mit f/2.8 zu einem mit maximal f/5.6 (2 Blendenstufen dunkler) musst du die Verschlusszeit vervierfachen oder die ISO vervierfachen, um dieselbe Belichtung zu erhalten.</p>
+        <p>Für Langzeitbelichtungen mit ND-Filtern (z. B. 6 Blendenstufen) hilft die äquivalente Belichtung, um von einer normalen Verschlusszeit auf die stark verlängerte Zeit mit Filter umzurechnen.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Was ist der Belichtungswert (EV)?</summary><p>Der Belichtungswert (Exposure Value) fasst Blende und Verschlusszeit zu einer Zahl zusammen, die die Lichtmenge einer Aufnahme beschreibt. EV 15 entspricht z. B. einem sonnigen Tag, EV 5 einem dunklen Innenraum.</p></details>
+        <details class="faq-item"><summary>Wie viel mehr Licht lässt Blende f/2.8 gegenüber f/5.6 durch?</summary><p>f/2.8 lässt bei gleicher Zeit etwa 4× so viel Licht durch wie f/5.6 (2 Blendenstufen Unterschied, jede Stufe verdoppelt oder halbiert die Lichtmenge).</p></details>
+        <details class="faq-item"><summary>Wie hängen ISO 100 und ISO 1600 zusammen?</summary><p>ISO 1600 ist 4 Blendenstufen (2⁴ = 16-fach) empfindlicher als ISO 100, benötigt also nur ein Sechzehntel der Lichtmenge für dieselbe Belichtung – allerdings meist mit deutlich mehr Bildrauschen.</p></details>
+        <details class="faq-item"><summary>Was ist eine äquivalente Belichtung?</summary><p>Zwei Kombinationen aus Blende, Zeit und ISO sind äquivalent, wenn sie dieselbe Lichtmenge auf den Sensor lassen (gleicher EV). Wird die Blende geschlossen (mehr Tiefenschärfe), muss die Verschlusszeit verlängert oder die ISO erhöht werden, um dieselbe Belichtung zu erhalten.</p></details>
+        <details class="faq-item"><summary>Was ist das Belichtungsdreieck?</summary><p>Blende, Verschlusszeit und ISO bilden zusammen das Belichtungsdreieck: Jede Änderung eines Werts erfordert eine Anpassung der anderen, um dieselbe Belichtung zu erhalten – gleichzeitig beeinflusst jeder Wert auch Tiefenschärfe (Blende), Bewegungsunschärfe (Zeit) und Bildrauschen (ISO).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="index.html">Alle Umrechner →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const apertureInput = document.getElementById('apertureInput');
+    const shutterInput = document.getElementById('shutterInput');
+    const isoInput = document.getElementById('isoInput');
+    const evResult = document.getElementById('evResult');
+    const evCondition = document.getElementById('evCondition');
+
+    function calcEv() {
+      const n = parseFloat(apertureInput.value);
+      const t = parseFloat(shutterInput.value);
+      const iso = parseFloat(isoInput.value);
+      if (![n, t, iso].every(Number.isFinite) || n <= 0 || t <= 0 || iso <= 0) {
+        evResult.textContent = '–';
+        return;
+      }
+      const ev = Math.log2((n * n) / t / (iso / 100));
+      evResult.textContent = formatNumber(ev, 2);
+      evCondition.textContent = 'Belichtungswert (EV, bezogen auf ISO 100)';
+    }
+    [apertureInput, shutterInput, isoInput].forEach(el => el.addEventListener('input', calcEv));
+    calcEv();
+
+    const curAperture = document.getElementById('curAperture');
+    const curShutter = document.getElementById('curShutter');
+    const curIso = document.getElementById('curIso');
+    const newAperture = document.getElementById('newAperture');
+    const newIso = document.getElementById('newIso');
+    const equivResult = document.getElementById('equivResult');
+
+    function formatShutter(t) {
+      if (t >= 1) return formatNumber(t, 2) + ' s';
+      const denom = 1 / t;
+      return '1/' + formatNumber(denom, denom < 10 ? 1 : 0) + ' s';
+    }
+
+    function calcEquiv() {
+      const n1 = parseFloat(curAperture.value);
+      const t1 = parseFloat(curShutter.value);
+      const iso1 = parseFloat(curIso.value);
+      const n2 = parseFloat(newAperture.value);
+      const iso2 = parseFloat(newIso.value);
+      if (![n1, t1, iso1, n2, iso2].every(Number.isFinite) || n1 <= 0 || t1 <= 0 || iso1 <= 0 || n2 <= 0 || iso2 <= 0) {
+        equivResult.textContent = '–';
+        return;
+      }
+      const t2 = t1 * (n2 * n2) / (n1 * n1) * (iso1 / iso2);
+      equivResult.textContent = formatShutter(t2);
+    }
+    [curAperture, curShutter, curIso, newAperture, newIso].forEach(el => el.addEventListener('input', calcEquiv));
+    calcEquiv();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="sw-register.js" defer></script>
+</body>
+</html>

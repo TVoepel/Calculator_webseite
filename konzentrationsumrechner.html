@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr</title>
-  <meta name="description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
+  <meta name="description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, sowie Molalität (mol/kg). Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
@@ -20,13 +20,13 @@
   <meta property="og:site_name" content="Einheitenrechner" />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:title" content="Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr" />
-  <meta property="og:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
+  <meta property="og:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, sowie Molalität (mol/kg). Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
   <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Konzentrationsumrechner – mol/L, g/L, ppm, mg/dL & mehr" />
-  <meta name="twitter:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
+  <meta name="twitter:description" content="Chemische Konzentrationen umrechnen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, sowie Molalität (mol/kg). Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.)." />
   <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
@@ -61,7 +61,7 @@
       "@type": "WebApplication",
       "name": "Konzentrationsumrechner",
       "url": "https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html",
-      "description": "Chemische Konzentrationen umrechnen: mol/L, mmol/L, µmol/L, g/L, mg/L, mg/dL, mg/mL, ppm. Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.).",
+      "description": "Chemische Konzentrationen umrechnen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, sowie Molalität (mol/kg). Mit Molmassen-Berechnung aus Formel oder Verbindungsname (Nitrat, Sulfat, Phosphat, Ammonium, Glutamat, Kreatinin u.v.m.).",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any (webbasiert)",
       "inLanguage": "de",
@@ -135,6 +135,14 @@
             "@type": "Answer",
             "text": "Praktisch nicht: Die Elektronenmasse ist im Vergleich zur Gesamtmasse eines Ions vernachlässigbar klein, weshalb Molmassen von Ionen wie üblich aus der Summe der Atommassen berechnet werden."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Molarität und Molalität?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Molarität (mol/L) bezieht die Stoffmenge auf das Volumen der fertigen Lösung, Molalität (mol/kg) auf die Masse des reinen Lösungsmittels. Molalität ist temperaturunabhängig, Molarität leicht temperaturabhängig. Die Umrechnung zwischen beiden benötigt zusätzlich die Dichte der Lösung."
+          }
         }
       ]
     }
@@ -176,6 +184,14 @@
             </div>
           </div>
           <div class="status-line" id="substanceStatus"></div>
+
+          <div class="row" id="densityRow" style="display:none;">
+            <div>
+              <label for="densityInput">Lösungsdichte ρ (kg/L, nur für Molalität)</label>
+              <input id="densityInput" type="number" step="any" min="0" value="1.000" />
+            </div>
+            <div class="status-line" style="align-self:end;">Näherung für verdünnte wässrige Lösungen: ρ ≈ 1,00 kg/L</div>
+          </div>
 
           <div class="row" style="margin-top: var(--space-2);">
             <div>
@@ -230,6 +246,7 @@
         <button type="button" data-preset="Ammonium,0.5,mg_l,umol_l">Ammonium: 0,5 mg/L in µmol/L</button>
         <button type="button" data-preset="Kreatinin,1.2,mg_dl,umol_l">Kreatinin: 1,2 mg/dL in µmol/L</button>
         <button type="button" data-preset="Glutamin,5,mg_dl,mmol_l">Glutamin: 5 mg/dL in mmol/L</button>
+        <button type="button" data-preset="NaCl,58.44,g_l,mol_kg">NaCl: 58,44 g/L in mol/kg (Molalität)</button>
       </div>
     </section>
 
@@ -238,6 +255,10 @@
       <div class="formula">Masse-Konzentration [g/L] = Molare Konzentration [mol/L] × Molmasse [g/mol]
 Molare Konzentration [mol/L] = Masse-Konzentration [g/L] ÷ Molmasse [g/mol]
 
+Molalität ↔ Molarität (zusätzlich Lösungsdichte ρ in kg/L nötig):
+Molarität c [mol/L] = Molalität b [mol/kg] × ρ ÷ (1 + b × Molmasse ÷ 1000)
+Molalität b [mol/kg] = Molarität c [mol/L] ÷ (ρ − c × Molmasse ÷ 1000)
+
 Formel-Syntax:
 - Elementsymbole großgeschrieben, optional 2. Buchstabe klein (Na, Cl, Fe, Ca)
 - Klammern ( ) und [ ] mit Multiplikator, z. B. Ca3(PO4)2, Fe2(SO4)3
@@ -245,13 +266,14 @@ Formel-Syntax:
 - Ladungen optional mit ^, z. B. SO4^2-, NH4^+ (Ladung ändert die Molmasse nicht)</div>
       <p class="note">Für ppm/ppb wird die für verdünnte wässrige Lösungen übliche Näherung 1 ppm ≈ 1 mg/L (Dichte der Lösung ≈ 1 kg/L) verwendet. Bei stark konzentrierten Lösungen, anderen Lösungsmitteln oder Gasgemischen (ppm nach Volumen) gilt diese Näherung nicht.</p>
       <p class="note">Kontrollrechnung: Für Kreatinin (M = 113,12 g/mol) ergibt sich der in der Klinischen Chemie bekannte Umrechnungsfaktor µmol/L = mg/dL × 88,4 – stimmt mit diesem Rechner exakt überein.</p>
+      <p class="note">Die Molalität bezieht sich auf die Masse des <strong>Lösungsmittels</strong> (mol/kg), die Molarität auf das Volumen der <strong>Lösung</strong> (mol/L) – deshalb wird für die Umrechnung zusätzlich die Lösungsdichte benötigt. Für verdünnte wässrige Lösungen ist ρ ≈ 1,00 kg/L eine übliche Näherung; bei konzentrierteren Lösungen weicht die tatsächliche Dichte spürbar davon ab.</p>
           <p class="source-links">Quellen: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Periodensystem & Standard-Atomgewichte</a>, <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI-Broschüre (Mol-Definition)</a>, <a href="https://de.wikipedia.org/wiki/Stoffmengenkonzentration" target="_blank" rel="noopener noreferrer">Wikipedia – Stoffmengenkonzentration</a></p>
     </section>
 
     <section class="card seo-card">
       <h2 class="section-title">Alle unterstützten Konzentrationseinheiten</h2>
       <div class="seo-text">
-        <p>Molare Einheiten: mol/L, mmol/L, µmol/L, nmol/L. Masseeinheiten: g/L, mg/L, µg/L, mg/dL, mg/mL, µg/mL, ppm, ppb.</p>
+        <p>Molare Einheiten: mol/L, mmol/L, µmol/L, nmol/L. Masseeinheiten: g/L, mg/L, µg/L, mg/dL, mg/mL, µg/mL, ppm, ppb. Molale Einheiten: mol/kg, mmol/kg (benötigt zusätzlich die Lösungsdichte).</p>
         <p>Eingebaute Verbindungen: Nitrat, Nitrit, Sulfat, Phosphat, Ammonium, Glutamat, Glutamin, Kreatinin, Kreatin. Alle weiteren Stoffe lassen sich als chemische Formel (z. B. NaCl, C6H12O6, CaCO3) oder direkt als Zahlenwert der Molmasse eingeben.</p>
       </div>
     </section>
@@ -273,6 +295,7 @@ Formel-Syntax:
         <details class="faq-item"><summary>Was bedeutet ppm bei Wasserwerten?</summary><p>ppm (parts per million) entspricht bei verdünnten wässrigen Lösungen näherungsweise mg/L, da die Dichte von Wasser nahe 1 kg/L liegt. Bei anderen Lösungsmitteln oder hohen Konzentrationen gilt diese Näherung nicht mehr.</p></details>
         <details class="faq-item"><summary>Wie berechnet man die Molmasse eines Hydrats wie MgSO4·7H2O?</summary><p>Man addiert die Molmasse der Grundverbindung (MgSO₄) und die Molmasse des Kristallwassers, multipliziert mit der Anzahl der Wassermoleküle (hier 7 × 18,015 g/mol für 7 H₂O).</p></details>
         <details class="faq-item"><summary>Ändert die Ladung eines Ions (z. B. SO4²⁻) die Molmasse?</summary><p>Praktisch nicht: Die Elektronenmasse ist im Vergleich zur Gesamtmasse eines Ions vernachlässigbar klein, weshalb Molmassen von Ionen wie üblich aus der Summe der Atommassen berechnet werden.</p></details>
+        <details class="faq-item"><summary>Was ist der Unterschied zwischen Molarität und Molalität?</summary><p>Molarität (mol/L) bezieht die Stoffmenge auf das Volumen der fertigen Lösung, Molalität (mol/kg) auf die Masse des reinen Lösungsmittels. Molalität ist temperaturunabhängig (Masse ändert sich nicht mit der Temperatur), Molarität dagegen leicht temperaturabhängig, da sich Flüssigkeitsvolumen mit der Temperatur ändert. Die Umrechnung zwischen beiden benötigt zusätzlich die Dichte der Lösung.</p></details>
       </div>
     </section>
 
@@ -444,6 +467,13 @@ Formel-Syntax:
           { key: 'ppm', label: 'ppm (≈ mg/L in Wasser)', kind: 'mass', factor: 0.001 },
           { key: 'ppb', label: 'ppb (≈ µg/L in Wasser)', kind: 'mass', factor: 0.000001 }
         ]
+      },
+      {
+        label: 'Molal (benötigt Molmasse UND Lösungsdichte)',
+        units: [
+          { key: 'mol_kg', label: 'mol/kg (molal)', kind: 'molal', factor: 1 },
+          { key: 'mmol_kg', label: 'mmol/kg (molal)', kind: 'molal', factor: 0.001 }
+        ]
       }
     ];
 
@@ -452,6 +482,8 @@ Formel-Syntax:
 
     const substanceInput = document.getElementById('substanceInput');
     const molarMassInput = document.getElementById('molarMassInput');
+    const densityInput = document.getElementById('densityInput');
+    const densityRow = document.getElementById('densityRow');
     const substanceStatus = document.getElementById('substanceStatus');
     const fromValue = document.getElementById('fromValue');
     const toValue = document.getElementById('toValue');
@@ -501,10 +533,32 @@ Formel-Syntax:
       convert();
     }
 
+    // Rechnet eine beliebige Einheit in die molare Basis (mol/L) um.
+    // Molar: direkter Faktor. Masse: über Molmasse M. Molal: über Molmasse M UND Lösungsdichte ρ (kg/L),
+    // Formel: c [mol/L] = b [mol/kg] × ρ [kg/L] / (1 + b × M / 1000)
+    function toMolarBase(value, unit, M, rho) {
+      const raw = value * unit.factor;
+      if (unit.kind === 'molar') return raw;
+      if (unit.kind === 'mass') return raw / M;
+      // molal
+      return (raw * rho) / (1 + (raw * M) / 1000);
+    }
+
+    // Rechnet von der molaren Basis (mol/L) in die Zieleinheit um (Umkehrung von toMolarBase).
+    // Molal-Umkehrung: b [mol/kg] = c [mol/L] / (ρ − c × M / 1000)
+    function fromMolarBase(molPerL, unit, M, rho) {
+      if (unit.kind === 'molar') return molPerL / unit.factor;
+      if (unit.kind === 'mass') return (molPerL * M) / unit.factor;
+      const denom = rho - (molPerL * M) / 1000;
+      const b = molPerL / denom;
+      return b / unit.factor;
+    }
+
     function convert() {
       const value = parseFloat(fromValue.value);
       const from = units[fromUnit.value];
       const to = units[toUnit.value];
+      densityRow.style.display = (from.kind === 'molal' || to.kind === 'molal') ? 'grid' : 'none';
       if (Number.isNaN(value)) {
         toValue.value = '';
         resultText.textContent = 'Bitte einen gültigen Zahlenwert eingeben.';
@@ -514,20 +568,22 @@ Formel-Syntax:
       if (from.kind === to.kind) {
         result = (value * from.factor) / to.factor;
       } else {
+        const needsM = from.kind !== 'molar' || to.kind !== 'molar';
+        const needsRho = from.kind === 'molal' || to.kind === 'molal';
         const M = parseFloat(molarMassInput.value);
-        if (!Number.isFinite(M) || M <= 0) {
+        if (needsM && (!Number.isFinite(M) || M <= 0)) {
           toValue.value = '';
-          resultText.textContent = 'Für die Umrechnung zwischen Mol- und Masseeinheiten wird eine gültige Molmasse benötigt (siehe Feld oben rechts).';
+          resultText.textContent = 'Für diese Umrechnung wird eine gültige Molmasse benötigt (siehe Feld oben rechts).';
           return;
         }
-        if (from.kind === 'molar' && to.kind === 'mass') {
-          const gPerL = value * from.factor * M;
-          result = gPerL / to.factor;
-        } else {
-          const gPerL = value * from.factor;
-          const molPerL = gPerL / M;
-          result = molPerL / to.factor;
+        const rho = parseFloat(densityInput.value);
+        if (needsRho && (!Number.isFinite(rho) || rho <= 0)) {
+          toValue.value = '';
+          resultText.textContent = 'Für die Molalität wird zusätzlich eine gültige Lösungsdichte (kg/L) benötigt.';
+          return;
         }
+        const molPerL = toMolarBase(value, from, M, rho);
+        result = fromMolarBase(molPerL, to, M, rho);
       }
       toValue.value = formatNumber(result, 6);
       resultText.textContent = `${formatNumber(value, 6)} ${from.label} = ${formatNumber(result, 6)} ${to.label}`;
@@ -540,7 +596,7 @@ Formel-Syntax:
       convert();
     });
 
-    [fromValue, fromUnit, toUnit, molarMassInput].forEach(el => el.addEventListener('input', convert));
+    [fromValue, fromUnit, toUnit, molarMassInput, densityInput].forEach(el => el.addEventListener('input', convert));
     substanceInput.addEventListener('input', updateSubstance);
 
     document.querySelectorAll('[data-preset]').forEach(btn => {
@@ -560,5 +616,6 @@ Formel-Syntax:
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="sw-register.js" defer></script>
 </body>
 </html>

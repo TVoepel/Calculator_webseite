@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Alkoholgehalt-Umrechner – Vol% ↔ US/UK Proof</title>
+  <meta name="description" content="Alkoholgehalt umrechnen: Vol% (ABV) in US Proof und UK Proof – plus Rechner für reine Alkoholmenge (mL/Gramm) aus Volumen und Vol%." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <meta name="theme-color" content="#6d4c41" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Alkoholgehalt-Umrechner – Vol% ↔ US/UK Proof" />
+  <meta property="og:description" content="Alkoholgehalt umrechnen: Vol% (ABV) in US Proof und UK Proof, plus reine Alkoholmenge berechnen." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alkoholgehalt-Umrechner – Vol% ↔ US/UK Proof" />
+  <meta name="twitter:description" content="Alkoholgehalt umrechnen und reine Alkoholmenge berechnen." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #6d4c41;
+      --color-primary-hover: #442f28;
+      --color-primary-soft: #e6dbd7;
+    }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Alkoholgehalt-Umrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html",
+      "description": "Alkoholgehalt umrechnen: Vol% (ABV) in US Proof und UK Proof, plus reine Alkoholmenge berechnen.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": { "@type": "WebSite", "name": "Einheitenrechner", "url": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Alkoholgehalt-Umrechner", "item": "https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Was ist der Unterschied zwischen Vol% und Proof?", "acceptedAnswer": { "@type": "Answer", "text": "Vol% gibt den Alkoholanteil direkt an (z. B. 40 % Vodka = 40 mL Alkohol pro 100 mL). US Proof ist das Doppelte des Vol%-Werts (40 % = 80 Proof), UK Proof (historisch) entspricht Vol% × 1,75." } },
+        { "@type": "Question", "name": "Wie viel Gramm reiner Alkohol sind in einem Bier?", "acceptedAnswer": { "@type": "Answer", "text": "500 mL Bier mit 5 % Vol enthalten 500 × 0,05 = 25 mL reinen Alkohol. Mit der Ethanoldichte von ca. 0,789 g/mL entspricht das etwa 19,7 g reinem Alkohol." } },
+        { "@type": "Question", "name": "Wie verdünnt man Alkohol auf eine niedrigere Konzentration?", "acceptedAnswer": { "@type": "Answer", "text": "Mit der Verdünnungsformel c₁ × V₁ = c₂ × V₂. Beispiel: 1 L 50%iger Schnaps ergibt mit 0,25 L Wasser 1,25 L bei 40 % Vol." } },
+        { "@type": "Question", "name": "Wie misst man den Alkoholgehalt beim Hausbrennen?", "acceptedAnswer": { "@type": "Answer", "text": "Mit einem Alkoholmeter (Spindel) direkt im Destillat oder rechnerisch aus der Dichte vor und nach der Gärung. Eine gängige Faustformel lautet ABV ≈ (Stammwürze − Restextrakt) × 131,25 – eine vereinfachte Näherung, keine exakte physikalische Formel." } },
+        { "@type": "Question", "name": "Warum unterscheiden sich US Proof und UK Proof?", "acceptedAnswer": { "@type": "Answer", "text": "Die USA definieren Proof seit 1848 exakt als das Doppelte des Vol%-Werts. Das historische britische Proof-System (vor 1980) basierte auf einer Schießpulver-Testmethode und ergab den Faktor 1,75 – seit 1980 verwendet auch Großbritannien nur noch Vol%." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">%</span>
+        <span>Alkoholgehalt-Umrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Küche &amp; Genuss</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Alkoholgehalt umrechnen: Vol% ↔ Proof</h1>
+      <p>Rechne zwischen Vol% (ABV), US Proof und historischem UK Proof um – und berechne die reine Alkoholmenge in mL und Gramm aus Getränkevolumen und Vol%.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Umrechner Vol% ↔ Proof</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Wert</label>
+              <input id="fromValue" type="number" value="40" step="any" min="0" />
+            </div>
+            <div>
+              <label for="fromUnit">Von</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Einheiten tauschen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Ergebnis</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Nach</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Reine Alkoholmenge berechnen</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="volumeInput">Getränkevolumen (mL)</label>
+              <input id="volumeInput" type="number" value="500" step="any" min="0" />
+            </div>
+            <div>
+              <label for="abvInput">Alkoholgehalt (Vol%)</label>
+              <input id="abvInput" type="number" value="5" step="any" min="0" max="100" />
+            </div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="alcoholResult">–</span>
+            <span>Reiner Alkohol (mL / Gramm)</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Beliebte Umrechnungen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="vol,us_proof,40">40 Vol% in US Proof</button>
+        <button type="button" data-preset="us_proof,vol,80">80 US Proof in Vol%</button>
+        <button type="button" data-preset="vol,uk_proof,57">57 Vol% in UK Proof</button>
+        <button type="button" data-preset="uk_proof,vol,100">100 UK Proof in Vol%</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Quellen</h2>
+      <div class="formula">Vol% (ABV) = Alkoholvolumen ÷ Gesamtvolumen × 100
+
+US Proof = Vol% × 2
+UK Proof (historisch, vor 1980) = Vol% × 1,75
+
+Reine Alkoholmenge:
+mL Alkohol = Getränkevolumen [mL] × Vol% ÷ 100
+Gramm Alkohol = mL Alkohol × 0,789 (Dichte Ethanol bei 20 °C)</div>
+      <p class="note">Eine gängige Faustformel beim Hausbrauen/-brennen lautet ABV ≈ (Stammwürze − Restextrakt) × 131,25 – das ist eine vereinfachte, in der Praxis übliche Näherung und keine exakte physikalische Formel.</p>
+      <p class="source-links">Quellen: <a href="https://de.wikipedia.org/wiki/Alkoholgehalt" target="_blank" rel="noopener noreferrer">Wikipedia – Alkoholgehalt</a>, <a href="https://de.wikipedia.org/wiki/Ethanol" target="_blank" rel="noopener noreferrer">Wikipedia – Ethanol (Dichte)</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        Dieser Rechner dient allgemeinen Informationszwecken. Er ersetzt keine amtliche Messung (z. B. für Steuerzwecke) und ist kein Aufruf zum Alkoholkonsum – bitte konsumiere verantwortungsvoll.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug</h2>
+      <div class="seo-text">
+        <p>US-amerikanische Spirituosenflaschen geben den Alkoholgehalt oft zusätzlich in Proof an – die Umrechnung hilft beim Vergleich mit europäischen Vol%-Angaben.</p>
+        <p>Cocktail-Rezepte lassen sich damit auf den tatsächlichen Alkoholgehalt im fertigen Getränk umrechnen, z. B. 50 mL Rum (40 %) in 200 mL Cocktail ergibt 10 % Vol im Gesamtgetränk.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Was ist der Unterschied zwischen Vol% und Proof?</summary><p>Vol% gibt den Alkoholanteil direkt an (z. B. 40 % Vodka = 40 mL Alkohol pro 100 mL). US Proof ist das Doppelte des Vol%-Werts (40 % = 80 Proof), UK Proof (historisch) entspricht Vol% × 1,75.</p></details>
+        <details class="faq-item"><summary>Wie viel Gramm reiner Alkohol sind in einem Bier?</summary><p>500 mL Bier mit 5 % Vol enthalten 500 × 0,05 = 25 mL reinen Alkohol. Mit der Ethanoldichte von ca. 0,789 g/mL entspricht das etwa 19,7 g reinem Alkohol.</p></details>
+        <details class="faq-item"><summary>Wie verdünnt man Alkohol auf eine niedrigere Konzentration?</summary><p>Mit der Verdünnungsformel c₁ × V₁ = c₂ × V₂. Beispiel: 1 L 50%iger Schnaps ergibt mit 0,25 L Wasser 1,25 L bei 40 % Vol.</p></details>
+        <details class="faq-item"><summary>Wie misst man den Alkoholgehalt beim Hausbrennen?</summary><p>Mit einem Alkoholmeter (Spindel) direkt im Destillat oder rechnerisch aus der Dichte vor und nach der Gärung. Eine gängige Faustformel lautet ABV ≈ (Stammwürze − Restextrakt) × 131,25 – eine vereinfachte Näherung, keine exakte physikalische Formel.</p></details>
+        <details class="faq-item"><summary>Warum unterscheiden sich US Proof und UK Proof?</summary><p>Die USA definieren Proof seit 1848 exakt als das Doppelte des Vol%-Werts. Das historische britische Proof-System (vor 1980) basierte auf einer Schießpulver-Testmethode und ergab den Faktor 1,75 – seit 1980 verwendet auch Großbritannien nur noch Vol%.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Volumenumrechner →</a>
+        <a href="dichte.html">Dichte-Umrechner →</a>
+        <a href="konzentrationsumrechner.html">Konzentrationsumrechner →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const units = {
+      vol: { label: 'Vol% (ABV)', factor: 1 },
+      us_proof: { label: 'US Proof', factor: 0.5 },
+      uk_proof: { label: 'UK Proof (historisch)', factor: 1 / 1.75 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'vol',
+      defaultTo: 'us_proof',
+      decimals: 4
+    });
+
+    const volumeInput = document.getElementById('volumeInput');
+    const abvInput = document.getElementById('abvInput');
+    const alcoholResult = document.getElementById('alcoholResult');
+    const ETHANOL_DENSITY = 0.789;
+
+    function calcAlcohol() {
+      const v = parseFloat(volumeInput.value);
+      const abv = parseFloat(abvInput.value);
+      if (!Number.isFinite(v) || !Number.isFinite(abv)) {
+        alcoholResult.textContent = '–';
+        return;
+      }
+      const mlAlcohol = v * abv / 100;
+      const gAlcohol = mlAlcohol * ETHANOL_DENSITY;
+      alcoholResult.textContent = `${formatNumber(mlAlcohol, 1)} mL / ${formatNumber(gAlcohol, 1)} g`;
+    }
+
+    [volumeInput, abvInput].forEach(el => el.addEventListener('input', calcAlcohol));
+    calcAlcohol();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="sw-register.js" defer></script>
+</body>
+</html>

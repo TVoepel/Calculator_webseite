@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BMI &amp; Kalorienbedarf-Rechner – BMI, BMR, TDEE</title>
+  <meta name="description" content="BMI kostenlos berechnen, WHO-Kategorien einordnen und täglichen Kalorienbedarf (BMR/TDEE) nach Mifflin-St Jeor und Harris-Benedict ermitteln." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta name="theme-color" content="#4527a0" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="BMI &amp; Kalorienbedarf-Rechner – BMI, BMR, TDEE" />
+  <meta property="og:description" content="BMI kostenlos berechnen, WHO-Kategorien einordnen und täglichen Kalorienbedarf (BMR/TDEE) ermitteln." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BMI &amp; Kalorienbedarf-Rechner" />
+  <meta name="twitter:description" content="BMI, BMR und täglichen Kalorienbedarf kostenlos berechnen." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4527a0;
+      --color-primary-hover: #2c1a68;
+      --color-primary-soft: #e3dbf5;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BMI & Kalorienbedarf-Rechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/bmi.html",
+      "description": "BMI kostenlos berechnen, WHO-Kategorien einordnen und täglichen Kalorienbedarf (BMR/TDEE) ermitteln.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": { "@type": "WebSite", "name": "Einheitenrechner", "url": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://tvoepel.github.io/Calculator_webseite/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "BMI & Kalorienbedarf-Rechner", "item": "https://tvoepel.github.io/Calculator_webseite/bmi.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie berechne ich meinen BMI?", "acceptedAnswer": { "@type": "Answer", "text": "BMI = Gewicht (kg) ÷ Größe (m)². Beispiel: 75 kg ÷ (1,75 m)² = 24,5 (Normalgewicht nach WHO-Einteilung)." } },
+        { "@type": "Question", "name": "Was sind die BMI-Kategorien nach WHO?", "acceptedAnswer": { "@type": "Answer", "text": "Unter 18,5 Untergewicht, 18,5–24,9 Normalgewicht, 25–29,9 Übergewicht (Präadipositas), 30–34,9 Adipositas Grad I, 35–39,9 Adipositas Grad II, ab 40 Adipositas Grad III." } },
+        { "@type": "Question", "name": "Was ist der Grundumsatz (BMR)?", "acceptedAnswer": { "@type": "Answer", "text": "Der Grundumsatz (Basal Metabolic Rate) ist die Energiemenge, die der Körper in völliger Ruhe für lebenswichtige Funktionen benötigt. Die Mifflin-St-Jeor-Formel (1990) gilt heute als genauer als die ältere Harris-Benedict-Formel." } },
+        { "@type": "Question", "name": "Wie berechne ich meinen täglichen Kalorienbedarf (TDEE)?", "acceptedAnswer": { "@type": "Answer", "text": "TDEE = Grundumsatz (BMR) × Aktivitätsfaktor. Der Faktor reicht von 1,2 (kaum Bewegung) bis 1,9 (sehr harte körperliche Arbeit plus Training)." } },
+        { "@type": "Question", "name": "Ist der BMI ein zuverlässiger Gesundheitsindikator?", "acceptedAnswer": { "@type": "Answer", "text": "Der BMI berücksichtigt weder Muskelanteil noch Körperbau oder Fettverteilung und kann bei sehr muskulösen oder sehr schlanken Personen irreführend sein. Er dient als grobe Orientierung, nicht als medizinische Diagnose." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">B</span>
+        <span>BMI &amp; Kalorienbedarf</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Gesundheit &amp; Fitness</span>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>BMI, Grundumsatz &amp; Kalorienbedarf berechnen</h1>
+      <p>Berechne deinen Body-Mass-Index mit WHO-Einordnung sowie deinen täglichen Kalorienbedarf (Grundumsatz × Aktivitätsfaktor) nach der modernen Mifflin-St-Jeor-Formel.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Eingaben</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="weightInput">Gewicht (kg)</label>
+              <input id="weightInput" type="number" value="75" step="0.1" min="1" />
+            </div>
+            <div>
+              <label for="heightInput">Größe (cm)</label>
+              <input id="heightInput" type="number" value="175" step="0.1" min="50" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="ageInput">Alter (Jahre)</label>
+              <input id="ageInput" type="number" value="35" step="1" min="1" max="120" />
+            </div>
+            <div>
+              <label for="genderInput">Geschlecht (für BMR-Formel)</label>
+              <select id="genderInput">
+                <option value="m">Männlich</option>
+                <option value="f">Weiblich</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div style="grid-column: 1 / -1;">
+              <label for="activityInput">Aktivitätslevel</label>
+              <select id="activityInput">
+                <option value="1.2">Sitzend, kaum Bewegung (1,2)</option>
+                <option value="1.375">Leicht aktiv, 1–3× Sport/Woche (1,375)</option>
+                <option value="1.55" selected>Mäßig aktiv, 3–5× Sport/Woche (1,55)</option>
+                <option value="1.725">Sehr aktiv, 6–7× Sport/Woche (1,725)</option>
+                <option value="1.9">Extrem aktiv, körperliche Arbeit + Training (1,9)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-row">
+              <span class="result-highlight" id="bmiResult">–</span>
+              <span id="bmiCategory">BMI &amp; Kategorie</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrResult">–</span>
+              <span>Grundumsatz (Mifflin-St Jeor)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrHbResult">–</span>
+              <span>Grundumsatz (Harris-Benedict, zum Vergleich)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="tdeeResult">–</span>
+              <span>Täglicher Kalorienbedarf (TDEE)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">BMI-Kategorien (WHO)</h2>
+        <table class="ref-table">
+          <thead><tr><th>BMI</th><th>Kategorie</th></tr></thead>
+          <tbody>
+            <tr><td>&lt; 18,5</td><td>Untergewicht</td></tr>
+            <tr><td>18,5–24,9</td><td>Normalgewicht</td></tr>
+            <tr><td>25,0–29,9</td><td>Übergewicht (Präadipositas)</td></tr>
+            <tr><td>30,0–34,9</td><td>Adipositas Grad I</td></tr>
+            <tr><td>35,0–39,9</td><td>Adipositas Grad II</td></tr>
+            <tr><td>≥ 40,0</td><td>Adipositas Grad III</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formeln &amp; Quellen</h2>
+      <div class="formula">BMI = Gewicht [kg] ÷ Größe [m]²
+
+Mifflin-St Jeor (1990), Grundumsatz in kcal/Tag:
+  Männer: BMR = 10 × Gewicht[kg] + 6,25 × Größe[cm] − 5 × Alter − 5
+  Frauen:  BMR = 10 × Gewicht[kg] + 6,25 × Größe[cm] − 5 × Alter − 161
+
+Harris-Benedict, revidiert 1984 (zum Vergleich):
+  Männer: BMR = 88,362 + 13,397 × Gewicht + 4,799 × Größe − 5,677 × Alter
+  Frauen:  BMR = 447,593 + 9,247 × Gewicht + 3,098 × Größe − 4,330 × Alter
+
+TDEE = BMR × Aktivitätsfaktor (1,2 bis 1,9)</div>
+      <p class="note">Die Mifflin-St-Jeor-Formel gilt in der Ernährungswissenschaft heute allgemein als genauer als die ältere Harris-Benedict-Formel und wird hier als primäres Ergebnis angezeigt.</p>
+      <p class="source-links">Quellen: <a href="https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations" target="_blank" rel="noopener noreferrer">WHO – Body Mass Index</a>, <a href="https://de.wikipedia.org/wiki/Body-Mass-Index" target="_blank" rel="noopener noreferrer">Wikipedia – Body-Mass-Index</a>, <a href="https://de.wikipedia.org/wiki/Grundumsatz" target="_blank" rel="noopener noreferrer">Wikipedia – Grundumsatz</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ Diese Werte dienen ausschließlich der allgemeinen Orientierung und ersetzen keine ärztliche oder ernährungsberaterische Einschätzung. BMI und BMR berücksichtigen weder Muskelanteil noch individuelle gesundheitliche Faktoren. Bei Fragen zu deinem Körpergewicht oder Ernährungsplan wende dich an eine Ärztin, einen Arzt oder eine qualifizierte Ernährungsberatung.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug</h2>
+      <div class="seo-text">
+        <p>Für einen realistischen Gewichtsverlust gilt ein Kaloriendefizit von ca. 500 kcal/Tag als gängige Faustregel für rund 0,5 kg Gewichtsverlust pro Woche – dein TDEE ist dabei der Ausgangswert, von dem das Defizit abgezogen wird.</p>
+        <p>Kraftsportler und Ausdauersportler nutzen den TDEE häufig, um die passende Kalorienzufuhr für Muskelaufbau (leichter Überschuss) oder Definitionsphasen (Defizit) zu planen.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Wie berechne ich meinen BMI?</summary><p>BMI = Gewicht (kg) ÷ Größe (m)². Beispiel: 75 kg ÷ (1,75 m)² = 24,5 (Normalgewicht nach WHO-Einteilung).</p></details>
+        <details class="faq-item"><summary>Was sind die BMI-Kategorien nach WHO?</summary><p>Unter 18,5 Untergewicht, 18,5–24,9 Normalgewicht, 25–29,9 Übergewicht (Präadipositas), 30–34,9 Adipositas Grad I, 35–39,9 Adipositas Grad II, ab 40 Adipositas Grad III.</p></details>
+        <details class="faq-item"><summary>Was ist der Grundumsatz (BMR)?</summary><p>Der Grundumsatz (Basal Metabolic Rate) ist die Energiemenge, die der Körper in völliger Ruhe für lebenswichtige Funktionen benötigt. Die Mifflin-St-Jeor-Formel (1990) gilt heute als genauer als die ältere Harris-Benedict-Formel.</p></details>
+        <details class="faq-item"><summary>Wie berechne ich meinen täglichen Kalorienbedarf (TDEE)?</summary><p>TDEE = Grundumsatz (BMR) × Aktivitätsfaktor. Der Faktor reicht von 1,2 (kaum Bewegung) bis 1,9 (sehr harte körperliche Arbeit plus Training).</p></details>
+        <details class="faq-item"><summary>Ist der BMI ein zuverlässiger Gesundheitsindikator?</summary><p>Der BMI berücksichtigt weder Muskelanteil noch Körperbau oder Fettverteilung und kann bei sehr muskulösen oder sehr schlanken Personen irreführend sein. Er dient als grobe Orientierung, nicht als medizinische Diagnose.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="gewichtumrechner.html">Gewichtsumrechner →</a>
+        <a href="energieumrechner.html">Energieumrechner →</a>
+        <a href="blutzuckerumrechner.html">Blutzucker-Umrechner →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const heightInput = document.getElementById('heightInput');
+    const ageInput = document.getElementById('ageInput');
+    const genderInput = document.getElementById('genderInput');
+    const activityInput = document.getElementById('activityInput');
+    const bmiResult = document.getElementById('bmiResult');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmrResult = document.getElementById('bmrResult');
+    const bmrHbResult = document.getElementById('bmrHbResult');
+    const tdeeResult = document.getElementById('tdeeResult');
+
+    function bmiCategoryFor(bmi) {
+      if (bmi < 18.5) return 'Untergewicht';
+      if (bmi < 25) return 'Normalgewicht';
+      if (bmi < 30) return 'Übergewicht (Präadipositas)';
+      if (bmi < 35) return 'Adipositas Grad I';
+      if (bmi < 40) return 'Adipositas Grad II';
+      return 'Adipositas Grad III';
+    }
+
+    function calculate() {
+      const w = parseFloat(weightInput.value);
+      const hCm = parseFloat(heightInput.value);
+      const age = parseFloat(ageInput.value);
+      const gender = genderInput.value;
+      const activity = parseFloat(activityInput.value);
+
+      if (![w, hCm, age, activity].every(Number.isFinite) || w <= 0 || hCm <= 0 || age <= 0) {
+        bmiResult.textContent = '–';
+        bmiCategory.textContent = 'Bitte gültige Werte eingeben.';
+        bmrResult.textContent = '–';
+        bmrHbResult.textContent = '–';
+        tdeeResult.textContent = '–';
+        return;
+      }
+
+      const hM = hCm / 100;
+      const bmi = w / (hM * hM);
+      bmiResult.textContent = formatNumber(bmi, 1);
+      bmiCategory.textContent = `BMI-Kategorie (WHO): ${bmiCategoryFor(bmi)}`;
+
+      const bmr = gender === 'm'
+        ? 10 * w + 6.25 * hCm - 5 * age + 5
+        : 10 * w + 6.25 * hCm - 5 * age - 161;
+      bmrResult.textContent = `${formatNumber(bmr, 0)} kcal/Tag`;
+
+      const bmrHb = gender === 'm'
+        ? 88.362 + 13.397 * w + 4.799 * hCm - 5.677 * age
+        : 447.593 + 9.247 * w + 3.098 * hCm - 4.330 * age;
+      bmrHbResult.textContent = `${formatNumber(bmrHb, 0)} kcal/Tag`;
+
+      const tdee = bmr * activity;
+      tdeeResult.textContent = `${formatNumber(tdee, 0)} kcal/Tag`;
+    }
+
+    [weightInput, heightInput, ageInput, genderInput, activityInput].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="sw-register.js" defer></script>
+</body>
+</html>
