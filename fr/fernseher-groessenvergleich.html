@@ -296,10 +296,14 @@ Pour 16:9 : ratio largeur = 16, ratio hauteur = 9
 
         const boxWrap = document.createElement('div');
         boxWrap.className = 'tv-box-wrap';
+        boxWrap.style.width = pct + '%';
         const box = document.createElement('div');
         box.className = 'tv-box' + (r.isSelected ? '' : ' tv-box--ref');
-        box.style.width = pct + '%';
-        box.style.aspectRatio = `${d.widthCm} / ${d.heightCm}`;
+        // Astuce du "padding-top en pourcentage" au lieu de la propriété CSS
+        // aspect-ratio : fonctionne à l'identique dans tous les navigateurs, y
+        // compris Safari, qui peut silencieusement rejeter des valeurs
+        // aspect-ratio à décimales longues définies en JS.
+        box.style.paddingTop = ((d.heightCm / d.widthCm) * 100) + '%';
         boxWrap.appendChild(box);
 
         const info = document.createElement('div');
