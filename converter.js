@@ -1,7 +1,15 @@
-// Gemeinsame Umrechner-Engine für alle Einheitenrechner-Seiten.
+// Gemeinsame Umrechner-Engine für alle Einheitenrechner-Seiten (DE/NL/FR).
+const LOCALE_BY_LANG = { de: 'de-DE', nl: 'nl-NL', fr: 'fr-FR' };
+const INVALID_NUMBER_MSG = {
+  de: 'Bitte einen gültigen Zahlenwert eingeben.',
+  nl: 'Voer een geldige numerieke waarde in.',
+  fr: 'Veuillez saisir une valeur numérique valide.'
+};
+
 function formatNumber(num, maxFractionDigits = 10) {
   if (!Number.isFinite(num)) return '';
-  return new Intl.NumberFormat('de-DE', { maximumFractionDigits: maxFractionDigits }).format(num);
+  const locale = LOCALE_BY_LANG[document.documentElement.lang] || 'de-DE';
+  return new Intl.NumberFormat(locale, { maximumFractionDigits: maxFractionDigits }).format(num);
 }
 
 // units: { key: { label, ...beliebige Umrechnungsdaten } }
@@ -43,7 +51,7 @@ function createConverter({
     const value = parseFloat(fromValue.value);
     if (Number.isNaN(value)) {
       toValue.value = '';
-      if (resultText) resultText.textContent = 'Bitte einen gültigen Zahlenwert eingeben.';
+      if (resultText) resultText.textContent = INVALID_NUMBER_MSG[document.documentElement.lang] || INVALID_NUMBER_MSG.de;
       return;
     }
     const from = units[fromUnit.value];
