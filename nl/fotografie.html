@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fotografie-belichtingsrekenaar – EV, diafragma, tijd en ISO</title>
+  <meta name="description" content="Bereken de lichtwaarde (EV) uit diafragma, sluitertijd en ISO. Plus rekenaar voor equivalente belichting bij gewijzigd diafragma of ISO." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/fotografie.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <meta name="theme-color" content="#212121" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Fotografie-belichtingsrekenaar – EV, diafragma, tijd en ISO" />
+  <meta property="og:description" content="Bereken de lichtwaarde (EV) en de equivalente belichting bij gewijzigd diafragma of ISO." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fotografie-belichtingsrekenaar – EV, diafragma, tijd en ISO" />
+  <meta name="twitter:description" content="Bereken de lichtwaarde en de equivalente belichting." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #212121;
+      --color-primary-hover: #000000;
+      --color-primary-soft: #e0e0e0;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Fotografie-belichtingsrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html",
+      "description": "Bereken de lichtwaarde (EV) en de equivalente belichting bij gewijzigd diafragma of ISO.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": { "@type": "WebSite", "name": "Eenheden Omrekenen", "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startpagina", "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Fotografie-belichtingsrekenaar", "item": "https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wat is de lichtwaarde (EV)?", "acceptedAnswer": { "@type": "Answer", "text": "De lichtwaarde (Exposure Value) vat diafragma en sluitertijd samen in één getal dat de hoeveelheid licht van een opname beschrijft. EV 15 komt bijvoorbeeld overeen met een zonnige dag, EV 5 met een donkere binnenruimte." } },
+        { "@type": "Question", "name": "Hoeveel meer licht laat diafragma f/2.8 door ten opzichte van f/5.6?", "acceptedAnswer": { "@type": "Answer", "text": "f/2.8 laat bij dezelfde tijd ongeveer 4× zoveel licht door als f/5.6 (2 stops verschil, elke stop verdubbelt of halveert de hoeveelheid licht)." } },
+        { "@type": "Question", "name": "Hoe verhouden ISO 100 en ISO 1600 zich tot elkaar?", "acceptedAnswer": { "@type": "Answer", "text": "ISO 1600 is 4 stops (2⁴ = 16×) gevoeliger dan ISO 100 en heeft dus maar een zestiende van de hoeveelheid licht nodig voor dezelfde belichting – meestal wel met duidelijk meer beeldruis." } },
+        { "@type": "Question", "name": "Wat is een equivalente belichting?", "acceptedAnswer": { "@type": "Answer", "text": "Twee combinaties van diafragma, tijd en ISO zijn equivalent als ze dezelfde hoeveelheid licht op de sensor laten vallen (dezelfde EV). Wordt het diafragma kleiner gemaakt (meer scherptediepte), dan moet de sluitertijd worden verlengd of de ISO worden verhoogd om dezelfde belichting te krijgen." } },
+        { "@type": "Question", "name": "Wat is de belichtingsdriehoek?", "acceptedAnswer": { "@type": "Answer", "text": "Diafragma, sluitertijd en ISO vormen samen de belichtingsdriehoek: elke wijziging van één waarde vereist een aanpassing van de andere om dezelfde belichting te behouden – tegelijk beïnvloedt elke waarde ook de scherptediepte (diafragma), bewegingsonscherpte (tijd) en beeldruis (ISO)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">EV</span>
+        <span>Belichtingsrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Fotografie</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../fotografie.html" hreflang="de">DE</a>
+          <a href="fotografie.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/fotografie.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Lichtwaarde &amp; equivalente belichting berekenen</h1>
+      <p>Bereken de lichtwaarde (EV) uit diafragma, sluitertijd en ISO, en bepaal de bijbehorende nieuwe sluitertijd wanneer je het diafragma of de ISO wijzigt.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Lichtwaarde (EV) berekenen</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="apertureInput">Diafragma (f/)</label>
+              <input id="apertureInput" type="number" value="8" step="any" min="0.5" />
+            </div>
+            <div>
+              <label for="shutterInput">Sluitertijd (seconden)</label>
+              <input id="shutterInput" type="number" value="0.01" step="any" min="0.00001" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="isoInput">ISO</label>
+              <input id="isoInput" type="number" value="100" step="any" min="1" />
+            </div>
+            <div></div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="evResult">–</span>
+            <span id="evCondition">Belichtingswaarde (EV, ten opzichte van ISO 100)</span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Globale EV-richtwaarden</h2>
+        <table class="ref-table">
+          <thead><tr><th>EV</th><th>Lichtsituatie</th></tr></thead>
+          <tbody>
+            <tr><td>−6</td><td>Sterrenlicht</td></tr>
+            <tr><td>0</td><td>Volle maan</td></tr>
+            <tr><td>5</td><td>Interieur, normaal verlicht</td></tr>
+            <tr><td>9</td><td>Zonsondergang</td></tr>
+            <tr><td>12</td><td>Bewolkte dag</td></tr>
+            <tr><td>15</td><td>Zonnige dag (Sunny-16)</td></tr>
+            <tr><td>16</td><td>Strand/sneeuw, volle zon</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Globale richtwaarden ter oriëntatie – werkelijke lichtomstandigheden variëren sterk.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Equivalente belichting berekenen</h2>
+      <p class="note" style="margin-top:0;">Voer je huidige instellingen in en wijzig het diafragma of de ISO – de bijbehorende nieuwe sluitertijd voor dezelfde belichting wordt berekend.</p>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="curAperture">Huidig diafragma (f/)</label>
+            <input id="curAperture" type="number" value="8" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="curShutter">Huidige tijd (s)</label>
+            <input id="curShutter" type="number" value="0.01" step="any" min="0.00001" />
+          </div>
+          <div>
+            <label for="curIso">Huidige ISO</label>
+            <input id="curIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="newAperture">Nieuw diafragma (f/)</label>
+            <input id="newAperture" type="number" value="11" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="newIso">Nieuwe ISO</label>
+            <input id="newIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="equivResult">–</span>
+          <span>Benodigde nieuwe sluitertijd voor dezelfde belichting</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; bronnen</h2>
+      <div class="formula">EV (ten opzichte van ISO 100) = log₂(diafragmagetal² ÷ sluitertijd ÷ (ISO ÷ 100))
+
+Equivalente belichting (dezelfde EV):
+Nieuwe tijd = oude tijd × (nieuw diafragma² ÷ oud diafragma²) × (oude ISO ÷ nieuwe ISO)</div>
+      <p class="note">De klassieke diafragmareeks volgt stappen van √2: f/1.0 – 1.4 – 2 – 2.8 – 4 – 5.6 – 8 – 11 – 16 – 22 – 32. Elke stop halveert of verdubbelt de doorgelaten hoeveelheid licht.</p>
+      <p class="source-links">Bronnen: <a href="https://de.wikipedia.org/wiki/Lichtwert" target="_blank" rel="noopener noreferrer">Wikipedia – Lichtwaarde (EV) (DE)</a>, <a href="https://de.wikipedia.org/wiki/Blendenzahl" target="_blank" rel="noopener noreferrer">Wikipedia – Diafragmagetal (DE)</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast</h2>
+      <div class="seo-text">
+        <p>Bij de overstap van een objectief met f/2.8 naar een objectief met maximaal f/5.6 (2 stops donkerder) moet je de sluitertijd verviervoudigen of de ISO verviervoudigen om dezelfde belichting te krijgen.</p>
+        <p>Voor langetijdopnamen met ND-filters (bijv. 6 stops) helpt de equivalente belichting om van een normale sluitertijd naar de sterk verlengde tijd met filter om te rekenen.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Wat is de lichtwaarde (EV)?</summary><p>De lichtwaarde (Exposure Value) vat diafragma en sluitertijd samen in één getal dat de hoeveelheid licht van een opname beschrijft. EV 15 komt bijvoorbeeld overeen met een zonnige dag, EV 5 met een donkere binnenruimte.</p></details>
+        <details class="faq-item"><summary>Hoeveel meer licht laat diafragma f/2.8 door ten opzichte van f/5.6?</summary><p>f/2.8 laat bij dezelfde tijd ongeveer 4× zoveel licht door als f/5.6 (2 stops verschil, elke stop verdubbelt of halveert de hoeveelheid licht).</p></details>
+        <details class="faq-item"><summary>Hoe verhouden ISO 100 en ISO 1600 zich tot elkaar?</summary><p>ISO 1600 is 4 stops (2⁴ = 16×) gevoeliger dan ISO 100 en heeft dus maar een zestiende van de hoeveelheid licht nodig voor dezelfde belichting – meestal wel met duidelijk meer beeldruis.</p></details>
+        <details class="faq-item"><summary>Wat is een equivalente belichting?</summary><p>Twee combinaties van diafragma, tijd en ISO zijn equivalent als ze dezelfde hoeveelheid licht op de sensor laten vallen (dezelfde EV). Wordt het diafragma kleiner gemaakt (meer scherptediepte), dan moet de sluitertijd worden verlengd of de ISO worden verhoogd om dezelfde belichting te krijgen.</p></details>
+        <details class="faq-item"><summary>Wat is de belichtingsdriehoek?</summary><p>Diafragma, sluitertijd en ISO vormen samen de belichtingsdriehoek: elke wijziging van één waarde vereist een aanpassing van de andere om dezelfde belichting te behouden – tegelijk beïnvloedt elke waarde ook de scherptediepte (diafragma), bewegingsonscherpte (tijd) en beeldruis (ISO).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="index.html">Alle omrekentools →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const apertureInput = document.getElementById('apertureInput');
+    const shutterInput = document.getElementById('shutterInput');
+    const isoInput = document.getElementById('isoInput');
+    const evResult = document.getElementById('evResult');
+    const evCondition = document.getElementById('evCondition');
+
+    function calcEv() {
+      const n = parseFloat(apertureInput.value);
+      const t = parseFloat(shutterInput.value);
+      const iso = parseFloat(isoInput.value);
+      if (![n, t, iso].every(Number.isFinite) || n <= 0 || t <= 0 || iso <= 0) {
+        evResult.textContent = '–';
+        return;
+      }
+      const ev = Math.log2((n * n) / t / (iso / 100));
+      evResult.textContent = formatNumber(ev, 2);
+      evCondition.textContent = 'Belichtingswaarde (EV, ten opzichte van ISO 100)';
+    }
+    [apertureInput, shutterInput, isoInput].forEach(el => el.addEventListener('input', calcEv));
+    calcEv();
+
+    const curAperture = document.getElementById('curAperture');
+    const curShutter = document.getElementById('curShutter');
+    const curIso = document.getElementById('curIso');
+    const newAperture = document.getElementById('newAperture');
+    const newIso = document.getElementById('newIso');
+    const equivResult = document.getElementById('equivResult');
+
+    function formatShutter(t) {
+      if (t >= 1) return formatNumber(t, 2) + ' s';
+      const denom = 1 / t;
+      return '1/' + formatNumber(denom, denom < 10 ? 1 : 0) + ' s';
+    }
+
+    function calcEquiv() {
+      const n1 = parseFloat(curAperture.value);
+      const t1 = parseFloat(curShutter.value);
+      const iso1 = parseFloat(curIso.value);
+      const n2 = parseFloat(newAperture.value);
+      const iso2 = parseFloat(newIso.value);
+      if (![n1, t1, iso1, n2, iso2].every(Number.isFinite) || n1 <= 0 || t1 <= 0 || iso1 <= 0 || n2 <= 0 || iso2 <= 0) {
+        equivResult.textContent = '–';
+        return;
+      }
+      const t2 = t1 * (n2 * n2) / (n1 * n1) * (iso1 / iso2);
+      equivResult.textContent = formatShutter(t2);
+    }
+    [curAperture, curShutter, curIso, newAperture, newIso].forEach(el => el.addEventListener('input', calcEquiv));
+    calcEquiv();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

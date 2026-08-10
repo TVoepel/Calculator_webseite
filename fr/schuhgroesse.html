@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Convertisseur de pointures – EU, UK, US et tableau en cm</title>
+  <meta name="description" content="Convertissez les pointures : EU vers UK, US (femme/homme) et longueur du pied en cm – avec tableau de conversion et estimation rapide à partir de la longueur du pied." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/schuhgroesse.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/schuhgroesse.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/schuhgroesse.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/schuhgroesse.html" />
+  <meta name="theme-color" content="#bf360c" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/schuhgroesse.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Convertisseur de pointures – EU, UK, US et tableau en cm" />
+  <meta property="og:description" content="Convertissez les pointures : EU vers UK, US (femme/homme) et longueur du pied en cm – avec tableau de conversion et estimation rapide." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convertisseur de pointures – EU, UK, US et tableau en cm" />
+  <meta name="twitter:description" content="Convertissez les pointures : EU vers UK, US (femme/homme) et longueur du pied en cm." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #bf360c;
+      --color-primary-hover: #7f2208;
+      --color-primary-soft: #fbe0d3;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .ref-table tr.hit { background: var(--color-primary-soft); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Convertisseur de pointures",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/schuhgroesse.html",
+      "description": "Convertissez les pointures : EU vers UK, US (femme/homme) et longueur du pied en cm.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": { "@type": "WebSite", "name": "Convertisseur d'Unités", "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Convertisseur de pointures", "item": "https://tvoepel.github.io/Calculator_webseite/fr/schuhgroesse.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "À quelle pointure US correspond la pointure 38 EU ?", "acceptedAnswer": { "@type": "Answer", "text": "La pointure EU 38 correspond environ à US femme 7,5 ou US homme 6 – la taille exacte dépend toutefois du fabricant, car il n'existe pas de norme mondiale unifiée pour les pointures." } },
+        { "@type": "Question", "name": "Pourquoi les pointures US sont-elles numérotées différemment des pointures EU ?", "acceptedAnswer": { "@type": "Answer", "text": "Historiquement, l'Europe utilise le système de points parisien (1 point = 2/3 cm de longueur de forme), les États-Unis le système barleycorn (1 unité = 1/3 de pouce ≈ 8,47 mm) avec son propre point zéro – d'où des séries de chiffres différentes pour une même longueur de pied." } },
+        { "@type": "Question", "name": "Pourquoi une marque taille-t-elle plus grand qu'une autre pour la même pointure indiquée ?", "acceptedAnswer": { "@type": "Answer", "text": "Il n'existe aucune norme internationale contraignante que tous les fabricants doivent respecter. Chaque marque utilise sa propre forme (le gabarit de base de la chaussure), ce qui fait que la même pointure indiquée peut varier selon le fabricant." } },
+        { "@type": "Question", "name": "Comment mesurer correctement la longueur de mon pied ?", "acceptedAnswer": { "@type": "Answer", "text": "Placez-vous sur une feuille de papier, marquez la position du talon et de l'orteil le plus long, puis mesurez la distance en centimètres – de préférence le soir, car les pieds gonflent légèrement au cours de la journée. Mesurez les deux pieds, car ils sont souvent de taille différente, et basez-vous sur le plus grand." } },
+        { "@type": "Question", "name": "Comment la pointure des enfants évolue-t-elle avec l'âge ?", "acceptedAnswer": { "@type": "Answer", "text": "Les pieds des enfants grandissent de façon irrégulière ; il faut généralement de nouvelles chaussures tous les 2 à 4 mois environ. Il est plus judicieux de mesurer régulièrement la longueur actuelle du pied que de se fier à des tailles fixes selon l'âge." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">Sc</span>
+        <span>Convertisseur de pointures</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">Mode &amp; quotidien</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../schuhgroesse.html" hreflang="de">DE</a>
+          <a href="../nl/schuhgroesse.html" hreflang="nl">NL</a>
+          <a href="schuhgroesse.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convertir les pointures : EU, UK, US et cm</h1>
+      <p>Choisissez une pointure EU ou saisissez la longueur de votre pied en cm pour voir l'équivalence approximative en pointures UK et US. Comme il n'existe pas de norme mondiale unifiée, toutes les valeurs sont indicatives – les marques peuvent varier.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Estimation rapide à partir de la longueur du pied</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="footLength">Longueur du pied (cm)</label>
+              <input id="footLength" type="number" value="26.5" step="0.1" min="10" max="35" />
+            </div>
+            <div>
+              <label for="euSelect">ou choisir une pointure EU</label>
+              <select id="euSelect"></select>
+            </div>
+          </div>
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Publicité / AdSense / emplacement d'affiliation</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Espace publicitaire</h2>
+        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Tableau de conversion (valeurs indicatives)</h2>
+      <div style="overflow-x:auto;">
+        <table class="ref-table" id="sizeTable">
+          <thead><tr><th>EU</th><th>UK</th><th>US homme</th><th>US femme</th><th>Longueur du pied (cm)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note">Valeurs indicatives basées sur des tableaux de conversion courants – la coupe réelle varie selon la marque, la forme et le modèle de chaussure. En cas de doute, mesurez la longueur du pied et essayez la chaussure avant l'achat si possible.</p>
+      <p class="source-links">Sources : <a href="https://de.wikipedia.org/wiki/Schuhgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Pointure</a>, indications courantes des fabricants (Nike, Adidas, etc.)</p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">En pratique</h2>
+      <div class="seo-text">
+        <p>Lors d'achats en ligne auprès de vendeurs américains (par ex. Zappos, Amazon US), la conversion aide à trouver la bonne pointure à commander sans pouvoir essayer la chaussure au préalable.</p>
+        <p>En voyage ou lors de l'importation de chaussures de sport (Nike, Adidas), les tailles ne sont souvent indiquées qu'en pointures US – la conversion en EU facilite la comparaison avec des pointures déjà connues.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>À quelle pointure US correspond la pointure 38 EU ?</summary><p>La pointure EU 38 correspond environ à US femme 7,5 ou US homme 6 – la taille exacte dépend toutefois du fabricant, car il n'existe pas de norme mondiale unifiée pour les pointures.</p></details>
+        <details class="faq-item"><summary>Pourquoi les pointures US sont-elles numérotées différemment des pointures EU ?</summary><p>Historiquement, l'Europe utilise le système de points parisien (1 point = 2/3 cm de longueur de forme), les États-Unis le système barleycorn (1 unité = 1/3 de pouce ≈ 8,47 mm) avec son propre point zéro – d'où des séries de chiffres différentes pour une même longueur de pied.</p></details>
+        <details class="faq-item"><summary>Pourquoi une marque taille-t-elle plus grand qu'une autre pour la même pointure indiquée ?</summary><p>Il n'existe aucune norme internationale contraignante que tous les fabricants doivent respecter. Chaque marque utilise sa propre forme (le gabarit de base de la chaussure), ce qui fait que la même pointure indiquée peut varier selon le fabricant.</p></details>
+        <details class="faq-item"><summary>Comment mesurer correctement la longueur de mon pied ?</summary><p>Placez-vous sur une feuille de papier, marquez la position du talon et de l'orteil le plus long, puis mesurez la distance en centimètres – de préférence le soir, car les pieds gonflent légèrement au cours de la journée. Mesurez les deux pieds, car ils sont souvent de taille différente, et basez-vous sur le plus grand.</p></details>
+        <details class="faq-item"><summary>Comment la pointure des enfants évolue-t-elle avec l'âge ?</summary><p>Les pieds des enfants grandissent de façon irrégulière ; il faut généralement de nouvelles chaussures tous les 2 à 4 mois environ. Il est plus judicieux de mesurer régulièrement la longueur actuelle du pied que de se fier à des tailles fixes selon l'âge.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="kleidergroesse.html">Convertisseur de tailles de vêtements →</a>
+        <a href="laengenumrechner.html">Convertisseur de longueur →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Tableau de valeurs indicatives (tableaux de conversion courants, aucune norme contraignante)
+    const sizes = [
+      { eu: 35, uk: 2.5, usM: 3.5, usW: 5,    cm: 22.0 },
+      { eu: 36, uk: 3.5, usM: 4.5, usW: 6,    cm: 22.5 },
+      { eu: 37, uk: 4,   usM: 5,   usW: 6.5,  cm: 23.0 },
+      { eu: 38, uk: 5,   usM: 6,   usW: 7.5,  cm: 24.0 },
+      { eu: 39, uk: 6,   usM: 6.5, usW: 8,    cm: 24.5 },
+      { eu: 40, uk: 6.5, usM: 7.5, usW: 9,    cm: 25.0 },
+      { eu: 41, uk: 7.5, usM: 8,   usW: 9.5,  cm: 25.5 },
+      { eu: 42, uk: 8,   usM: 9,   usW: 10.5, cm: 26.5 },
+      { eu: 43, uk: 9,   usM: 9.5, usW: 11,   cm: 27.0 },
+      { eu: 44, uk: 9.5, usM: 10.5, usW: 12,  cm: 27.5 },
+      { eu: 45, uk: 10.5, usM: 11, usW: null, cm: 29.0 },
+      { eu: 46, uk: 11,  usM: 12,  usW: null, cm: 29.5 },
+      { eu: 47, uk: 12,  usM: 13,  usW: null, cm: 30.5 }
+    ];
+
+    const footLength = document.getElementById('footLength');
+    const euSelect = document.getElementById('euSelect');
+    const resultText = document.getElementById('resultText');
+    const tableBody = document.querySelector('#sizeTable tbody');
+
+    function fmtSize(v) { return v === null ? '–' : formatNumber(v, 1); }
+
+    function populate() {
+      sizes.forEach(s => euSelect.add(new Option('EU ' + s.eu, s.eu)));
+      sizes.forEach(s => {
+        const row = document.createElement('tr');
+        row.dataset.eu = s.eu;
+        row.innerHTML = `<td>${s.eu}</td><td>${fmtSize(s.uk)}</td><td>${fmtSize(s.usM)}</td><td>${fmtSize(s.usW)}</td><td>${fmtSize(s.cm)}</td>`;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function highlightRow(eu) {
+      document.querySelectorAll('#sizeTable tbody tr').forEach(tr => {
+        tr.classList.toggle('hit', Number(tr.dataset.eu) === eu);
+      });
+    }
+
+    function nearestSize(cm) {
+      let best = sizes[0];
+      let bestDiff = Math.abs(sizes[0].cm - cm);
+      sizes.forEach(s => {
+        const diff = Math.abs(s.cm - cm);
+        if (diff < bestDiff) { best = s; bestDiff = diff; }
+      });
+      return best;
+    }
+
+    function updateFromFoot() {
+      const cm = parseFloat(footLength.value);
+      if (!Number.isFinite(cm) || cm <= 0) {
+        resultText.textContent = 'Veuillez saisir une longueur de pied valide.';
+        return;
+      }
+      const s = nearestSize(cm);
+      euSelect.value = s.eu;
+      highlightRow(s.eu);
+      resultText.textContent = `${formatNumber(cm, 1)} cm ≈ EU ${s.eu} · UK ${fmtSize(s.uk)} · US homme ${fmtSize(s.usM)} · US femme ${fmtSize(s.usW)}`;
+    }
+
+    function updateFromSelect() {
+      const eu = Number(euSelect.value);
+      const s = sizes.find(x => x.eu === eu);
+      if (!s) return;
+      footLength.value = s.cm;
+      highlightRow(s.eu);
+      resultText.textContent = `EU ${s.eu} ≈ ${formatNumber(s.cm, 1)} cm · UK ${fmtSize(s.uk)} · US homme ${fmtSize(s.usM)} · US femme ${fmtSize(s.usW)}`;
+    }
+
+    footLength.addEventListener('input', updateFromFoot);
+    euSelect.addEventListener('change', updateFromSelect);
+
+    populate();
+    updateFromFoot();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Temperatuur-omrekenaar – Celsius, Fahrenheit, Kelvin & meer</title>
+  <meta name="description" content="Temperatuureenheden gratis omrekenen: Celsius, Fahrenheit, Kelvin, Rankine en Réaumur – met formules en voorbeelden." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/temperaturumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/temperaturumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/temperaturumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/temperaturumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/temperaturumrechner.html" />
+  <meta name="theme-color" content="#7b1fa2" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/temperaturumrechner.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Temperatuur-omrekenaar – Celsius, Fahrenheit, Kelvin & meer" />
+  <meta property="og:description" content="Temperatuureenheden gratis omrekenen: Celsius, Fahrenheit, Kelvin, Rankine en Réaumur – met formules en voorbeelden." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Temperatuur-omrekenaar – Celsius, Fahrenheit, Kelvin & meer" />
+  <meta name="twitter:description" content="Temperatuureenheden gratis omrekenen: Celsius, Fahrenheit, Kelvin, Rankine en Réaumur – met formules en voorbeelden." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #7b1fa2;
+      --color-primary-hover: #4a148c;
+      --color-primary-soft: #ede7f6;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Temperatuur-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/temperaturumrechner.html",
+      "description": "Temperatuureenheden gratis omrekenen: Celsius, Fahrenheit, Kelvin, Rankine en Réaumur – met formules en voorbeelden.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Temperatuur-omrekenaar",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/temperaturumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoe reken je Celsius om naar Fahrenheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formule: °F = (°C × 9/5) + 32. Voorbeeld: 20 °C komt overeen met (20 × 9/5) + 32 = 68 °F."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel graden Celsius is 0 Kelvin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0 Kelvin is het absolute nulpunt en komt overeen met −273,15 °C – de theoretisch laagst mogelijke temperatuur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom gebruiken de VS Fahrenheit in plaats van Celsius?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De Fahrenheit-schaal werd in 1724 ontwikkeld door Daniel Gabriel Fahrenheit en heeft zich historisch doorgezet in de VS, terwijl de meeste andere landen in de 20e eeuw overstapten op Celsius (onderdeel van het metrisch stelsel)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel Fahrenheit is de normale lichaamstemperatuur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De vroeger vaak aangehaalde \"normale\" lichaamstemperatuur van 37 °C komt overeen met 98,6 °F; moderne studies laten echter een zekere individuele spreiding zien."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen Celsius, Kelvin en Rankine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Celsius en Kelvin hebben dezelfde schaalverdeling, alleen met een verschoven nulpunt (0 °C = 273,15 K). Rankine is de Fahrenheit-tegenhanger van Kelvin: 0 °R komt eveneens overeen met het absolute nulpunt, maar met de gradengrootte van Fahrenheit."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">T</span>
+        <span>Temperatuur-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Dagelijks gebruik & wetenschap</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../temperaturumrechner.html" hreflang="de">DE</a>
+          <a href="temperaturumrechner.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/temperaturumrechner.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Temperatuur snel omrekenen</h1>
+      <p>Reken snel om tussen Celsius, Fahrenheit, Kelvin, Rankine en Réaumur – voor het weer, koken, natuurkunde en techniek.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Omrekenaar</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="0" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">0 °C = 32 °F</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Advertentieruimte</h2>
+        <div class="ad-slot">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Populaire omrekeningen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="celsius,fahrenheit,0">Celsius naar Fahrenheit</button>
+        <button type="button" data-preset="fahrenheit,celsius,32">Fahrenheit naar Celsius</button>
+        <button type="button" data-preset="celsius,kelvin,25">Celsius naar Kelvin</button>
+        <button type="button" data-preset="kelvin,celsius,300">Kelvin naar Celsius</button>
+        <button type="button" data-preset="fahrenheit,kelvin,68">Fahrenheit naar Kelvin</button>
+        <button type="button" data-preset="kelvin,fahrenheit,293.15">Kelvin naar Fahrenheit</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formules</h2>
+      <div class="formula">
+Celsius → Fahrenheit: (°C × 9/5) + 32
+Fahrenheit → Celsius: (°F − 32) × 5/9
+Celsius → Kelvin: °C + 273,15
+Kelvin → Celsius: K − 273,15
+Kelvin → Rankine: K × 9/5
+Rankine → Kelvin: °R × 5/9
+Celsius → Réaumur: °C × 4/5
+Réaumur → Celsius: °Ré × 5/4</div>
+      <p class="footer-note">Kelvin is de SI-basiseenheid van temperatuur; alle andere schalen worden intern via Kelvin omgerekend om afrondingsfouten te voorkomen.</p>
+          <p class="source-links">Bronnen: <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI-brochure (Kelvin-definitie)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST – Guide to Unit Conversion</a>, <a href="https://de.wikipedia.org/wiki/Grad_Celsius" target="_blank" rel="noopener noreferrer">Wikipedia – Celsius</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle ondersteunde temperatuureenheden</h2>
+      <div class="seo-text">
+        <p>Met deze temperatuur-omrekenaar zet je Celsius (°C), Fahrenheit (°F), Kelvin (K), Rankine (°R) en Réaumur (°Ré) direct in elkaar om.</p>
+        <p>0 °C komt overeen met 32 °F en 273,15 K – het vriespunt van water. 100 °C komt overeen met 212 °F en 373,15 K – het kookpunt van water bij normale druk.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast: wanneer moet je temperaturen omrekenen</h2>
+      <div class="seo-text">
+        <p>Amerikaanse bakrecepten en ovendisplays gebruiken Fahrenheit in plaats van Celsius – 350 °F (een veelvoorkomende waarde in Amerikaanse recepten) komt overeen met ongeveer 177 °C.</p>
+        <p>Weerberichten in de VS worden in Fahrenheit gegeven; wie een reis plant, wil snel weten hoe warm of koud een aangekondigde waarde in werkelijkheid aanvoelt.</p>
+        <p>In natuurkunde en techniek wordt vaak Kelvin gebruikt, bijvoorbeeld bij kleurtemperaturen van lampen of in wetenschappelijke berekeningen waarbij het absolute nulpunt relevant is.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe reken je Celsius om naar Fahrenheit?</summary><p>Formule: °F = (°C × 9/5) + 32. Voorbeeld: 20 °C komt overeen met (20 × 9/5) + 32 = 68 °F.</p></details>
+        <details class="faq-item"><summary>Hoeveel graden Celsius is 0 Kelvin?</summary><p>0 Kelvin is het absolute nulpunt en komt overeen met −273,15 °C – de theoretisch laagst mogelijke temperatuur.</p></details>
+        <details class="faq-item"><summary>Waarom gebruiken de VS Fahrenheit in plaats van Celsius?</summary><p>De Fahrenheit-schaal werd in 1724 ontwikkeld door Daniel Gabriel Fahrenheit en heeft zich historisch doorgezet in de VS, terwijl de meeste andere landen in de 20e eeuw overstapten op Celsius (onderdeel van het metrisch stelsel).</p></details>
+        <details class="faq-item"><summary>Hoeveel Fahrenheit is de normale lichaamstemperatuur?</summary><p>De vroeger vaak aangehaalde "normale" lichaamstemperatuur van 37 °C komt overeen met 98,6 °F; moderne studies laten echter een zekere individuele spreiding zien.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen Celsius, Kelvin en Rankine?</summary><p>Celsius en Kelvin hebben dezelfde schaalverdeling, alleen met een verschoven nulpunt (0 °C = 273,15 K). Rankine is de Fahrenheit-tegenhanger van Kelvin: 0 °R komt eveneens overeen met het absolute nulpunt, maar met de gradengrootte van Fahrenheit.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="energieumrechner.html">Energie-omrekenaar →</a>
+        <a href="geschwindigkeitumrechner.html">Snelheid-omrekenaar →</a>
+        <a href="volumenumrechner.html">Volume-omrekenaar →</a>
+        <a href="blutzuckerumrechner.html">Bloedsuiker-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      kelvin: { label: 'Kelvin (K)', toK: v => v, fromK: v => v },
+      celsius: { label: 'Celsius (°C)', toK: v => v + 273.15, fromK: v => v - 273.15 },
+      fahrenheit: { label: 'Fahrenheit (°F)', toK: v => (v - 32) * 5 / 9 + 273.15, fromK: v => (v - 273.15) * 9 / 5 + 32 },
+      rankine: { label: 'Rankine (°R)', toK: v => v * 5 / 9, fromK: v => v * 9 / 5 },
+      reaumur: { label: 'Réaumur (°Ré)', toK: v => v * 5 / 4 + 273.15, fromK: v => (v - 273.15) * 4 / 5 }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromK(from.toK(value)),
+      defaultFrom: 'celsius',
+      defaultTo: 'fahrenheit',
+      decimals: 4
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

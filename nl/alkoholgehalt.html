@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Alcoholpercentage-omrekenaar – Vol% ↔ US/UK Proof</title>
+  <meta name="description" content="Alcoholpercentage omrekenen: Vol% (ABV) naar US Proof en UK Proof – plus rekenaar voor zuivere alcoholhoeveelheid (mL/gram) uit volume en Vol%." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <meta name="theme-color" content="#6d4c41" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Alcoholpercentage-omrekenaar – Vol% ↔ US/UK Proof" />
+  <meta property="og:description" content="Alcoholpercentage omrekenen: Vol% (ABV) naar US Proof en UK Proof, plus zuivere alcoholhoeveelheid berekenen." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alcoholpercentage-omrekenaar – Vol% ↔ US/UK Proof" />
+  <meta name="twitter:description" content="Alcoholpercentage omrekenen en zuivere alcoholhoeveelheid berekenen." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #6d4c41;
+      --color-primary-hover: #442f28;
+      --color-primary-soft: #e6dbd7;
+    }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Alcoholpercentage-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html",
+      "description": "Alcoholpercentage omrekenen: Vol% (ABV) naar US Proof en UK Proof, plus zuivere alcoholhoeveelheid berekenen.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": { "@type": "WebSite", "name": "Eenheden Omrekenen", "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startpagina", "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Alcoholpercentage-omrekenaar", "item": "https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wat is het verschil tussen Vol% en Proof?", "acceptedAnswer": { "@type": "Answer", "text": "Vol% geeft het alcoholaandeel direct aan (bijv. 40 % wodka = 40 mL alcohol per 100 mL). US Proof is het dubbele van de Vol%-waarde (40 % = 80 Proof), UK Proof (historisch) komt overeen met Vol% × 1,75." } },
+        { "@type": "Question", "name": "Hoeveel gram zuivere alcohol zit er in een biertje?", "acceptedAnswer": { "@type": "Answer", "text": "500 mL bier met 5 % Vol bevat 500 × 0,05 = 25 mL zuivere alcohol. Met de ethanoldichtheid van ca. 0,789 g/mL komt dat overeen met ongeveer 19,7 g zuivere alcohol." } },
+        { "@type": "Question", "name": "Hoe verdun je alcohol tot een lagere concentratie?", "acceptedAnswer": { "@type": "Answer", "text": "Met de verdunningsformule c₁ × V₁ = c₂ × V₂. Voorbeeld: 1 L jenever van 50 % geeft met 0,25 L water 1,25 L bij 40 % Vol." } },
+        { "@type": "Question", "name": "Hoe meet je het alcoholpercentage bij thuis stoken?", "acceptedAnswer": { "@type": "Answer", "text": "Met een alcoholmeter (spindel) direct in het destillaat of rekenkundig uit de dichtheid vóór en na de gisting. Een gangbare vuistregel luidt ABV ≈ (beginextract − restextract) × 131,25 – een vereenvoudigde benadering, geen exacte natuurkundige formule." } },
+        { "@type": "Question", "name": "Waarom verschillen US Proof en UK Proof van elkaar?", "acceptedAnswer": { "@type": "Answer", "text": "De VS definiëren Proof sinds 1848 exact als het dubbele van de Vol%-waarde. Het historische Britse Proof-systeem (vóór 1980) was gebaseerd op een buskruit-testmethode en resulteerde in de factor 1,75 – sinds 1980 gebruikt ook het Verenigd Koninkrijk alleen nog Vol%." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">%</span>
+        <span>Alcoholpercentage-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Keuken &amp; genot</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../alkoholgehalt.html" hreflang="de">DE</a>
+          <a href="alkoholgehalt.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/alkoholgehalt.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Alcoholpercentage omrekenen: Vol% ↔ Proof</h1>
+      <p>Reken om tussen Vol% (ABV), US Proof en historische UK Proof – en bereken de zuivere alcoholhoeveelheid in mL en gram uit drankvolume en Vol%.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Omrekenaar Vol% ↔ Proof</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="40" step="any" min="0" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Zuivere alcoholhoeveelheid berekenen</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="volumeInput">Drankvolume (mL)</label>
+              <input id="volumeInput" type="number" value="500" step="any" min="0" />
+            </div>
+            <div>
+              <label for="abvInput">Alcoholpercentage (Vol%)</label>
+              <input id="abvInput" type="number" value="5" step="any" min="0" max="100" />
+            </div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="alcoholResult">–</span>
+            <span>Zuivere alcohol (mL / gram)</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Populaire omrekeningen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="vol,us_proof,40">40 Vol% naar US Proof</button>
+        <button type="button" data-preset="us_proof,vol,80">80 US Proof naar Vol%</button>
+        <button type="button" data-preset="vol,uk_proof,57">57 Vol% naar UK Proof</button>
+        <button type="button" data-preset="uk_proof,vol,100">100 UK Proof naar Vol%</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; bronnen</h2>
+      <div class="formula">Vol% (ABV) = alcoholvolume ÷ totaalvolume × 100
+
+US Proof = Vol% × 2
+UK Proof (historisch, vóór 1980) = Vol% × 1,75
+
+Zuivere alcoholhoeveelheid:
+mL alcohol = drankvolume [mL] × Vol% ÷ 100
+Gram alcohol = mL alcohol × 0,789 (dichtheid ethanol bij 20 °C)</div>
+      <p class="note">Een gangbare vuistregel bij thuis brouwen/stoken luidt ABV ≈ (beginextract − restextract) × 131,25 – dit is een vereenvoudigde, in de praktijk gebruikelijke benadering en geen exacte natuurkundige formule.</p>
+      <p class="source-links">Bronnen: <a href="https://de.wikipedia.org/wiki/Alkoholgehalt" target="_blank" rel="noopener noreferrer">Wikipedia – Alcoholgehalte (DE)</a>, <a href="https://de.wikipedia.org/wiki/Ethanol" target="_blank" rel="noopener noreferrer">Wikipedia – Ethanol (dichtheid) (DE)</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        Deze rekenaar dient algemene informatiedoeleinden. Hij vervangt geen officiële meting (bijv. voor belastingdoeleinden) en is geen aansporing tot alcoholgebruik – consumeer alsjeblieft verantwoord.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast</h2>
+      <div class="seo-text">
+        <p>Amerikaanse sterkedrankflessen geven het alcoholpercentage vaak ook in Proof aan – de omrekening helpt bij het vergelijken met Europese Vol%-aanduidingen.</p>
+        <p>Cocktailrecepten kun je hiermee omrekenen naar het werkelijke alcoholpercentage in het uiteindelijke drankje, bijv. 50 mL rum (40 %) in 200 mL cocktail geeft 10 % Vol in het totale drankje.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Wat is het verschil tussen Vol% en Proof?</summary><p>Vol% geeft het alcoholaandeel direct aan (bijv. 40 % wodka = 40 mL alcohol per 100 mL). US Proof is het dubbele van de Vol%-waarde (40 % = 80 Proof), UK Proof (historisch) komt overeen met Vol% × 1,75.</p></details>
+        <details class="faq-item"><summary>Hoeveel gram zuivere alcohol zit er in een biertje?</summary><p>500 mL bier met 5 % Vol bevat 500 × 0,05 = 25 mL zuivere alcohol. Met de ethanoldichtheid van ca. 0,789 g/mL komt dat overeen met ongeveer 19,7 g zuivere alcohol.</p></details>
+        <details class="faq-item"><summary>Hoe verdun je alcohol tot een lagere concentratie?</summary><p>Met de verdunningsformule c₁ × V₁ = c₂ × V₂. Voorbeeld: 1 L jenever van 50 % geeft met 0,25 L water 1,25 L bij 40 % Vol.</p></details>
+        <details class="faq-item"><summary>Hoe meet je het alcoholpercentage bij thuis stoken?</summary><p>Met een alcoholmeter (spindel) direct in het destillaat of rekenkundig uit de dichtheid vóór en na de gisting. Een gangbare vuistregel luidt ABV ≈ (beginextract − restextract) × 131,25 – een vereenvoudigde benadering, geen exacte natuurkundige formule.</p></details>
+        <details class="faq-item"><summary>Waarom verschillen US Proof en UK Proof van elkaar?</summary><p>De VS definiëren Proof sinds 1848 exact als het dubbele van de Vol%-waarde. Het historische Britse Proof-systeem (vóór 1980) was gebaseerd op een buskruit-testmethode en resulteerde in de factor 1,75 – sinds 1980 gebruikt ook het Verenigd Koninkrijk alleen nog Vol%.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Volume-omrekenaar →</a>
+        <a href="dichte.html">Dichtheid-omrekenaar →</a>
+        <a href="konzentrationsumrechner.html">Concentratie-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      vol: { label: 'Vol% (ABV)', factor: 1 },
+      us_proof: { label: 'US Proof', factor: 0.5 },
+      uk_proof: { label: 'UK Proof (historisch)', factor: 1 / 1.75 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'vol',
+      defaultTo: 'us_proof',
+      decimals: 4
+    });
+
+    const volumeInput = document.getElementById('volumeInput');
+    const abvInput = document.getElementById('abvInput');
+    const alcoholResult = document.getElementById('alcoholResult');
+    const ETHANOL_DENSITY = 0.789;
+
+    function calcAlcohol() {
+      const v = parseFloat(volumeInput.value);
+      const abv = parseFloat(abvInput.value);
+      if (!Number.isFinite(v) || !Number.isFinite(abv)) {
+        alcoholResult.textContent = '–';
+        return;
+      }
+      const mlAlcohol = v * abv / 100;
+      const gAlcohol = mlAlcohol * ETHANOL_DENSITY;
+      alcoholResult.textContent = `${formatNumber(mlAlcohol, 1)} mL / ${formatNumber(gAlcohol, 1)} g`;
+    }
+
+    [volumeInput, abvInput].forEach(el => el.addEventListener('input', calcAlcohol));
+    calcAlcohol();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

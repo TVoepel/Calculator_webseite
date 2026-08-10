@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Data-omrekenaar – byte, KB, MB, GB & meer</title>
+  <meta name="description" content="Digitale datahoeveelheden gratis omrekenen: bit, byte, kilobyte, megabyte, gigabyte, terabyte – inclusief binaire eenheden (KiB, MiB, GiB, TiB)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/datenumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <meta name="theme-color" content="#37474f" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Data-omrekenaar – byte, KB, MB, GB & meer" />
+  <meta property="og:description" content="Digitale datahoeveelheden gratis omrekenen: bit, byte, kilobyte, megabyte, gigabyte, terabyte – inclusief binaire eenheden (KiB, MiB, GiB, TiB)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data-omrekenaar – byte, KB, MB, GB & meer" />
+  <meta name="twitter:description" content="Digitale datahoeveelheden gratis omrekenen: bit, byte, kilobyte, megabyte, gigabyte, terabyte – inclusief binaire eenheden (KiB, MiB, GiB, TiB)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #37474f;
+      --color-primary-hover: #1c262b;
+      --color-primary-soft: #dfe4e6;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Data-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html",
+      "description": "Digitale datahoeveelheden gratis omrekenen: bit, byte, kilobyte, megabyte, gigabyte, terabyte – inclusief binaire eenheden (KiB, MiB, GiB, TiB).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data-omrekenaar",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Waarom is mijn harde schijf kleiner dan aangegeven?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fabrikanten rekenen 1 TB = 1000 GB (decimaal, SI-voorvoegsels), maar Windows geeft opslag weer in GiB (binair, basis 1024). Een harde schijf van 1 TB toont in Verkenner daarom maar ongeveer 931 GiB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen Mbit en MB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 byte komt overeen met 8 bit. Internetsnelheden worden aangegeven in Mbit/s (megabit), bestandsgroottes in MB (megabyte) – 100 Mbit/s komt dus overeen met slechts 12,5 MB/s downloadsnelheid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is een kibibyte (KiB)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Een kibibyte (KiB) komt exact overeen met 1024 byte (2¹⁰) en werd door de IEC geïntroduceerd om binaire en decimale voorvoegsels (1 kB = 1000 byte) duidelijk van elkaar te onderscheiden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe lang duurt een download bij 100 Mbit/s?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bij 100 Mbit/s (= 12,5 MB/s theoretisch, in de praktijk iets minder) duurt het downloaden van een bestand van 5 GB rekenkundig ongeveer 400 seconden, oftewel circa 6-7 minuten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel GB heeft een terabyte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 terabyte (TB, decimaal) komt overeen met 1000 GB. Het binaire equivalent tebibyte (TiB) heeft daarentegen 1024 GiB."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">D</span>
+        <span>Data-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">IT &amp; internet</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../datenumrechner.html" hreflang="de">DE</a>
+          <a href="datenumrechner.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/datenumrechner.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Datahoeveelheden snel omrekenen</h1>
+      <p>Reken om tussen bit, byte, kilobyte, megabyte, gigabyte en terabyte – inclusief de binaire eenheden KiB, MiB, GiB en TiB, en bitsnelheden voor downloadsnelheden.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Omrekenaar</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 gigabyte = 1.000 megabyte</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Advertentieruimte</h2>
+        <div class="ad-slot">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Populaire omrekeningen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="gigabyte,megabyte,1">GB naar MB</button>
+        <button type="button" data-preset="megabyte,gigabyte,1000">MB naar GB</button>
+        <button type="button" data-preset="gigabyte,gibibyte,1">GB naar GiB</button>
+        <button type="button" data-preset="megabit,megabyte,100">Mbit naar MB (downloadsnelheid)</button>
+        <button type="button" data-preset="byte,bit,1">Byte naar bit</button>
+        <button type="button" data-preset="terabyte,gigabyte,1">TB naar GB</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; referentiewaarden</h2>
+      <div class="formula">Resultaat = Waarde × Factor(van) ÷ Factor(naar), Basiseenheid = 1 byte
+
+Decimaal (SI, basis 1000):  1 kB = 1000 B, 1 MB = 1000 kB, 1 GB = 1000 MB
+Binair (IEC, basis 1024):   1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB
+1 byte = 8 bit</div>
+      <p class="note">Besturingssystemen en fabrikanten gebruiken deze voorvoegsels niet consistent: fabrikanten van harde schijven rekenen meestal decimaal (1 TB = 1000 GB), terwijl bijvoorbeeld het werkgeheugen traditioneel binair wordt aangegeven. Deze omrekenaar maakt duidelijk onderscheid tussen beide systemen (kB/MB/GB = decimaal, KiB/MiB/GiB = binair).</p>
+          <p class="source-links">Bronnen: <a href="https://physics.nist.gov/cuu/Units/binary.html" target="_blank" rel="noopener noreferrer">NIST – referentie voor binaire voorvoegsels</a>, <a href="https://www.iec.ch/prefixes-binary-multiples" target="_blank" rel="noopener noreferrer">IEC – voorvoegsels voor binaire veelvouden</a>, <a href="https://de.wikipedia.org/wiki/Byte" target="_blank" rel="noopener noreferrer">Wikipedia – Byte</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle ondersteunde data-eenheden</h2>
+      <div class="seo-text">
+        <p>Met deze data-omrekenaar kun je bit, byte, kilobit, kilobyte, kibibyte, megabit, megabyte, mebibyte, gigabit, gigabyte, gibibyte, terabyte en tebibyte direct omrekenen.</p>
+        <p>Bit-eenheden (kbit, Mbit, Gbit) worden meestal gebruikt voor overdrachtssnelheden (internet, netwerk), byte-eenheden (kB, MB, GB) voor bestandsgroottes en opslagruimte.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast: wanneer je datahoeveelheden moet omrekenen</h2>
+      <div class="seo-text">
+        <p>Internetproviders adverteren met downloadsnelheden in Mbit/s – de daadwerkelijke downloadtijd van een bestand bereken je echter via MB of GB, wat gemakkelijk tot verwarring leidt.</p>
+        <p>Opslagfabrikanten rekenen bij harde schijven en ssd's decimaal (1 TB = 1000 GB), maar besturingssystemen tonen de vrije opslagruimte vaak binair (GiB) – daardoor lijkt een nieuwe harde schijf in Verkenner kleiner dan op de verpakking staat aangegeven.</p>
+        <p>Bij streaming, cloudopslag en mobiele databundels helpt de omrekening om je eigen datavolume realistisch in te schatten.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Waarom is mijn harde schijf kleiner dan aangegeven?</summary><p>Fabrikanten rekenen 1 TB = 1000 GB (decimaal, SI-voorvoegsels), maar Windows geeft opslag weer in GiB (binair, basis 1024). Een harde schijf van 1 TB toont in Verkenner daarom maar ongeveer 931 GiB.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen Mbit en MB?</summary><p>1 byte komt overeen met 8 bit. Internetsnelheden worden aangegeven in Mbit/s (megabit), bestandsgroottes in MB (megabyte) – 100 Mbit/s komt dus overeen met slechts 12,5 MB/s downloadsnelheid.</p></details>
+        <details class="faq-item"><summary>Wat is een kibibyte (KiB)?</summary><p>Een kibibyte (KiB) komt exact overeen met 1024 byte (2¹⁰) en werd door de IEC geïntroduceerd om binaire en decimale voorvoegsels (1 kB = 1000 byte) duidelijk van elkaar te onderscheiden.</p></details>
+        <details class="faq-item"><summary>Hoe lang duurt een download bij 100 Mbit/s?</summary><p>Bij 100 Mbit/s (= 12,5 MB/s theoretisch, in de praktijk iets minder) duurt het downloaden van een bestand van 5 GB rekenkundig ongeveer 400 seconden, oftewel circa 6-7 minuten.</p></details>
+        <details class="faq-item"><summary>Hoeveel GB heeft een terabyte?</summary><p>1 terabyte (TB, decimaal) komt overeen met 1000 GB. Het binaire equivalent tebibyte (TiB) heeft daarentegen 1024 GiB.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="energieumrechner.html">Energie-omrekenaar →</a>
+        <a href="geschwindigkeitumrechner.html">Snelheid-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      bit: { label: 'Bit (b)', factor: 0.125 },
+      byte: { label: 'Byte (B)', factor: 1 },
+      kilobit: { label: 'Kilobit (kbit)', factor: 125 },
+      kilobyte: { label: 'Kilobyte (kB, decimaal)', factor: 1000 },
+      kibibyte: { label: 'Kibibyte (KiB, binair)', factor: 1024 },
+      megabit: { label: 'Megabit (Mbit)', factor: 125000 },
+      megabyte: { label: 'Megabyte (MB, decimaal)', factor: 1000000 },
+      mebibyte: { label: 'Mebibyte (MiB, binair)', factor: 1048576 },
+      gigabit: { label: 'Gigabit (Gbit)', factor: 125000000 },
+      gigabyte: { label: 'Gigabyte (GB, decimaal)', factor: 1000000000 },
+      gibibyte: { label: 'Gibibyte (GiB, binair)', factor: 1073741824 },
+      terabyte: { label: 'Terabyte (TB, decimaal)', factor: 1000000000000 },
+      tebibyte: { label: 'Tebibyte (TiB, binair)', factor: 1099511627776 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'gigabyte',
+      defaultTo: 'megabyte',
+      decimals: 8
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>pH-waarde omrekenen – pH ↔ [H⁺] & Henderson-Hasselbalch</title>
+  <meta name="description" content="pH-waarde omrekenen: pH ↔ H+-concentratie, pH ↔ pOH. Plus Henderson-Hasselbalch-rekenaar voor bufferoplossingen op basis van pKa en verhouding." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/ph-wert.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <meta name="theme-color" content="#004d40" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="pH-waarde omrekenen – pH ↔ [H⁺] & Henderson-Hasselbalch" />
+  <meta property="og:description" content="pH omrekenen en bufferoplossingen berekenen met de Henderson-Hasselbalch-vergelijking." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="pH-waarde omrekenen – pH ↔ [H⁺] & Henderson-Hasselbalch" />
+  <meta name="twitter:description" content="pH omrekenen en bufferoplossingen berekenen." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #004d40;
+      --color-primary-hover: #00251a;
+      --color-primary-soft: #d6e6e3;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "pH-Waarde-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html",
+      "description": "pH omrekenen en bufferoplossingen berekenen met de Henderson-Hasselbalch-vergelijking.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": { "@type": "WebSite", "name": "Eenheden Omrekenen", "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startpagina", "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "pH-Waarde-omrekenaar", "item": "https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Hoe bereken je de pH-waarde uit de H+-concentratie?", "acceptedAnswer": { "@type": "Answer", "text": "pH = −log₁₀[H⁺]. Voorbeeld: [H⁺] = 10⁻⁷ mol/L geeft pH 7 (neutraal, zoals bij zuiver water bij 25 °C)." } },
+        { "@type": "Question", "name": "Wat is de Henderson-Hasselbalch-vergelijking?", "acceptedAnswer": { "@type": "Answer", "text": "pH = pKa + log₁₀([A⁻]/[HA]). Ze berekent de pH-waarde van een bufferoplossing op basis van de pKa-waarde van het zuur en de verhouding tussen base en zuur." } },
+        { "@type": "Question", "name": "Hoe maak je een bufferoplossing met een bepaalde pH-waarde?", "acceptedAnswer": { "@type": "Answer", "text": "Je kiest een zuur waarvan de pKa zo dicht mogelijk bij de gewenste pH ligt, en berekent met de Henderson-Hasselbalch-vergelijking de benodigde verhouding tussen base en zuur: verhouding = 10^(pH − pKa)." } },
+        { "@type": "Question", "name": "Wat is het verband tussen pH en pOH?", "acceptedAnswer": { "@type": "Answer", "text": "Bij 25 °C geldt pH + pOH = 14, omdat het ionenproduct van water Kw = 10⁻¹⁴ is. Bij andere temperaturen wijkt deze waarde licht af." } },
+        { "@type": "Question", "name": "Wat betekent bufferkapaciteit?", "acceptedAnswer": { "@type": "Answer", "text": "De bufferkapaciteit beschrijft hoeveel zuur of base kan worden toegevoegd voordat de pH-waarde merkbaar verandert. Ze is het hoogst wanneer pH ≈ pKa (verhouding base:zuur dicht bij 1:1)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">pH</span>
+        <span>pH-Waarde-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Chemie &amp; lab</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../ph-wert.html" hreflang="de">DE</a>
+          <a href="ph-wert.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/ph-wert.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>pH-waarde omrekenen &amp; bufferoplossingen berekenen</h1>
+      <p>Reken tussen pH, H⁺-concentratie, pOH en OH⁻-concentratie om, en bereken bufferoplossingen met de Henderson-Hasselbalch-vergelijking.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">pH-omrekenaar</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="7" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Gangbare pKa-waarden (25 °C)</h2>
+        <table class="ref-table">
+          <thead><tr><th>Zuur</th><th>pKa</th></tr></thead>
+          <tbody>
+            <tr><td>Azijnzuur</td><td>4,76</td></tr>
+            <tr><td>Koolzuur (pKa1)</td><td>6,35</td></tr>
+            <tr><td>Fosforzuur (pKa2)</td><td>7,20</td></tr>
+            <tr><td>Ammonium (NH₄⁺)</td><td>9,25</td></tr>
+            <tr><td>Citroenzuur (pKa1)</td><td>3,13</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Henderson-Hasselbalch: bufferoplossing berekenen</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="pkaInput">pKa van het zuur</label>
+            <input id="pkaInput" type="number" value="4.76" step="any" />
+          </div>
+          <div>
+            <label for="ratioInput">Verhouding [A⁻]/[HA] (base/zuur)</label>
+            <input id="ratioInput" type="number" value="1" step="any" min="0.0001" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="phFromRatio">–</span>
+          <span>Resulterende pH-waarde</span>
+        </div>
+
+        <div class="row" style="margin-top: var(--space-3);">
+          <div>
+            <label for="targetPhInput">Gewenste doel-pH</label>
+            <input id="targetPhInput" type="number" value="5" step="any" />
+          </div>
+          <div></div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="ratioFromPh">–</span>
+          <span>Benodigde verhouding [A⁻]/[HA] voor deze pH (met bovenstaande pKa)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; bronnen</h2>
+      <div class="formula">pH = −log₁₀[H⁺]
+pOH = −log₁₀[OH⁻]
+pH + pOH = 14 (bij 25 °C, Kw = 10⁻¹⁴)
+
+Henderson-Hasselbalch: pH = pKa + log₁₀([A⁻] ÷ [HA])
+Benodigde verhouding: [A⁻]/[HA] = 10^(pH − pKa)</div>
+      <p class="note">De bufferkapaciteit is het grootst wanneer de pH dicht bij de pKa-waarde ligt (verhouding dicht bij 1:1) – buiten ±1 pH-eenheid rond de pKa werkt een buffer nauwelijks nog.</p>
+      <p class="source-links">Bronnen: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Gold Book (pH-definitie)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST</a>, <a href="https://de.wikipedia.org/wiki/PH-Wert" target="_blank" rel="noopener noreferrer">Wikipedia – pH-waarde</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast</h2>
+      <div class="seo-text">
+        <p>In het laboratorium wordt vaak een acetaatbuffer (pKa 4,76) of fosfaatbuffer (pKa 7,20) gebruikt om een oplossing bij een bepaalde pH-waarde stabiel te houden – bijvoorbeeld voor enzymreacties of celkweken.</p>
+        <p>Aquarium- en zwembadwater wordt regelmatig op de pH-waarde gecontroleerd; de omrekening tussen pH en H⁺-concentratie helpt om kleine pH-veranderingen (die op een logaritmische schaal liggen) realistisch in te schatten.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe bereken je de pH-waarde uit de H+-concentratie?</summary><p>pH = −log₁₀[H⁺]. Voorbeeld: [H⁺] = 10⁻⁷ mol/L geeft pH 7 (neutraal, zoals bij zuiver water bij 25 °C).</p></details>
+        <details class="faq-item"><summary>Wat is de Henderson-Hasselbalch-vergelijking?</summary><p>pH = pKa + log₁₀([A⁻]/[HA]). Ze berekent de pH-waarde van een bufferoplossing op basis van de pKa-waarde van het zuur en de verhouding tussen base en zuur.</p></details>
+        <details class="faq-item"><summary>Hoe maak je een bufferoplossing met een bepaalde pH-waarde?</summary><p>Je kiest een zuur waarvan de pKa zo dicht mogelijk bij de gewenste pH ligt, en berekent met de Henderson-Hasselbalch-vergelijking de benodigde verhouding tussen base en zuur: verhouding = 10^(pH − pKa).</p></details>
+        <details class="faq-item"><summary>Wat is het verband tussen pH en pOH?</summary><p>Bij 25 °C geldt pH + pOH = 14, omdat het ionenproduct van water Kw = 10⁻¹⁴ is. Bij andere temperaturen wijkt deze waarde licht af.</p></details>
+        <details class="faq-item"><summary>Wat betekent bufferkapaciteit?</summary><p>De bufferkapaciteit beschrijft hoeveel zuur of base kan worden toegevoegd voordat de pH-waarde merkbaar verandert. Ze is het hoogst wanneer pH ≈ pKa (verhouding base:zuur dicht bij 1:1).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="konzentrationsumrechner.html">Concentratie-omrekenaar →</a>
+        <a href="dichte.html">Dichtheid-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      ph: { label: 'pH', toBase: v => v, fromBase: v => v },
+      h_conc: { label: '[H⁺] (mol/L)', toBase: v => -Math.log10(v), fromBase: ph => Math.pow(10, -ph) },
+      poh: { label: 'pOH', toBase: v => 14 - v, fromBase: ph => 14 - ph },
+      oh_conc: { label: '[OH⁻] (mol/L)', toBase: v => 14 + Math.log10(v), fromBase: ph => Math.pow(10, ph - 14) }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromBase(from.toBase(value)),
+      defaultFrom: 'ph',
+      defaultTo: 'h_conc',
+      decimals: 10
+    });
+
+    const pkaInput = document.getElementById('pkaInput');
+    const ratioInput = document.getElementById('ratioInput');
+    const phFromRatio = document.getElementById('phFromRatio');
+    const targetPhInput = document.getElementById('targetPhInput');
+    const ratioFromPh = document.getElementById('ratioFromPh');
+
+    function calcBuffer() {
+      const pka = parseFloat(pkaInput.value);
+      const ratio = parseFloat(ratioInput.value);
+      const targetPh = parseFloat(targetPhInput.value);
+
+      if (Number.isFinite(pka) && Number.isFinite(ratio) && ratio > 0) {
+        const ph = pka + Math.log10(ratio);
+        phFromRatio.textContent = formatNumber(ph, 2);
+      } else {
+        phFromRatio.textContent = '–';
+      }
+
+      if (Number.isFinite(pka) && Number.isFinite(targetPh)) {
+        const neededRatio = Math.pow(10, targetPh - pka);
+        ratioFromPh.textContent = formatNumber(neededRatio, 4);
+      } else {
+        ratioFromPh.textContent = '–';
+      }
+    }
+
+    [pkaInput, ratioInput, targetPhInput].forEach(el => el.addEventListener('input', calcBuffer));
+    calcBuffer();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

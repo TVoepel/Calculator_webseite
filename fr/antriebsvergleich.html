@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Thermique vs. électrique – Énergie et coûts par 100 km</title>
+  <meta name="description" content="Comparez la consommation d'énergie et le coût par 100 km des voitures essence et diesel avec celles des voitures électriques, en kWh/100 km et euros/100 km." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Thermique vs. électrique – Énergie et coûts par 100 km" />
+  <meta property="og:description" content="Comparez la consommation d'énergie et le coût par 100 km des voitures essence et diesel avec celles des voitures électriques, en kWh/100 km et euros/100 km." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thermique vs. électrique – Énergie et coûts par 100 km" />
+  <meta name="twitter:description" content="Comparez la consommation d'énergie et le coût par 100 km des voitures essence et diesel avec celles des voitures électriques, en kWh/100 km et euros/100 km." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-hover: #0d3711;
+      --color-primary-soft: #e8f5e9;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Comparaison des motorisations thermique vs. électrique",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html",
+      "description": "Comparez la consommation d'énergie et le coût par 100 km des voitures essence et diesel avec celles des voitures électriques, en kWh/100 km et euros/100 km.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Convertisseur d'Unités",
+        "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Comparaison des motorisations thermique vs. électrique",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Une voiture électrique est-elle moins chère à l'usage qu'un véhicule thermique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En ce qui concerne les seuls coûts énergétiques par 100 km, une voiture électrique rechargée à domicile revient généralement bien moins cher qu'un véhicule thermique comparable. En revanche, si l'on utilise surtout des bornes de recharge rapide publiques, souvent coûteuses, cet avantage peut nettement diminuer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de kWh consomme une voiture électrique par 100 km ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La plupart des voitures électriques particulières consomment entre 15 et 22 kWh/100 km, selon la taille du véhicule, le style de conduite, la température extérieure et la vitesse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi une voiture électrique consomme-t-elle plus en hiver ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le froid réduit l'efficacité de la batterie et le chauffage de l'habitacle nécessite de l'énergie supplémentaire, ce qui peut augmenter sensiblement la consommation par 100 km en hiver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de kWh représente 1 litre d'essence sur le plan énergétique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sur le plan énergétique, 1 litre d'essence contient environ 8,9 à 9,0 kWh, 1 litre de diesel environ 9,8 kWh – nettement plus que l'énergie électrique nécessaire à une voiture électrique pour parcourir la même distance, mais avec un rendement plus faible pour le moteur thermique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les pertes de recharge de la voiture électrique sont-elles prises en compte dans ce calculateur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, ce calculateur compare uniquement les coûts énergétiques sur la base de la consommation indiquée. Les pertes de recharge (généralement quelques pour cent) ne sont pas indiquées séparément et augmenteraient légèrement le coût réel."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">EV</span>
+        <span>Comparaison des motorisations</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">Énergie et coûts / 100 km</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../antriebsvergleich.html" hreflang="de">DE</a>
+          <a href="../nl/antriebsvergleich.html" hreflang="nl">NL</a>
+          <a href="antriebsvergleich.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Comparer équitablement thermique et électrique</h1>
+      <p>Indiquez la consommation de votre véhicule thermique en L/100 km et celle de votre voiture électrique en kWh/100 km, ainsi que les prix actuels du carburant et de l'électricité. Le calculateur affiche côte à côte la consommation d'énergie et le coût par 100 km.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Saisies et résultats</h2>
+        <div class="subgrid">
+          <div class="two-col">
+            <div>
+              <h3>Véhicule thermique</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="iceFuelType">Carburant</label>
+                  <select id="iceFuelType">
+                    <option value="super_e5">Essence Super (E5/E10)</option>
+                    <option value="super_plus">Essence Super Plus (E5)</option>
+                    <option value="diesel">Diesel</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iceConsumption">Consommation (L/100 km)</label>
+                  <input id="iceConsumption" type="number" step="0.1" min="0" value="6.5" />
+                </div>
+                <div>
+                  <label for="icePrice">Prix du carburant (€/L)</label>
+                  <input id="icePrice" type="number" step="0.01" min="0" value="1.85" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Véhicule électrique</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="evConsumption">Consommation (kWh/100 km)</label>
+                  <input id="evConsumption" type="number" step="0.1" min="0" value="18" />
+                </div>
+                <div>
+                  <label for="evPrice">Prix de l'électricité (€/kWh)</label>
+                  <input id="evPrice" type="number" step="0.01" min="0" value="0.35" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Résultat véhicule thermique</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="iceKwhDisplay">– kWh/100 km</span>
+                  <span>Consommation d'énergie du véhicule thermique</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="iceCostDisplay">– €/100 km</span>
+                  <span>Coût du carburant par 100 km</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Résultat électrique</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="evKwhDisplay">– kWh/100 km</span>
+                  <span>Consommation d'énergie électrique</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="evCostDisplay">– €/100 km</span>
+                  <span>Coût de l'électricité par 100 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare" id="compareText">
+            Saisissez vos valeurs ci-dessus pour voir la comparaison.
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Espace publicitaire : emplacement pour une annonce (AdSense, vente directe ou bannière d'affiliation).</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Hypothèses et formules</h2>
+        <div class="formula">Nous utilisons des contenus énergétiques types (pouvoir calorifique inférieur, moyennes arrondies) :
+
+- Essence Super (E5/E10/Super Plus) : env. 8,9–9,0 kWh par litre
+- Diesel : env. 9,8 kWh par litre
+
+Formules :
+
+1) Consommation d'énergie du véhicule thermique :
+   kWh/100 km = consommation (L/100 km) × kWh/L
+
+2) Coût du véhicule thermique :
+   €/100 km = consommation (L/100 km) × prix du carburant (€/L)
+
+3) Coût de l'électrique :
+   €/100 km = consommation (kWh/100 km) × prix de l'électricité (€/kWh)</div>
+        <p class="note">
+          Le contenu énergétique réel des carburants varie légèrement selon leur composition (essence env. 8,7–9,1 kWh/L, diesel env. 9,7–9,9 kWh/L). Les moyennes utilisées ici servent à une comparaison approximative et ne remplacent pas une valeur exacte du constructeur. Les pertes de recharge du véhicule électrique (généralement quelques pour cent) ne sont pas indiquées séparément dans le calcul du coût de l'électricité.
+        </p>
+        <p class="source-links">Sources : <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – publications sur les carburants et les émissions</a>, <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/neuwagenkauf/co2-label-pkw-effizienzklassen/" target="_blank" rel="noopener noreferrer">ADAC – guide de la voiture électrique</a>, <a href="https://de.wikipedia.org/wiki/Elektroauto" target="_blank" rel="noopener noreferrer">Wikipedia – Voiture électrique</a></p>
+      </aside>
+    </div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Remarques sur la comparaison des motorisations</h2>
+      <div class="seo-text">
+        <p>Ce calculateur vous permet de comparer directement la consommation d'énergie et le coût énergétique pur des véhicules thermiques et des voitures électriques. Pour cela, indiquez la consommation en L/100 km et en kWh/100 km, ainsi que les prix actuels du carburant et de l'électricité.</p>
+        <p>Vous voyez ainsi en un coup d'œil ce qu'implique un passage de l'essence ou du diesel à l'électrique dans votre situation personnelle. Face à des prix de l'énergie fluctuants, une comparaison transparente par 100 km est particulièrement utile pour mieux évaluer une décision d'achat.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">En pratique : thermique ou électrique – ce qui compte</h2>
+      <div class="seo-text">
+        <p>La rentabilité financière d'une voiture électrique dépend fortement de votre propre prix de l'électricité (borne de recharge à domicile vs. borne de recharge rapide coûteuse en déplacement) et du prix du carburant dans votre région – ce calculateur rend transparente la comparaison des seuls coûts énergétiques.</p>
+        <p>Celui qui recharge beaucoup à domicile avec un tarif de nuit avantageux ou sa propre installation solaire obtient un coût par 100 km nettement inférieur à celui d'une recharge sur des bornes rapides publiques.</p>
+        <p>Pour un calcul de coût complet (coût total de possession), il faut, outre les coûts énergétiques, tenir compte du prix d'achat, de la dépréciation, de l'entretien et de l'assurance – ce calculateur se limite volontairement aux coûts énergétiques par 100 km.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Une voiture électrique est-elle moins chère à l'usage qu'un véhicule thermique ?</summary><p>En ce qui concerne les seuls coûts énergétiques par 100 km, une voiture électrique rechargée à domicile revient généralement bien moins cher qu'un véhicule thermique comparable. En revanche, si l'on utilise surtout des bornes de recharge rapide publiques, souvent coûteuses, cet avantage peut nettement diminuer.</p></details>
+        <details class="faq-item"><summary>Combien de kWh consomme une voiture électrique par 100 km ?</summary><p>La plupart des voitures électriques particulières consomment entre 15 et 22 kWh/100 km, selon la taille du véhicule, le style de conduite, la température extérieure et la vitesse.</p></details>
+        <details class="faq-item"><summary>Pourquoi une voiture électrique consomme-t-elle plus en hiver ?</summary><p>Le froid réduit l'efficacité de la batterie et le chauffage de l'habitacle nécessite de l'énergie supplémentaire, ce qui peut augmenter sensiblement la consommation par 100 km en hiver.</p></details>
+        <details class="faq-item"><summary>Combien de kWh représente 1 litre d'essence sur le plan énergétique ?</summary><p>Sur le plan énergétique, 1 litre d'essence contient environ 8,9 à 9,0 kWh, 1 litre de diesel environ 9,8 kWh – nettement plus que l'énergie électrique nécessaire à une voiture électrique pour parcourir la même distance, mais avec un rendement plus faible pour le moteur thermique.</p></details>
+        <details class="faq-item"><summary>Les pertes de recharge de la voiture électrique sont-elles prises en compte dans ce calculateur ?</summary><p>Non, ce calculateur compare uniquement les coûts énergétiques sur la base de la consommation indiquée. Les pertes de recharge (généralement quelques pour cent) ne sont pas indiquées séparément et augmenteraient légèrement le coût réel.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Convertisseur de consommation →</a>
+        <a href="energieumrechner.html">Convertisseur d'énergie →</a>
+        <a href="geschwindigkeitumrechner.html">Convertisseur de vitesse →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script>
+    const fuelTypes = {
+      super_e5:   { kwhPerLiter: 8.9 },
+      super_plus: { kwhPerLiter: 9.0 },
+      diesel:     { kwhPerLiter: 9.8 }
+    };
+
+    const iceFuelType    = document.getElementById('iceFuelType');
+    const iceConsumption = document.getElementById('iceConsumption');
+    const icePrice       = document.getElementById('icePrice');
+    const evConsumption  = document.getElementById('evConsumption');
+    const evPrice        = document.getElementById('evPrice');
+
+    const iceKwhDisplay  = document.getElementById('iceKwhDisplay');
+    const iceCostDisplay = document.getElementById('iceCostDisplay');
+    const evKwhDisplay   = document.getElementById('evKwhDisplay');
+    const evCostDisplay  = document.getElementById('evCostDisplay');
+    const compareText    = document.getElementById('compareText');
+
+    function fmt(num, decimals = 2) {
+      if (!Number.isFinite(num)) return '–';
+      return new Intl.NumberFormat('de-DE', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(num);
+    }
+
+    function recalc() {
+      const fuel = fuelTypes[iceFuelType.value];
+      const iceCons = parseFloat(iceConsumption.value);
+      const iceP    = parseFloat(icePrice.value);
+      const evCons  = parseFloat(evConsumption.value);
+      const evP     = parseFloat(evPrice.value);
+
+      if (Number.isNaN(iceCons) || Number.isNaN(iceP) ||
+          Number.isNaN(evCons) || Number.isNaN(evP)) {
+        compareText.textContent = 'Veuillez remplir tous les champs avec des valeurs numériques valides.';
+        return;
+      }
+
+      const iceKwhPer100  = iceCons * fuel.kwhPerLiter;
+      const iceCostPer100 = iceCons * iceP;
+      const evKwhPer100   = evCons;
+      const evCostPer100  = evCons * evP;
+
+      iceKwhDisplay.textContent  = `${fmt(iceKwhPer100)} kWh/100 km`;
+      iceCostDisplay.textContent = `${fmt(iceCostPer100)} €/100 km`;
+      evKwhDisplay.textContent   = `${fmt(evKwhPer100)} kWh/100 km`;
+      evCostDisplay.textContent  = `${fmt(evCostPer100)} €/100 km`;
+
+      let text = '';
+      const kwhRatio  = iceKwhPer100 / evKwhPer100;
+      const costRatio = iceCostPer100 / evCostPer100;
+
+      if (Number.isFinite(kwhRatio) && Number.isFinite(costRatio) && evKwhPer100 > 0 && evCostPer100 > 0) {
+        if (kwhRatio > 1) {
+          text += `Le <strong>véhicule thermique</strong> nécessite environ ${fmt(kwhRatio, 1)} fois plus d'énergie que le <strong>véhicule électrique</strong> par 100 km. `;
+        } else {
+          text += `Le <strong>véhicule électrique</strong> nécessite environ ${fmt(1 / kwhRatio, 1)} fois plus d'énergie que le <strong>véhicule thermique</strong> par 100 km (avec les valeurs saisies). `;
+        }
+
+        if (costRatio > 1) {
+          text += `En termes de coût, le <strong>véhicule thermique</strong> est environ ${fmt(costRatio, 1)} fois plus cher par 100 km.`;
+        } else {
+          text += `En termes de coût, le <strong>véhicule électrique</strong> est environ ${fmt(1 / costRatio, 1)} fois plus cher par 100 km.`;
+        }
+      } else {
+        text = 'Les valeurs saisies ne permettent pas de comparaison pertinente (vérifiez les valeurs à 0).';
+      }
+
+      compareText.innerHTML = text;
+    }
+
+    [iceFuelType, iceConsumption, icePrice, evConsumption, evPrice]
+      .forEach(el => el.addEventListener('input', recalc));
+
+    recalc();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Convertisseur d'énergie – Joule, kWh, calories, BTU et plus</title>
+  <meta name="description" content="Convertissez gratuitement les unités d'énergie : joules, kilojoules, wattheures, kilowattheures, calories, électronvolts et BTU." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/energieumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/energieumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/energieumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/energieumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/energieumrechner.html" />
+  <meta name="theme-color" content="#0d47a1" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/energieumrechner.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Convertisseur d'énergie – Joule, kWh, calories, BTU et plus" />
+  <meta property="og:description" content="Convertissez gratuitement les unités d'énergie : joules, kilojoules, wattheures, kilowattheures, calories, électronvolts et BTU." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convertisseur d'énergie – Joule, kWh, calories, BTU et plus" />
+  <meta name="twitter:description" content="Convertissez gratuitement les unités d'énergie : joules, kilojoules, wattheures, kilowattheures, calories, électronvolts et BTU." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #0d47a1;
+      --color-primary-hover: #082f6b;
+      --color-primary-soft: #dce7f7;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Convertisseur d'énergie",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/energieumrechner.html",
+      "description": "Convertissez gratuitement les unités d'énergie : joules, kilojoules, wattheures, kilowattheures, calories, électronvolts et BTU.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Convertisseur d'Unités",
+        "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Convertisseur d'énergie",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/energieumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de kJ vaut 1 kcal ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 kilocalorie (kcal) équivaut à 4,184 kilojoules (kJ). Les valeurs nutritionnelles indiquent souvent les deux valeurs côte à côte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de joules vaut 1 kWh ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 kilowattheure équivaut à 3.600.000 joules (3,6 mégajoules) – c'est l'énergie fournie par une puissance de 1 kW pendant une heure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que signifie BTU pour les climatiseurs ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le BTU (British Thermal Unit) est une unité d'énergie courante dans les pays anglo-saxons. 1 BTU équivaut à environ 1055 joules ; la puissance frigorifique des climatiseurs est souvent indiquée en BTU/h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre calorie et kilocalorie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dans le langage courant, « calorie » désigne sur les aliments le plus souvent la kilocalorie (kcal). Sur le plan physique, 1 kcal équivaut cependant à 1000 (petites) calories – une confusion fréquente dans les informations nutritionnelles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de joules vaut 1 électronvolt ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 électronvolt (eV) équivaut exactement à 1,602176634 × 10⁻¹⁹ joule – une valeur exacte depuis la redéfinition du SI en 2019, courante en physique des particules et en physique atomique."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">E</span>
+        <span>Convertisseur d'énergie</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">physique &amp; technique</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../energieumrechner.html" hreflang="de">DE</a>
+          <a href="../nl/energieumrechner.html" hreflang="nl">NL</a>
+          <a href="energieumrechner.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convertissez l'énergie rapidement</h1>
+      <p>Convertissez entre joules, kilowattheures, calories, électronvolts et BTU – pour l'électricité, l'alimentation et la technique.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Convertisseur</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Valeur</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">De</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Inverser les unités</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Résultat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Vers</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 kWh = 3.600.000 joules</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Publicité / AdSense / emplacement d'affiliation</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Espace publicitaire</h2>
+        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversions populaires</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="kilowatt_hour,joule,1">kWh vers joule</button>
+        <button type="button" data-preset="joule,kilowatt_hour,3600000">Joule vers kWh</button>
+        <button type="button" data-preset="kilocalorie,kilojoule,1">kcal vers kJ</button>
+        <button type="button" data-preset="kilojoule,kilocalorie,1">kJ vers kcal</button>
+        <button type="button" data-preset="watt_hour,joule,1">Wh vers joule</button>
+        <button type="button" data-preset="btu,kilojoule,1">BTU vers kJ</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule et valeurs de référence</h2>
+      <div class="formula">Résultat = Valeur × Facteur(de) ÷ Facteur(vers), Unité de base = 1 joule (J)
+
+1 kWh              = 3.600.000 J
+1 Wh               = 3600 J
+1 cal (thermochimique) = 4,184 J
+1 kcal             = 4184 J
+1 eV               = 1,602176634 × 10⁻¹⁹ J (exact, définition SI depuis 2019)
+1 BTU (int. Table) = 1055,05585262 J
+1 ft·lb            = 1,3558179483314004 J</div>
+      <p class="note">Dans les informations nutritionnelles, « calorie » est couramment employé au sens de kilocalorie (kcal) – ce convertisseur distingue correctement cal et kcal.</p>
+          <p class="source-links">Sources : <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – Brochure SI (définition du joule)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST – Guide de conversion d'unités</a>, <a href="https://de.wikipedia.org/wiki/Joule" target="_blank" rel="noopener noreferrer">Wikipedia – Joule</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Toutes les unités d'énergie prises en charge</h2>
+      <div class="seo-text">
+        <p>Avec ce convertisseur d'énergie, vous pouvez convertir directement les joules, kilojoules, wattheures, kilowattheures, calories, kilocalories, électronvolts, BTU et foot-pounds.</p>
+        <p>Le kilowattheure (kWh) est l'unité de facturation courante de l'électricité en Allemagne, tandis que le BTU est souvent utilisé pour la puissance des climatiseurs et des chauffages dans les pays anglo-saxons.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">En pratique : quand convertir des unités d'énergie</h2>
+      <div class="seo-text">
+        <p>Sur les emballages alimentaires, les valeurs nutritionnelles sont généralement indiquées à la fois en kilojoules (kJ) et en kilocalories (kcal) – celui qui planifie ses besoins caloriques en kcal doit convertir la valeur en kJ.</p>
+        <p>La facture d'électricité est établie en kilowattheures (kWh) ; pour comparer la consommation d'énergie des appareils en joules ou en wattheures, la conversion est nécessaire.</p>
+        <p>Les climatiseurs du marché américain indiquent leur puissance frigorifique en BTU plutôt qu'en kW – un point important pour choisir la taille d'appareil adaptée à une pièce.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Combien de kJ vaut 1 kcal ?</summary><p>1 kilocalorie (kcal) équivaut à 4,184 kilojoules (kJ). Les valeurs nutritionnelles indiquent souvent les deux valeurs côte à côte.</p></details>
+        <details class="faq-item"><summary>Combien de joules vaut 1 kWh ?</summary><p>1 kilowattheure équivaut à 3.600.000 joules (3,6 mégajoules) – c'est l'énergie fournie par une puissance de 1 kW pendant une heure.</p></details>
+        <details class="faq-item"><summary>Que signifie BTU pour les climatiseurs ?</summary><p>Le BTU (British Thermal Unit) est une unité d'énergie courante dans les pays anglo-saxons. 1 BTU équivaut à environ 1055 joules ; la puissance frigorifique des climatiseurs est souvent indiquée en BTU/h.</p></details>
+        <details class="faq-item"><summary>Quelle est la différence entre calorie et kilocalorie ?</summary><p>Dans le langage courant, « calorie » désigne sur les aliments le plus souvent la kilocalorie (kcal). Sur le plan physique, 1 kcal équivaut cependant à 1000 (petites) calories – une confusion fréquente dans les informations nutritionnelles.</p></details>
+        <details class="faq-item"><summary>Combien de joules vaut 1 électronvolt ?</summary><p>1 électronvolt (eV) équivaut exactement à 1,602176634 × 10⁻¹⁹ joule – une valeur exacte depuis la redéfinition du SI en 2019, courante en physique des particules et en physique atomique.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Convertisseur de consommation →</a>
+        <a href="antriebsvergleich.html">Comparaison thermique/électrique →</a>
+        <a href="datenumrechner.html">Convertisseur de données →</a>
+        <a href="temperaturumrechner.html">Convertisseur de température →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      joule: { label: 'Joule (J)', factor: 1 },
+      kilojoule: { label: 'Kilojoule (kJ)', factor: 1000 },
+      calorie: { label: 'Calorie (cal)', factor: 4.184 },
+      kilocalorie: { label: 'Kilocalorie (kcal)', factor: 4184 },
+      watt_hour: { label: 'Wattheure (Wh)', factor: 3600 },
+      kilowatt_hour: { label: 'Kilowattheure (kWh)', factor: 3600000 },
+      electronvolt: { label: 'Électronvolt (eV)', factor: 1.602176634e-19 },
+      btu: { label: 'BTU (International Table)', factor: 1055.05585262 },
+      foot_pound: { label: 'Foot-pound (ft·lb)', factor: 1.3558179483314004 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'kilowatt_hour',
+      defaultTo: 'joule',
+      decimals: 8
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

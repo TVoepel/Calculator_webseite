@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Benzine/diesel vs. elektrisch – Energie &amp; kosten per 100 km</title>
+  <meta name="description" content="Vergelijk het energieverbruik en de kosten per 100 km van benzine- en dieselauto's met elektrische auto's, in kWh/100 km en euro/100 km." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Benzine/diesel vs. elektrisch – Energie &amp; kosten per 100 km" />
+  <meta property="og:description" content="Vergelijk het energieverbruik en de kosten per 100 km van benzine- en dieselauto's met elektrische auto's, in kWh/100 km en euro/100 km." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Benzine/diesel vs. elektrisch – Energie &amp; kosten per 100 km" />
+  <meta name="twitter:description" content="Vergelijk het energieverbruik en de kosten per 100 km van benzine- en dieselauto's met elektrische auto's, in kWh/100 km en euro/100 km." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-hover: #0d3711;
+      --color-primary-soft: #e8f5e9;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Aandrijfvergelijking benzine/diesel vs. elektrisch",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html",
+      "description": "Vergelijk het energieverbruik en de kosten per 100 km van benzine- en dieselauto's met elektrische auto's, in kWh/100 km en euro/100 km.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aandrijfvergelijking benzine/diesel vs. elektrisch",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is een elektrische auto goedkoper in onderhoud dan een auto met verbrandingsmotor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wat de pure energiekosten per 100 km betreft, ligt een elektrische auto die thuis wordt opgeladen meestal duidelijk lager dan een vergelijkbare benzine- of dieselauto. Wordt er echter vooral gebruikgemaakt van dure openbare snelladers, dan kan dit voordeel flink kleiner worden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel kWh verbruikt een elektrische auto per 100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De meeste elektrische personenauto's verbruiken tussen 15 en 22 kWh/100 km, afhankelijk van de grootte van de auto, rijstijl, buitentemperatuur en snelheid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom verbruikt een elektrische auto in de winter meer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kou vermindert de efficiëntie van de accu en de verwarming van de cabine vergt extra energie, wat het verbruik per 100 km 's winters merkbaar kan verhogen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel kWh aan energie bevat 1 liter benzine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Energetisch gezien bevat 1 liter benzine ongeveer 8,9–9,0 kWh, 1 liter diesel ongeveer 9,8 kWh – aanzienlijk meer dan de elektrische energie die een elektrische auto voor dezelfde afstand nodig heeft, al is het rendement van een verbrandingsmotor lager."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Zijn laadverliezen van de elektrische auto in deze rekenaar meegenomen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nee, deze rekenaar vergelijkt alleen de energiekosten op basis van het opgegeven verbruik. Laadverliezen (doorgaans enkele procenten) worden niet apart weergegeven en zouden de werkelijke kosten iets verhogen."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">EV</span>
+        <span>Aandrijfvergelijking</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Energie &amp; kosten / 100 km</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../antriebsvergleich.html" hreflang="de">DE</a>
+          <a href="antriebsvergleich.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/antriebsvergleich.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Benzine/diesel en elektrische auto eerlijk vergelijken</h1>
+      <p>Vul het verbruik van je benzine- of dieselauto in L/100 km en van je elektrische auto in kWh/100 km in, samen met de actuele brandstof- en stroomprijs. De rekenaar toont energieverbruik en kosten per 100 km naast elkaar.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Invoer &amp; resultaten</h2>
+        <div class="subgrid">
+          <div class="two-col">
+            <div>
+              <h3>Brandstofauto</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="iceFuelType">Brandstof</label>
+                  <select id="iceFuelType">
+                    <option value="super_e5">Benzine Super (E5/E10)</option>
+                    <option value="super_plus">Benzine Super Plus (E5)</option>
+                    <option value="diesel">Diesel</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iceConsumption">Verbruik (L/100 km)</label>
+                  <input id="iceConsumption" type="number" step="0.1" min="0" value="6.5" />
+                </div>
+                <div>
+                  <label for="icePrice">Brandstofprijs (€/L)</label>
+                  <input id="icePrice" type="number" step="0.01" min="0" value="1.85" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Elektrische auto</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="evConsumption">Verbruik (kWh/100 km)</label>
+                  <input id="evConsumption" type="number" step="0.1" min="0" value="18" />
+                </div>
+                <div>
+                  <label for="evPrice">Stroomprijs (€/kWh)</label>
+                  <input id="evPrice" type="number" step="0.01" min="0" value="0.35" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Resultaat brandstofauto</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="iceKwhDisplay">– kWh/100 km</span>
+                  <span>Energieverbruik brandstofauto</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="iceCostDisplay">– €/100 km</span>
+                  <span>Brandstofkosten per 100 km</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Resultaat elektrisch</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="evKwhDisplay">– kWh/100 km</span>
+                  <span>Energieverbruik elektrisch</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="evCostDisplay">– €/100 km</span>
+                  <span>Stroomkosten per 100 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare" id="compareText">
+            Vul hierboven je waarden in om de vergelijking te zien.
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Advertentieruimte: plek voor advertentie (AdSense, directe verkoop of affiliate-banner).</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Aannames &amp; formules</h2>
+        <div class="formula">We rekenen met typische energiewaarden (onderste verbrandingswaarde, afgeronde gemiddelden):
+
+- Benzine Super (E5/E10/Super Plus): ca. 8,9–9,0 kWh per liter
+- Diesel: ca. 9,8 kWh per liter
+
+Formules:
+
+1) Energieverbruik brandstofauto:
+   kWh/100 km = verbruik (L/100 km) × kWh/L
+
+2) Kosten brandstofauto:
+   €/100 km = verbruik (L/100 km) × brandstofprijs (€/L)
+
+3) Kosten elektrisch:
+   €/100 km = verbruik (kWh/100 km) × stroomprijs (€/kWh)</div>
+        <p class="note">
+          De werkelijke energie-inhoud van brandstoffen varieert licht afhankelijk van de samenstelling (benzine ca. 8,7–9,1 kWh/L, diesel ca. 9,7–9,9 kWh/L). De hier gebruikte gemiddelden dienen voor een globale vergelijking en vervangen geen exacte fabrieksopgave. Laadverliezen bij de elektrische auto (doorgaans enkele procenten) worden in de stroomkostenberekening niet apart weergegeven.
+        </p>
+        <p class="source-links">Bronnen: <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – publicaties over brandstoffen &amp; emissies</a>, <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/neuwagenkauf/co2-label-pkw-effizienzklassen/" target="_blank" rel="noopener noreferrer">ADAC – gids elektrische auto's</a>, <a href="https://de.wikipedia.org/wiki/Elektroauto" target="_blank" rel="noopener noreferrer">Wikipedia – Elektrische auto</a></p>
+      </aside>
+    </div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Toelichting bij de aandrijfvergelijking</h2>
+      <div class="seo-text">
+        <p>Met deze rekenaar kun je het energieverbruik en de pure energiekosten van brandstofauto's en elektrische auto's rechtstreeks naast elkaar zetten. Vul daarvoor het verbruik in L/100 km en kWh/100 km in, samen met actuele prijzen voor brandstof en stroom.</p>
+        <p>Zo zie je in één oogopslag wat een overstap van benzine of diesel naar een elektrische auto betekent onder jouw persoonlijke omstandigheden. Zeker bij schommelende energieprijzen is een transparante vergelijking per 100 km nuttig om aankoopbeslissingen beter te kunnen inschatten.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast: brandstofauto of elektrisch – waar het op aankomt</h2>
+      <div class="seo-text">
+        <p>Of een elektrische auto financieel de moeite waard is, hangt sterk af van je eigen stroomprijs (wallbox thuis versus dure snellader onderweg) en de brandstofprijs bij jou in de buurt – deze rekenaar maakt de zuivere energiekostenvergelijking inzichtelijk.</p>
+        <p>Wie veel thuis oplaadt met goedkope nachtstroom of een eigen zonne-installatie, komt uit op duidelijk lagere kosten per 100 km dan bij het opladen bij openbare snelladers.</p>
+        <p>Voor een volledige kostenberekening (Total Cost of Ownership) moeten naast de energiekosten ook de aanschafprijs, waardevermindering, onderhoud en verzekering worden meegenomen – deze rekenaar behandelt bewust alleen de energiekosten per 100 km.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is een elektrische auto goedkoper in onderhoud dan een auto met verbrandingsmotor?</summary><p>Wat de pure energiekosten per 100 km betreft, ligt een elektrische auto die thuis wordt opgeladen meestal duidelijk lager dan een vergelijkbare benzine- of dieselauto. Wordt er echter vooral gebruikgemaakt van dure openbare snelladers, dan kan dit voordeel flink kleiner worden.</p></details>
+        <details class="faq-item"><summary>Hoeveel kWh verbruikt een elektrische auto per 100 km?</summary><p>De meeste elektrische personenauto's verbruiken tussen 15 en 22 kWh/100 km, afhankelijk van de grootte van de auto, rijstijl, buitentemperatuur en snelheid.</p></details>
+        <details class="faq-item"><summary>Waarom verbruikt een elektrische auto in de winter meer?</summary><p>Kou vermindert de efficiëntie van de accu en de verwarming van de cabine vergt extra energie, wat het verbruik per 100 km 's winters merkbaar kan verhogen.</p></details>
+        <details class="faq-item"><summary>Hoeveel kWh aan energie bevat 1 liter benzine?</summary><p>Energetisch gezien bevat 1 liter benzine ongeveer 8,9–9,0 kWh, 1 liter diesel ongeveer 9,8 kWh – aanzienlijk meer dan de elektrische energie die een elektrische auto voor dezelfde afstand nodig heeft, al is het rendement van een verbrandingsmotor lager.</p></details>
+        <details class="faq-item"><summary>Zijn laadverliezen van de elektrische auto in deze rekenaar meegenomen?</summary><p>Nee, deze rekenaar vergelijkt alleen de energiekosten op basis van het opgegeven verbruik. Laadverliezen (doorgaans enkele procenten) worden niet apart weergegeven en zouden de werkelijke kosten iets verhogen.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Brandstofverbruik-omrekenaar →</a>
+        <a href="energieumrechner.html">Energie-omrekenaar →</a>
+        <a href="geschwindigkeitumrechner.html">Snelheid-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script>
+    const fuelTypes = {
+      super_e5:   { kwhPerLiter: 8.9 },
+      super_plus: { kwhPerLiter: 9.0 },
+      diesel:     { kwhPerLiter: 9.8 }
+    };
+
+    const iceFuelType    = document.getElementById('iceFuelType');
+    const iceConsumption = document.getElementById('iceConsumption');
+    const icePrice       = document.getElementById('icePrice');
+    const evConsumption  = document.getElementById('evConsumption');
+    const evPrice        = document.getElementById('evPrice');
+
+    const iceKwhDisplay  = document.getElementById('iceKwhDisplay');
+    const iceCostDisplay = document.getElementById('iceCostDisplay');
+    const evKwhDisplay   = document.getElementById('evKwhDisplay');
+    const evCostDisplay  = document.getElementById('evCostDisplay');
+    const compareText    = document.getElementById('compareText');
+
+    function fmt(num, decimals = 2) {
+      if (!Number.isFinite(num)) return '–';
+      return new Intl.NumberFormat('de-DE', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(num);
+    }
+
+    function recalc() {
+      const fuel = fuelTypes[iceFuelType.value];
+      const iceCons = parseFloat(iceConsumption.value);
+      const iceP    = parseFloat(icePrice.value);
+      const evCons  = parseFloat(evConsumption.value);
+      const evP     = parseFloat(evPrice.value);
+
+      if (Number.isNaN(iceCons) || Number.isNaN(iceP) ||
+          Number.isNaN(evCons) || Number.isNaN(evP)) {
+        compareText.textContent = 'Vul alle invoervelden in met geldige numerieke waarden.';
+        return;
+      }
+
+      const iceKwhPer100  = iceCons * fuel.kwhPerLiter;
+      const iceCostPer100 = iceCons * iceP;
+      const evKwhPer100   = evCons;
+      const evCostPer100  = evCons * evP;
+
+      iceKwhDisplay.textContent  = `${fmt(iceKwhPer100)} kWh/100 km`;
+      iceCostDisplay.textContent = `${fmt(iceCostPer100)} €/100 km`;
+      evKwhDisplay.textContent   = `${fmt(evKwhPer100)} kWh/100 km`;
+      evCostDisplay.textContent  = `${fmt(evCostPer100)} €/100 km`;
+
+      let text = '';
+      const kwhRatio  = iceKwhPer100 / evKwhPer100;
+      const costRatio = iceCostPer100 / evCostPer100;
+
+      if (Number.isFinite(kwhRatio) && Number.isFinite(costRatio) && evKwhPer100 > 0 && evCostPer100 > 0) {
+        if (kwhRatio > 1) {
+          text += `De <strong>brandstofauto</strong> heeft ongeveer ${fmt(kwhRatio, 1)}‑maal zoveel energie nodig als de <strong>elektrische auto</strong> per 100 km. `;
+        } else {
+          text += `De <strong>elektrische auto</strong> heeft ongeveer ${fmt(1 / kwhRatio, 1)}‑maal zoveel energie nodig als de <strong>brandstofauto</strong> per 100 km (bij de ingevoerde waarden). `;
+        }
+
+        if (costRatio > 1) {
+          text += `Qua kosten is de <strong>brandstofauto</strong> ongeveer ${fmt(costRatio, 1)}‑maal duurder per 100 km.`;
+        } else {
+          text += `Qua kosten is de <strong>elektrische auto</strong> ongeveer ${fmt(1 / costRatio, 1)}‑maal duurder per 100 km.`;
+        }
+      } else {
+        text = 'De ingevoerde waarden leveren geen zinvolle vergelijking op (controleer op 0‑waarden).';
+      }
+
+      compareText.innerHTML = text;
+    }
+
+    [iceFuelType, iceConsumption, icePrice, evConsumption, evPrice]
+      .forEach(el => el.addEventListener('input', recalc));
+
+    recalc();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
