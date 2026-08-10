@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Convertisseur de poids – Kilogramme, livre, once et plus</title>
-  <meta name="description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, livre (lb), once (oz), stone, carat et plus." />
+  <meta name="description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, Zentner, Doppelzentner, décitonne, livre (lb), once (oz), stone, carat et plus." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/gewichtumrechner.html" />
@@ -26,13 +26,13 @@
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="nl_NL" />
   <meta property="og:title" content="Convertisseur de poids – Kilogramme, livre, once et plus" />
-  <meta property="og:description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, livre (lb), once (oz), stone, carat et plus." />
+  <meta property="og:description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, Zentner, Doppelzentner, décitonne, livre (lb), once (oz), stone, carat et plus." />
   <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Convertisseur de poids – Kilogramme, livre, once et plus" />
-  <meta name="twitter:description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, livre (lb), once (oz), stone, carat et plus." />
+  <meta name="twitter:description" content="Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, Zentner, Doppelzentner, décitonne, livre (lb), once (oz), stone, carat et plus." />
   <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
@@ -49,7 +49,7 @@
       "@type": "WebApplication",
       "name": "Convertisseur de poids",
       "url": "https://tvoepel.github.io/Calculator_webseite/fr/gewichtumrechner.html",
-      "description": "Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, livre (lb), once (oz), stone, carat et plus.",
+      "description": "Convertissez gratuitement les unités de poids et de masse : gramme, kilogramme, tonne, Zentner, Doppelzentner, décitonne, livre (lb), once (oz), stone, carat et plus.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any (via navigateur)",
       "inLanguage": "fr",
@@ -122,6 +122,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "La tonne métrique (t) fait 1000 kg, la tonne courte US (short ton) 907,18474 kg et la tonne longue UK (long ton) 1016,0469088 kg – une source fréquente d'erreur dans les indications de fret internationales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre le Zentner, le Doppelzentner et la décitonne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 Zentner correspond en Allemagne à 50 kg. 1 Doppelzentner (Dz) fait 100 kg, soit deux Zentner. La décitonne (dt) équivaut également exactement à 100 kg (un dixième de tonne) et est surtout utilisée dans les statistiques agricoles officielles allemandes, par ex. pour les rendements en dt/ha – Doppelzentner et décitonne désignent donc la même quantité."
           }
         }
       ]
@@ -207,6 +215,8 @@
         <button type="button" data-preset="ounce,gram,1">Once vers gramme</button>
         <button type="button" data-preset="tonne,kilogram,1">Tonne vers kilogramme</button>
         <button type="button" data-preset="stone,kilogram,1">Stone vers kilogramme</button>
+        <button type="button" data-preset="zentner,kilogram,1">Zentner vers kilogramme</button>
+        <button type="button" data-preset="dezitonne,kilogram,1">Décitonne vers kilogramme</button>
       </div>
     </section>
 
@@ -217,6 +227,9 @@
 1 livre (lb, avoirdupois)      = 0,45359237 kg (exacte)
 1 once (oz)                     = 0,028349523125 kg (exacte, 1 lb / 16)
 1 stone                         = 6,35029318 kg (exacte, 14 lb)
+1 Zentner (unité allemande)     = 50 kg
+1 Doppelzentner (Dz)            = 100 kg (= 2 Zentner)
+1 décitonne (dt)                = 100 kg (unité officielle des statistiques agricoles, par ex. dt/ha)
 1 carat (ct)                    = 0,0002 kg = 0,2 g
 1 tonne courte US (short ton)   = 907,18474 kg
 1 tonne longue UK (long ton)    = 1016,0469088 kg</div>
@@ -227,7 +240,7 @@
     <section class="card seo-card">
       <h2 class="section-title">Toutes les unités de poids prises en charge</h2>
       <div class="seo-text">
-        <p>Avec ce convertisseur de poids, vous pouvez convertir directement le milligramme, le gramme, le kilogramme, la tonne, la livre (lb), l'once (oz), le stone, le carat, la tonne courte US et la tonne longue UK.</p>
+        <p>Avec ce convertisseur de poids, vous pouvez convertir directement le milligramme, le gramme, le kilogramme, le Zentner, le Doppelzentner, la décitonne, la tonne, la livre (lb), l'once (oz), le stone, le carat, la tonne courte US et la tonne longue UK.</p>
         <p>Les facteurs de conversion impériaux (livre, once, stone) correspondent au système « avoirdupois » standardisé au niveau international.</p>
       </div>
     </section>
@@ -238,6 +251,7 @@
         <p>Lors d'un entraînement de fitness, les disques d'haltères et les appareils de fitness américains sont souvent indiqués en livres (lb), alors que le poids corporel et les programmes d'entraînement sont généralement exprimés en kilogrammes.</p>
         <p>La franchise bagages des vols est souvent limitée en livres par les compagnies aériennes américaines, et les bijoux en or et les diamants sont pesés en carats – les deux peuvent être rapidement convertis en grammes ou en kilogrammes avec ce convertisseur.</p>
         <p>Les recettes américaines indiquent aussi parfois les ingrédients en onces (oz) plutôt qu'en grammes, ce qui peut prêter à confusion lorsqu'on reproduit des recettes européennes ou américaines.</p>
+        <p>Dans l'agriculture allemande, les rendements des récoltes sont traditionnellement indiqués en Zentner ou en Doppelzentner par hectare (par ex. « 80 dt/ha de blé »), tandis que les statistiques officielles utilisent la décitonne (dt) comme unité officielle – les deux correspondent exactement à 100 kg.</p>
       </div>
     </section>
 
@@ -246,9 +260,10 @@
       <div class="faq-list">
         <details class="faq-item"><summary>Combien de kilogrammes fait 1 livre ?</summary><p>1 livre (lb, avoirdupois) équivaut exactement à 0,45359237 kg. Inversement, 1 kg correspond à environ 2,2046 livres.</p></details>
         <details class="faq-item"><summary>Combien de grammes fait une once ?</summary><p>1 once (oz) équivaut exactement à 0,028349523125 kg, soit environ 28,35 grammes – un seizième de livre.</p></details>
-        <details class="faq-item"><summary>Qu'est-ce qu'un carat pour le poids de l'or ?</summary><p>1 carat (carat de poids, ct) équivaut à 0,2 gramme. À ne pas confondre avec le "carat" utilisé comme indication de pureté de l'or (par ex. 24 carats = or pur), qui a une signification différente.</p></details>
+        <details class="faq-item"><summary>Qu'est-ce qu'un carat pour le poids de l'or ?</summary><p>1 carat (carat de poids, ct) équivaut à 0,2 gramme. À ne pas confondre avec le « carat » utilisé comme indication de pureté de l'or (par ex. 24 carats = or pur), qui a une signification différente.</p></details>
         <details class="faq-item"><summary>Combien pèse 1 stone en kilogrammes ?</summary><p>1 stone équivaut à 6,35029318 kg (14 livres). Cette unité est surtout utilisée au Royaume-Uni et en Irlande pour le poids corporel.</p></details>
         <details class="faq-item"><summary>Quelle est la différence entre la tonne courte US, la tonne longue UK et la tonne métrique ?</summary><p>La tonne métrique (t) fait 1000 kg, la tonne courte US (short ton) 907,18474 kg et la tonne longue UK (long ton) 1016,0469088 kg – une source fréquente d'erreur dans les indications de fret internationales.</p></details>
+        <details class="faq-item"><summary>Quelle est la différence entre le Zentner, le Doppelzentner et la décitonne ?</summary><p>1 Zentner correspond en Allemagne à 50 kg. 1 Doppelzentner (Dz) fait 100 kg, soit deux Zentner. La décitonne (dt) équivaut également exactement à 100 kg (un dixième de tonne) et est surtout utilisée dans les statistiques agricoles officielles allemandes, par ex. pour les rendements en dt/ha – Doppelzentner et décitonne désignent donc la même quantité.</p></details>
       </div>
     </section>
 
@@ -278,6 +293,9 @@
       milligram: { label: 'Milligramme (mg)', factor: 0.000001 },
       gram: { label: 'Gramme (g)', factor: 0.001 },
       kilogram: { label: 'Kilogramme (kg)', factor: 1 },
+      zentner: { label: 'Zentner (unité allemande, 50 kg)', factor: 50 },
+      doppelzentner: { label: 'Doppelzentner (unité allemande, 100 kg)', factor: 100 },
+      dezitonne: { label: 'Décitonne (dt)', factor: 100 },
       tonne: { label: 'Tonne (t)', factor: 1000 },
       carat: { label: 'Carat (ct)', factor: 0.0002 },
       ounce: { label: 'Once (oz)', factor: 0.028349523125 },

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Gewichtsumrechner – Kilogramm, Pfund, Unze & mehr</title>
-  <meta name="description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
+  <meta name="description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Zentner, Doppelzentner, Dezitonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/gewichtumrechner.html" />
@@ -26,13 +26,13 @@
   <meta property="og:locale:alternate" content="nl_NL" />
   <meta property="og:locale:alternate" content="fr_FR" />
   <meta property="og:title" content="Gewichtsumrechner – Kilogramm, Pfund, Unze & mehr" />
-  <meta property="og:description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
+  <meta property="og:description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Zentner, Doppelzentner, Dezitonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
   <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gewichtsumrechner – Kilogramm, Pfund, Unze & mehr" />
-  <meta name="twitter:description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
+  <meta name="twitter:description" content="Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Zentner, Doppelzentner, Dezitonne, Pfund (lb), Unze (oz), Stone, Karat und mehr." />
   <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
@@ -49,7 +49,7 @@
       "@type": "WebApplication",
       "name": "Gewichtsumrechner",
       "url": "https://tvoepel.github.io/Calculator_webseite/gewichtumrechner.html",
-      "description": "Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Pfund (lb), Unze (oz), Stone, Karat und mehr.",
+      "description": "Gewichts- und Masseeinheiten kostenlos umrechnen: Gramm, Kilogramm, Tonne, Zentner, Doppelzentner, Dezitonne, Pfund (lb), Unze (oz), Stone, Karat und mehr.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any (webbasiert)",
       "inLanguage": "de",
@@ -122,6 +122,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Die metrische Tonne (t) hat 1000 kg, die US-Tonne (short ton) 907,18474 kg und die UK-Tonne (long ton) 1016,0469088 kg – ein häufiger Stolperstein bei internationalen Frachtangaben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Zentner, Doppelzentner und Dezitonne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 Zentner entspricht in Deutschland 50 kg. 1 Doppelzentner (Dz) sind 100 kg, also zwei Zentner. Die Dezitonne (dt) ist ebenfalls exakt 100 kg (ein Zehntel Tonne) und wird vor allem in der amtlichen Agrarstatistik verwendet, z. B. bei Ernteerträgen in dt/ha – Doppelzentner und Dezitonne bezeichnen also dieselbe Menge."
           }
         }
       ]
@@ -207,6 +215,8 @@
         <button type="button" data-preset="ounce,gram,1">Unze in Gramm</button>
         <button type="button" data-preset="tonne,kilogram,1">Tonne in Kilogramm</button>
         <button type="button" data-preset="stone,kilogram,1">Stone in Kilogramm</button>
+        <button type="button" data-preset="zentner,kilogram,1">Zentner in Kilogramm</button>
+        <button type="button" data-preset="dezitonne,kilogram,1">Dezitonne in Kilogramm</button>
       </div>
     </section>
 
@@ -217,6 +227,9 @@
 1 Pfund (lb, avoirdupois) = 0,45359237 kg (exakt)
 1 Unze (oz)                = 0,028349523125 kg (exakt, 1 lb / 16)
 1 Stone                    = 6,35029318 kg (exakt, 14 lb)
+1 Zentner (Ztr.)            = 50 kg (in Deutschland gesetzlich festgelegt)
+1 Doppelzentner (Dz)        = 100 kg (= 2 Zentner)
+1 Dezitonne (dt)            = 100 kg (amtliche Einheit der Agrarstatistik, z. B. dt/ha)
 1 Karat (ct)                = 0,0002 kg = 0,2 g
 1 US-Tonne (short ton)      = 907,18474 kg
 1 UK-Tonne (long ton)       = 1016,0469088 kg</div>
@@ -227,7 +240,7 @@
     <section class="card seo-card">
       <h2 class="section-title">Alle unterstützten Gewichtseinheiten</h2>
       <div class="seo-text">
-        <p>Mit diesem Gewichtsumrechner kannst du Milligramm, Gramm, Kilogramm, Tonne, Pfund (lb), Unze (oz), Stone, Karat, US-Tonne und UK-Tonne direkt umrechnen.</p>
+        <p>Mit diesem Gewichtsumrechner kannst du Milligramm, Gramm, Kilogramm, Zentner, Doppelzentner, Dezitonne, Tonne, Pfund (lb), Unze (oz), Stone, Karat, US-Tonne und UK-Tonne direkt umrechnen.</p>
         <p>Die imperialen Umrechnungsfaktoren (Pfund, Unze, Stone) entsprechen dem international standardisierten „avoirdupois“-System.</p>
       </div>
     </section>
@@ -238,6 +251,7 @@
         <p>Beim Fitnesstraining sind Hantelscheiben und US-Fitnessgeräte oft in Pfund (lb) beschriftet, während Körpergewicht und Trainingspläne in Deutschland meist in Kilogramm angegeben werden.</p>
         <p>Freigepäck bei Flügen wird von US-Airlines häufig in Pfund limitiert, Goldschmuck und Diamanten werden in Karat gewogen – beides lässt sich schnell mit diesem Rechner in Gramm oder Kilogramm umrechnen.</p>
         <p>Auch US-Rezepte geben Zutaten teils in Unzen (oz) statt Gramm an, was beim Nachkochen europäischer oder amerikanischer Rezepte zu Verwirrung führen kann.</p>
+        <p>In der Landwirtschaft werden Ernteerträge traditionell in Zentnern oder Doppelzentnern pro Hektar angegeben (z. B. "80 dt/ha Weizen"), während amtliche Statistiken die Dezitonne (dt) als offizielle Einheit nutzen – beide Angaben entsprechen exakt 100 kg.</p>
       </div>
     </section>
 
@@ -249,6 +263,7 @@
         <details class="faq-item"><summary>Was ist ein Karat beim Goldgewicht?</summary><p>1 Karat (Gewichtskarat, ct) entspricht 0,2 Gramm. Nicht zu verwechseln mit "Karat" als Feingehaltsangabe bei Gold (z. B. 24 Karat = reines Gold), das eine andere Bedeutung hat.</p></details>
         <details class="faq-item"><summary>Wie viel wiegt 1 Stone in Kilogramm?</summary><p>1 Stone entspricht 6,35029318 kg (14 Pfund). Die Einheit wird vor allem in Großbritannien und Irland für Körpergewicht verwendet.</p></details>
         <details class="faq-item"><summary>Was ist der Unterschied zwischen US-Tonne, UK-Tonne und metrischer Tonne?</summary><p>Die metrische Tonne (t) hat 1000 kg, die US-Tonne (short ton) 907,18474 kg und die UK-Tonne (long ton) 1016,0469088 kg – ein häufiger Stolperstein bei internationalen Frachtangaben.</p></details>
+        <details class="faq-item"><summary>Was ist der Unterschied zwischen Zentner, Doppelzentner und Dezitonne?</summary><p>1 Zentner entspricht in Deutschland 50 kg. 1 Doppelzentner (Dz) sind 100 kg, also zwei Zentner. Die Dezitonne (dt) ist ebenfalls exakt 100 kg (ein Zehntel Tonne) und wird vor allem in der amtlichen Agrarstatistik verwendet, z. B. bei Ernteerträgen in dt/ha – Doppelzentner und Dezitonne bezeichnen also dieselbe Menge.</p></details>
       </div>
     </section>
 
@@ -278,6 +293,9 @@
       milligram: { label: 'Milligramm (mg)', factor: 0.000001 },
       gram: { label: 'Gramm (g)', factor: 0.001 },
       kilogram: { label: 'Kilogramm (kg)', factor: 1 },
+      zentner: { label: 'Zentner (Ztr.)', factor: 50 },
+      doppelzentner: { label: 'Doppelzentner (Dz)', factor: 100 },
+      dezitonne: { label: 'Dezitonne (dt)', factor: 100 },
       tonne: { label: 'Tonne (t)', factor: 1000 },
       carat: { label: 'Karat (ct)', factor: 0.0002 },
       ounce: { label: 'Unze (oz)', factor: 0.028349523125 },

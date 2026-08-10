@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bloedsuiker-omrekenaar – mg/dl naar mmol/l en omgekeerd</title>
+  <meta name="description" content="Bloedsuikerwaarden gratis omrekenen: mg/dl naar mmol/l en omgekeerd, met referentietabel (normaal, prediabetes, diabetes) en bronvermeldingen (Wikipedia, PharmaWiki, diabetesDE)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/blutzuckerumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/blutzuckerumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/blutzuckerumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/blutzuckerumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/blutzuckerumrechner.html" />
+  <meta name="theme-color" content="#b71c1c" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/blutzuckerumrechner.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Bloedsuiker-omrekenaar – mg/dl naar mmol/l en omgekeerd" />
+  <meta property="og:description" content="Bloedsuikerwaarden gratis omrekenen: mg/dl naar mmol/l en omgekeerd, met referentietabel (normaal, prediabetes, diabetes) en bronvermeldingen (Wikipedia, PharmaWiki, diabetesDE)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bloedsuiker-omrekenaar – mg/dl naar mmol/l en omgekeerd" />
+  <meta name="twitter:description" content="Bloedsuikerwaarden gratis omrekenen: mg/dl naar mmol/l en omgekeerd, met referentietabel (normaal, prediabetes, diabetes) en bronvermeldingen (Wikipedia, PharmaWiki, diabetesDE)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #b71c1c;
+      --color-primary-hover: #7f1313;
+      --color-primary-soft: #fbdada;
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    .ref-table th, .ref-table td {
+      text-align: left;
+      padding: 0.5rem 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .source-list {
+      display: grid;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+    }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Bloedsuiker-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/blutzuckerumrechner.html",
+      "description": "Bloedsuikerwaarden gratis omrekenen: mg/dl naar mmol/l en omgekeerd, met referentietabel (normaal, prediabetes, diabetes) en bronvermeldingen (Wikipedia, PharmaWiki, diabetesDE).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bloedsuiker-omrekenaar",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/blutzuckerumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoeveel mmol/l is 100 mg/dl bloedsuiker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100 mg/dl komt overeen met ongeveer 5,55 mmol/l (100 ÷ 18,0156)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel mg/dl is 7,0 mmol/l bloedsuiker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "7,0 mmol/l komt overeen met ongeveer 126,1 mg/dl (7,0 × 18,0156) – een veelgenoemde diabetesgrenswaarde voor de nuchtere bloedsuiker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom wordt bloedsuiker in sommige landen in mg/dl gemeten en in andere in mmol/l?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beide eenheden hebben zich historisch regionaal doorgezet: mmol/l is de SI-conforme eenheid en in de meeste landen standaard, mg/dl wordt onder andere gebruikt in de VS, delen van Duitsland, Oostenrijk, Frankrijk en Japan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vanaf welke waarde spreekt men van diabetes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Een nuchter gemeten bloedsuiker vanaf 126 mg/dl (7,0 mmol/l), bevestigd op een tweede dag of door een aanvullende test, geldt volgens gangbare richtlijnen als aanwijzing voor diabetes mellitus. De uiteindelijke diagnose wordt altijd gesteld door een arts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan ik de eenheid van mijn bloedsuikermeter omzetten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Veel meters en apps (bijv. FreeStyle Libre, Apple Health) laten je in de instellingen schakelen tussen mg/dl en mmol/l – deze rekentool helpt om bestaande waarden toch snel te vergelijken."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">Bz</span>
+        <span>Bloedsuiker-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Diabetes &amp; lab</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../blutzuckerumrechner.html" hreflang="de">DE</a>
+          <a href="blutzuckerumrechner.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/blutzuckerumrechner.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Bloedsuikerwaarden omrekenen: mg/dl ↔ mmol/l</h1>
+      <p>In Duitsland, Oostenrijk, de VS en enkele andere landen wordt bloedsuiker meestal in mg/dl gemeten; in het SI-eenhedenstelsel (en in grote delen van Europa) in mmol/l. Deze rekentool rekent glucosewaarden in beide richtingen om.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Omrekenaar</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="100" step="any" min="0" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">100 mg/dl = 5,5507 mmol/l</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Advertentieruimte</h2>
+        <div class="ad-slot">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Populaire omrekeningen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="mg_dl,mmol_l,100">100 mg/dl naar mmol/l</button>
+        <button type="button" data-preset="mg_dl,mmol_l,126">126 mg/dl naar mmol/l</button>
+        <button type="button" data-preset="mg_dl,mmol_l,140">140 mg/dl naar mmol/l</button>
+        <button type="button" data-preset="mmol_l,mg_dl,5.6">5,6 mmol/l naar mg/dl</button>
+        <button type="button" data-preset="mmol_l,mg_dl,7">7,0 mmol/l naar mg/dl</button>
+        <button type="button" data-preset="mmol_l,mg_dl,11.1">11,1 mmol/l naar mg/dl</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule</h2>
+      <div class="formula">mmol/l = mg/dl ÷ 18,0156
+mg/dl = mmol/l × 18,0156
+
+(vaak afgerond als: mg/dl × 0,0555 = mmol/l of mmol/l × 18,02 = mg/dl)</div>
+      <p class="note">De factor 18,0156 volgt uit de molaire massa van glucose (C₆H₁₂O₆ = 180,156 g/mol): 1 mmol/l glucose komt overeen met 180,156 mg/l = 18,0156 mg/dl. Dezelfde formule (massa = molariteit × molaire massa) gebruikt ook onze <a href="konzentrationsumrechner.html">algemene concentratie-omrekenaar</a>.</p>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Referentiewaarden (richtwaarden)</h2>
+      <div class="seo-text" style="margin-bottom: var(--space-4);">
+        <p>Diagnostische grenswaarden volgens gangbare richtlijnen (WHO / ADA / Deutsche Diabetes Gesellschaft), zoals onder andere samengevat door diabetesDE:</p>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="ref-table">
+          <thead>
+            <tr><th>Categorie</th><th>Nuchtere bloedsuiker</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Normaal</td><td>&lt; 100 mg/dl (&lt; 5,6 mmol/l)</td></tr>
+            <tr><td>Prediabetes (verstoorde nuchtere glucose)</td><td>100–125 mg/dl (5,6–6,9 mmol/l)</td></tr>
+            <tr><td>Diabetes mellitus (bevestigd op 2 dagen, of + HbA1c/OGTT)</td><td>≥ 126 mg/dl (≥ 7,0 mmol/l)</td></tr>
+            <tr><td>Normaal, 2 uur na de maaltijd (postprandiaal)</td><td>&lt; 140 mg/dl (&lt; 7,8 mmol/l)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ Deze waarden dienen uitsluitend ter algemene informatie en vervangen geen medische diagnose of advies. Eenmalige metingen zijn niet voldoende voor een diabetesdiagnose. Neem bij vragen over je persoonlijke bloedsuikerwaarden contact op met je huisarts of diabetesverpleegkundige.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Bronnen</h2>
+      <div class="source-list">
+        <p><a href="https://de.wikipedia.org/wiki/Blutzucker" target="_blank" rel="noopener noreferrer">Wikipedia – Bloedsuiker</a> (eenheden mg/dl vs. mmol/l, regionaal gebruik)</p>
+        <p><a href="https://www.pharmawiki.ch/wiki/index.php?wiki=Blutzucker" target="_blank" rel="noopener noreferrer">PharmaWiki – Bloedsuiker</a> (omrekenfactor, regulatie, hypo-/hyperglykemie)</p>
+        <p><a href="https://www.diabetesde.org/ueber_diabetes/blutzuckerwerte_umrechnen" target="_blank" rel="noopener noreferrer">diabetesDE – Deutsche Diabetes-Hilfe: bloedsuikerwaarden omrekenen</a></p>
+        <p><a href="https://www.apotheken-umschau.de/krankheiten-symptome/diabetes/lexikon/blutzucker-masseinheiten-809687.html" target="_blank" rel="noopener noreferrer">Apotheken Umschau – bloedsuiker-maateenheden</a></p>
+      </div>
+      <p class="note" style="margin-top: var(--space-4);">Externe links openen in een nieuw tabblad en verwijzen naar onafhankelijke websites van derden, waarop wij geen invloed hebben.</p>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoeveel mmol/l is 100 mg/dl bloedsuiker?</summary><p>100 mg/dl komt overeen met ongeveer 5,55 mmol/l (100 ÷ 18,0156).</p></details>
+        <details class="faq-item"><summary>Hoeveel mg/dl is 7,0 mmol/l bloedsuiker?</summary><p>7,0 mmol/l komt overeen met ongeveer 126,1 mg/dl (7,0 × 18,0156) – een veelgenoemde diabetesgrenswaarde voor de nuchtere bloedsuiker.</p></details>
+        <details class="faq-item"><summary>Waarom wordt bloedsuiker in sommige landen in mg/dl gemeten en in andere in mmol/l?</summary><p>Beide eenheden hebben zich historisch regionaal doorgezet: mmol/l is de SI-conforme eenheid en in de meeste landen standaard, mg/dl wordt onder andere gebruikt in de VS, delen van Duitsland, Oostenrijk, Frankrijk en Japan.</p></details>
+        <details class="faq-item"><summary>Vanaf welke waarde spreekt men van diabetes?</summary><p>Een nuchter gemeten bloedsuiker vanaf 126 mg/dl (7,0 mmol/l), bevestigd op een tweede dag of door een aanvullende test, geldt volgens gangbare richtlijnen als aanwijzing voor diabetes mellitus. De uiteindelijke diagnose wordt altijd gesteld door een arts.</p></details>
+        <details class="faq-item"><summary>Kan ik de eenheid van mijn bloedsuikermeter omzetten?</summary><p>Veel meters en apps (bijv. FreeStyle Libre, Apple Health) laten je in de instellingen schakelen tussen mg/dl en mmol/l – deze rekentool helpt om bestaande waarden toch snel te vergelijken.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="konzentrationsumrechner.html">Concentratie-omrekenaar →</a>
+        <a href="gewichtumrechner.html">Gewicht-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Basis: mg/dl. 1 mmol/l glucose = 18,0156 mg/dl (molaire massa glucose C6H12O6 = 180,156 g/mol)
+    const units = {
+      mg_dl: { label: 'mg/dl', factor: 1 },
+      mmol_l: { label: 'mmol/l', factor: 18.0156 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'mg_dl',
+      defaultTo: 'mmol_l',
+      decimals: 4
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

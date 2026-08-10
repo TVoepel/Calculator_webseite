@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Concentratie-omrekenaar – mol/L, g/L, ppm, mg/dL &amp; meer</title>
+  <meta name="description" content="Chemische concentraties omrekenen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, en molaliteit (mol/kg). Met molaire-massaberekening uit formule of verbindingsnaam (nitraat, sulfaat, fosfaat, ammonium, glutamaat, creatinine e.v.)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <meta name="theme-color" content="#ad1457" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Concentratie-omrekenaar – mol/L, g/L, ppm, mg/dL &amp; meer" />
+  <meta property="og:description" content="Chemische concentraties omrekenen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, en molaliteit (mol/kg). Met molaire-massaberekening uit formule of verbindingsnaam (nitraat, sulfaat, fosfaat, ammonium, glutamaat, creatinine e.v.)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Concentratie-omrekenaar – mol/L, g/L, ppm, mg/dL &amp; meer" />
+  <meta name="twitter:description" content="Chemische concentraties omrekenen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, en molaliteit (mol/kg). Met molaire-massaberekening uit formule of verbindingsnaam (nitraat, sulfaat, fosfaat, ammonium, glutamaat, creatinine e.v.)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #ad1457;
+      --color-primary-hover: #740d3a;
+      --color-primary-soft: #fbdce8;
+    }
+    .status-line {
+      font-size: var(--text-sm);
+      margin-top: var(--space-2);
+      min-height: 1.4em;
+    }
+    .status-ok { color: var(--color-primary); font-weight: 600; }
+    .status-error { color: #b3261e; font-weight: 600; }
+    .status-muted { color: var(--color-text-muted); }
+    .compound-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    .compound-table th, .compound-table td {
+      text-align: left;
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Concentratie-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html",
+      "description": "Chemische concentraties omrekenen: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, en molaliteit (mol/kg). Met molaire-massaberekening uit formule of verbindingsnaam (nitraat, sulfaat, fosfaat, ammonium, glutamaat, creatinine e.v.).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Concentratie-omrekenaar",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoe bereken je de molaire massa van een verbinding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De molaire massa is de som van de atoommassa's van alle atomen in de chemische formule, bijv. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen mol/L en mg/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "mol/L (molariteit) telt deeltjes ongeacht hun massa, mg/L (massaconcentratie) meet het gewicht per liter. De omrekening verloopt via de molaire massa: massa = stofhoeveelheid × molaire massa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat betekent ppm bij waterwaarden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ppm (parts per million) komt bij verdunde waterige oplossingen ongeveer overeen met mg/L, omdat de dichtheid van water dicht bij 1 kg/L ligt. Bij andere oplosmiddelen of hoge concentraties geldt deze benadering niet meer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe bereken je de molaire massa van een hydraat zoals MgSO4·7H2O?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je telt de molaire massa van de basisverbinding (MgSO₄) op bij de molaire massa van het kristalwater, vermenigvuldigd met het aantal watermoleculen (hier 7 × 18,015 g/mol voor 7 H₂O)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Verandert de lading van een ion (bijv. SO4²⁻) de molaire massa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Praktisch niet: de elektronmassa is verwaarloosbaar klein ten opzichte van de totale massa van een ion, waardoor molaire massa's van ionen zoals gebruikelijk uit de som van de atoommassa's worden berekend."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen molariteit en molaliteit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Molariteit (mol/L) relateert de stofhoeveelheid aan het volume van de kant-en-klare oplossing, molaliteit (mol/kg) aan de massa van het zuivere oplosmiddel. Molaliteit is temperatuuronafhankelijk (massa verandert niet met de temperatuur), molariteit daarentegen licht temperatuurafhankelijk, omdat het vloeistofvolume met de temperatuur verandert. Voor de omrekening tussen beide is bovendien de dichtheid van de oplossing nodig."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">c</span>
+        <span>Concentratie-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Chemie &amp; lab</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../konzentrationsumrechner.html" hreflang="de">DE</a>
+          <a href="konzentrationsumrechner.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/konzentrationsumrechner.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Chemische concentraties omrekenen</h1>
+      <p>Reken tussen molaire eenheden (mol/L, mmol/L, µmol/L, nmol/L) en massaeenheden (g/L, mg/L, mg/dL, mg/mL, ppm …) om. Voor de omrekening tussen mol- en massaeenheden is de molaire massa nodig – vul daarvoor een verbindingsnaam, chemische formule of direct een getal in.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Omrekenaar</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="substanceInput">Verbinding, formule of molaire massa</label>
+              <input id="substanceInput" type="text" placeholder="bijv. nitraat, NaCl, MgSO4·7H2O" list="compoundList" value="Nitraat" />
+              <datalist id="compoundList"></datalist>
+            </div>
+            <div>
+              <label for="molarMassInput">Molaire massa (g/mol)</label>
+              <input id="molarMassInput" type="number" step="any" min="0" />
+            </div>
+          </div>
+          <div class="status-line" id="substanceStatus"></div>
+
+          <div class="row" id="densityRow" style="display:none;">
+            <div>
+              <label for="densityInput">Oplossingsdichtheid ρ (kg/L, alleen voor molaliteit)</label>
+              <input id="densityInput" type="number" step="any" min="0" value="1.000" />
+            </div>
+            <div class="status-line" style="align-self:end;">Benadering voor verdunde waterige oplossingen: ρ ≈ 1,00 kg/L</div>
+          </div>
+
+          <div class="row" style="margin-top: var(--space-2);">
+            <div>
+              <label for="fromValue">Waarde</label>
+              <input id="fromValue" type="number" value="50" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">Van</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultaat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Naar</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Bekende verbindingen</h2>
+        <table class="compound-table">
+          <thead><tr><th>Naam</th><th>Formule</th><th>M (g/mol)</th></tr></thead>
+          <tbody id="compoundTableBody"></tbody>
+        </table>
+        <p class="note">Waarden bepaald via de ingebouwde formuleberekening (som van de atoommassa's). Ionladingen (⁻/⁺) veranderen de molaire massa vrijwel niet (elektronmassa verwaarloosbaar) en worden daarom genegeerd.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Populaire omrekeningen</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="Nitraat,50,mg_l,mmol_l">Nitraat: 50 mg/L naar mmol/L</button>
+        <button type="button" data-preset="Sulfaat,100,mg_l,mmol_l">Sulfaat: 100 mg/L naar mmol/L</button>
+        <button type="button" data-preset="Fosfaat,2,mg_l,umol_l">Fosfaat: 2 mg/L naar µmol/L</button>
+        <button type="button" data-preset="Ammonium,0.5,mg_l,umol_l">Ammonium: 0,5 mg/L naar µmol/L</button>
+        <button type="button" data-preset="Creatinine,1.2,mg_dl,umol_l">Creatinine: 1,2 mg/dL naar µmol/L</button>
+        <button type="button" data-preset="Glutamine,5,mg_dl,mmol_l">Glutamine: 5 mg/dL naar mmol/L</button>
+        <button type="button" data-preset="NaCl,58.44,g_l,mol_kg">NaCl: 58,44 g/L naar mol/kg (molaliteit)</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formules &amp; opmerkingen over de syntax</h2>
+      <div class="formula">Massaconcentratie [g/L] = molaire concentratie [mol/L] × molaire massa [g/mol]
+Molaire concentratie [mol/L] = massaconcentratie [g/L] ÷ molaire massa [g/mol]
+
+Molaliteit ↔ molariteit (bovendien oplossingsdichtheid ρ in kg/L nodig):
+Molariteit c [mol/L] = molaliteit b [mol/kg] × ρ ÷ (1 + b × molaire massa ÷ 1000)
+Molaliteit b [mol/kg] = molariteit c [mol/L] ÷ (ρ − c × molaire massa ÷ 1000)
+
+Formulesyntax:
+- Elementsymbolen met hoofdletter, optioneel 2e letter klein (Na, Cl, Fe, Ca)
+- Haakjes ( ) en [ ] met vermenigvuldiger, bijv. Ca3(PO4)2, Fe2(SO4)3
+- Hydraten met · of *, bijv. MgSO4·7H2O, CuSO4*5H2O
+- Ladingen optioneel met ^, bijv. SO4^2-, NH4^+ (lading verandert de molaire massa niet)</div>
+      <p class="note">Voor ppm/ppb wordt de voor verdunde waterige oplossingen gebruikelijke benadering 1 ppm ≈ 1 mg/L (dichtheid van de oplossing ≈ 1 kg/L) gebruikt. Bij sterk geconcentreerde oplossingen, andere oplosmiddelen of gasmengsels (ppm naar volume) geldt deze benadering niet.</p>
+      <p class="note">Controleberekening: voor creatinine (M = 113,12 g/mol) volgt de in de klinische chemie bekende omrekenfactor µmol/L = mg/dL × 88,4 – komt exact overeen met deze rekentool.</p>
+      <p class="note">De molaliteit heeft betrekking op de massa van het <strong>oplosmiddel</strong> (mol/kg), de molariteit op het volume van de <strong>oplossing</strong> (mol/L) – daarom is voor de omrekening ook de oplossingsdichtheid nodig. Voor verdunde waterige oplossingen is ρ ≈ 1,00 kg/L een gebruikelijke benadering; bij geconcentreerdere oplossingen wijkt de werkelijke dichtheid merkbaar af.</p>
+          <p class="source-links">Bronnen: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Periodiek systeem &amp; standaard-atoomgewichten</a>, <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI-brochure (definitie van de mol)</a>, <a href="https://de.wikipedia.org/wiki/Stoffmengenkonzentration" target="_blank" rel="noopener noreferrer">Wikipedia – Molariteit</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle ondersteunde concentratie-eenheden</h2>
+      <div class="seo-text">
+        <p>Molaire eenheden: mol/L, mmol/L, µmol/L, nmol/L. Massaeenheden: g/L, mg/L, µg/L, mg/dL, mg/mL, µg/mL, ppm, ppb. Molale eenheden: mol/kg, mmol/kg (vereist bovendien de oplossingsdichtheid).</p>
+        <p>Ingebouwde verbindingen: nitraat, nitriet, sulfaat, fosfaat, ammonium, glutamaat, glutamine, creatinine, creatine. Alle andere stoffen kun je invoeren als chemische formule (bijv. NaCl, C6H12O6, CaCO3) of direct als getalswaarde van de molaire massa.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast: wanneer moet je concentraties omrekenen?</h2>
+      <div class="seo-text">
+        <p>In het aquarium worden nitraat-, nitriet-, fosfaat- en ammoniumwaarden meestal in mg/L gemeten – wetenschappelijke grenswaarden of laboratoriumanalyses geven dezelfde waarden echter vaak in mmol/L op.</p>
+        <p>Laboratoriumuitslagen (bijv. elektrolyten, creatinine) worden afhankelijk van land en laboratorium in mg/dL of in mmol/L resp. µmol/L uitgegeven, wat het vergelijken van waarden lastig maakt.</p>
+        <p>In scheikundeonderwijs en laboratorium is de omrekening tussen molariteit (mol/L) en massaconcentratie (g/L) via de molaire massa een van de meest fundamentele rekenopgaven.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe bereken je de molaire massa van een verbinding?</summary><p>De molaire massa is de som van de atoommassa's van alle atomen in de chemische formule, bijv. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen mol/L en mg/L?</summary><p>mol/L (molariteit) telt deeltjes ongeacht hun massa, mg/L (massaconcentratie) meet het gewicht per liter. De omrekening verloopt via de molaire massa: massa = stofhoeveelheid × molaire massa.</p></details>
+        <details class="faq-item"><summary>Wat betekent ppm bij waterwaarden?</summary><p>ppm (parts per million) komt bij verdunde waterige oplossingen ongeveer overeen met mg/L, omdat de dichtheid van water dicht bij 1 kg/L ligt. Bij andere oplosmiddelen of hoge concentraties geldt deze benadering niet meer.</p></details>
+        <details class="faq-item"><summary>Hoe bereken je de molaire massa van een hydraat zoals MgSO4·7H2O?</summary><p>Je telt de molaire massa van de basisverbinding (MgSO₄) op bij de molaire massa van het kristalwater, vermenigvuldigd met het aantal watermoleculen (hier 7 × 18,015 g/mol voor 7 H₂O).</p></details>
+        <details class="faq-item"><summary>Verandert de lading van een ion (bijv. SO4²⁻) de molaire massa?</summary><p>Praktisch niet: de elektronmassa is verwaarloosbaar klein ten opzichte van de totale massa van een ion, waardoor molaire massa's van ionen zoals gebruikelijk uit de som van de atoommassa's worden berekend.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen molariteit en molaliteit?</summary><p>Molariteit (mol/L) relateert de stofhoeveelheid aan het volume van de kant-en-klare oplossing, molaliteit (mol/kg) aan de massa van het zuivere oplosmiddel. Molaliteit is temperatuuronafhankelijk (massa verandert niet met de temperatuur), molariteit daarentegen licht temperatuurafhankelijk, omdat het vloeistofvolume met de temperatuur verandert. Voor de omrekening tussen beide is bovendien de dichtheid van de oplossing nodig.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Volume-omrekenaar →</a>
+        <a href="gewichtumrechner.html">Gewicht-omrekenaar →</a>
+        <a href="blutzuckerumrechner.html">Bloedsuiker-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Standaard-atoommassa's (g/mol), IUPAC-conventiewaarden (afgerond)
+    const atomicWeights = {
+      H: 1.008, He: 4.003, Li: 6.94, Be: 9.012, B: 10.81, C: 12.011, N: 14.007, O: 15.999,
+      F: 18.998, Ne: 20.180, Na: 22.990, Mg: 24.305, Al: 26.982, Si: 28.085, P: 30.974,
+      S: 32.06, Cl: 35.45, Ar: 39.948, K: 39.098, Ca: 40.078, Sc: 44.956, Ti: 47.867,
+      V: 50.942, Cr: 51.996, Mn: 54.938, Fe: 55.845, Co: 58.933, Ni: 58.693, Cu: 63.546,
+      Zn: 65.38, Ga: 69.723, Ge: 72.630, As: 74.922, Se: 78.971, Br: 79.904, Kr: 83.798,
+      Rb: 85.468, Sr: 87.62, Y: 88.906, Zr: 91.224, Nb: 92.906, Mo: 95.95, Ru: 101.07,
+      Rh: 102.91, Pd: 106.42, Ag: 107.87, Cd: 112.41, In: 114.82, Sn: 118.71, Sb: 121.76,
+      Te: 127.60, I: 126.90, Xe: 131.29, Cs: 132.91, Ba: 137.33, W: 183.84, Pt: 195.08,
+      Au: 196.97, Hg: 200.59, Pb: 207.2, Bi: 208.98
+    };
+
+    function parseSimpleFormula(formula) {
+      let i = 0;
+      function parseElementSymbol() {
+        const match = /^[A-Z][a-z]?/.exec(formula.slice(i));
+        if (!match) throw new Error(`Onverwacht teken op positie ${i + 1}: „${formula[i]}“`);
+        i += match[0].length;
+        return match[0];
+      }
+      function parseNumber() {
+        const match = /^\d+/.exec(formula.slice(i));
+        if (!match) return 1;
+        i += match[0].length;
+        return parseInt(match[0], 10);
+      }
+      function parseGroup() {
+        let mass = 0;
+        while (i < formula.length) {
+          const ch = formula[i];
+          if (ch === '(' || ch === '[') {
+            const closeCh = ch === '(' ? ')' : ']';
+            i++;
+            const subMass = parseGroup();
+            if (formula[i] !== closeCh) throw new Error(`Haakje „${ch}“ niet gesloten`);
+            i++;
+            mass += subMass * parseNumber();
+          } else if (ch === ')' || ch === ']') {
+            break;
+          } else if (/[A-Z]/.test(ch)) {
+            const symbol = parseElementSymbol();
+            const weight = atomicWeights[symbol];
+            if (weight === undefined) throw new Error(`Onbekend element: „${symbol}“`);
+            mass += weight * parseNumber();
+          } else {
+            throw new Error(`Onverwacht teken: „${ch}“`);
+          }
+        }
+        return mass;
+      }
+      const result = parseGroup();
+      if (i !== formula.length) throw new Error('Formule kon niet volledig worden gelezen.');
+      if (result <= 0) throw new Error('Formule levert geen geldige molaire massa op.');
+      return result;
+    }
+
+    function stripCharge(str) {
+      str = str.replace(/[+-]+$/, '');
+      str = str.replace(/\^\d*$/, '');
+      return str;
+    }
+
+    // Berekent de molaire massa (g/mol) van een formule, incl. haakjes, hydraten (·/*) en optionele lading (^)
+    function parseFormula(input) {
+      const clean = input.replace(/\s+/g, '');
+      if (!clean) throw new Error('Geen formule ingevoerd.');
+      const parts = clean.split(/[·*]/).filter(Boolean);
+      let totalMass = 0;
+      for (const rawPart of parts) {
+        let part = rawPart;
+        let multiplier = 1;
+        const m = /^(\d+)(.+)$/.exec(part);
+        if (m) { multiplier = parseInt(m[1], 10); part = m[2]; }
+        part = stripCharge(part);
+        totalMass += multiplier * parseSimpleFormula(part);
+      }
+      return Math.round(totalMass * 10000) / 10000;
+    }
+
+    // Bekende verbindingen: Nederlandse naam -> chemische formule (lading wordt bij de molaire massa genegeerd)
+    const compoundDictionary = {
+      nitraat: { formula: 'NO3', display: 'Nitraat', symbol: 'NO₃⁻' },
+      nitriet: { formula: 'NO2', display: 'Nitriet', symbol: 'NO₂⁻' },
+      sulfaat: { formula: 'SO4', display: 'Sulfaat', symbol: 'SO₄²⁻' },
+      fosfaat: { formula: 'PO4', display: 'Fosfaat', symbol: 'PO₄³⁻' },
+      ammonium: { formula: 'NH4', display: 'Ammonium', symbol: 'NH₄⁺' },
+      glutamaat: { formula: 'C5H8NO4', display: 'Glutamaat', symbol: 'C₅H₈NO₄⁻' },
+      glutamine: { formula: 'C5H10N2O3', display: 'Glutamine', symbol: 'C₅H₁₀N₂O₃' },
+      creatinine: { formula: 'C4H7N3O', display: 'Creatinine', symbol: 'C₄H₇N₃O' },
+      creatine: { formula: 'C4H9N3O2', display: 'Creatine', symbol: 'C₄H₉N₃O₂' }
+    };
+
+    function normalizeKey(str) {
+      return str.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
+    function lookupSubstance(raw) {
+      const trimmed = raw.trim();
+      if (!trimmed) return { error: 'Voer een verbinding, formule of molaire massa in.' };
+      const key = normalizeKey(trimmed);
+      if (compoundDictionary[key]) {
+        const entry = compoundDictionary[key];
+        try {
+          const mass = parseFormula(entry.formula);
+          return { mass, message: `✓ ${entry.display} (${entry.symbol}) herkend, M = ${formatNumber(mass, 4)} g/mol` };
+        } catch (e) {
+          return { error: e.message };
+        }
+      }
+      try {
+        const mass = parseFormula(trimmed);
+        return { mass, message: `✓ Formule herkend, M = ${formatNumber(mass, 4)} g/mol` };
+      } catch (e) {
+        return { error: `${e.message} Voer de molaire massa rechts handmatig in.` };
+      }
+    }
+
+    // Eenheden: 'molar' (basis mol/L) en 'mass' (basis g/L)
+    const unitGroups = [
+      {
+        label: 'Molair (molaire massa nodig voor massa-eenheden)',
+        units: [
+          { key: 'mol_l', label: 'mol/L', kind: 'molar', factor: 1 },
+          { key: 'mmol_l', label: 'mmol/L', kind: 'molar', factor: 0.001 },
+          { key: 'umol_l', label: 'µmol/L', kind: 'molar', factor: 0.000001 },
+          { key: 'nmol_l', label: 'nmol/L', kind: 'molar', factor: 0.000000001 }
+        ]
+      },
+      {
+        label: 'Massa',
+        units: [
+          { key: 'g_l', label: 'g/L', kind: 'mass', factor: 1 },
+          { key: 'mg_l', label: 'mg/L', kind: 'mass', factor: 0.001 },
+          { key: 'ug_l', label: 'µg/L', kind: 'mass', factor: 0.000001 },
+          { key: 'mg_dl', label: 'mg/dL', kind: 'mass', factor: 0.01 },
+          { key: 'mg_ml', label: 'mg/mL', kind: 'mass', factor: 1 },
+          { key: 'ug_ml', label: 'µg/mL', kind: 'mass', factor: 0.001 },
+          { key: 'ppm', label: 'ppm (≈ mg/L in water)', kind: 'mass', factor: 0.001 },
+          { key: 'ppb', label: 'ppb (≈ µg/L in water)', kind: 'mass', factor: 0.000001 }
+        ]
+      },
+      {
+        label: 'Molaal (molaire massa ÉN oplossingsdichtheid nodig)',
+        units: [
+          { key: 'mol_kg', label: 'mol/kg (molaal)', kind: 'molal', factor: 1 },
+          { key: 'mmol_kg', label: 'mmol/kg (molaal)', kind: 'molal', factor: 0.001 }
+        ]
+      }
+    ];
+
+    const units = {};
+    unitGroups.forEach(g => g.units.forEach(u => { units[u.key] = u; }));
+
+    const substanceInput = document.getElementById('substanceInput');
+    const molarMassInput = document.getElementById('molarMassInput');
+    const densityInput = document.getElementById('densityInput');
+    const densityRow = document.getElementById('densityRow');
+    const substanceStatus = document.getElementById('substanceStatus');
+    const fromValue = document.getElementById('fromValue');
+    const toValue = document.getElementById('toValue');
+    const fromUnit = document.getElementById('fromUnit');
+    const toUnit = document.getElementById('toUnit');
+    const resultText = document.getElementById('resultText');
+    const swapBtn = document.getElementById('swapBtn');
+    const compoundList = document.getElementById('compoundList');
+    const compoundTableBody = document.getElementById('compoundTableBody');
+
+    function populateSelects() {
+      [fromUnit, toUnit].forEach(select => {
+        unitGroups.forEach(group => {
+          const optgroup = document.createElement('optgroup');
+          optgroup.label = group.label;
+          group.units.forEach(u => optgroup.appendChild(new Option(u.label, u.key)));
+          select.appendChild(optgroup);
+        });
+      });
+      fromUnit.value = 'mg_l';
+      toUnit.value = 'mmol_l';
+    }
+
+    function populateCompoundList() {
+      const seen = new Set();
+      Object.values(compoundDictionary).forEach(entry => {
+        if (seen.has(entry.display)) return;
+        seen.add(entry.display);
+        compoundList.appendChild(new Option(entry.display));
+        const mass = parseFormula(entry.formula);
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${entry.display}</td><td>${entry.symbol}</td><td>${formatNumber(mass, 3)}</td>`;
+        compoundTableBody.appendChild(row);
+      });
+    }
+
+    function updateSubstance() {
+      const result = lookupSubstance(substanceInput.value);
+      if (result.error) {
+        substanceStatus.textContent = result.error;
+        substanceStatus.className = 'status-line status-error';
+      } else {
+        molarMassInput.value = result.mass;
+        substanceStatus.textContent = result.message;
+        substanceStatus.className = 'status-line status-ok';
+      }
+      convert();
+    }
+
+    // Rekent een willekeurige eenheid om naar de molaire basis (mol/L).
+    // Molair: directe factor. Massa: via molaire massa M. Molaal: via molaire massa M ÉN oplossingsdichtheid ρ (kg/L),
+    // formule: c [mol/L] = b [mol/kg] × ρ [kg/L] / (1 + b × M / 1000)
+    function toMolarBase(value, unit, M, rho) {
+      const raw = value * unit.factor;
+      if (unit.kind === 'molar') return raw;
+      if (unit.kind === 'mass') return raw / M;
+      // molaal
+      return (raw * rho) / (1 + (raw * M) / 1000);
+    }
+
+    // Rekent van de molaire basis (mol/L) om naar de doeleenheid (omkering van toMolarBase).
+    // Molaal-omkering: b [mol/kg] = c [mol/L] / (ρ − c × M / 1000)
+    function fromMolarBase(molPerL, unit, M, rho) {
+      if (unit.kind === 'molar') return molPerL / unit.factor;
+      if (unit.kind === 'mass') return (molPerL * M) / unit.factor;
+      const denom = rho - (molPerL * M) / 1000;
+      const b = molPerL / denom;
+      return b / unit.factor;
+    }
+
+    function convert() {
+      const value = parseFloat(fromValue.value);
+      const from = units[fromUnit.value];
+      const to = units[toUnit.value];
+      densityRow.style.display = (from.kind === 'molal' || to.kind === 'molal') ? 'grid' : 'none';
+      if (Number.isNaN(value)) {
+        toValue.value = '';
+        resultText.textContent = 'Voer een geldige numerieke waarde in.';
+        return;
+      }
+      let result;
+      if (from.kind === to.kind) {
+        result = (value * from.factor) / to.factor;
+      } else {
+        const needsM = from.kind !== 'molar' || to.kind !== 'molar';
+        const needsRho = from.kind === 'molal' || to.kind === 'molal';
+        const M = parseFloat(molarMassInput.value);
+        if (needsM && (!Number.isFinite(M) || M <= 0)) {
+          toValue.value = '';
+          resultText.textContent = 'Voor deze omrekening is een geldige molaire massa nodig (zie veld rechtsboven).';
+          return;
+        }
+        const rho = parseFloat(densityInput.value);
+        if (needsRho && (!Number.isFinite(rho) || rho <= 0)) {
+          toValue.value = '';
+          resultText.textContent = 'Voor molaliteit is bovendien een geldige oplossingsdichtheid (kg/L) nodig.';
+          return;
+        }
+        const molPerL = toMolarBase(value, from, M, rho);
+        result = fromMolarBase(molPerL, to, M, rho);
+      }
+      toValue.value = formatNumber(result, 6);
+      resultText.textContent = `${formatNumber(value, 6)} ${from.label} = ${formatNumber(result, 6)} ${to.label}`;
+    }
+
+    swapBtn.addEventListener('click', () => {
+      const a = fromUnit.value;
+      fromUnit.value = toUnit.value;
+      toUnit.value = a;
+      convert();
+    });
+
+    [fromValue, fromUnit, toUnit, molarMassInput, densityInput].forEach(el => el.addEventListener('input', convert));
+    substanceInput.addEventListener('input', updateSubstance);
+
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const [substance, value, from, to] = btn.dataset.preset.split(',');
+        substanceInput.value = substance;
+        fromValue.value = value;
+        fromUnit.value = from;
+        toUnit.value = to;
+        updateSubstance();
+      });
+    });
+
+    populateSelects();
+    populateCompoundList();
+    updateSubstance();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

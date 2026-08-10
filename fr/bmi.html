@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Calculateur d'IMC &amp; de besoins caloriques – IMC, MB, TDEE</title>
+  <meta name="description" content="Calculez gratuitement votre IMC, situez-le dans les catégories de l'OMS et déterminez vos besoins caloriques journaliers (métabolisme de base/TDEE) selon les formules de Mifflin-St Jeor et de Harris-Benedict." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta name="theme-color" content="#4527a0" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Calculateur d'IMC &amp; de besoins caloriques – IMC, MB, TDEE" />
+  <meta property="og:description" content="Calculez gratuitement votre IMC, situez-le dans les catégories de l'OMS et déterminez vos besoins caloriques journaliers (métabolisme de base/TDEE)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculateur d'IMC &amp; de besoins caloriques" />
+  <meta name="twitter:description" content="Calculez gratuitement votre IMC, votre métabolisme de base et vos besoins caloriques journaliers." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4527a0;
+      --color-primary-hover: #2c1a68;
+      --color-primary-soft: #e3dbf5;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calculateur d'IMC & de besoins caloriques",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/bmi.html",
+      "description": "Calculez gratuitement votre IMC, situez-le dans les catégories de l'OMS et déterminez vos besoins caloriques journaliers (métabolisme de base/TDEE).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": { "@type": "WebSite", "name": "Convertisseur d'Unités", "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Calculateur d'IMC & de besoins caloriques", "item": "https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Comment calculer mon IMC ?", "acceptedAnswer": { "@type": "Answer", "text": "IMC = poids (kg) ÷ taille (m)². Exemple : 75 kg ÷ (1,75 m)² = 24,5 (poids normal selon la classification de l'OMS)." } },
+        { "@type": "Question", "name": "Quelles sont les catégories d'IMC selon l'OMS ?", "acceptedAnswer": { "@type": "Answer", "text": "Moins de 18,5 insuffisance pondérale, 18,5–24,9 corpulence normale, 25–29,9 surpoids (pré-obésité), 30–34,9 obésité modérée (classe I), 35–39,9 obésité sévère (classe II), à partir de 40 obésité morbide (classe III)." } },
+        { "@type": "Question", "name": "Qu'est-ce que le métabolisme de base (MB) ?", "acceptedAnswer": { "@type": "Answer", "text": "Le métabolisme de base (Basal Metabolic Rate) est la quantité d'énergie dont le corps a besoin au repos complet pour ses fonctions vitales. La formule de Mifflin-St Jeor (1990) est aujourd'hui considérée comme plus précise que l'ancienne formule de Harris-Benedict." } },
+        { "@type": "Question", "name": "Comment calculer mes besoins caloriques journaliers (TDEE) ?", "acceptedAnswer": { "@type": "Answer", "text": "TDEE = métabolisme de base (MB) × facteur d'activité. Le facteur va de 1,2 (peu d'activité physique) à 1,9 (travail physique très intense associé à l'entraînement)." } },
+        { "@type": "Question", "name": "L'IMC est-il un indicateur de santé fiable ?", "acceptedAnswer": { "@type": "Answer", "text": "L'IMC ne tient compte ni de la masse musculaire, ni de la morphologie, ni de la répartition des graisses, et peut être trompeur chez les personnes très musclées ou très minces. Il sert d'indication générale, et non de diagnostic médical." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">B</span>
+        <span>IMC &amp; besoins caloriques</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">Santé &amp; fitness</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../bmi.html" hreflang="de">DE</a>
+          <a href="../nl/bmi.html" hreflang="nl">NL</a>
+          <a href="bmi.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Calculer l'IMC, le métabolisme de base &amp; les besoins caloriques</h1>
+      <p>Calculez votre indice de masse corporelle avec classification selon l'OMS, ainsi que vos besoins caloriques journaliers (métabolisme de base × facteur d'activité) selon la formule moderne de Mifflin-St Jeor.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Données</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="weightInput">Poids (kg)</label>
+              <input id="weightInput" type="number" value="75" step="0.1" min="1" />
+            </div>
+            <div>
+              <label for="heightInput">Taille (cm)</label>
+              <input id="heightInput" type="number" value="175" step="0.1" min="50" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="ageInput">Âge (années)</label>
+              <input id="ageInput" type="number" value="35" step="1" min="1" max="120" />
+            </div>
+            <div>
+              <label for="genderInput">Sexe (pour la formule du MB)</label>
+              <select id="genderInput">
+                <option value="m">Homme</option>
+                <option value="f">Femme</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div style="grid-column: 1 / -1;">
+              <label for="activityInput">Niveau d'activité</label>
+              <select id="activityInput">
+                <option value="1.2">Sédentaire, peu d'activité (1,2)</option>
+                <option value="1.375">Légèrement actif, 1 à 3 séances de sport/semaine (1,375)</option>
+                <option value="1.55" selected>Modérément actif, 3 à 5 séances de sport/semaine (1,55)</option>
+                <option value="1.725">Très actif, 6 à 7 séances de sport/semaine (1,725)</option>
+                <option value="1.9">Extrêmement actif, travail physique + entraînement (1,9)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-row">
+              <span class="result-highlight" id="bmiResult">–</span>
+              <span id="bmiCategory">IMC &amp; catégorie</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrResult">–</span>
+              <span>Métabolisme de base (Mifflin-St Jeor)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrHbResult">–</span>
+              <span>Métabolisme de base (Harris-Benedict, à titre de comparaison)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="tdeeResult">–</span>
+              <span>Besoins caloriques journaliers (TDEE)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Publicité / AdSense / emplacement d'affiliation</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Catégories d'IMC (OMS)</h2>
+        <table class="ref-table">
+          <thead><tr><th>IMC</th><th>Catégorie</th></tr></thead>
+          <tbody>
+            <tr><td>&lt; 18,5</td><td>Insuffisance pondérale</td></tr>
+            <tr><td>18,5–24,9</td><td>Corpulence normale</td></tr>
+            <tr><td>25,0–29,9</td><td>Surpoids (pré-obésité)</td></tr>
+            <tr><td>30,0–34,9</td><td>Obésité modérée (classe I)</td></tr>
+            <tr><td>35,0–39,9</td><td>Obésité sévère (classe II)</td></tr>
+            <tr><td>≥ 40,0</td><td>Obésité morbide (classe III)</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formules et sources</h2>
+      <div class="formula">IMC = poids [kg] ÷ taille [m]²
+
+Mifflin-St Jeor (1990), métabolisme de base en kcal/jour :
+  Hommes : MB = 10 × poids[kg] + 6,25 × taille[cm] − 5 × âge − 5
+  Femmes : MB = 10 × poids[kg] + 6,25 × taille[cm] − 5 × âge − 161
+
+Harris-Benedict, révisée en 1984 (à titre de comparaison) :
+  Hommes : MB = 88,362 + 13,397 × poids + 4,799 × taille − 5,677 × âge
+  Femmes : MB = 447,593 + 9,247 × poids + 3,098 × taille − 4,330 × âge
+
+TDEE = MB × facteur d'activité (1,2 à 1,9)</div>
+      <p class="note">La formule de Mifflin-St Jeor est aujourd'hui généralement considérée en nutrition comme plus précise que l'ancienne formule de Harris-Benedict et s'affiche ici comme résultat principal.</p>
+      <p class="source-links">Sources : <a href="https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations" target="_blank" rel="noopener noreferrer">OMS – Indice de masse corporelle</a>, <a href="https://de.wikipedia.org/wiki/Body-Mass-Index" target="_blank" rel="noopener noreferrer">Wikipedia – Indice de masse corporelle</a>, <a href="https://de.wikipedia.org/wiki/Grundumsatz" target="_blank" rel="noopener noreferrer">Wikipedia – Métabolisme de base</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ Ces valeurs sont fournies à titre purement indicatif et ne remplacent pas l'avis d'un médecin ou d'un(e) diététicien(ne). L'IMC et le métabolisme de base ne tiennent compte ni de la masse musculaire ni des facteurs de santé individuels. Pour toute question concernant votre poids ou votre plan alimentaire, consultez un médecin ou un(e) diététicien(ne) qualifié(e).
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">En pratique</h2>
+      <div class="seo-text">
+        <p>Pour une perte de poids réaliste, un déficit calorique d'environ 500 kcal/jour est une règle empirique courante pour perdre environ 0,5 kg par semaine – votre TDEE constitue ici la valeur de départ dont ce déficit est soustrait.</p>
+        <p>Les pratiquants de musculation et les sportifs d'endurance utilisent souvent le TDEE pour planifier l'apport calorique adapté à la prise de muscle (léger surplus) ou aux phases de sèche (déficit).</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Comment calculer mon IMC ?</summary><p>IMC = poids (kg) ÷ taille (m)². Exemple : 75 kg ÷ (1,75 m)² = 24,5 (poids normal selon la classification de l'OMS).</p></details>
+        <details class="faq-item"><summary>Quelles sont les catégories d'IMC selon l'OMS ?</summary><p>Moins de 18,5 insuffisance pondérale, 18,5–24,9 corpulence normale, 25–29,9 surpoids (pré-obésité), 30–34,9 obésité modérée (classe I), 35–39,9 obésité sévère (classe II), à partir de 40 obésité morbide (classe III).</p></details>
+        <details class="faq-item"><summary>Qu'est-ce que le métabolisme de base (MB) ?</summary><p>Le métabolisme de base (Basal Metabolic Rate) est la quantité d'énergie dont le corps a besoin au repos complet pour ses fonctions vitales. La formule de Mifflin-St Jeor (1990) est aujourd'hui considérée comme plus précise que l'ancienne formule de Harris-Benedict.</p></details>
+        <details class="faq-item"><summary>Comment calculer mes besoins caloriques journaliers (TDEE) ?</summary><p>TDEE = métabolisme de base (MB) × facteur d'activité. Le facteur va de 1,2 (peu d'activité physique) à 1,9 (travail physique très intense associé à l'entraînement).</p></details>
+        <details class="faq-item"><summary>L'IMC est-il un indicateur de santé fiable ?</summary><p>L'IMC ne tient compte ni de la masse musculaire, ni de la morphologie, ni de la répartition des graisses, et peut être trompeur chez les personnes très musclées ou très minces. Il sert d'indication générale, et non de diagnostic médical.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="gewichtumrechner.html">Convertisseur de poids →</a>
+        <a href="energieumrechner.html">Convertisseur d'énergie →</a>
+        <a href="blutzuckerumrechner.html">Convertisseur de glycémie →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const heightInput = document.getElementById('heightInput');
+    const ageInput = document.getElementById('ageInput');
+    const genderInput = document.getElementById('genderInput');
+    const activityInput = document.getElementById('activityInput');
+    const bmiResult = document.getElementById('bmiResult');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmrResult = document.getElementById('bmrResult');
+    const bmrHbResult = document.getElementById('bmrHbResult');
+    const tdeeResult = document.getElementById('tdeeResult');
+
+    function bmiCategoryFor(bmi) {
+      if (bmi < 18.5) return 'Insuffisance pondérale';
+      if (bmi < 25) return 'Corpulence normale';
+      if (bmi < 30) return 'Surpoids (pré-obésité)';
+      if (bmi < 35) return 'Obésité modérée (classe I)';
+      if (bmi < 40) return 'Obésité sévère (classe II)';
+      return 'Obésité morbide (classe III)';
+    }
+
+    function calculate() {
+      const w = parseFloat(weightInput.value);
+      const hCm = parseFloat(heightInput.value);
+      const age = parseFloat(ageInput.value);
+      const gender = genderInput.value;
+      const activity = parseFloat(activityInput.value);
+
+      if (![w, hCm, age, activity].every(Number.isFinite) || w <= 0 || hCm <= 0 || age <= 0) {
+        bmiResult.textContent = '–';
+        bmiCategory.textContent = 'Veuillez saisir des valeurs valides.';
+        bmrResult.textContent = '–';
+        bmrHbResult.textContent = '–';
+        tdeeResult.textContent = '–';
+        return;
+      }
+
+      const hM = hCm / 100;
+      const bmi = w / (hM * hM);
+      bmiResult.textContent = formatNumber(bmi, 1);
+      bmiCategory.textContent = `Catégorie d'IMC (OMS) : ${bmiCategoryFor(bmi)}`;
+
+      const bmr = gender === 'm'
+        ? 10 * w + 6.25 * hCm - 5 * age + 5
+        : 10 * w + 6.25 * hCm - 5 * age - 161;
+      bmrResult.textContent = `${formatNumber(bmr, 0)} kcal/jour`;
+
+      const bmrHb = gender === 'm'
+        ? 88.362 + 13.397 * w + 4.799 * hCm - 5.677 * age
+        : 447.593 + 9.247 * w + 3.098 * hCm - 4.330 * age;
+      bmrHbResult.textContent = `${formatNumber(bmrHb, 0)} kcal/jour`;
+
+      const tdee = bmr * activity;
+      tdeeResult.textContent = `${formatNumber(tdee, 0)} kcal/jour`;
+    }
+
+    [weightInput, heightInput, ageInput, genderInput, activityInput].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Gewicht-omrekenaar – Kilogram, pond, ounce & meer</title>
-  <meta name="description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, pond (lb), ounce (oz), stone, karaat en meer." />
+  <meta name="description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, Zentner, Doppelzentner, deciton, pond (lb), ounce (oz), stone, karaat en meer." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/gewichtumrechner.html" />
@@ -26,13 +26,13 @@
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="fr_FR" />
   <meta property="og:title" content="Gewicht-omrekenaar – Kilogram, pond, ounce & meer" />
-  <meta property="og:description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, pond (lb), ounce (oz), stone, karaat en meer." />
+  <meta property="og:description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, Zentner, Doppelzentner, deciton, pond (lb), ounce (oz), stone, karaat en meer." />
   <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gewicht-omrekenaar – Kilogram, pond, ounce & meer" />
-  <meta name="twitter:description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, pond (lb), ounce (oz), stone, karaat en meer." />
+  <meta name="twitter:description" content="Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, Zentner, Doppelzentner, deciton, pond (lb), ounce (oz), stone, karaat en meer." />
   <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
   <style>
     :root {
@@ -49,7 +49,7 @@
       "@type": "WebApplication",
       "name": "Gewicht-omrekenaar",
       "url": "https://tvoepel.github.io/Calculator_webseite/nl/gewichtumrechner.html",
-      "description": "Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, pond (lb), ounce (oz), stone, karaat en meer.",
+      "description": "Gewicht- en massa-eenheden gratis omrekenen: gram, kilogram, ton, Zentner, Doppelzentner, deciton, pond (lb), ounce (oz), stone, karaat en meer.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any (webgebaseerd)",
       "inLanguage": "nl",
@@ -122,6 +122,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "De metrische ton (t) heeft 1000 kg, de Amerikaanse ton (short ton) 907,18474 kg en de Britse ton (long ton) 1016,0469088 kg – een veelvoorkomende valkuil bij internationale vrachtgegevens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen Zentner, Doppelzentner en Dezitonne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 Zentner komt in Duitsland overeen met 50 kg. 1 Doppelzentner (Dz) is 100 kg, dus twee Zentner. De deciton (dt) is eveneens exact 100 kg (een tiende ton) en wordt vooral gebruikt in de officiële landbouwstatistiek, bijv. bij oogstopbrengsten in dt/ha – Doppelzentner en deciton duiden dus dezelfde hoeveelheid aan."
           }
         }
       ]
@@ -207,6 +215,8 @@
         <button type="button" data-preset="ounce,gram,1">Ounce naar gram</button>
         <button type="button" data-preset="tonne,kilogram,1">Ton naar kilogram</button>
         <button type="button" data-preset="stone,kilogram,1">Stone naar kilogram</button>
+        <button type="button" data-preset="zentner,kilogram,1">Zentner naar kilogram</button>
+        <button type="button" data-preset="dezitonne,kilogram,1">Deciton naar kilogram</button>
       </div>
     </section>
 
@@ -217,6 +227,9 @@
 1 pond (lb, avoirdupois)      = 0,45359237 kg (exact)
 1 ounce (oz)                   = 0,028349523125 kg (exact, 1 lb / 16)
 1 stone                        = 6,35029318 kg (exact, 14 lb)
+1 Zentner (Duitse eenheid)     = 50 kg
+1 Doppelzentner (Dz)           = 100 kg (= 2 Zentner)
+1 deciton (dt)                 = 100 kg (officiële eenheid in de landbouwstatistiek, bijv. dt/ha)
 1 karaat (ct)                  = 0,0002 kg = 0,2 g
 1 Amerikaanse ton (short ton)  = 907,18474 kg
 1 Britse ton (long ton)        = 1016,0469088 kg</div>
@@ -227,7 +240,7 @@
     <section class="card seo-card">
       <h2 class="section-title">Alle ondersteunde gewichtseenheden</h2>
       <div class="seo-text">
-        <p>Met deze gewicht-omrekenaar kun je milligram, gram, kilogram, ton, pond (lb), ounce (oz), stone, karaat, Amerikaanse ton en Britse ton direct omrekenen.</p>
+        <p>Met deze gewicht-omrekenaar kun je milligram, gram, kilogram, Zentner, Doppelzentner, deciton, ton, pond (lb), ounce (oz), stone, karaat, Amerikaanse ton en Britse ton direct omrekenen.</p>
         <p>De imperiale omrekeningsfactoren (pond, ounce, stone) komen overeen met het internationaal gestandaardiseerde 'avoirdupois'-systeem.</p>
       </div>
     </section>
@@ -238,6 +251,7 @@
         <p>Bij fitnesstraining zijn gewichtsschijven en Amerikaanse fitnessapparatuur vaak aangeduid in pond (lb), terwijl lichaamsgewicht en trainingsschema's meestal in kilogram worden opgegeven.</p>
         <p>De vrije bagage bij vluchten wordt door Amerikaanse luchtvaartmaatschappijen vaak in pond gelimiteerd, en gouden sieraden en diamanten worden in karaat gewogen – beide reken je snel om naar gram of kilogram met deze rekenaar.</p>
         <p>Ook Amerikaanse recepten geven ingrediënten soms op in ounces (oz) in plaats van gram, wat verwarring kan opleveren bij het nakoken van Europese of Amerikaanse recepten.</p>
+        <p>In de Duitse landbouw worden oogstopbrengsten traditioneel opgegeven in Zentner of Doppelzentner per hectare (bijv. "80 dt/ha tarwe"), terwijl officiële statistieken de deciton (dt) als officiële eenheid gebruiken – beide komen exact overeen met 100 kg.</p>
       </div>
     </section>
 
@@ -249,6 +263,7 @@
         <details class="faq-item"><summary>Wat is een karaat bij het gewicht van goud?</summary><p>1 karaat (gewichtskaraat, ct) komt overeen met 0,2 gram. Niet te verwarren met "karaat" als gehalteaanduiding bij goud (bijv. 24 karaat = zuiver goud), wat een andere betekenis heeft.</p></details>
         <details class="faq-item"><summary>Hoeveel weegt 1 stone in kilogram?</summary><p>1 stone komt overeen met 6,35029318 kg (14 pond). De eenheid wordt vooral in het Verenigd Koninkrijk en Ierland gebruikt voor lichaamsgewicht.</p></details>
         <details class="faq-item"><summary>Wat is het verschil tussen de Amerikaanse ton, de Britse ton en de metrische ton?</summary><p>De metrische ton (t) heeft 1000 kg, de Amerikaanse ton (short ton) 907,18474 kg en de Britse ton (long ton) 1016,0469088 kg – een veelvoorkomende valkuil bij internationale vrachtgegevens.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen Zentner, Doppelzentner en Dezitonne?</summary><p>1 Zentner komt in Duitsland overeen met 50 kg. 1 Doppelzentner (Dz) is 100 kg, dus twee Zentner. De deciton (dt) is eveneens exact 100 kg (een tiende ton) en wordt vooral gebruikt in de officiële landbouwstatistiek, bijv. bij oogstopbrengsten in dt/ha – Doppelzentner en deciton duiden dus dezelfde hoeveelheid aan.</p></details>
       </div>
     </section>
 
@@ -278,6 +293,9 @@
       milligram: { label: 'Milligram (mg)', factor: 0.000001 },
       gram: { label: 'Gram (g)', factor: 0.001 },
       kilogram: { label: 'Kilogram (kg)', factor: 1 },
+      zentner: { label: 'Zentner (Duitse eenheid, 50 kg)', factor: 50 },
+      doppelzentner: { label: 'Doppelzentner (Duitse eenheid, 100 kg)', factor: 100 },
+      dezitonne: { label: 'Deciton (dt)', factor: 100 },
       tonne: { label: 'Ton (t)', factor: 1000 },
       carat: { label: 'Karaat (ct)', factor: 0.0002 },
       ounce: { label: 'Ounce (oz)', factor: 0.028349523125 },
