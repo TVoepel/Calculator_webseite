@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Motorvergelijking – pk, kW, koppel & vermogen-gewichtsverhouding</title>
+  <meta name="description" content="Twee voertuigmotoren vergelijken: pk omrekenen naar kW, vermogen-gewichtsverhouding (kg/kW) en specifiek koppel (Nm/ton) berekenen en naast elkaar zetten." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/motorvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <meta name="theme-color" content="#311b92" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Motorvergelijking – pk, kW, koppel & vermogen-gewichtsverhouding" />
+  <meta property="og:description" content="Twee voertuigmotoren vergelijken op basis van vermogen-gewichtsverhouding en specifiek koppel." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motorvergelijking – pk, kW, koppel & vermogen-gewichtsverhouding" />
+  <meta name="twitter:description" content="Twee voertuigmotoren vergelijken." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #311b92;
+      --color-primary-hover: #1a0e52;
+      --color-primary-soft: #e1dcf5;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Motorvergelijking",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html",
+      "description": "Twee voertuigmotoren vergelijken op basis van vermogen-gewichtsverhouding en specifiek koppel.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": { "@type": "WebSite", "name": "Eenheden Omrekenen", "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startpagina", "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Motorvergelijking", "item": "https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Hoe vergelijk je twee motoren eerlijk?", "acceptedAnswer": { "@type": "Answer", "text": "Naast pure vermogen (kW/pk) en koppel (Nm) zegt de vermogen-gewichtsverhouding (kg per kW) meer over de acceleratie, omdat daarbij ook het voertuiggewicht wordt meegenomen. Een lichte auto met minder pk kan zo sneller zijn dan een zware auto met meer pk." } },
+        { "@type": "Question", "name": "Wat is het verschil tussen pk en kW?", "acceptedAnswer": { "@type": "Answer", "text": "1 pk (paardenkracht) komt exact overeen met 0,735498875 kW, 1 kW komt overeen met circa 1,359621617 pk. Pk is de oudere eenheid die in Duitsland spreektaal nog gangbaar is, kW is de SI-eenheid voor vermogen." } },
+        { "@type": "Question", "name": "Waarom accelereren elektrische auto's vaak sneller ondanks minder pk?", "acceptedAnswer": { "@type": "Answer", "text": "Elektromotoren leveren hun maximale koppel al vanaf 0 toeren per minuut, terwijl verbrandingsmotoren pas bij hogere toerentallen hun piekkoppel bereiken. Dat is vooral merkbaar bij het optrekken." } },
+        { "@type": "Question", "name": "Kun je de 0-100 km/u-tijd alleen uit vermogen en gewicht berekenen?", "acceptedAnswer": { "@type": "Answer", "text": "Niet betrouwbaar. De werkelijke acceleratietijd hangt ook af van tractie (vierwielaandrijving versus achterwielaandrijving), versnellingsbakafstelling, aerodynamica en softwarelimieten. Vermogen-gewichtsverhouding en specifiek koppel correleren met de acceleratie, maar vervangen geen gemeten fabrieksopgaven." } },
+        { "@type": "Question", "name": "Wat is een goede vermogen-gewichtsverhouding?", "acceptedAnswer": { "@type": "Answer", "text": "Alledaagse auto's zitten vaak op 10-15 kg/kW, sportieve modellen op 5-8 kg/kW, supersportwagens soms onder 3 kg/kW. Hoe lager de waarde, hoe meer vermogen er per kilogram voertuiggewicht beschikbaar is." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">PS</span>
+        <span>Motorvergelijking</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Auto &amp; techniek</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../motorvergleich.html" hreflang="de">DE</a>
+          <a href="motorvergleich.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/motorvergleich.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Motoren vergelijken op vermogen &amp; koppel</h1>
+      <p>Reken pk om naar kW en vergelijk twee voertuigen op basis van vermogen-gewichtsverhouding (kg/kW) en specifiek koppel (Nm/ton) – zeggingskrachtiger dan pure pk-cijfers. Voor de kostenvergelijking verbrandingsmotor vs. elektrisch, zie onze aparte <a href="antriebsvergleich.html">aandrijfvergelijking</a>.</p>
+    </section>
+
+    <div class="card">
+      <h2 class="section-title">pk ↔ kW omrekenen</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="fromValue">Waarde</label>
+            <input id="fromValue" type="number" value="150" step="any" />
+          </div>
+          <div>
+            <label for="fromUnit">Van</label>
+            <select id="fromUnit"></select>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <button class="swap" id="swapBtn" type="button">⇅ Eenheden wisselen</button>
+        </div>
+        <div class="row">
+          <div>
+            <label for="toValue">Resultaat</label>
+            <input id="toValue" type="text" readonly />
+          </div>
+          <div>
+            <label for="toUnit">Naar</label>
+            <select id="toUnit"></select>
+          </div>
+        </div>
+        <div class="meta"><span id="resultText"></span></div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: var(--space-6);">
+      <section class="card">
+        <h2 class="section-title">Voertuig A</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psA">Vermogen (pk)</label><input id="psA" type="number" value="150" step="any" min="1" /></div>
+            <div><label for="nmA">Koppel (Nm)</label><input id="nmA" type="number" value="250" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightA">Gewicht (kg)</label><input id="weightA" type="number" value="1400" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioA">–</span><span>Vermogen-gewichtsverhouding</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueA">–</span><span>Specifiek koppel</span></div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Voertuig B</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psB">Vermogen (pk)</label><input id="psB" type="number" value="250" step="any" min="1" /></div>
+            <div><label for="nmB">Koppel (Nm)</label><input id="nmB" type="number" value="500" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightB">Gewicht (kg)</label><input id="weightB" type="number" value="1900" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioB">–</span><span>Vermogen-gewichtsverhouding</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueB">–</span><span>Specifiek koppel</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <div class="compare" id="compareText" style="border-top:none; padding-top:0; margin-top:0;">Vul hierboven vermogen, koppel en gewicht van beide voertuigen in.</div>
+      <div class="ad-slot ad-slot--inline" style="margin-top: var(--space-4);">Advertentie / AdSense / affiliate-plaatshouder</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; bronnen</h2>
+      <div class="formula">1 pk = 0,735498875 kW (exact, 75 kgf·m/s met standaardvalversnelling 9,80665 m/s²)
+1 kW = 1,359621617 pk
+
+Vermogen-gewichtsverhouding = voertuiggewicht [kg] ÷ vermogen [kW]
+Specifiek koppel = koppel [Nm] ÷ voertuiggewicht [t]</div>
+      <p class="note">Bewust <strong>geen</strong> 0-100 km/u-schattingsformule: de werkelijke acceleratie hangt ook af van tractie, versnellingsbakafstelling, aerodynamica en software, en kan niet betrouwbaar alleen uit vermogen en gewicht worden berekend. Vermogen-gewichtsverhouding en specifiek koppel zijn indicatieve waarden, geen tijdvoorspelling.</p>
+      <p class="source-links">Bronnen: <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI-brochure</a>, <a href="https://www.adac.de/" target="_blank" rel="noopener noreferrer">ADAC – voertuigdatabank</a>, <a href="https://de.wikipedia.org/wiki/Leistungsgewicht" target="_blank" rel="noopener noreferrer">Wikipedia – Vermogen-gewichtsverhouding</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast</h2>
+      <div class="seo-text">
+        <p>Een compacte auto met 110 pk en 1000 kg (kg/kW-waarde ~12,4) kan merkbaar wendiger aanvoelen dan een grote sedan met 190 pk maar 1800 kg (kg/kW-waarde ~12,9) – ondanks aanzienlijk meer pk is de vermogen-gewichtsverhouding bijna gelijk.</p>
+        <p>Bij het trekken van een aanhanger of bij volle belading stijgt het effectieve gewicht en daarmee de kg/kW-waarde merkbaar – dat verklaart waarom beladen voertuigen merkbaar trager optrekken.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe vergelijk je twee motoren eerlijk?</summary><p>Naast pure vermogen (kW/pk) en koppel (Nm) zegt de vermogen-gewichtsverhouding (kg per kW) meer over de acceleratie, omdat daarbij ook het voertuiggewicht wordt meegenomen. Een lichte auto met minder pk kan zo sneller zijn dan een zware auto met meer pk.</p></details>
+        <details class="faq-item"><summary>Wat is het verschil tussen pk en kW?</summary><p>1 pk (paardenkracht) komt exact overeen met 0,735498875 kW, 1 kW komt overeen met circa 1,359621617 pk. Pk is de oudere eenheid die in Duitsland spreektaal nog gangbaar is, kW is de SI-eenheid voor vermogen.</p></details>
+        <details class="faq-item"><summary>Waarom accelereren elektrische auto's vaak sneller ondanks minder pk?</summary><p>Elektromotoren leveren hun maximale koppel al vanaf 0 toeren per minuut, terwijl verbrandingsmotoren pas bij hogere toerentallen hun piekkoppel bereiken. Dat is vooral merkbaar bij het optrekken.</p></details>
+        <details class="faq-item"><summary>Kun je de 0-100 km/u-tijd alleen uit vermogen en gewicht berekenen?</summary><p>Niet betrouwbaar. De werkelijke acceleratietijd hangt ook af van tractie (vierwielaandrijving versus achterwielaandrijving), versnellingsbakafstelling, aerodynamica en softwarelimieten. Vermogen-gewichtsverhouding en specifiek koppel correleren met de acceleratie, maar vervangen geen gemeten fabrieksopgaven.</p></details>
+        <details class="faq-item"><summary>Wat is een goede vermogen-gewichtsverhouding?</summary><p>Alledaagse auto's zitten vaak op 10-15 kg/kW, sportieve modellen op 5-8 kg/kW, supersportwagens soms onder 3 kg/kW. Hoe lager de waarde, hoe meer vermogen er per kilogram voertuiggewicht beschikbaar is.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="drehmoment.html">Koppel-omrekenaar →</a>
+        <a href="antriebsvergleich.html">Aandrijfvergelijking (kosten) →</a>
+        <a href="geschwindigkeitumrechner.html">Snelheid-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      kw: { label: 'Kilowatt (kW)', factor: 1 },
+      ps: { label: 'pk', factor: 0.735498875 }
+    };
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'ps',
+      defaultTo: 'kw',
+      decimals: 4
+    });
+
+    const PS_TO_KW = 0.735498875;
+    const fields = ['psA', 'nmA', 'weightA', 'psB', 'nmB', 'weightB'].reduce((acc, id) => {
+      acc[id] = document.getElementById(id);
+      return acc;
+    }, {});
+    const ratioA = document.getElementById('ratioA');
+    const specTorqueA = document.getElementById('specTorqueA');
+    const ratioB = document.getElementById('ratioB');
+    const specTorqueB = document.getElementById('specTorqueB');
+    const compareText = document.getElementById('compareText');
+
+    function computeVehicle(ps, nm, weight) {
+      const kw = ps * PS_TO_KW;
+      const kgPerKw = weight / kw;
+      const nmPerTonne = nm / (weight / 1000);
+      return { kw, kgPerKw, nmPerTonne };
+    }
+
+    function calculate() {
+      const psA = parseFloat(fields.psA.value), nmA = parseFloat(fields.nmA.value), wA = parseFloat(fields.weightA.value);
+      const psB = parseFloat(fields.psB.value), nmB = parseFloat(fields.nmB.value), wB = parseFloat(fields.weightB.value);
+      if (![psA, nmA, wA, psB, nmB, wB].every(v => Number.isFinite(v) && v > 0)) {
+        ratioA.textContent = ratioB.textContent = specTorqueA.textContent = specTorqueB.textContent = '–';
+        compareText.textContent = 'Vul alle velden met geldige waarden in.';
+        return;
+      }
+      const a = computeVehicle(psA, nmA, wA);
+      const b = computeVehicle(psB, nmB, wB);
+
+      ratioA.textContent = `${formatNumber(a.kgPerKw, 1)} kg/kW`;
+      ratioB.textContent = `${formatNumber(b.kgPerKw, 1)} kg/kW`;
+      specTorqueA.textContent = `${formatNumber(a.nmPerTonne, 0)} Nm/t`;
+      specTorqueB.textContent = `${formatNumber(b.nmPerTonne, 0)} Nm/t`;
+
+      let text;
+      if (a.kgPerKw < b.kgPerKw) {
+        const factor = b.kgPerKw / a.kgPerKw;
+        text = `<strong>Voertuig A</strong> heeft de gunstigere vermogen-gewichtsverhouding (${formatNumber(factor, 2)}× beter dan voertuig B) en zal doorgaans wendiger accelereren.`;
+      } else if (b.kgPerKw < a.kgPerKw) {
+        const factor = a.kgPerKw / b.kgPerKw;
+        text = `<strong>Voertuig B</strong> heeft de gunstigere vermogen-gewichtsverhouding (${formatNumber(factor, 2)}× beter dan voertuig A) en zal doorgaans wendiger accelereren.`;
+      } else {
+        text = 'Beide voertuigen hebben een identieke vermogen-gewichtsverhouding.';
+      }
+      text += ' Let op: dit is een benadering – de werkelijke acceleratie hangt ook af van tractie, versnellingsbak en aerodynamica.';
+      compareText.innerHTML = text;
+    }
+
+    Object.values(fields).forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

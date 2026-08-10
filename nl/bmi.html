@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BMI &amp; calorieënbehoefte-rekenaar – BMI, BMR, TDEE</title>
+  <meta name="description" content="Bereken gratis je BMI, bepaal de WHO-categorie en bereken je dagelijkse calorieënbehoefte (BMR/TDEE) volgens Mifflin-St Jeor en Harris-Benedict." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta name="theme-color" content="#4527a0" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="BMI &amp; calorieënbehoefte-rekenaar – BMI, BMR, TDEE" />
+  <meta property="og:description" content="Bereken gratis je BMI, bepaal de WHO-categorie en bereken je dagelijkse calorieënbehoefte (BMR/TDEE)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BMI &amp; calorieënbehoefte-rekenaar" />
+  <meta name="twitter:description" content="Bereken gratis je BMI, BMR en dagelijkse calorieënbehoefte." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4527a0;
+      --color-primary-hover: #2c1a68;
+      --color-primary-soft: #e3dbf5;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BMI & calorieënbehoefte-rekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/bmi.html",
+      "description": "Bereken gratis je BMI, bepaal de WHO-categorie en bereken je dagelijkse calorieënbehoefte (BMR/TDEE).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": { "@type": "WebSite", "name": "Eenheden Omrekenen", "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startpagina", "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "BMI & calorieënbehoefte-rekenaar", "item": "https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Hoe bereken ik mijn BMI?", "acceptedAnswer": { "@type": "Answer", "text": "BMI = gewicht (kg) ÷ lengte (m)². Voorbeeld: 75 kg ÷ (1,75 m)² = 24,5 (normaal gewicht volgens de WHO-indeling)." } },
+        { "@type": "Question", "name": "Wat zijn de BMI-categorieën volgens de WHO?", "acceptedAnswer": { "@type": "Answer", "text": "Onder 18,5 ondergewicht, 18,5–24,9 normaal gewicht, 25–29,9 overgewicht (pre-obesitas), 30–34,9 obesitas graad I, 35–39,9 obesitas graad II, vanaf 40 obesitas graad III." } },
+        { "@type": "Question", "name": "Wat is het rustmetabolisme (BMR)?", "acceptedAnswer": { "@type": "Answer", "text": "Het rustmetabolisme (Basal Metabolic Rate) is de hoeveelheid energie die het lichaam in volledige rust nodig heeft voor levensbelangrijke functies. De Mifflin-St-Jeor-formule (1990) geldt tegenwoordig als nauwkeuriger dan de oudere Harris-Benedict-formule." } },
+        { "@type": "Question", "name": "Hoe bereken ik mijn dagelijkse calorieënbehoefte (TDEE)?", "acceptedAnswer": { "@type": "Answer", "text": "TDEE = rustmetabolisme (BMR) × activiteitsfactor. De factor loopt van 1,2 (nauwelijks beweging) tot 1,9 (zeer zwaar lichamelijk werk plus training)." } },
+        { "@type": "Question", "name": "Is de BMI een betrouwbare gezondheidsindicator?", "acceptedAnswer": { "@type": "Answer", "text": "De BMI houdt geen rekening met spiermassa, lichaamsbouw of vetverdeling en kan bij zeer gespierde of zeer slanke personen misleidend zijn. Hij dient als grove indicatie, niet als medische diagnose." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">B</span>
+        <span>BMI &amp; calorieënbehoefte</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Gezondheid &amp; fitness</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../bmi.html" hreflang="de">DE</a>
+          <a href="bmi.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/bmi.html" hreflang="fr">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>BMI, rustmetabolisme &amp; calorieënbehoefte berekenen</h1>
+      <p>Bereken je Body Mass Index met WHO-indeling en je dagelijkse calorieënbehoefte (rustmetabolisme × activiteitsfactor) volgens de moderne Mifflin-St-Jeor-formule.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Invoer</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="weightInput">Gewicht (kg)</label>
+              <input id="weightInput" type="number" value="75" step="0.1" min="1" />
+            </div>
+            <div>
+              <label for="heightInput">Lengte (cm)</label>
+              <input id="heightInput" type="number" value="175" step="0.1" min="50" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="ageInput">Leeftijd (jaar)</label>
+              <input id="ageInput" type="number" value="35" step="1" min="1" max="120" />
+            </div>
+            <div>
+              <label for="genderInput">Geslacht (voor BMR-formule)</label>
+              <select id="genderInput">
+                <option value="m">Man</option>
+                <option value="f">Vrouw</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div style="grid-column: 1 / -1;">
+              <label for="activityInput">Activiteitsniveau</label>
+              <select id="activityInput">
+                <option value="1.2">Zittend, nauwelijks beweging (1,2)</option>
+                <option value="1.375">Licht actief, 1–3× sport/week (1,375)</option>
+                <option value="1.55" selected>Matig actief, 3–5× sport/week (1,55)</option>
+                <option value="1.725">Zeer actief, 6–7× sport/week (1,725)</option>
+                <option value="1.9">Extreem actief, lichamelijk werk + training (1,9)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-row">
+              <span class="result-highlight" id="bmiResult">–</span>
+              <span id="bmiCategory">BMI &amp; categorie</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrResult">–</span>
+              <span>Rustmetabolisme (Mifflin-St Jeor)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrHbResult">–</span>
+              <span>Rustmetabolisme (Harris-Benedict, ter vergelijking)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="tdeeResult">–</span>
+              <span>Dagelijkse calorieënbehoefte (TDEE)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">BMI-categorieën (WHO)</h2>
+        <table class="ref-table">
+          <thead><tr><th>BMI</th><th>Categorie</th></tr></thead>
+          <tbody>
+            <tr><td>&lt; 18,5</td><td>Ondergewicht</td></tr>
+            <tr><td>18,5–24,9</td><td>Normaal gewicht</td></tr>
+            <tr><td>25,0–29,9</td><td>Overgewicht (pre-obesitas)</td></tr>
+            <tr><td>30,0–34,9</td><td>Obesitas graad I</td></tr>
+            <tr><td>35,0–39,9</td><td>Obesitas graad II</td></tr>
+            <tr><td>≥ 40,0</td><td>Obesitas graad III</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formules &amp; bronnen</h2>
+      <div class="formula">BMI = gewicht [kg] ÷ lengte [m]²
+
+Mifflin-St Jeor (1990), rustmetabolisme in kcal/dag:
+  Mannen: BMR = 10 × gewicht[kg] + 6,25 × lengte[cm] − 5 × leeftijd − 5
+  Vrouwen: BMR = 10 × gewicht[kg] + 6,25 × lengte[cm] − 5 × leeftijd − 161
+
+Harris-Benedict, herzien 1984 (ter vergelijking):
+  Mannen: BMR = 88,362 + 13,397 × gewicht + 4,799 × lengte − 5,677 × leeftijd
+  Vrouwen: BMR = 447,593 + 9,247 × gewicht + 3,098 × lengte − 4,330 × leeftijd
+
+TDEE = BMR × activiteitsfactor (1,2 tot 1,9)</div>
+      <p class="note">De Mifflin-St-Jeor-formule geldt in de voedingswetenschap tegenwoordig algemeen als nauwkeuriger dan de oudere Harris-Benedict-formule en wordt hier als primair resultaat weergegeven.</p>
+      <p class="source-links">Bronnen: <a href="https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations" target="_blank" rel="noopener noreferrer">WHO – Body Mass Index</a>, <a href="https://de.wikipedia.org/wiki/Body-Mass-Index" target="_blank" rel="noopener noreferrer">Wikipedia – Body Mass Index</a>, <a href="https://de.wikipedia.org/wiki/Grundumsatz" target="_blank" rel="noopener noreferrer">Wikipedia – Rustmetabolisme</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ Deze waarden dienen uitsluitend ter algemene oriëntatie en vervangen geen medisch of diëtistisch advies. BMI en BMR houden geen rekening met spiermassa of individuele gezondheidsfactoren. Neem bij vragen over je lichaamsgewicht of voedingsplan contact op met een arts of een erkende diëtist.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast</h2>
+      <div class="seo-text">
+        <p>Voor een realistisch gewichtsverlies geldt een calorietekort van ca. 500 kcal/dag als gangbare vuistregel voor ongeveer 0,5 kg gewichtsverlies per week – je TDEE is daarbij de uitgangswaarde waarvan het tekort wordt afgetrokken.</p>
+        <p>Krachtsporters en duursporters gebruiken de TDEE vaak om de juiste calorie-inname te plannen voor spieropbouw (licht overschot) of definitiefases (tekort).</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe bereken ik mijn BMI?</summary><p>BMI = gewicht (kg) ÷ lengte (m)². Voorbeeld: 75 kg ÷ (1,75 m)² = 24,5 (normaal gewicht volgens de WHO-indeling).</p></details>
+        <details class="faq-item"><summary>Wat zijn de BMI-categorieën volgens de WHO?</summary><p>Onder 18,5 ondergewicht, 18,5–24,9 normaal gewicht, 25–29,9 overgewicht (pre-obesitas), 30–34,9 obesitas graad I, 35–39,9 obesitas graad II, vanaf 40 obesitas graad III.</p></details>
+        <details class="faq-item"><summary>Wat is het rustmetabolisme (BMR)?</summary><p>Het rustmetabolisme (Basal Metabolic Rate) is de hoeveelheid energie die het lichaam in volledige rust nodig heeft voor levensbelangrijke functies. De Mifflin-St-Jeor-formule (1990) geldt tegenwoordig als nauwkeuriger dan de oudere Harris-Benedict-formule.</p></details>
+        <details class="faq-item"><summary>Hoe bereken ik mijn dagelijkse calorieënbehoefte (TDEE)?</summary><p>TDEE = rustmetabolisme (BMR) × activiteitsfactor. De factor loopt van 1,2 (nauwelijks beweging) tot 1,9 (zeer zwaar lichamelijk werk plus training).</p></details>
+        <details class="faq-item"><summary>Is de BMI een betrouwbare gezondheidsindicator?</summary><p>De BMI houdt geen rekening met spiermassa, lichaamsbouw of vetverdeling en kan bij zeer gespierde of zeer slanke personen misleidend zijn. Hij dient als grove indicatie, niet als medische diagnose.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="gewichtumrechner.html">Gewicht-omrekenaar →</a>
+        <a href="energieumrechner.html">Energie-omrekenaar →</a>
+        <a href="blutzuckerumrechner.html">Bloedsuiker-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const heightInput = document.getElementById('heightInput');
+    const ageInput = document.getElementById('ageInput');
+    const genderInput = document.getElementById('genderInput');
+    const activityInput = document.getElementById('activityInput');
+    const bmiResult = document.getElementById('bmiResult');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmrResult = document.getElementById('bmrResult');
+    const bmrHbResult = document.getElementById('bmrHbResult');
+    const tdeeResult = document.getElementById('tdeeResult');
+
+    function bmiCategoryFor(bmi) {
+      if (bmi < 18.5) return 'Ondergewicht';
+      if (bmi < 25) return 'Normaal gewicht';
+      if (bmi < 30) return 'Overgewicht (pre-obesitas)';
+      if (bmi < 35) return 'Obesitas graad I';
+      if (bmi < 40) return 'Obesitas graad II';
+      return 'Obesitas graad III';
+    }
+
+    function calculate() {
+      const w = parseFloat(weightInput.value);
+      const hCm = parseFloat(heightInput.value);
+      const age = parseFloat(ageInput.value);
+      const gender = genderInput.value;
+      const activity = parseFloat(activityInput.value);
+
+      if (![w, hCm, age, activity].every(Number.isFinite) || w <= 0 || hCm <= 0 || age <= 0) {
+        bmiResult.textContent = '–';
+        bmiCategory.textContent = 'Voer geldige waarden in.';
+        bmrResult.textContent = '–';
+        bmrHbResult.textContent = '–';
+        tdeeResult.textContent = '–';
+        return;
+      }
+
+      const hM = hCm / 100;
+      const bmi = w / (hM * hM);
+      bmiResult.textContent = formatNumber(bmi, 1);
+      bmiCategory.textContent = `BMI-categorie (WHO): ${bmiCategoryFor(bmi)}`;
+
+      const bmr = gender === 'm'
+        ? 10 * w + 6.25 * hCm - 5 * age + 5
+        : 10 * w + 6.25 * hCm - 5 * age - 161;
+      bmrResult.textContent = `${formatNumber(bmr, 0)} kcal/dag`;
+
+      const bmrHb = gender === 'm'
+        ? 88.362 + 13.397 * w + 4.799 * hCm - 5.677 * age
+        : 447.593 + 9.247 * w + 3.098 * hCm - 4.330 * age;
+      bmrHbResult.textContent = `${formatNumber(bmrHb, 0)} kcal/dag`;
+
+      const tdee = bmr * activity;
+      tdeeResult.textContent = `${formatNumber(tdee, 0)} kcal/dag`;
+    }
+
+    [weightInput, heightInput, ageInput, genderInput, activityInput].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

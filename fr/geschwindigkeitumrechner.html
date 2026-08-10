@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Convertisseur de vitesse – km/h, mph, nœuds et plus</title>
+  <meta name="description" content="Convertissez gratuitement les unités de vitesse : km/h, m/s, mph, nœuds, pied/s et mach." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/geschwindigkeitumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/geschwindigkeitumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/geschwindigkeitumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/geschwindigkeitumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/geschwindigkeitumrechner.html" />
+  <meta name="theme-color" content="#c62828" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/geschwindigkeitumrechner.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Convertisseur de vitesse – km/h, mph, nœuds et plus" />
+  <meta property="og:description" content="Convertissez gratuitement les unités de vitesse : km/h, m/s, mph, nœuds, pied/s et mach." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convertisseur de vitesse – km/h, mph, nœuds et plus" />
+  <meta name="twitter:description" content="Convertissez gratuitement les unités de vitesse : km/h, m/s, mph, nœuds, pied/s et mach." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #c62828;
+      --color-primary-hover: #8e0000;
+      --color-primary-soft: #fbdede;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Convertisseur de vitesse",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/geschwindigkeitumrechner.html",
+      "description": "Convertissez gratuitement les unités de vitesse : km/h, m/s, mph, nœuds, pied/s et mach.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Convertisseur d'Unités",
+        "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Convertisseur de vitesse",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/geschwindigkeitumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment convertir des mph en km/h ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 mph (mile par heure) équivaut à 1,609344 km/h. 60 mph correspondent ainsi à environ 96,6 km/h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À quelle vitesse correspond 1 nœud en km/h ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 nœud équivaut à 1 mille marin par heure, soit 1,852 km/h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi mesure-t-on la vitesse en mer en nœuds ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le nœud tire son origine d'une méthode de mesure utilisant une ligne nouée, et s'est maintenu jusqu'à aujourd'hui comme unité pratique dans la navigation maritime et aérienne, car il est directement lié aux milles nautiques et aux cartes marines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la vitesse du mach 1 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mach 1 correspond à la vitesse du son et dépend de l'altitude et de la température de l'air. Dans des conditions standard au niveau de la mer (15 °C), elle est d'environ 340,3 m/s, soit 1225 km/h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de km/h représente la limite de vitesse allemande de 130 par rapport aux autoroutes américaines ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "130 km/h correspondent à environ 80,8 mph. De nombreuses autoroutes américaines autorisent 65 à 75 mph (env. 105-121 km/h), soit une limite inférieure à la vitesse recommandée allemande."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">S</span>
+        <span>Convertisseur de vitesse</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">Circulation & sport</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../geschwindigkeitumrechner.html" hreflang="de">DE</a>
+          <a href="../nl/geschwindigkeitumrechner.html" hreflang="nl">NL</a>
+          <a href="geschwindigkeitumrechner.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convertir la vitesse rapidement</h1>
+      <p>Convertissez entre km/h, m/s, mph, nœuds, pieds par seconde et mach – pour la voiture, le vent, la navigation et l'aviation.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Convertisseur</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Valeur</label>
+              <input id="fromValue" type="number" value="100" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">De</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Inverser les unités</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Résultat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Vers</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">100 km/h = 27,78 m/s</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Publicité / AdSense / emplacement d'affiliation</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Espace publicitaire</h2>
+        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversions populaires</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="kilometer_per_hour,mile_per_hour,100">km/h vers mph</button>
+        <button type="button" data-preset="mile_per_hour,kilometer_per_hour,60">mph vers km/h</button>
+        <button type="button" data-preset="kilometer_per_hour,meter_per_second,50">km/h vers m/s</button>
+        <button type="button" data-preset="meter_per_second,kilometer_per_hour,10">m/s vers km/h</button>
+        <button type="button" data-preset="knot,kilometer_per_hour,10">Nœuds vers km/h</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule et valeurs de référence</h2>
+      <div class="formula">Résultat = valeur × facteur(de) ÷ facteur(vers), unité de base = 1 mètre/seconde (m/s)
+
+1 km/h  = 1000 m / 3600 s = 0,2777... m/s
+1 mph   = 0,44704 m/s (exact, 1 mile/h)
+1 nœud (kn) = 1 mille marin/h = 1852 m / 3600 s = 0,5144... m/s
+1 ft/s  = 0,3048 m/s</div>
+      <p class="note">Mach 1 (vitesse du son) dépend de l'altitude, de la température et de la pression atmosphérique. La valeur standard de l'atmosphère type internationale au niveau de la mer à 15 °C est utilisée ici (env. 340,3 m/s) – à titre de valeur approximative, et non de constante physique exacte.</p>
+          <p class="source-links">Sources : <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – Brochure SI (unités dérivées)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST – Guide to Unit Conversion</a>, <a href="https://de.wikipedia.org/wiki/Knoten_(Einheit)" target="_blank" rel="noopener noreferrer">Wikipedia – Nœud (unité)</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Toutes les unités de vitesse prises en charge</h2>
+      <div class="seo-text">
+        <p>Ce convertisseur de vitesse permet de convertir directement mètre par seconde (m/s), kilomètre par heure (km/h), mile par heure (mph), nœud (kn), pied par seconde (ft/s) et mach.</p>
+        <p>Le km/h est utilisé pour la circulation routière en Europe, le mph dans le monde anglo-saxon, le nœud dans la navigation maritime et aérienne.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">En pratique : quand faut-il convertir des vitesses</h2>
+      <div class="seo-text">
+        <p>Les limitations de vitesse américaines sont indiquées en mph (miles per hour) – important pour quiconque conduit aux États-Unis ou compare des données de véhicules américains.</p>
+        <p>Dans la navigation maritime et aérienne, la vitesse est traditionnellement mesurée en nœuds (milles nautiques par heure), tandis que les vitesses du vent sont indiquées en km/h, m/s ou nœuds selon la source.</p>
+        <p>Sur les compteurs de vélo et montres de sport du marché américain, l'écran affiche parfois mph au lieu de km/h.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Comment convertir des mph en km/h ?</summary><p>1 mph (mile par heure) équivaut à 1,609344 km/h. 60 mph correspondent ainsi à environ 96,6 km/h.</p></details>
+        <details class="faq-item"><summary>À quelle vitesse correspond 1 nœud en km/h ?</summary><p>1 nœud équivaut à 1 mille marin par heure, soit 1,852 km/h.</p></details>
+        <details class="faq-item"><summary>Pourquoi mesure-t-on la vitesse en mer en nœuds ?</summary><p>Le nœud tire son origine d'une méthode de mesure utilisant une ligne nouée, et s'est maintenu jusqu'à aujourd'hui comme unité pratique dans la navigation maritime et aérienne, car il est directement lié aux milles nautiques et aux cartes marines.</p></details>
+        <details class="faq-item"><summary>Quelle est la vitesse du mach 1 ?</summary><p>Mach 1 correspond à la vitesse du son et dépend de l'altitude et de la température de l'air. Dans des conditions standard au niveau de la mer (15 °C), elle est d'environ 340,3 m/s, soit 1225 km/h.</p></details>
+        <details class="faq-item"><summary>Combien de km/h représente la limite de vitesse allemande de 130 par rapport aux autoroutes américaines ?</summary><p>130 km/h correspondent à environ 80,8 mph. De nombreuses autoroutes américaines autorisent 65 à 75 mph (env. 105-121 km/h), soit une limite inférieure à la vitesse recommandée allemande.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="laengenumrechner.html">Convertisseur de longueur →</a>
+        <a href="treibstoffverbrauch-umrechner.html">Convertisseur de consommation →</a>
+        <a href="energieumrechner.html">Convertisseur d'énergie →</a>
+        <a href="antriebsvergleich.html">Comparaison thermique/électrique →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      meter_per_second: { label: 'Mètre/seconde (m/s)', factor: 1 },
+      kilometer_per_hour: { label: 'Kilomètre/heure (km/h)', factor: 1000 / 3600 },
+      mile_per_hour: { label: 'Mile/heure (mph)', factor: 0.44704 },
+      knot: { label: 'Nœud (kn)', factor: 1852 / 3600 },
+      foot_per_second: { label: 'Pied/seconde (ft/s)', factor: 0.3048 },
+      mach: { label: 'Mach (≈ niveau de la mer, 15 °C)', factor: 340.3 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'kilometer_per_hour',
+      defaultTo: 'meter_per_second',
+      decimals: 2
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Convertisseur de volume – Litre, millilitre, gallons et plus</title>
+  <meta name="description" content="Convertissez gratuitement les unités de volume : litre, millilitre, mètre cube, gallons US/UK, cups, fluid ounces, cuillères à soupe, cuillères à café et plus." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/fr/volumenumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/volumenumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/volumenumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/volumenumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/volumenumrechner.html" />
+  <meta name="theme-color" content="#4e342e" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertisseur d'Unités" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/fr/volumenumrechner.html" />
+  <meta property="og:site_name" content="Convertisseur d'Unités" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:title" content="Convertisseur de volume – Litre, millilitre, gallons et plus" />
+  <meta property="og:description" content="Convertissez gratuitement les unités de volume : litre, millilitre, mètre cube, gallons US/UK, cups, fluid ounces, cuillères à soupe, cuillères à café et plus." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convertisseur de volume – Litre, millilitre, gallons et plus" />
+  <meta name="twitter:description" content="Convertissez gratuitement les unités de volume : litre, millilitre, mètre cube, gallons US/UK, cups, fluid ounces, cuillères à soupe, cuillères à café et plus." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4e342e;
+      --color-primary-hover: #341f1b;
+      --color-primary-soft: #ece1de;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Convertisseur de volume",
+      "url": "https://tvoepel.github.io/Calculator_webseite/fr/volumenumrechner.html",
+      "description": "Convertissez gratuitement les unités de volume : litre, millilitre, mètre cube, gallons US/UK, cups, fluid ounces, cuillères à soupe, cuillères à café et plus.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (via navigateur)",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Convertisseur d'Unités",
+        "url": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Convertisseur de volume",
+          "item": "https://tvoepel.github.io/Calculator_webseite/fr/volumenumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de ml fait une cup US ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une cup US (mesure culinaire) équivaut à 236,588 ml – à ne pas confondre avec la « legal cup » (240 ml), utilisée aux États-Unis uniquement pour les valeurs nutritionnelles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de litres fait un gallon US ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 gallon US (liquid gallon) équivaut exactement à 3,785411784 litres. Le gallon britannique (Imperial) est nettement plus grand, avec 4,54609 litres."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de ml font une cuillère à soupe et une cuillère à café ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une cuillère à soupe US (tablespoon) fait 14,79 ml, une cuillère à café US (teaspoon) 4,93 ml – soit un facteur 3 entre les deux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de litres contient un baril de pétrole ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un baril de pétrole équivaut à 158,987 litres (42 gallons US) – l'unité commerciale internationale usuelle pour le pétrole brut."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi les mesures américaines et britanniques diffèrent-elles en cuisine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les États-Unis utilisent encore aujourd'hui le US customary system, tandis que le Royaume-Uni utilise historiquement le système impérial – les deux reposent sur des normalisations historiques différentes et n'ont jamais été entièrement harmonisés."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Accueil Convertisseur d'Unités">
+        <span class="logo-mark">V</span>
+        <span>Convertisseur de volume</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Tous les convertisseurs</a>
+        <span class="pill">cuisine &amp; laboratoire</span>
+
+        <nav class="lang-switch" aria-label="Choisir la langue">
+          <a href="../volumenumrechner.html" hreflang="de">DE</a>
+          <a href="../nl/volumenumrechner.html" hreflang="nl">NL</a>
+          <a href="volumenumrechner.html" class="lang-active" aria-current="page">FR</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convertir les volumes rapidement</h1>
+      <p>Convertissez directement les litres, millilitres, mètres cubes ainsi que les unités de volume américaines et britanniques comme les gallons, cups ou fluid ounces.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Convertisseur</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Valeur</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">De</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Inverser les unités</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Résultat</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">Vers</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 litre = 1 000 millilitres</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Publicité / AdSense / emplacement d'affiliation</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Espace publicitaire</h2>
+        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversions populaires</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="liter,milliliter,1">Litre vers millilitre</button>
+        <button type="button" data-preset="milliliter,liter,500">Millilitre vers litre</button>
+        <button type="button" data-preset="liter,gallon_us,2">Litre vers gallon US</button>
+        <button type="button" data-preset="gallon_us,liter,1">Gallon US vers litre</button>
+        <button type="button" data-preset="cubic_meter,liter,1">Mètre cube vers litre</button>
+        <button type="button" data-preset="cup_us,milliliter,1">Cup US vers millilitre</button>
+        <button type="button" data-preset="barrel_oil,liter,1">Baril (pétrole) vers litre</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule</h2>
+      <div class="formula">Résultat = Valeur × Facteur(de) ÷ Facteur(vers), unité de base = 1 mètre cube (m³)</div>
+      <p class="footer-note">Exemple : 1 litre équivaut à 0,001 mètre cube. Ainsi, les volumes de cuisine, de laboratoire et techniques se convertissent tous selon la même logique.</p>
+          <p class="source-links">Sources : <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – Brochure SI (le litre comme unité admise)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST – Guide to Unit Conversion</a>, <a href="https://de.wikipedia.org/wiki/Liter" target="_blank" rel="noopener noreferrer">Wikipedia – Litre</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Toutes les unités de volume prises en charge</h2>
+      <div class="seo-text">
+        <p>Avec ce convertisseur de volume, vous pouvez convertir directement le litre, le millilitre, le microlitre, le mètre cube, le centimètre cube, le millimètre cube, les gallons US, les gallons UK, les cups, les cuillères à soupe, les cuillères à café, les fluid ounces, le pied cube, le pouce cube et le baril de pétrole.</p>
+        <p>Les mesures américaines (cup, tablespoon, teaspoon, gallon) reposent sur les mesures culinaires/commerciales américaines, les mesures britanniques sur le système impérial britannique (4,54609 litres par gallon).</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">En pratique : quand faut-il convertir des volumes ?</h2>
+      <div class="seo-text">
+        <p>Les recettes de pâtisserie américaines mesurent généralement les ingrédients en cups, tablespoons et teaspoons plutôt qu'en millilitres ou en grammes – sans conversion, on obtient vite de mauvaises quantités dans la pâte.</p>
+        <p>Les gallons US et UK sont différents (3,785 L contre 4,546 L), ce qui est important lors de la comparaison de la consommation de carburant, de la taille des réservoirs ou des barils de pétrole.</p>
+        <p>Dans le domaine de l'aquariophilie et du laboratoire également, on passe du litre au millilitre et au microlitre, par exemple pour le dosage de conditionneurs d'eau ou de réactifs.</p>
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Combien de ml fait une cup US ?</summary><p>Une cup US (mesure culinaire) équivaut à 236,588 ml – à ne pas confondre avec la "legal cup" (240 ml), utilisée aux États-Unis uniquement pour les valeurs nutritionnelles.</p></details>
+        <details class="faq-item"><summary>Combien de litres fait un gallon US ?</summary><p>1 gallon US (liquid gallon) équivaut exactement à 3,785411784 litres. Le gallon britannique (Imperial) est nettement plus grand, avec 4,54609 litres.</p></details>
+        <details class="faq-item"><summary>Combien de ml font une cuillère à soupe et une cuillère à café ?</summary><p>Une cuillère à soupe US (tablespoon) fait 14,79 ml, une cuillère à café US (teaspoon) 4,93 ml – soit un facteur 3 entre les deux.</p></details>
+        <details class="faq-item"><summary>Combien de litres contient un baril de pétrole ?</summary><p>Un baril de pétrole équivaut à 158,987 litres (42 gallons US) – l'unité commerciale internationale usuelle pour le pétrole brut.</p></details>
+        <details class="faq-item"><summary>Pourquoi les mesures américaines et britanniques diffèrent-elles en cuisine ?</summary><p>Les États-Unis utilisent encore aujourd'hui le US customary system, tandis que le Royaume-Uni utilise historiquement le système impérial – les deux reposent sur des normalisations historiques différentes et n'ont jamais été entièrement harmonisés.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertisseurs similaires</h2>
+      <div class="related-grid">
+        <a href="laengenumrechner.html">Convertisseur de longueur →</a>
+        <a href="gewichtumrechner.html">Convertisseur de poids →</a>
+        <a href="konzentrationsumrechner.html">Convertisseur de concentration →</a>
+        <a href="treibstoffverbrauch-umrechner.html">Convertisseur de consommation →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertisseur d'Unités</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="../impressum.html">Mentions légales (DE)</a>
+        <a href="../datenschutz.html">Politique de confidentialité (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      cubic_meter: { label: 'Mètre cube (m³)', factor: 1 },
+      cubic_kilometer: { label: 'Kilomètre cube (km³)', factor: 1000000000 },
+      cubic_centimeter: { label: 'Centimètre cube (cm³)', factor: 0.000001 },
+      cubic_millimeter: { label: 'Millimètre cube (mm³)', factor: 0.000000001 },
+      liter: { label: 'Litre (L)', factor: 0.001 },
+      milliliter: { label: 'Millilitre (mL)', factor: 0.000001 },
+      microliter: { label: 'Microlitre (µL)', factor: 0.000000001 },
+      cubic_decimeter: { label: 'Décimètre cube (dm³)', factor: 0.001 },
+      gallon_us: { label: 'Gallon (US)', factor: 0.003785411784 },
+      quart_us: { label: 'Quart (US)', factor: 0.000946352946 },
+      pint_us: { label: 'Pinte (US)', factor: 0.000473176473 },
+      cup_us: { label: 'Cup (US)', factor: 0.0002365882365 },
+      tablespoon_us: { label: 'Cuillère à soupe (US)', factor: 0.0000147867648 },
+      teaspoon_us: { label: 'Cuillère à café (US)', factor: 0.00000492892159375 },
+      cubic_foot: { label: 'Pied cube (ft³)', factor: 0.028316846592 },
+      cubic_inch: { label: 'Pouce cube (in³)', factor: 0.000016387064 },
+      gallon_uk: { label: 'Gallon (UK)', factor: 0.00454609 },
+      quart_uk: { label: 'Quart (UK)', factor: 0.0011365225 },
+      pint_uk: { label: 'Pinte (UK)', factor: 0.00056826125 },
+      cup_metric: { label: 'Tasse (métrique)', factor: 0.00025 },
+      fluid_ounce_us: { label: 'Once liquide (US)', factor: 0.0000295735295625 },
+      fluid_ounce_uk: { label: 'Once liquide (UK)', factor: 0.0000284130625 },
+      barrel_oil: { label: 'Baril (pétrole, 42 gal US)', factor: 0.158987294928 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'liter',
+      defaultTo: 'milliliter',
+      decimals: 12
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
