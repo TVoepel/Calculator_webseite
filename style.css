@@ -333,33 +333,56 @@ input[readonly] { background: var(--color-surface-2); }
 }
 .ad-slot--inline { margin-top: var(--space-6); }
 
-/* TV size comparison visual */
-.tv-compare-list { display: flex; flex-direction: column; gap: var(--space-4); }
+/* TV size comparison visual: sizes overlaid on one another, anchored at the
+   bottom-left corner, so the size difference is directly visible. All box
+   dimensions are computed and set as literal pixel values in JS (no CSS
+   aspect-ratio or percentage-padding tricks), for maximum cross-browser
+   reliability. */
+.tv-overlay-wrap {
+  width: 100%;
+  max-width: 30rem;
+  margin: var(--space-8) auto var(--space-6);
+}
+.tv-overlay {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.tv-overlay-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.tv-overlay-box--ref {
+  border: 2px dashed var(--color-border);
+  background: transparent;
+}
+.tv-overlay-box--selected {
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary-soft);
+}
+.tv-overlay-label {
+  position: absolute;
+  top: -1.1rem;
+  right: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+.tv-overlay-box--selected .tv-overlay-label { color: var(--color-primary); }
+
+.tv-compare-list { display: flex; flex-direction: column; gap: var(--space-3); }
 .tv-compare-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
   padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
 }
 .tv-compare-row:last-child { border-bottom: none; padding-bottom: 0; }
-.tv-box-wrap { width: 260px; max-width: 100%; flex-shrink: 0; }
-.tv-box {
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%;
-  box-sizing: border-box;
-  background: var(--color-primary-soft);
-  border: 2px solid var(--color-primary);
-  border-radius: 4px;
-}
-.tv-box.tv-box--ref {
-  background: var(--color-surface-2);
-  border: 2px dashed var(--color-border);
-}
-.tv-compare-info { font-size: var(--text-sm); color: var(--color-text-muted); min-width: 200px; flex: 1; }
-.tv-compare-info strong { color: var(--color-text); }
+.tv-compare-row strong { color: var(--color-text); }
 
 .seo-card { margin-top: var(--space-6); }
 .seo-text {

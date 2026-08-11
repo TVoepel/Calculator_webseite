@@ -192,6 +192,10 @@
 
     <section class="card" style="margin-top: var(--space-6);">
       <h2 class="section-title">Visueller Vergleich</h2>
+      <p class="footer-note" style="margin-top:0;">Alle Größen sind an der unteren linken Ecke ausgerichtet übereinandergelegt, damit der Größenunterschied direkt sichtbar wird.</p>
+      <div class="tv-overlay-wrap">
+        <div id="tvOverlay" class="tv-overlay"></div>
+      </div>
       <div id="compareList" class="tv-compare-list"></div>
     </section>
 
@@ -268,6 +272,39 @@ Bei 16:9: Breitenanteil = 16, Höhenanteil = 9
     const ratioSelect = document.getElementById('aspectRatio');
     const resultText = document.getElementById('resultText');
     const compareList = document.getElementById('compareList');
+    const overlayEl = document.getElementById('tvOverlay');
+
+    let lastRows = null;
+    let lastRatioKey = null;
+
+    // Renders every size as an overlaid box anchored to the bottom-left corner,
+    // all scaled with literal pixel widths/heights computed from the overlay's
+    // own rendered width. No CSS aspect-ratio or percentage-padding is used, to
+    // avoid any browser-specific quirks with those properties.
+    function renderOverlay(rows, ratioKey) {
+      const dimsList = rows.map(r => Object.assign({}, r, dims(r.inch, ratioKey)));
+      const maxWidthCm = Math.max(...dimsList.map(d => d.widthCm));
+      const maxHeightCm = Math.max(...dimsList.map(d => d.heightCm));
+
+      const stageWidthPx = overlayEl.getBoundingClientRect().width || 300;
+      const pxPerCm = stageWidthPx / maxWidthCm;
+      overlayEl.style.height = Math.round(maxHeightCm * pxPerCm) + 'px';
+
+      overlayEl.innerHTML = '';
+      const sorted = [...dimsList].sort((a, b) => b.widthCm - a.widthCm);
+      sorted.forEach((d, idx) => {
+        const box = document.createElement('div');
+        box.className = 'tv-overlay-box' + (d.isSelected ? ' tv-overlay-box--selected' : ' tv-overlay-box--ref');
+        box.style.width = Math.max(2, Math.round(d.widthCm * pxPerCm)) + 'px';
+        box.style.height = Math.max(2, Math.round(d.heightCm * pxPerCm)) + 'px';
+        box.style.zIndex = String(idx + (d.isSelected ? 100 : 0));
+        const label = document.createElement('span');
+        label.className = 'tv-overlay-label';
+        label.textContent = d.label;
+        box.appendChild(label);
+        overlayEl.appendChild(box);
+      });
+    }
 
     function render() {
       const diagonal = parseFloat(sizeInput.value);
@@ -275,59 +312,38 @@ Bei 16:9: Breitenanteil = 16, Höhenanteil = 9
       if (!Number.isFinite(diagonal) || diagonal <= 0) {
         resultText.textContent = 'Bitte eine gültige Bildschirmgröße eingeben.';
         compareList.innerHTML = '';
+        overlayEl.innerHTML = '';
         return;
       }
       const selected = dims(diagonal, ratioKey);
       resultText.textContent = `${formatNumber(diagonal, 1)} Zoll (${ratioKey}) = ${formatNumber(selected.diagonalCm, 1)} cm Diagonale, ${formatNumber(selected.widthCm, 1)} × ${formatNumber(selected.heightCm, 1)} cm`;
 
       const rows = [
-        { label: `Deine Eingabe – ${formatNumber(diagonal, 1)} Zoll`, inch: diagonal, isSelected: true },
+        { label: `${formatNumber(diagonal, 1)} Zoll (deine Eingabe)`, inch: diagonal, isSelected: true },
         ...STANDARD_SIZES.map(s => ({ label: `${s} Zoll`, inch: s, isSelected: false }))
       ];
-      const maxWidthCm = Math.max(...rows.map(r => dims(r.inch, ratioKey).widthCm));
       const selectedArea = selected.widthCm * selected.heightCm;
+
+      lastRows = rows;
+      lastRatioKey = ratioKey;
+      renderOverlay(rows, ratioKey);
 
       compareList.innerHTML = '';
       rows.forEach(r => {
+        if (r.isSelected) return;
         const d = dims(r.inch, ratioKey);
-        const pct = (d.widthCm / maxWidthCm) * 100;
         const row = document.createElement('div');
         row.className = 'tv-compare-row';
-
-        const boxWrap = document.createElement('div');
-        boxWrap.className = 'tv-box-wrap';
-        boxWrap.style.width = pct + '%';
-        const box = document.createElement('div');
-        box.className = 'tv-box' + (r.isSelected ? '' : ' tv-box--ref');
-        // Classic "padding-top percentage" trick instead of the CSS aspect-ratio
-        // property: percentage padding always resolves against the containing
-        // block's width, giving a proportional height in every browser
-        // (including Safari, which can silently reject long-decimal aspect-ratio
-        // values set via JS).
-        box.style.paddingTop = ((d.heightCm / d.widthCm) * 100) + '%';
-        boxWrap.appendChild(box);
-
-        const info = document.createElement('div');
-        info.className = 'tv-compare-info';
-        if (r.isSelected) {
-          info.innerHTML = `<strong>${r.label}</strong><br>${formatNumber(d.widthCm, 1)} × ${formatNumber(d.heightCm, 1)} cm, Diagonale ${formatNumber(d.diagonalCm, 1)} cm`;
+        const area = d.widthCm * d.heightCm;
+        const areaDiffPct = ((selectedArea / area) - 1) * 100;
+        const diagDiffCm = selected.diagonalCm - d.diagonalCm;
+        if (Math.abs(diagDiffCm) < 0.05) {
+          row.innerHTML = `<strong>${r.label}</strong> – ${formatNumber(d.widthCm, 1)} × ${formatNumber(d.heightCm, 1)} cm. Das entspricht genau deiner Eingabe.`;
         } else {
-          const area = d.widthCm * d.heightCm;
-          const areaDiffPct = ((selectedArea / area) - 1) * 100;
-          const diagDiffCm = selected.diagonalCm - d.diagonalCm;
           const areaWord = areaDiffPct >= 0 ? 'größere' : 'kleinere';
           const diagWord = diagDiffCm >= 0 ? 'größer' : 'kleiner';
-          if (Math.abs(diagDiffCm) < 0.05) {
-            info.innerHTML = `<strong>${r.label}</strong> – ${formatNumber(d.widthCm, 1)} × ${formatNumber(d.heightCm, 1)} cm<br>Das entspricht genau deiner Eingabe.`;
-            row.appendChild(boxWrap);
-            row.appendChild(info);
-            compareList.appendChild(row);
-            return;
-          }
-          info.innerHTML = `<strong>${r.label}</strong> – ${formatNumber(d.widthCm, 1)} × ${formatNumber(d.heightCm, 1)} cm<br>Deine Eingabe ist ${formatNumber(Math.abs(diagDiffCm), 1)} cm ${diagWord} (Diagonale) und hat ${formatNumber(Math.abs(areaDiffPct), 0)} % ${areaWord} Fläche`;
+          row.innerHTML = `<strong>${r.label}</strong> – ${formatNumber(d.widthCm, 1)} × ${formatNumber(d.heightCm, 1)} cm. Deine Eingabe ist ${formatNumber(Math.abs(diagDiffCm), 1)} cm ${diagWord} (Diagonale) und hat ${formatNumber(Math.abs(areaDiffPct), 0)} % ${areaWord} Fläche.`;
         }
-        row.appendChild(boxWrap);
-        row.appendChild(info);
         compareList.appendChild(row);
       });
     }
@@ -336,6 +352,13 @@ Bei 16:9: Breitenanteil = 16, Höhenanteil = 9
     ratioSelect.addEventListener('input', render);
     document.querySelectorAll('[data-size]').forEach(btn => {
       btn.addEventListener('click', () => { sizeInput.value = btn.dataset.size; render(); });
+    });
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      if (!lastRows) return;
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => renderOverlay(lastRows, lastRatioKey), 150);
     });
 
     render();
