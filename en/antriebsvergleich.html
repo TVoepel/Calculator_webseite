@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gas vs. Electric Comparison – Energy &amp; Cost per 100 km</title>
+  <meta name="description" content="Compare the energy consumption and cost per 100 km of gasoline and diesel cars with electric vehicles, in kWh/100 km and euros/100 km." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Gas vs. Electric Comparison – Energy &amp; Cost per 100 km" />
+  <meta property="og:description" content="Compare the energy consumption and cost per 100 km of gasoline and diesel cars with electric vehicles, in kWh/100 km and euros/100 km." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gas vs. Electric Comparison – Energy &amp; Cost per 100 km" />
+  <meta name="twitter:description" content="Compare the energy consumption and cost per 100 km of gasoline and diesel cars with electric vehicles, in kWh/100 km and euros/100 km." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-hover: #0d3711;
+      --color-primary-soft: #e8f5e9;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Gas vs. Electric Comparison",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html",
+      "description": "Compare the energy consumption and cost per 100 km of gasoline and diesel cars with electric vehicles, in kWh/100 km and euros/100 km.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Unit Converter",
+        "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gas vs. Electric Comparison",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is an electric car cheaper to run than a gasoline or diesel car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When it comes to pure energy costs per 100 km, an electric car charged at home is usually significantly cheaper than a comparable gasoline or diesel car. However, if you mostly rely on expensive public fast chargers, that advantage can shrink considerably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many kWh does an electric car use per 100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most electric cars use between 15 and 22 kWh/100 km, depending on vehicle size, driving style, outside temperature, and speed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does an EV use more energy in winter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold reduces battery efficiency, and cabin heating requires additional energy, which can noticeably increase consumption per 100 km in winter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many kWh of energy does 1 liter of gasoline contain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One liter of gasoline contains roughly 8.9–9.0 kWh of energy, and one liter of diesel about 9.8 kWh – considerably more than an electric car needs in electrical energy for the same distance, though the combustion engine has lower efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are charging losses for the electric car included in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, this calculator compares the pure energy costs based on the stated consumption. Charging losses (typically a few percent) are not shown separately and would slightly increase real-world costs."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">EV</span>
+        <span>Gas vs. Electric Comparison</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Energy &amp; Cost / 100 km</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../antriebsvergleich.html" hreflang="de">DE</a>
+          <a href="../nl/antriebsvergleich.html" hreflang="nl">NL</a>
+          <a href="../fr/antriebsvergleich.html" hreflang="fr">FR</a>
+          <a href="antriebsvergleich.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Compare gasoline/diesel and electric cars fairly</h1>
+      <p>Enter your gasoline or diesel car's consumption in L/100 km and your electric car's consumption in kWh/100 km, along with current fuel and electricity prices. The calculator shows you the energy consumption and cost per 100 km side by side.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Inputs &amp; Results</h2>
+        <div class="subgrid">
+          <div class="two-col">
+            <div>
+              <h3>Gasoline/Diesel Car</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="iceFuelType">Fuel</label>
+                  <select id="iceFuelType">
+                    <option value="super_e5">Gasoline Super (E5/E10)</option>
+                    <option value="super_plus">Gasoline Super Plus (E5)</option>
+                    <option value="diesel">Diesel</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iceConsumption">Consumption (L/100 km)</label>
+                  <input id="iceConsumption" type="number" step="0.1" min="0" value="6.5" />
+                </div>
+                <div>
+                  <label for="icePrice">Fuel price (€/L)</label>
+                  <input id="icePrice" type="number" step="0.01" min="0" value="1.85" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Electric Car</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="evConsumption">Consumption (kWh/100 km)</label>
+                  <input id="evConsumption" type="number" step="0.1" min="0" value="18" />
+                </div>
+                <div>
+                  <label for="evPrice">Electricity price (€/kWh)</label>
+                  <input id="evPrice" type="number" step="0.01" min="0" value="0.35" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Gasoline/Diesel Result</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="iceKwhDisplay">– kWh/100 km</span>
+                  <span>Energy consumption (gasoline/diesel)</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="iceCostDisplay">– €/100 km</span>
+                  <span>Fuel cost per 100 km</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Electric Result</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="evKwhDisplay">– kWh/100 km</span>
+                  <span>Energy consumption (electric)</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="evCostDisplay">– €/100 km</span>
+                  <span>Electricity cost per 100 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare" id="compareText">
+            Enter your values above to see the comparison.
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Ad space: placeholder for an advertisement (AdSense, direct sales, or affiliate banner).</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Assumptions &amp; Formulas</h2>
+        <div class="formula">We calculate using typical energy contents (lower heating value, rounded averages):
+
+- Gasoline Super (E5/E10/Super Plus): approx. 8.9–9.0 kWh per liter
+- Diesel: approx. 9.8 kWh per liter
+
+Formulas:
+
+1) Gasoline/diesel energy consumption:
+   kWh/100 km = Consumption (L/100 km) × kWh/L
+
+2) Gasoline/diesel cost:
+   €/100 km = Consumption (L/100 km) × Fuel price (€/L)
+
+3) Electric cost:
+   €/100 km = Consumption (kWh/100 km) × Electricity price (€/kWh)</div>
+        <p class="note">
+          The actual energy content of fuels varies slightly depending on composition (gasoline approx. 8.7–9.1 kWh/L, diesel approx. 9.7–9.9 kWh/L). The averages used here serve as a rough comparison and do not replace exact manufacturer figures. Charging losses for electric cars (typically a few percent) are not shown separately in the electricity cost calculation.
+        </p>
+        <p class="source-links">Sources: <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – Publications on fuels &amp; emissions</a>, <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/neuwagenkauf/co2-label-pkw-effizienzklassen/" target="_blank" rel="noopener noreferrer">ADAC – Electric vehicle guide</a>, <a href="https://de.wikipedia.org/wiki/Elektroauto" target="_blank" rel="noopener noreferrer">Wikipedia – Electric car</a></p>
+      </aside>
+    </div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Notes on the Powertrain Comparison</h2>
+      <div class="seo-text">
+        <p>With this calculator you can directly compare the energy consumption and pure energy costs of gasoline/diesel vehicles and electric cars. Enter the consumption in L/100 km and kWh/100 km along with current fuel and electricity prices.</p>
+        <p>This lets you see at a glance how switching from gasoline or diesel to an electric car would affect your individual situation. Especially with fluctuating energy prices, a transparent comparison per 100 km helps you better evaluate purchase decisions.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">In Practice: Gasoline/Diesel or Electric – What Matters</h2>
+      <div class="seo-text">
+        <p>Whether an electric car pays off financially depends heavily on your own electricity price (home wallbox vs. expensive public fast chargers) and the local fuel price – this calculator makes the pure energy cost comparison transparent.</p>
+        <p>Anyone who charges mostly at home with cheap off-peak electricity or their own solar system ends up with significantly lower costs per 100 km than when charging at public fast chargers.</p>
+        <p>For a complete cost calculation (total cost of ownership), purchase price, depreciation, maintenance, and insurance should be considered alongside energy costs – this calculator deliberately covers only the energy cost per 100 km.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is an electric car cheaper to run than a gasoline or diesel car?</summary><p>When it comes to pure energy costs per 100 km, an electric car charged at home is usually significantly cheaper than a comparable gasoline or diesel car. However, if you mostly rely on expensive public fast chargers, that advantage can shrink considerably.</p></details>
+        <details class="faq-item"><summary>How many kWh does an electric car use per 100 km?</summary><p>Most electric cars use between 15 and 22 kWh/100 km, depending on vehicle size, driving style, outside temperature, and speed.</p></details>
+        <details class="faq-item"><summary>Why does an EV use more energy in winter?</summary><p>Cold reduces battery efficiency, and cabin heating requires additional energy, which can noticeably increase consumption per 100 km in winter.</p></details>
+        <details class="faq-item"><summary>How many kWh of energy does 1 liter of gasoline contain?</summary><p>One liter of gasoline contains roughly 8.9–9.0 kWh of energy, and one liter of diesel about 9.8 kWh – considerably more than an electric car needs in electrical energy for the same distance, though the combustion engine has lower efficiency.</p></details>
+        <details class="faq-item"><summary>Are charging losses for the electric car included in this calculator?</summary><p>No, this calculator compares the pure energy costs based on the stated consumption. Charging losses (typically a few percent) are not shown separately and would slightly increase real-world costs.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Fuel Consumption Converter →</a>
+        <a href="energieumrechner.html">Energy Converter →</a>
+        <a href="geschwindigkeitumrechner.html">Speed Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script>
+    const fuelTypes = {
+      super_e5:   { kwhPerLiter: 8.9 },
+      super_plus: { kwhPerLiter: 9.0 },
+      diesel:     { kwhPerLiter: 9.8 }
+    };
+
+    const iceFuelType    = document.getElementById('iceFuelType');
+    const iceConsumption = document.getElementById('iceConsumption');
+    const icePrice       = document.getElementById('icePrice');
+    const evConsumption  = document.getElementById('evConsumption');
+    const evPrice        = document.getElementById('evPrice');
+
+    const iceKwhDisplay  = document.getElementById('iceKwhDisplay');
+    const iceCostDisplay = document.getElementById('iceCostDisplay');
+    const evKwhDisplay   = document.getElementById('evKwhDisplay');
+    const evCostDisplay  = document.getElementById('evCostDisplay');
+    const compareText    = document.getElementById('compareText');
+
+    function fmt(num, decimals = 2) {
+      if (!Number.isFinite(num)) return '–';
+      return new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(num);
+    }
+
+    function recalc() {
+      const fuel = fuelTypes[iceFuelType.value];
+      const iceCons = parseFloat(iceConsumption.value);
+      const iceP    = parseFloat(icePrice.value);
+      const evCons  = parseFloat(evConsumption.value);
+      const evP     = parseFloat(evPrice.value);
+
+      if (Number.isNaN(iceCons) || Number.isNaN(iceP) ||
+          Number.isNaN(evCons) || Number.isNaN(evP)) {
+        compareText.textContent = 'Please fill in all fields with valid numeric values.';
+        return;
+      }
+
+      const iceKwhPer100  = iceCons * fuel.kwhPerLiter;
+      const iceCostPer100 = iceCons * iceP;
+      const evKwhPer100   = evCons;
+      const evCostPer100  = evCons * evP;
+
+      iceKwhDisplay.textContent  = `${fmt(iceKwhPer100)} kWh/100 km`;
+      iceCostDisplay.textContent = `${fmt(iceCostPer100)} €/100 km`;
+      evKwhDisplay.textContent   = `${fmt(evKwhPer100)} kWh/100 km`;
+      evCostDisplay.textContent  = `${fmt(evCostPer100)} €/100 km`;
+
+      let text = '';
+      const kwhRatio  = iceKwhPer100 / evKwhPer100;
+      const costRatio = iceCostPer100 / evCostPer100;
+
+      if (Number.isFinite(kwhRatio) && Number.isFinite(costRatio) && evKwhPer100 > 0 && evCostPer100 > 0) {
+        if (kwhRatio > 1) {
+          text += `The <strong>gasoline/diesel car</strong> needs about ${fmt(kwhRatio, 1)}× as much energy as the <strong>electric car</strong> per 100 km. `;
+        } else {
+          text += `The <strong>electric car</strong> needs about ${fmt(1 / kwhRatio, 1)}× as much energy as the <strong>gasoline/diesel car</strong> per 100 km (based on the entered values). `;
+        }
+
+        if (costRatio > 1) {
+          text += `In terms of cost, the <strong>gasoline/diesel car</strong> is about ${fmt(costRatio, 1)}× more expensive per 100 km.`;
+        } else {
+          text += `In terms of cost, the <strong>electric car</strong> is about ${fmt(1 / costRatio, 1)}× more expensive per 100 km.`;
+        }
+      } else {
+        text = 'These inputs do not produce a meaningful comparison (check for 0 values).';
+      }
+
+      compareText.innerHTML = text;
+    }
+
+    [iceFuelType, iceConsumption, icePrice, evConsumption, evPrice]
+      .forEach(el => el.addEventListener('input', recalc));
+
+    recalc();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

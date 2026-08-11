@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>pH Converter – pH ↔ [H⁺] &amp; Henderson-Hasselbalch</title>
+  <meta name="description" content="Convert pH: pH ↔ H+ concentration, pH ↔ pOH. Plus a Henderson-Hasselbalch calculator for buffer solutions from pKa and ratio." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/ph-wert.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <meta name="theme-color" content="#004d40" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="pH Converter – pH ↔ [H⁺] &amp; Henderson-Hasselbalch" />
+  <meta property="og:description" content="Convert pH and calculate buffer solutions with the Henderson-Hasselbalch equation." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="pH Converter – pH ↔ [H⁺] &amp; Henderson-Hasselbalch" />
+  <meta name="twitter:description" content="Convert pH and calculate buffer solutions." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #004d40;
+      --color-primary-hover: #00251a;
+      --color-primary-soft: #d6e6e3;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "pH Converter",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html",
+      "description": "Convert pH and calculate buffer solutions with the Henderson-Hasselbalch equation.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Unit Converter", "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "pH Converter", "item": "https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do you calculate pH from H+ concentration?", "acceptedAnswer": { "@type": "Answer", "text": "pH = −log₁₀[H⁺]. Example: [H⁺] = 10⁻⁷ mol/L gives pH 7 (neutral, as with pure water at 25 °C)." } },
+        { "@type": "Question", "name": "What is the Henderson-Hasselbalch equation?", "acceptedAnswer": { "@type": "Answer", "text": "pH = pKa + log₁₀([A⁻]/[HA]). It calculates the pH of a buffer solution from the pKa of the acid and the ratio of base to acid." } },
+        { "@type": "Question", "name": "How do you prepare a buffer solution with a specific pH?", "acceptedAnswer": { "@type": "Answer", "text": "You choose an acid whose pKa is as close as possible to the desired pH, then use the Henderson-Hasselbalch equation to calculate the required ratio of base to acid: Ratio = 10^(pH − pKa)." } },
+        { "@type": "Question", "name": "What is the relationship between pH and pOH?", "acceptedAnswer": { "@type": "Answer", "text": "At 25 °C, pH + pOH = 14, since the ion product of water is Kw = 10⁻¹⁴. At other temperatures, this value deviates slightly." } },
+        { "@type": "Question", "name": "What does buffer capacity mean?", "acceptedAnswer": { "@type": "Answer", "text": "Buffer capacity describes how much acid or base can be added before the pH changes noticeably. It is highest when pH ≈ pKa (a base:acid ratio close to 1:1)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">pH</span>
+        <span>pH Converter</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Chemistry &amp; Lab</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../ph-wert.html" hreflang="de">DE</a>
+          <a href="../nl/ph-wert.html" hreflang="nl">NL</a>
+          <a href="../fr/ph-wert.html" hreflang="fr">FR</a>
+          <a href="ph-wert.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convert pH &amp; Calculate Buffer Solutions</h1>
+      <p>Convert between pH, H⁺ concentration, pOH, and OH⁻ concentration, and calculate buffer solutions with the Henderson-Hasselbalch equation.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">pH Converter</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Value</label>
+              <input id="fromValue" type="number" value="7" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">From</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Swap units</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Result</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">To</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Ad / AdSense / Affiliate Placeholder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Common pKa Values (25 °C)</h2>
+        <table class="ref-table">
+          <thead><tr><th>Acid</th><th>pKa</th></tr></thead>
+          <tbody>
+            <tr><td>Acetic acid</td><td>4.76</td></tr>
+            <tr><td>Carbonic acid (pKa1)</td><td>6.35</td></tr>
+            <tr><td>Phosphoric acid (pKa2)</td><td>7.20</td></tr>
+            <tr><td>Ammonium (NH₄⁺)</td><td>9.25</td></tr>
+            <tr><td>Citric acid (pKa1)</td><td>3.13</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Henderson-Hasselbalch: Calculate Buffer Solution</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="pkaInput">pKa of the acid</label>
+            <input id="pkaInput" type="number" value="4.76" step="any" />
+          </div>
+          <div>
+            <label for="ratioInput">Ratio [A⁻]/[HA] (base/acid)</label>
+            <input id="ratioInput" type="number" value="1" step="any" min="0.0001" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="phFromRatio">–</span>
+          <span>Resulting pH value</span>
+        </div>
+
+        <div class="row" style="margin-top: var(--space-3);">
+          <div>
+            <label for="targetPhInput">Desired target pH</label>
+            <input id="targetPhInput" type="number" value="5" step="any" />
+          </div>
+          <div></div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="ratioFromPh">–</span>
+          <span>Required ratio [A⁻]/[HA] for this pH (with the pKa above)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula &amp; Sources</h2>
+      <div class="formula">pH = −log₁₀[H⁺]
+pOH = −log₁₀[OH⁻]
+pH + pOH = 14 (at 25 °C, Kw = 10⁻¹⁴)
+
+Henderson-Hasselbalch: pH = pKa + log₁₀([A⁻] ÷ [HA])
+Required ratio: [A⁻]/[HA] = 10^(pH − pKa)</div>
+      <p class="note">Buffer capacity is greatest when pH is close to the pKa value (a ratio close to 1:1) – outside ±1 pH unit from the pKa, a buffer has little effect.</p>
+      <p class="source-links">Sources: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Gold Book (pH definition)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST</a>, <a href="https://de.wikipedia.org/wiki/PH-Wert" target="_blank" rel="noopener noreferrer">Wikipedia – pH</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">In Practice</h2>
+      <div class="seo-text">
+        <p>In the lab, an acetate buffer (pKa 4.76) or phosphate buffer (pKa 7.20) is often used to keep a solution stable at a specific pH – for example for enzyme reactions or cell cultures.</p>
+        <p>Aquarium and pool water is regularly tested for pH; converting between pH and H⁺ concentration helps put small pH changes (which lie on a logarithmic scale) into realistic perspective.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>How do you calculate pH from H+ concentration?</summary><p>pH = −log₁₀[H⁺]. Example: [H⁺] = 10⁻⁷ mol/L gives pH 7 (neutral, as with pure water at 25 °C).</p></details>
+        <details class="faq-item"><summary>What is the Henderson-Hasselbalch equation?</summary><p>pH = pKa + log₁₀([A⁻]/[HA]). It calculates the pH of a buffer solution from the pKa of the acid and the ratio of base to acid.</p></details>
+        <details class="faq-item"><summary>How do you prepare a buffer solution with a specific pH?</summary><p>You choose an acid whose pKa is as close as possible to the desired pH, then use the Henderson-Hasselbalch equation to calculate the required ratio of base to acid: Ratio = 10^(pH − pKa).</p></details>
+        <details class="faq-item"><summary>What is the relationship between pH and pOH?</summary><p>At 25 °C, pH + pOH = 14, since the ion product of water is Kw = 10⁻¹⁴. At other temperatures, this value deviates slightly.</p></details>
+        <details class="faq-item"><summary>What does buffer capacity mean?</summary><p>Buffer capacity describes how much acid or base can be added before the pH changes noticeably. It is highest when pH ≈ pKa (a base:acid ratio close to 1:1).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="konzentrationsumrechner.html">Concentration Converter →</a>
+        <a href="dichte.html">Density Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      ph: { label: 'pH', toBase: v => v, fromBase: v => v },
+      h_conc: { label: '[H⁺] (mol/L)', toBase: v => -Math.log10(v), fromBase: ph => Math.pow(10, -ph) },
+      poh: { label: 'pOH', toBase: v => 14 - v, fromBase: ph => 14 - ph },
+      oh_conc: { label: '[OH⁻] (mol/L)', toBase: v => 14 + Math.log10(v), fromBase: ph => Math.pow(10, ph - 14) }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromBase(from.toBase(value)),
+      defaultFrom: 'ph',
+      defaultTo: 'h_conc',
+      decimals: 10
+    });
+
+    const pkaInput = document.getElementById('pkaInput');
+    const ratioInput = document.getElementById('ratioInput');
+    const phFromRatio = document.getElementById('phFromRatio');
+    const targetPhInput = document.getElementById('targetPhInput');
+    const ratioFromPh = document.getElementById('ratioFromPh');
+
+    function calcBuffer() {
+      const pka = parseFloat(pkaInput.value);
+      const ratio = parseFloat(ratioInput.value);
+      const targetPh = parseFloat(targetPhInput.value);
+
+      if (Number.isFinite(pka) && Number.isFinite(ratio) && ratio > 0) {
+        const ph = pka + Math.log10(ratio);
+        phFromRatio.textContent = formatNumber(ph, 2);
+      } else {
+        phFromRatio.textContent = '–';
+      }
+
+      if (Number.isFinite(pka) && Number.isFinite(targetPh)) {
+        const neededRatio = Math.pow(10, targetPh - pka);
+        ratioFromPh.textContent = formatNumber(neededRatio, 4);
+      } else {
+        ratioFromPh.textContent = '–';
+      }
+    }
+
+    [pkaInput, ratioInput, targetPhInput].forEach(el => el.addEventListener('input', calcBuffer));
+    calcBuffer();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

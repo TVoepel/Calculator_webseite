@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BMI &amp; Calorie Needs Calculator – BMI, BMR, TDEE</title>
+  <meta name="description" content="Calculate your BMI for free, see your WHO category, and determine your daily calorie needs (BMR/TDEE) using the Mifflin-St Jeor and Harris-Benedict formulas." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/bmi.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/bmi.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta name="theme-color" content="#4527a0" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/bmi.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="BMI &amp; Calorie Needs Calculator – BMI, BMR, TDEE" />
+  <meta property="og:description" content="Calculate your BMI for free, see your WHO category, and determine your daily calorie needs (BMR/TDEE)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BMI &amp; Calorie Needs Calculator" />
+  <meta name="twitter:description" content="Calculate your BMI, BMR, and daily calorie needs for free." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4527a0;
+      --color-primary-hover: #2c1a68;
+      --color-primary-soft: #e3dbf5;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BMI & Calorie Needs Calculator",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/bmi.html",
+      "description": "Calculate your BMI for free, see your WHO category, and determine your daily calorie needs (BMR/TDEE).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Unit Converter", "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "BMI & Calorie Needs Calculator", "item": "https://tvoepel.github.io/Calculator_webseite/en/bmi.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate my BMI?", "acceptedAnswer": { "@type": "Answer", "text": "BMI = weight (kg) ÷ height (m)². Example: 75 kg ÷ (1.75 m)² = 24.5 (normal weight according to the WHO classification)." } },
+        { "@type": "Question", "name": "What are the BMI categories according to the WHO?", "acceptedAnswer": { "@type": "Answer", "text": "Below 18.5 underweight, 18.5–24.9 normal weight, 25–29.9 overweight (pre-obesity), 30–34.9 obesity class I, 35–39.9 obesity class II, 40 and above obesity class III." } },
+        { "@type": "Question", "name": "What is basal metabolic rate (BMR)?", "acceptedAnswer": { "@type": "Answer", "text": "Basal metabolic rate is the amount of energy the body needs for vital functions while completely at rest. The Mifflin-St Jeor formula (1990) is now generally considered more accurate than the older Harris-Benedict formula." } },
+        { "@type": "Question", "name": "How do I calculate my daily calorie needs (TDEE)?", "acceptedAnswer": { "@type": "Answer", "text": "TDEE = basal metabolic rate (BMR) × activity factor. The factor ranges from 1.2 (little to no exercise) to 1.9 (very hard physical work plus training)." } },
+        { "@type": "Question", "name": "Is BMI a reliable health indicator?", "acceptedAnswer": { "@type": "Answer", "text": "BMI does not account for muscle mass, body composition, or fat distribution, and can be misleading for very muscular or very lean individuals. It serves as a rough guideline, not a medical diagnosis." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">B</span>
+        <span>BMI &amp; Calorie Needs</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Health &amp; Fitness</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../bmi.html" hreflang="de">DE</a>
+          <a href="../nl/bmi.html" hreflang="nl">NL</a>
+          <a href="../fr/bmi.html" hreflang="fr">FR</a>
+          <a href="bmi.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Calculate BMI, basal metabolic rate &amp; calorie needs</h1>
+      <p>Calculate your Body Mass Index with WHO classification, plus your daily calorie needs (basal metabolic rate × activity factor) using the modern Mifflin-St Jeor formula.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Inputs</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="weightInput">Weight (kg)</label>
+              <input id="weightInput" type="number" value="75" step="0.1" min="1" />
+            </div>
+            <div>
+              <label for="heightInput">Height (cm)</label>
+              <input id="heightInput" type="number" value="175" step="0.1" min="50" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="ageInput">Age (years)</label>
+              <input id="ageInput" type="number" value="35" step="1" min="1" max="120" />
+            </div>
+            <div>
+              <label for="genderInput">Gender (for BMR formula)</label>
+              <select id="genderInput">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div style="grid-column: 1 / -1;">
+              <label for="activityInput">Activity level</label>
+              <select id="activityInput">
+                <option value="1.2">Sedentary, little to no exercise (1.2)</option>
+                <option value="1.375">Lightly active, 1-3× sport/week (1.375)</option>
+                <option value="1.55" selected>Moderately active, 3-5× sport/week (1.55)</option>
+                <option value="1.725">Very active, 6-7× sport/week (1.725)</option>
+                <option value="1.9">Extremely active, physical labor + training (1.9)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-row">
+              <span class="result-highlight" id="bmiResult">–</span>
+              <span id="bmiCategory">BMI &amp; Category</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrResult">–</span>
+              <span>Basal metabolic rate (Mifflin-St Jeor)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrHbResult">–</span>
+              <span>Basal metabolic rate (Harris-Benedict, for comparison)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="tdeeResult">–</span>
+              <span>Daily calorie needs (TDEE)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Ad / AdSense / Affiliate Placeholder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">BMI Categories (WHO)</h2>
+        <table class="ref-table">
+          <thead><tr><th>BMI</th><th>Category</th></tr></thead>
+          <tbody>
+            <tr><td>&lt; 18.5</td><td>Underweight</td></tr>
+            <tr><td>18.5–24.9</td><td>Normal weight</td></tr>
+            <tr><td>25.0–29.9</td><td>Overweight (pre-obesity)</td></tr>
+            <tr><td>30.0–34.9</td><td>Obesity class I</td></tr>
+            <tr><td>35.0–39.9</td><td>Obesity class II</td></tr>
+            <tr><td>≥ 40.0</td><td>Obesity class III</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formulas &amp; Sources</h2>
+      <div class="formula">BMI = weight [kg] ÷ height [m]²
+
+Mifflin-St Jeor (1990), basal metabolic rate in kcal/day:
+  Men:   BMR = 10 × weight[kg] + 6.25 × height[cm] − 5 × age + 5
+  Women: BMR = 10 × weight[kg] + 6.25 × height[cm] − 5 × age − 161
+
+Harris-Benedict, revised 1984 (for comparison):
+  Men:   BMR = 88.362 + 13.397 × weight + 4.799 × height − 5.677 × age
+  Women: BMR = 447.593 + 9.247 × weight + 3.098 × height − 4.330 × age
+
+TDEE = BMR × activity factor (1.2 to 1.9)</div>
+      <p class="note">The Mifflin-St Jeor formula is now generally considered more accurate than the older Harris-Benedict formula in nutrition science and is shown here as the primary result.</p>
+      <p class="source-links">Sources: <a href="https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations" target="_blank" rel="noopener noreferrer">WHO – Body Mass Index</a>, <a href="https://de.wikipedia.org/wiki/Body-Mass-Index" target="_blank" rel="noopener noreferrer">Wikipedia – Body mass index</a>, <a href="https://de.wikipedia.org/wiki/Grundumsatz" target="_blank" rel="noopener noreferrer">Wikipedia – Basal metabolic rate</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ These figures are for general guidance only and do not replace medical or nutritional professional assessment. BMI and BMR do not account for muscle mass or individual health factors. If you have questions about your body weight or nutrition plan, consult a physician or a qualified nutrition counselor.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">In Practice</h2>
+      <div class="seo-text">
+        <p>For realistic weight loss, a calorie deficit of about 500 kcal/day is a common rule of thumb for around 0.5 kg of weight loss per week – your TDEE is the starting point from which the deficit is subtracted.</p>
+        <p>Strength and endurance athletes often use TDEE to plan the right calorie intake for muscle building (slight surplus) or cutting phases (deficit).</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>How do I calculate my BMI?</summary><p>BMI = weight (kg) ÷ height (m)². Example: 75 kg ÷ (1.75 m)² = 24.5 (normal weight according to the WHO classification).</p></details>
+        <details class="faq-item"><summary>What are the BMI categories according to the WHO?</summary><p>Below 18.5 underweight, 18.5–24.9 normal weight, 25–29.9 overweight (pre-obesity), 30–34.9 obesity class I, 35–39.9 obesity class II, 40 and above obesity class III.</p></details>
+        <details class="faq-item"><summary>What is basal metabolic rate (BMR)?</summary><p>Basal metabolic rate is the amount of energy the body needs for vital functions while completely at rest. The Mifflin-St Jeor formula (1990) is now generally considered more accurate than the older Harris-Benedict formula.</p></details>
+        <details class="faq-item"><summary>How do I calculate my daily calorie needs (TDEE)?</summary><p>TDEE = basal metabolic rate (BMR) × activity factor. The factor ranges from 1.2 (little to no exercise) to 1.9 (very hard physical work plus training).</p></details>
+        <details class="faq-item"><summary>Is BMI a reliable health indicator?</summary><p>BMI does not account for muscle mass, body composition, or fat distribution, and can be misleading for very muscular or very lean individuals. It serves as a rough guideline, not a medical diagnosis.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="gewichtumrechner.html">Weight Converter →</a>
+        <a href="energieumrechner.html">Energy Converter →</a>
+        <a href="blutzuckerumrechner.html">Blood Glucose Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const heightInput = document.getElementById('heightInput');
+    const ageInput = document.getElementById('ageInput');
+    const genderInput = document.getElementById('genderInput');
+    const activityInput = document.getElementById('activityInput');
+    const bmiResult = document.getElementById('bmiResult');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmrResult = document.getElementById('bmrResult');
+    const bmrHbResult = document.getElementById('bmrHbResult');
+    const tdeeResult = document.getElementById('tdeeResult');
+
+    function bmiCategoryFor(bmi) {
+      if (bmi < 18.5) return 'Underweight';
+      if (bmi < 25) return 'Normal weight';
+      if (bmi < 30) return 'Overweight (pre-obesity)';
+      if (bmi < 35) return 'Obesity class I';
+      if (bmi < 40) return 'Obesity class II';
+      return 'Obesity class III';
+    }
+
+    function calculate() {
+      const w = parseFloat(weightInput.value);
+      const hCm = parseFloat(heightInput.value);
+      const age = parseFloat(ageInput.value);
+      const gender = genderInput.value;
+      const activity = parseFloat(activityInput.value);
+
+      if (![w, hCm, age, activity].every(Number.isFinite) || w <= 0 || hCm <= 0 || age <= 0) {
+        bmiResult.textContent = '–';
+        bmiCategory.textContent = 'Please enter valid values.';
+        bmrResult.textContent = '–';
+        bmrHbResult.textContent = '–';
+        tdeeResult.textContent = '–';
+        return;
+      }
+
+      const hM = hCm / 100;
+      const bmi = w / (hM * hM);
+      bmiResult.textContent = formatNumber(bmi, 1);
+      bmiCategory.textContent = `BMI category (WHO): ${bmiCategoryFor(bmi)}`;
+
+      const bmr = gender === 'm'
+        ? 10 * w + 6.25 * hCm - 5 * age + 5
+        : 10 * w + 6.25 * hCm - 5 * age - 161;
+      bmrResult.textContent = `${formatNumber(bmr, 0)} kcal/day`;
+
+      const bmrHb = gender === 'm'
+        ? 88.362 + 13.397 * w + 4.799 * hCm - 5.677 * age
+        : 447.593 + 9.247 * w + 3.098 * hCm - 4.330 * age;
+      bmrHbResult.textContent = `${formatNumber(bmrHb, 0)} kcal/day`;
+
+      const tdee = bmr * activity;
+      tdeeResult.textContent = `${formatNumber(tdee, 0)} kcal/day`;
+    }
+
+    [weightInput, heightInput, ageInput, genderInput, activityInput].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
