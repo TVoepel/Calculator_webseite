@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fuel Consumption Converter – L/100km, km/L, mpg</title>
+  <meta name="description" content="Convert fuel consumption for free: liters per 100 km, kilometers per liter, mpg (US), and mpg (UK) for cars, vans, and fleets." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/treibstoffverbrauch-umrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/treibstoffverbrauch-umrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/treibstoffverbrauch-umrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/treibstoffverbrauch-umrechner.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/treibstoffverbrauch-umrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/treibstoffverbrauch-umrechner.html" />
+  <meta name="theme-color" content="#00695c" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/treibstoffverbrauch-umrechner.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Fuel Consumption Converter – L/100km, km/L, mpg" />
+  <meta property="og:description" content="Convert fuel consumption for free: liters per 100 km, kilometers per liter, mpg (US), and mpg (UK) for cars, vans, and fleets." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fuel Consumption Converter – L/100km, km/L, mpg" />
+  <meta name="twitter:description" content="Convert fuel consumption for free: liters per 100 km, kilometers per liter, mpg (US), and mpg (UK) for cars, vans, and fleets." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #00695c;
+      --color-primary-hover: #003d33;
+      --color-primary-soft: #d7ece8;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Fuel Consumption Converter",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/treibstoffverbrauch-umrechner.html",
+      "description": "Convert fuel consumption for free: liters per 100 km, kilometers per liter, mpg (US), and mpg (UK) for cars, vans, and fleets.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Unit Converter",
+        "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fuel Consumption Converter",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/treibstoffverbrauch-umrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you convert mpg to L/100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For US gallons: L/100 km = 235.214583 ÷ mpg. A vehicle with 30 mpg (US) therefore uses about 7.84 L/100 km."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do mpg (US) and mpg (UK) differ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The US gallon (3.785 L) is smaller than the imperial gallon (4.546 L). At the same consumption, the UK gallon therefore gives a higher mpg figure than the US gallon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as good fuel consumption in L/100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small cars often use 5–6 L/100 km, mid-size cars 6–8 L/100 km, and SUVs frequently more than 8 L/100 km – but real-world figures depend heavily on driving style and route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does WLTP mean for consumption figures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WLTP (Worldwide Harmonized Light Vehicles Test Procedure) has been the mandatory EU test procedure for determining consumption and emissions figures since 2018/2021, replacing the older NEDC procedure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate km/L from L/100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula: km/L = 100 ÷ (L/100 km). At a consumption of 6.5 L/100 km, that works out to about 15.4 km/L."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">F</span>
+        <span>Fuel Consumption Converter</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Car &amp; Fleet</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../treibstoffverbrauch-umrechner.html" hreflang="de">DE</a>
+          <a href="../nl/treibstoffverbrauch-umrechner.html" hreflang="nl">NL</a>
+          <a href="../fr/treibstoffverbrauch-umrechner.html" hreflang="fr">FR</a>
+          <a href="treibstoffverbrauch-umrechner.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convert fuel consumption quickly</h1>
+      <p>Convert between L/100&nbsp;km, km/L, mi/L, mpg (US), and mpg (UK). Useful when comparing German consumption figures with US or UK vehicle data.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Converter</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Value</label>
+              <input id="fromValue" type="number" value="6.5" step="any" min="0.0001" />
+            </div>
+            <div>
+              <label for="fromUnit">From</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Swap units</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Result</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">To</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">6.5 L/100 km = 15.38 km/L</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Ad / AdSense / Affiliate Placeholder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Ad Space</h2>
+        <div class="ad-slot">Ad / AdSense / Affiliate Placeholder</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Popular Conversions</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="l_100km,km_l,6.5">L/100 km to km/L</button>
+        <button type="button" data-preset="km_l,l_100km,15">km/L to L/100 km</button>
+        <button type="button" data-preset="l_100km,mpg_us,7">L/100 km to mpg (US)</button>
+        <button type="button" data-preset="mpg_us,l_100km,30">mpg (US) to L/100 km</button>
+        <button type="button" data-preset="l_100km,mpg_uk,7">L/100 km to mpg (UK)</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula &amp; Reference Values</h2>
+      <div class="formula">These figures are reciprocal to one another, so there is no fixed conversion factor:
+
+km/L        = 100 ÷ (L/100 km)
+mi/L        = km/L ÷ 1.609344
+mpg (US)    = 235.214583 ÷ (L/100 km)
+mpg (UK)    = 282.480936 ÷ (L/100 km)
+
+Derivation mpg (US): 100 km ÷ 1.609344 km/mi = miles per (L/100km) liters;
+1 US gallon = 3.785411784 L ⇒ constant = 100 × 3.785411784 ÷ 1.609344 ≈ 235.214583
+Derivation mpg (UK): 1 imperial gallon = 4.54609 L ⇒ constant = 100 × 4.54609 ÷ 1.609344 ≈ 282.480936</div>
+      <p class="note">A lower L/100km figure means less fuel consumed, and a higher mpg figure also means less fuel consumed (mpg counts distance traveled per unit of fuel) – so the two scales run in opposite directions.</p>
+          <p class="source-links">Sources: <a href="https://www.adac.de/rund-ums-fahrzeug/autokatalog/abgasnormen/wltp-messverfahren/" target="_blank" rel="noopener noreferrer">ADAC – WLTP test procedure explained</a>, <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – WLTP publications</a>, <a href="https://de.wikipedia.org/wiki/Kraftstoffverbrauch" target="_blank" rel="noopener noreferrer">Wikipedia – Fuel consumption</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">All Supported Consumption Units</h2>
+      <div class="seo-text">
+        <p>With this fuel consumption converter you can directly convert liters per 100 kilometers (L/100 km), kilometers per liter (km/L), miles per liter (mi/L), miles per US gallon (mpg US), and miles per UK gallon (mpg UK).</p>
+        <p>L/100 km is the consumption figure commonly used in Germany and the EU, while mpg is used in the US and the UK – though US and UK gallons differ in size (3.785 L vs. 4.546 L).</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">In Practice: When You Need to Convert Fuel Consumption</h2>
+      <div class="seo-text">
+        <p>When importing or comparing US vehicles, consumption is often given in mpg (miles per gallon) instead of L/100 km – a direct comparison is barely possible without converting.</p>
+        <p>Because US and UK gallons differ in size, mpg (US) also differs noticeably from mpg (UK) for the same vehicle.</p>
+        <p>For fleet comparisons or cost estimates on long trips, converting helps make consumption figures from different countries comparable.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>How do you convert mpg to L/100 km?</summary><p>For US gallons: L/100 km = 235.214583 ÷ mpg. A vehicle with 30 mpg (US) therefore uses about 7.84 L/100 km.</p></details>
+        <details class="faq-item"><summary>Why do mpg (US) and mpg (UK) differ?</summary><p>The US gallon (3.785 L) is smaller than the imperial gallon (4.546 L). At the same consumption, the UK gallon therefore gives a higher mpg figure than the US gallon.</p></details>
+        <details class="faq-item"><summary>What counts as good fuel consumption in L/100 km?</summary><p>Small cars often use 5–6 L/100 km, mid-size cars 6–8 L/100 km, and SUVs frequently more than 8 L/100 km – but real-world figures depend heavily on driving style and route.</p></details>
+        <details class="faq-item"><summary>What does WLTP mean for consumption figures?</summary><p>WLTP (Worldwide Harmonized Light Vehicles Test Procedure) has been the mandatory EU test procedure for determining consumption and emissions figures since 2018/2021, replacing the older NEDC procedure.</p></details>
+        <details class="faq-item"><summary>How do you calculate km/L from L/100 km?</summary><p>Formula: km/L = 100 ÷ (L/100 km). At a consumption of 6.5 L/100 km, that works out to about 15.4 km/L.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="antriebsvergleich.html">Gas vs. Electric Comparison →</a>
+        <a href="energieumrechner.html">Energy Converter →</a>
+        <a href="geschwindigkeitumrechner.html">Speed Converter →</a>
+        <a href="volumenumrechner.html">Volume Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Base unit: liters per 100 km (L/100km)
+    const units = {
+      l_100km: { label: 'Liters/100 km (L/100km)', toBase: v => v, fromBase: v => v },
+      km_l: { label: 'Kilometers/Liter (km/L)', toBase: v => 100 / v, fromBase: v => 100 / v },
+      mi_l: { label: 'Miles/Liter (mi/L)', toBase: v => 100 / (v * 1.609344), fromBase: v => (100 / v) / 1.609344 },
+      mpg_us: { label: 'Miles per US Gallon (mpg US)', toBase: v => 235.214583 / v, fromBase: v => 235.214583 / v },
+      mpg_uk: { label: 'Miles per UK Gallon (mpg UK)', toBase: v => 282.480936 / v, fromBase: v => 282.480936 / v }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromBase(from.toBase(value)),
+      defaultFrom: 'l_100km',
+      defaultTo: 'km_l',
+      decimals: 2
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

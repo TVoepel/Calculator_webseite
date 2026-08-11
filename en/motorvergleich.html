@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Motor Comparison – hp, kW, Torque & Power-to-Weight Ratio</title>
+  <meta name="description" content="Compare two vehicle engines: convert hp to kW, calculate and compare power-to-weight ratio (kg/kW) and specific torque (Nm/tonne)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/motorvergleich.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <meta name="theme-color" content="#311b92" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Motor Comparison – hp, kW, Torque & Power-to-Weight Ratio" />
+  <meta property="og:description" content="Compare two vehicle engines by power-to-weight ratio and specific torque." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motor Comparison – hp, kW, Torque & Power-to-Weight Ratio" />
+  <meta name="twitter:description" content="Compare two vehicle engines." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #311b92;
+      --color-primary-hover: #1a0e52;
+      --color-primary-soft: #e1dcf5;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Motor Comparison",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html",
+      "description": "Compare two vehicle engines by power-to-weight ratio and specific torque.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Unit Converter", "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Motor Comparison", "item": "https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do you compare two motors fairly?", "acceptedAnswer": { "@type": "Answer", "text": "Beyond raw power (kW/hp) and torque (Nm), power-to-weight ratio (kg per kW) is more meaningful for acceleration, since it factors in vehicle weight. A lighter car with less power can be quicker than a heavier car with more power." } },
+        { "@type": "Question", "name": "What's the difference between hp and kW?", "acceptedAnswer": { "@type": "Answer", "text": "1 hp (horsepower) equals exactly 0.735498875 kW, and 1 kW equals about 1.359621617 hp. Horsepower is the older unit, still widely used in everyday language, while kW is the SI unit of power." } },
+        { "@type": "Question", "name": "Why do electric cars often accelerate faster despite having less power?", "acceptedAnswer": { "@type": "Answer", "text": "Electric motors deliver their maximum torque right from 0 RPM, while combustion engines only reach peak torque at higher revs. This is especially noticeable when accelerating from a standstill." } },
+        { "@type": "Question", "name": "Can the 0-100 km/h time be calculated from power and weight alone?", "acceptedAnswer": { "@type": "Answer", "text": "Not reliably. Real-world acceleration time also depends on traction (all-wheel vs. rear-wheel drive), gear ratios, aerodynamics, and software limits. Power-to-weight ratio and specific torque correlate with acceleration but don't replace measured manufacturer figures." } },
+        { "@type": "Question", "name": "What counts as a good power-to-weight ratio?", "acceptedAnswer": { "@type": "Answer", "text": "Everyday cars are often around 10-15 kg/kW, sporty models around 5-8 kg/kW, and supercars sometimes below 3 kg/kW. The lower the value, the more power is available per kilogram of vehicle weight." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">PS</span>
+        <span>Motor Comparison</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Automotive &amp; Engineering</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../motorvergleich.html" hreflang="de">DE</a>
+          <a href="../nl/motorvergleich.html" hreflang="nl">NL</a>
+          <a href="../fr/motorvergleich.html" hreflang="fr">FR</a>
+          <a href="motorvergleich.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Compare motors by power &amp; torque</h1>
+      <p>Convert hp to kW and compare two vehicles by power-to-weight ratio (kg/kW) and specific torque (Nm/tonne) – more meaningful than raw hp figures. For a cost comparison of gas vs. electric, see our separate <a href="antriebsvergleich.html">Gas vs. Electric Comparison</a>.</p>
+    </section>
+
+    <div class="card">
+      <h2 class="section-title">Convert hp ↔ kW</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="fromValue">Value</label>
+            <input id="fromValue" type="number" value="150" step="any" />
+          </div>
+          <div>
+            <label for="fromUnit">From</label>
+            <select id="fromUnit"></select>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <button class="swap" id="swapBtn" type="button">⇅ Swap units</button>
+        </div>
+        <div class="row">
+          <div>
+            <label for="toValue">Result</label>
+            <input id="toValue" type="text" readonly />
+          </div>
+          <div>
+            <label for="toUnit">To</label>
+            <select id="toUnit"></select>
+          </div>
+        </div>
+        <div class="meta"><span id="resultText"></span></div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: var(--space-6);">
+      <section class="card">
+        <h2 class="section-title">Vehicle A</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psA">Power (hp)</label><input id="psA" type="number" value="150" step="any" min="1" /></div>
+            <div><label for="nmA">Torque (Nm)</label><input id="nmA" type="number" value="250" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightA">Weight (kg)</label><input id="weightA" type="number" value="1400" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioA">–</span><span>Power-to-weight ratio</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueA">–</span><span>Specific torque</span></div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Vehicle B</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psB">Power (hp)</label><input id="psB" type="number" value="250" step="any" min="1" /></div>
+            <div><label for="nmB">Torque (Nm)</label><input id="nmB" type="number" value="500" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightB">Weight (kg)</label><input id="weightB" type="number" value="1900" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioB">–</span><span>Power-to-weight ratio</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueB">–</span><span>Specific torque</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <div class="compare" id="compareText" style="border-top:none; padding-top:0; margin-top:0;">Enter power, torque, and weight for both vehicles above.</div>
+      <div class="ad-slot ad-slot--inline" style="margin-top: var(--space-4);">Ad / AdSense / Affiliate Placeholder</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula &amp; Sources</h2>
+      <div class="formula">1 hp = 0.735498875 kW (exact, 75 kgf·m/s using standard gravity 9.80665 m/s²)
+1 kW = 1.359621617 hp
+
+Power-to-weight ratio = Vehicle weight [kg] ÷ Power [kW]
+Specific torque = Torque [Nm] ÷ Vehicle weight [t]</div>
+      <p class="note">Deliberately <strong>no</strong> 0–100 km/h estimate formula: real-world acceleration also depends on traction, gear ratios, aerodynamics, and software limits, and can't be reliably calculated from power and weight alone. Power-to-weight ratio and specific torque are approximate indicators, not a time prediction.</p>
+      <p class="source-links">Sources: <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – SI Brochure</a>, <a href="https://www.adac.de/" target="_blank" rel="noopener noreferrer">ADAC – Vehicle Database</a>, <a href="https://de.wikipedia.org/wiki/Leistungsgewicht" target="_blank" rel="noopener noreferrer">Wikipedia – Power-to-weight ratio</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">In Practice</h2>
+      <div class="seo-text">
+        <p>A compact car with 110 hp and 1,000 kg (a kg/kW value of ~12.4) can feel noticeably more agile than a large sedan with 190 hp but 1,800 kg (a kg/kW value of ~12.9) – despite having far more hp, the power-to-weight ratio is almost the same.</p>
+        <p>When towing a trailer or carrying a full load, the effective weight – and with it the kg/kW value – rises noticeably, which explains why loaded vehicles accelerate noticeably more sluggishly.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>How do you compare two motors fairly?</summary><p>Beyond raw power (kW/hp) and torque (Nm), power-to-weight ratio (kg per kW) is more meaningful for acceleration, since it factors in vehicle weight. A lighter car with less power can be quicker than a heavier car with more power.</p></details>
+        <details class="faq-item"><summary>What's the difference between hp and kW?</summary><p>1 hp (horsepower) equals exactly 0.735498875 kW, and 1 kW equals about 1.359621617 hp. Horsepower is the older unit, still widely used in everyday language, while kW is the SI unit of power.</p></details>
+        <details class="faq-item"><summary>Why do electric cars often accelerate faster despite having less power?</summary><p>Electric motors deliver their maximum torque right from 0 RPM, while combustion engines only reach peak torque at higher revs. This is especially noticeable when accelerating from a standstill.</p></details>
+        <details class="faq-item"><summary>Can the 0-100 km/h time be calculated from power and weight alone?</summary><p>Not reliably. Real-world acceleration time also depends on traction (all-wheel vs. rear-wheel drive), gear ratios, aerodynamics, and software limits. Power-to-weight ratio and specific torque correlate with acceleration but don't replace measured manufacturer figures.</p></details>
+        <details class="faq-item"><summary>What counts as a good power-to-weight ratio?</summary><p>Everyday cars are often around 10-15 kg/kW, sporty models around 5-8 kg/kW, and supercars sometimes below 3 kg/kW. The lower the value, the more power is available per kilogram of vehicle weight.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="drehmoment.html">Torque Converter →</a>
+        <a href="antriebsvergleich.html">Gas vs. Electric Comparison (Cost) →</a>
+        <a href="geschwindigkeitumrechner.html">Speed Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      kw: { label: 'Kilowatt (kW)', factor: 1 },
+      ps: { label: 'Horsepower (hp)', factor: 0.735498875 }
+    };
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'ps',
+      defaultTo: 'kw',
+      decimals: 4
+    });
+
+    const PS_TO_KW = 0.735498875;
+    const fields = ['psA', 'nmA', 'weightA', 'psB', 'nmB', 'weightB'].reduce((acc, id) => {
+      acc[id] = document.getElementById(id);
+      return acc;
+    }, {});
+    const ratioA = document.getElementById('ratioA');
+    const specTorqueA = document.getElementById('specTorqueA');
+    const ratioB = document.getElementById('ratioB');
+    const specTorqueB = document.getElementById('specTorqueB');
+    const compareText = document.getElementById('compareText');
+
+    function computeVehicle(ps, nm, weight) {
+      const kw = ps * PS_TO_KW;
+      const kgPerKw = weight / kw;
+      const nmPerTonne = nm / (weight / 1000);
+      return { kw, kgPerKw, nmPerTonne };
+    }
+
+    function calculate() {
+      const psA = parseFloat(fields.psA.value), nmA = parseFloat(fields.nmA.value), wA = parseFloat(fields.weightA.value);
+      const psB = parseFloat(fields.psB.value), nmB = parseFloat(fields.nmB.value), wB = parseFloat(fields.weightB.value);
+      if (![psA, nmA, wA, psB, nmB, wB].every(v => Number.isFinite(v) && v > 0)) {
+        ratioA.textContent = ratioB.textContent = specTorqueA.textContent = specTorqueB.textContent = '–';
+        compareText.textContent = 'Please fill in all fields with valid values.';
+        return;
+      }
+      const a = computeVehicle(psA, nmA, wA);
+      const b = computeVehicle(psB, nmB, wB);
+
+      ratioA.textContent = `${formatNumber(a.kgPerKw, 1)} kg/kW`;
+      ratioB.textContent = `${formatNumber(b.kgPerKw, 1)} kg/kW`;
+      specTorqueA.textContent = `${formatNumber(a.nmPerTonne, 0)} Nm/t`;
+      specTorqueB.textContent = `${formatNumber(b.nmPerTonne, 0)} Nm/t`;
+
+      let text;
+      if (a.kgPerKw < b.kgPerKw) {
+        const factor = b.kgPerKw / a.kgPerKw;
+        text = `<strong>Vehicle A</strong> has the better power-to-weight ratio (${formatNumber(factor, 2)}× better than Vehicle B) and should tend to accelerate more briskly.`;
+      } else if (b.kgPerKw < a.kgPerKw) {
+        const factor = a.kgPerKw / b.kgPerKw;
+        text = `<strong>Vehicle B</strong> has the better power-to-weight ratio (${formatNumber(factor, 2)}× better than Vehicle A) and should tend to accelerate more briskly.`;
+      } else {
+        text = 'Both vehicles have an identical power-to-weight ratio.';
+      }
+      text += ' Note: this is an approximation – real-world acceleration also depends on traction, gearing, and aerodynamics.';
+      compareText.innerHTML = text;
+    }
+
+    Object.values(fields).forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

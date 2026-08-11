@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Photography Exposure Calculator – EV, Aperture, Time &amp; ISO</title>
+  <meta name="description" content="Calculate exposure value (EV) from aperture, shutter speed, and ISO. Plus a calculator for equivalent exposure when aperture or ISO changes." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/fotografie.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/fotografie.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/fotografie.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <meta name="theme-color" content="#212121" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/fotografie.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Photography Exposure Calculator – EV, Aperture, Time &amp; ISO" />
+  <meta property="og:description" content="Calculate exposure value (EV) and determine equivalent exposure when aperture or ISO changes." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Photography Exposure Calculator – EV, Aperture, Time &amp; ISO" />
+  <meta name="twitter:description" content="Calculate exposure value and equivalent exposure." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #212121;
+      --color-primary-hover: #000000;
+      --color-primary-soft: #e0e0e0;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Photography Exposure Calculator",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/fotografie.html",
+      "description": "Calculate exposure value (EV) and determine equivalent exposure when aperture or ISO changes.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "Unit Converter", "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Photography Exposure Calculator", "item": "https://tvoepel.github.io/Calculator_webseite/en/fotografie.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is exposure value (EV)?", "acceptedAnswer": { "@type": "Answer", "text": "Exposure value combines aperture and shutter speed into a single number that describes the amount of light in a shot. EV 15 corresponds to a sunny day, for example, while EV 5 corresponds to a dark indoor room." } },
+        { "@type": "Question", "name": "How much more light does f/2.8 let in compared to f/5.6?", "acceptedAnswer": { "@type": "Answer", "text": "At the same shutter speed, f/2.8 lets in about 4× as much light as f/5.6 (a difference of 2 stops; each stop doubles or halves the amount of light)." } },
+        { "@type": "Question", "name": "How are ISO 100 and ISO 1600 related?", "acceptedAnswer": { "@type": "Answer", "text": "ISO 1600 is 4 stops (2⁴ = 16×) more sensitive than ISO 100, so it needs only a sixteenth of the light for the same exposure – though usually with noticeably more image noise." } },
+        { "@type": "Question", "name": "What is equivalent exposure?", "acceptedAnswer": { "@type": "Answer", "text": "Two combinations of aperture, shutter speed, and ISO are equivalent when they let the same amount of light reach the sensor (the same EV). If the aperture is closed down (more depth of field), the shutter speed must be lengthened or the ISO increased to achieve the same exposure." } },
+        { "@type": "Question", "name": "What is the exposure triangle?", "acceptedAnswer": { "@type": "Answer", "text": "Aperture, shutter speed, and ISO together form the exposure triangle: changing any one value requires adjusting the others to keep the same exposure – while each value also affects depth of field (aperture), motion blur (shutter speed), and image noise (ISO)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">EV</span>
+        <span>Exposure Calculator</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">Photography</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../fotografie.html" hreflang="de">DE</a>
+          <a href="../nl/fotografie.html" hreflang="nl">NL</a>
+          <a href="../fr/fotografie.html" hreflang="fr">FR</a>
+          <a href="fotografie.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Calculate Exposure Value &amp; Equivalent Exposure</h1>
+      <p>Calculate the exposure value (EV) from aperture, shutter speed, and ISO, and find the matching new shutter speed when you change the aperture or ISO.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Calculate Exposure Value (EV)</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="apertureInput">Aperture (f/)</label>
+              <input id="apertureInput" type="number" value="8" step="any" min="0.5" />
+            </div>
+            <div>
+              <label for="shutterInput">Shutter speed (seconds)</label>
+              <input id="shutterInput" type="number" value="0.01" step="any" min="0.00001" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="isoInput">ISO</label>
+              <input id="isoInput" type="number" value="100" step="any" min="1" />
+            </div>
+            <div></div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="evResult">–</span>
+            <span id="evCondition">Exposure value (EV, relative to ISO 100)</span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Ad / AdSense / Affiliate Placeholder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Approximate EV Reference Values</h2>
+        <table class="ref-table">
+          <thead><tr><th>EV</th><th>Lighting Condition</th></tr></thead>
+          <tbody>
+            <tr><td>−6</td><td>Starlight</td></tr>
+            <tr><td>0</td><td>Full moon</td></tr>
+            <tr><td>5</td><td>Indoor, normally lit</td></tr>
+            <tr><td>9</td><td>Sunset</td></tr>
+            <tr><td>12</td><td>Overcast day</td></tr>
+            <tr><td>15</td><td>Sunny day (Sunny 16)</td></tr>
+            <tr><td>16</td><td>Beach/snow, bright sun</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Rough reference values for orientation – actual lighting conditions vary widely.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Calculate Equivalent Exposure</h2>
+      <p class="note" style="margin-top:0;">Enter your current settings and change the aperture or ISO – the matching new shutter speed for the same exposure will be calculated.</p>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="curAperture">Current aperture (f/)</label>
+            <input id="curAperture" type="number" value="8" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="curShutter">Current time (s)</label>
+            <input id="curShutter" type="number" value="0.01" step="any" min="0.00001" />
+          </div>
+          <div>
+            <label for="curIso">Current ISO</label>
+            <input id="curIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="newAperture">New aperture (f/)</label>
+            <input id="newAperture" type="number" value="11" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="newIso">New ISO</label>
+            <input id="newIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="equivResult">–</span>
+          <span>Required new shutter speed for the same exposure</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula &amp; Sources</h2>
+      <div class="formula">EV (relative to ISO 100) = log₂(aperture number² ÷ shutter speed ÷ (ISO ÷ 100))
+
+Equivalent exposure (same EV):
+New time = Old time × (New aperture² ÷ Old aperture²) × (Old ISO ÷ New ISO)</div>
+      <p class="note">The classical f-stop series follows steps of √2: f/1.0 – 1.4 – 2 – 2.8 – 4 – 5.6 – 8 – 11 – 16 – 22 – 32. Each stop halves or doubles the amount of light transmitted.</p>
+      <p class="source-links">Sources: <a href="https://de.wikipedia.org/wiki/Lichtwert" target="_blank" rel="noopener noreferrer">Wikipedia – Exposure value (EV)</a>, <a href="https://de.wikipedia.org/wiki/Blendenzahl" target="_blank" rel="noopener noreferrer">Wikipedia – f-number</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">In Practice</h2>
+      <div class="seo-text">
+        <p>When switching from a lens with f/2.8 to one with a maximum of f/5.6 (2 stops darker), you need to quadruple the shutter speed or quadruple the ISO to get the same exposure.</p>
+        <p>For long exposures with ND filters (e.g. 6 stops), equivalent exposure helps convert from a normal shutter speed to the much longer time needed with the filter.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>What is exposure value (EV)?</summary><p>Exposure value combines aperture and shutter speed into a single number that describes the amount of light in a shot. EV 15 corresponds to a sunny day, for example, while EV 5 corresponds to a dark indoor room.</p></details>
+        <details class="faq-item"><summary>How much more light does f/2.8 let in compared to f/5.6?</summary><p>At the same shutter speed, f/2.8 lets in about 4× as much light as f/5.6 (a difference of 2 stops; each stop doubles or halves the amount of light).</p></details>
+        <details class="faq-item"><summary>How are ISO 100 and ISO 1600 related?</summary><p>ISO 1600 is 4 stops (2⁴ = 16×) more sensitive than ISO 100, so it needs only a sixteenth of the light for the same exposure – though usually with noticeably more image noise.</p></details>
+        <details class="faq-item"><summary>What is equivalent exposure?</summary><p>Two combinations of aperture, shutter speed, and ISO are equivalent when they let the same amount of light reach the sensor (the same EV). If the aperture is closed down (more depth of field), the shutter speed must be lengthened or the ISO increased to achieve the same exposure.</p></details>
+        <details class="faq-item"><summary>What is the exposure triangle?</summary><p>Aperture, shutter speed, and ISO together form the exposure triangle: changing any one value requires adjusting the others to keep the same exposure – while each value also affects depth of field (aperture), motion blur (shutter speed), and image noise (ISO).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="index.html">All Converters →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const apertureInput = document.getElementById('apertureInput');
+    const shutterInput = document.getElementById('shutterInput');
+    const isoInput = document.getElementById('isoInput');
+    const evResult = document.getElementById('evResult');
+    const evCondition = document.getElementById('evCondition');
+
+    function calcEv() {
+      const n = parseFloat(apertureInput.value);
+      const t = parseFloat(shutterInput.value);
+      const iso = parseFloat(isoInput.value);
+      if (![n, t, iso].every(Number.isFinite) || n <= 0 || t <= 0 || iso <= 0) {
+        evResult.textContent = '–';
+        return;
+      }
+      const ev = Math.log2((n * n) / t / (iso / 100));
+      evResult.textContent = formatNumber(ev, 2);
+      evCondition.textContent = 'Exposure value (EV, relative to ISO 100)';
+    }
+    [apertureInput, shutterInput, isoInput].forEach(el => el.addEventListener('input', calcEv));
+    calcEv();
+
+    const curAperture = document.getElementById('curAperture');
+    const curShutter = document.getElementById('curShutter');
+    const curIso = document.getElementById('curIso');
+    const newAperture = document.getElementById('newAperture');
+    const newIso = document.getElementById('newIso');
+    const equivResult = document.getElementById('equivResult');
+
+    function formatShutter(t) {
+      if (t >= 1) return formatNumber(t, 2) + ' s';
+      const denom = 1 / t;
+      return '1/' + formatNumber(denom, denom < 10 ? 1 : 0) + ' s';
+    }
+
+    function calcEquiv() {
+      const n1 = parseFloat(curAperture.value);
+      const t1 = parseFloat(curShutter.value);
+      const iso1 = parseFloat(curIso.value);
+      const n2 = parseFloat(newAperture.value);
+      const iso2 = parseFloat(newIso.value);
+      if (![n1, t1, iso1, n2, iso2].every(Number.isFinite) || n1 <= 0 || t1 <= 0 || iso1 <= 0 || n2 <= 0 || iso2 <= 0) {
+        equivResult.textContent = '–';
+        return;
+      }
+      const t2 = t1 * (n2 * n2) / (n1 * n1) * (iso1 / iso2);
+      equivResult.textContent = formatShutter(t2);
+    }
+    [curAperture, curShutter, curIso, newAperture, newIso].forEach(el => el.addEventListener('input', calcEquiv));
+    calcEquiv();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
