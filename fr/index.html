@@ -161,7 +161,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="automotive">
+        <article class="tool-card" data-category="automotive">
           <div class="tool-header">
             <div class="tool-icon" style="background:#1b5e20;">EV</div>
             <div>
@@ -212,7 +212,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="science">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#ad1457;">c</div>
             <div>
@@ -263,7 +263,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="science">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#827717;">ρ</div>
             <div>
@@ -314,7 +314,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="everyday">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#006064;">L</div>
             <div>
@@ -365,7 +365,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="everyday">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#283593;">A</div>
             <div>
@@ -416,7 +416,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="lifestyle">
+        <article class="tool-card" data-category="lifestyle">
           <div class="tool-header">
             <div class="tool-icon" style="background:#6d4c41;">%</div>
             <div>
@@ -467,7 +467,7 @@
           </div>
         </article>
 
-        <div class="ad-slot">Publicité / AdSense / emplacement d'affiliation</div>        <article class="tool-card" data-category="everyday">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#4e342e;">V</div>
             <div>
@@ -525,9 +525,27 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   
     (function () {
+      const AD_TEXT = 'Publicité / AdSense / emplacement d\'affiliation';
       const chips = document.querySelectorAll('.category-chip');
-      const cards = document.querySelectorAll('.tool-card');
-      const gridAds = document.querySelectorAll('.tool-grid > .ad-slot');
+      const cards = Array.from(document.querySelectorAll('.tool-card'));
+      const grid = document.querySelector('.tool-grid');
+
+      function renderAds() {
+        grid.querySelectorAll(':scope > .ad-slot').forEach(el => el.remove());
+        const visible = cards.filter(card => !card.hidden);
+        visible.forEach((card, idx) => {
+          const position = idx + 1;
+          const completesBlock = position % 3 === 0;
+          const isLast = position === visible.length;
+          if (completesBlock || (isLast && !completesBlock)) {
+            const ad = document.createElement('div');
+            ad.className = 'ad-slot';
+            ad.textContent = AD_TEXT;
+            card.insertAdjacentElement('afterend', ad);
+          }
+        });
+      }
+
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
@@ -537,9 +555,11 @@
           cards.forEach(card => {
             card.hidden = cat !== 'all' && card.dataset.category !== cat;
           });
-          gridAds.forEach(ad => { ad.hidden = cat !== 'all'; });
+          renderAds();
         });
       });
+
+      renderAds();
     })();
 </script>
   <script src="../sw-register.js" defer></script>
