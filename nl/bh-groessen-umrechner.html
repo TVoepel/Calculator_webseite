@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BH-maat-omrekenaar – DE, EU, VS, UK, Italië, Frankrijk</title>
+  <meta name="description" content="BH-maten gratis omrekenen tussen Duitsland/EU, VS, UK, Italië en Frankrijk – bandmaat en cupmaat, inclusief omrekentabellen en uitleg van de cup-letters." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <meta name="theme-color" content="#d81b60" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Eenheden Omrekenen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html" />
+  <meta property="og:site_name" content="Eenheden Omrekenen" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="BH-maat-omrekenaar – DE, EU, VS, UK, Italië, Frankrijk" />
+  <meta property="og:description" content="BH-maten gratis omrekenen tussen Duitsland/EU, VS, UK, Italië en Frankrijk – bandmaat en cupmaat, inclusief omrekentabellen en uitleg van de cup-letters." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BH-maat-omrekenaar – DE, EU, VS, UK, Italië, Frankrijk" />
+  <meta name="twitter:description" content="BH-maten gratis omrekenen tussen Duitsland/EU, VS, UK, Italië en Frankrijk – bandmaat en cupmaat, inclusief omrekentabellen en uitleg van de cup-letters." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #d81b60;
+      --color-primary-hover: #9c1049;
+      --color-primary-soft: #fbdce8;
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    .ref-table th, .ref-table td {
+      text-align: left;
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .ref-table tr.hit td { background: var(--color-primary-soft); font-weight: 600; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BH-maat-omrekenaar",
+      "url": "https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html",
+      "description": "BH-maten gratis omrekenen tussen Duitsland/EU, VS, UK, Italië en Frankrijk – bandmaat en cupmaat, inclusief omrekentabellen en uitleg van de cup-letters.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webgebaseerd)",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eenheden Omrekenen",
+        "url": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startpagina",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BH-maat-omrekenaar",
+          "item": "https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoe reken ik een Amerikaanse BH-maat om naar een EU-maat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De bandmaat reken je om met EU-bandmaat = Amerikaanse bandmaat × 2,5 − 10, bijvoorbeeld wordt van US 34 de EU-bandmaat 75. De cupmaat blijft tot cup D gelijk (A–D zijn identiek), vanaf cup DD/E wijken de letters tussen landen af."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is de Duitse BH-maat hetzelfde als de EU-maat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Duitsland gebruikt direct de Europese bandmaat-nummering (onderborstomvang in cm, afgerond op 5 cm) zonder afwijking. Frankrijk en Italië gebruiken daarentegen hun eigen, verschoven nummeringen voor dezelfde fysieke maat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Waarom verschillen de cup-letters tussen landen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tot cup D gebruiken de VS, UK en continentaal Europa (DE/EU/FR/IT) dezelfde letters. Vanaf cup DD/E hebben zich historisch verschillende letterreeksen gevestigd: US DD/E komt overeen met UK DD en EU/FR/IT E, US DDD/F komt overeen met UK E en EU/FR/IT F, enzovoort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoeveel groter is een cup dan de volgende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elke cup-stap komt overeen met ongeveer 2,5 cm (1 inch) verschil tussen boven- en onderborstomvang. AA staat voor 0 cm verschil, A voor ca. 2,5 cm, B voor ca. 5 cm, C voor ca. 7,5 cm, enzovoort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe meet ik mijn BH-maat correct?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voor de bandmaat meet je de onderborstomvang horizontaal direct onder de borst, voor de cup de bovenborstomvang op het breedste punt van de borst. Het verschil tussen beide maten bepaalt de cupmaat."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startpagina Eenheden Omrekenen">
+        <span class="logo-mark">BH</span>
+        <span>BH-maat-omrekenaar</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle omrekentools</a>
+        <span class="pill">Mode &amp; dagelijks gebruik</span>
+
+        <nav class="lang-switch" aria-label="Taal kiezen">
+          <a href="../bh-groessen-umrechner.html" hreflang="de">DE</a>
+          <a href="bh-groessen-umrechner.html" class="lang-active" aria-current="page">NL</a>
+          <a href="../fr/bh-groessen-umrechner.html" hreflang="fr">FR</a>
+          <a href="../en/bh-groessen-umrechner.html" hreflang="en">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>BH-maten tussen landen omrekenen</h1>
+      <p>Kies je systeem en je maat – bandmaat en cupmaat worden direct omgerekend naar Duitsland/EU, VS, UK, Italië en Frankrijk. Duitsland en de EU gebruiken dezelfde nummering, Frankrijk en Italië hun eigen systemen.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Omrekenaar</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="bandSystem">Jouw systeem</label>
+            <select id="bandSystem"></select>
+          </div>
+          <div>
+            <label for="bandValue">Bandmaat</label>
+            <select id="bandValue"></select>
+          </div>
+        </div>
+        <div class="row" style="margin-top: var(--space-2);">
+          <div>
+            <label for="cupSystem">Cup-systeem</label>
+            <select id="cupSystem"></select>
+          </div>
+          <div>
+            <label for="cupValue">Cupmaat</label>
+            <select id="cupValue"></select>
+          </div>
+        </div>
+        <div class="meta">
+          <span id="resultText"></span>
+        </div>
+      </div>
+      <div class="ad-slot ad-slot--inline">Advertentie / AdSense / affiliate-plaatshouder</div>
+    </section>
+
+    <div class="grid" style="margin-top: var(--space-6);">
+      <section class="card">
+        <h2 class="section-title">Bandmaat-tabel</h2>
+        <table class="ref-table" id="bandTable">
+          <thead><tr><th>DE</th><th>EU</th><th>Frankrijk</th><th>Italië</th><th>VS / UK</th></tr></thead>
+          <tbody id="bandTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Cup-tabel</h2>
+        <table class="ref-table" id="cupTable">
+          <thead><tr><th>DE / EU / FR / IT</th><th>VS</th><th>UK</th></tr></thead>
+          <tbody id="cupTableBody"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; referentiewaarden</h2>
+      <div class="formula">Bandmaat (onderborstomvang), basis = VS/UK-bandmaat in inch
+EU-/DE-bandmaat   = VS-bandmaat × 2,5 − 10
+Frankrijk-bandmaat = VS-bandmaat × 2,5 + 10
+Italië-bandmaat    = (VS-bandmaat − 28) ÷ 2 + 1
+
+Cupmaat: elke letter/stap ≈ 2,5 cm (1 inch) verschil tussen boven- en onderborstomvang.
+Tot cup D identiek in alle systemen. Vanaf cup DD/E:
+US DD/E = UK DD = DE/EU/FR/IT E
+US DDD/F = UK E = DE/EU/FR/IT F
+US G = UK F = DE/EU/FR/IT G
+US H = UK FF = DE/EU/FR/IT H</div>
+      <p class="footer-note">Voorbeeld: VS/UK 34D komt overeen met DE/EU 75D, Frankrijk 95D en Italië 4D. VS/UK 34DD/E komt echter overeen met DE/EU 75E, maar UK 34DD (niet "E").</p>
+      <p class="source-links">Bronnen: <a href="https://de.wikipedia.org/wiki/BH-Gr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – BH-maat</a>, <a href="https://de.wikipedia.org/wiki/Bekleidungsgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Kledingmaat</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle ondersteunde BH-maatsystemen</h2>
+      <div class="seo-text">
+        <p>Ondersteunde bandmaat-systemen: Duitsland/EU (60–100), Frankrijk (80–120), Italië (1–9), VS/UK (28–44). Ondersteunde cup-systemen: continentaal Europa (DE/EU/FR/IT: AA–H), VS (AA–H, incl. DD/E en DDD/F), UK (AA–FF).</p>
+        <p>Duitsland volgt direct de Europese bandmaat-norm, daarom zijn DE- en EU-waarden altijd identiek. Frankrijk en Italië gebruiken hiervan afwijkende, eigen nummeringen voor dezelfde fysieke maat.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praktisch toegepast: wanneer moet je BH-maten omrekenen?</h2>
+      <div class="seo-text">
+        <p>Bij online winkelen bij internationale lingeriemerken (VS, UK, Frankrijk, Italië) staan maten vaak alleen in het betreffende landsysteem vermeld – een omrekenfout bij de cupmaat leidt snel tot een verkeerd zittende pasvorm.</p>
+        <p>Op reis of bij het winkelen in het buitenland helpt de omrekening om zonder passen de juiste maat in de winkel te vinden.</p>
+        <p>Ook bij het vergelijken van maattabellen van verschillende fabrikanten is het handig te weten dat een "E"-cup in continentaal Europa niet hetzelfde is als een "E"-cup in de VS.</p>
+      </div>
+    </section>
+
+    <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Advertentie / AdSense / affiliate-plaatshouder</div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Hoe reken ik een Amerikaanse BH-maat om naar een EU-maat?</summary><p>De bandmaat reken je om met EU-bandmaat = Amerikaanse bandmaat × 2,5 − 10, bijvoorbeeld wordt van US 34 de EU-bandmaat 75. De cupmaat blijft tot cup D gelijk (A–D zijn identiek), vanaf cup DD/E wijken de letters tussen landen af.</p></details>
+        <details class="faq-item"><summary>Is de Duitse BH-maat hetzelfde als de EU-maat?</summary><p>Ja. Duitsland gebruikt direct de Europese bandmaat-nummering (onderborstomvang in cm, afgerond op 5 cm) zonder afwijking. Frankrijk en Italië gebruiken daarentegen hun eigen, verschoven nummeringen voor dezelfde fysieke maat.</p></details>
+        <details class="faq-item"><summary>Waarom verschillen de cup-letters tussen landen?</summary><p>Tot cup D gebruiken de VS, UK en continentaal Europa (DE/EU/FR/IT) dezelfde letters. Vanaf cup DD/E hebben zich historisch verschillende letterreeksen gevestigd: US DD/E komt overeen met UK DD en EU/FR/IT E, US DDD/F komt overeen met UK E en EU/FR/IT F, enzovoort.</p></details>
+        <details class="faq-item"><summary>Hoeveel groter is een cup dan de volgende?</summary><p>Elke cup-stap komt overeen met ongeveer 2,5 cm (1 inch) verschil tussen boven- en onderborstomvang. AA staat voor 0 cm verschil, A voor ca. 2,5 cm, B voor ca. 5 cm, C voor ca. 7,5 cm, enzovoort.</p></details>
+        <details class="faq-item"><summary>Hoe meet ik mijn BH-maat correct?</summary><p>Voor de bandmaat meet je de onderborstomvang horizontaal direct onder de borst, voor de cup de bovenborstomvang op het breedste punt van de borst. Het verschil tussen beide maten bepaalt de cupmaat.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Vergelijkbare omrekentools</h2>
+      <div class="related-grid">
+        <a href="kleidergroesse.html">Kledingmaat-omrekenaar →</a>
+        <a href="schuhgroesse.html">Schoenmaat-omrekenaar →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Eenheden Omrekenen</span>
+      <nav>
+        <a href="index.html">Startpagina</a>
+        <a href="../impressum.html">Colofon (DE)</a>
+        <a href="../datenschutz.html">Privacybeleid (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Bandmaat: basis = VS/UK-bandmaat in inch (28-44, even getallen)
+    const US_BANDS = [28, 30, 32, 34, 36, 38, 40, 42, 44];
+    function bandToUs(system, value) {
+      const v = parseFloat(value);
+      if (system === 'us' || system === 'uk') return v;
+      if (system === 'de' || system === 'eu') return (v - 60) / 2.5 + 28;
+      if (system === 'fr') return (v - 80) / 2.5 + 28;
+      if (system === 'it') return (v - 1) * 2 + 28;
+    }
+    function bandFromUs(system, us) {
+      if (system === 'us' || system === 'uk') return us;
+      if (system === 'de' || system === 'eu') return us * 2.5 - 10;
+      if (system === 'fr') return us * 2.5 + 10;
+      if (system === 'it') return (us - 28) / 2 + 1;
+    }
+    const BAND_SYSTEMS = {
+      de: { label: 'Duitsland (DE)', values: US_BANDS.map(us => bandFromUs('de', us)) },
+      eu: { label: 'EU', values: US_BANDS.map(us => bandFromUs('eu', us)) },
+      fr: { label: 'Frankrijk', values: US_BANDS.map(us => bandFromUs('fr', us)) },
+      it: { label: 'Italië', values: US_BANDS.map(us => bandFromUs('it', us)) },
+      us: { label: 'VS', values: US_BANDS },
+      uk: { label: 'UK', values: US_BANDS }
+    };
+
+    // Cup-letters: index 0 = AA, 1 = A, 2 = B, ... oplopend
+    const CUP_LETTERS = {
+      continental: ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+      us: ['AA', 'A', 'B', 'C', 'D', 'DD/E', 'DDD/F', 'G', 'H'],
+      uk: ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF']
+    };
+    const CUP_SYSTEMS = {
+      continental: 'Continentaal Europa (DE/EU/FR/IT)',
+      us: 'VS',
+      uk: 'UK'
+    };
+
+    const bandSystemSelect = document.getElementById('bandSystem');
+    const bandValueSelect = document.getElementById('bandValue');
+    const cupSystemSelect = document.getElementById('cupSystem');
+    const cupValueSelect = document.getElementById('cupValue');
+    const resultText = document.getElementById('resultText');
+    const bandTableBody = document.getElementById('bandTableBody');
+    const cupTableBody = document.getElementById('cupTableBody');
+
+    function populateSelects() {
+      Object.entries(BAND_SYSTEMS).forEach(([key, sys]) => {
+        bandSystemSelect.add(new Option(sys.label, key));
+      });
+      bandSystemSelect.value = 'us';
+      populateBandValues();
+
+      Object.entries(CUP_SYSTEMS).forEach(([key, label]) => {
+        cupSystemSelect.add(new Option(label, key));
+      });
+      cupSystemSelect.value = 'us';
+      populateCupValues();
+    }
+
+    function populateBandValues() {
+      bandValueSelect.innerHTML = '';
+      const sys = BAND_SYSTEMS[bandSystemSelect.value];
+      sys.values.forEach(v => bandValueSelect.add(new Option(formatNumber(v, 1), v)));
+      bandValueSelect.selectedIndex = 3;
+    }
+
+    function populateCupValues() {
+      cupValueSelect.innerHTML = '';
+      const letters = CUP_LETTERS[cupSystemSelect.value];
+      letters.forEach((l, i) => cupValueSelect.add(new Option(l, i)));
+      cupValueSelect.selectedIndex = 4;
+    }
+
+    function buildBandTable() {
+      bandTableBody.innerHTML = '';
+      US_BANDS.forEach(us => {
+        const row = document.createElement('tr');
+        row.dataset.us = us;
+        row.innerHTML = `<td>${formatNumber(bandFromUs('de', us), 0)}</td><td>${formatNumber(bandFromUs('eu', us), 0)}</td><td>${formatNumber(bandFromUs('fr', us), 0)}</td><td>${formatNumber(bandFromUs('it', us), 0)}</td><td>${us}</td>`;
+        bandTableBody.appendChild(row);
+      });
+    }
+
+    function buildCupTable() {
+      cupTableBody.innerHTML = '';
+      CUP_LETTERS.continental.forEach((_, i) => {
+        const row = document.createElement('tr');
+        row.dataset.index = i;
+        row.innerHTML = `<td>${CUP_LETTERS.continental[i]}</td><td>${CUP_LETTERS.us[i]}</td><td>${CUP_LETTERS.uk[i]}</td>`;
+        cupTableBody.appendChild(row);
+      });
+    }
+
+    function convert() {
+      const bandSystem = bandSystemSelect.value;
+      const us = bandToUs(bandSystem, bandValueSelect.value);
+      const cupSystem = cupSystemSelect.value;
+      const cupIndex = parseInt(cupValueSelect.value, 10);
+
+      const deLabel = `DE/EU ${formatNumber(bandFromUs('de', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const frLabel = `FR ${formatNumber(bandFromUs('fr', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const itLabel = `IT ${formatNumber(bandFromUs('it', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const usLabel = `VS ${formatNumber(us, 0)}${CUP_LETTERS.us[cupIndex]}`;
+      const ukLabel = `UK ${formatNumber(us, 0)}${CUP_LETTERS.uk[cupIndex]}`;
+
+      resultText.textContent = `${deLabel} = ${frLabel} = ${itLabel} = ${usLabel} = ${ukLabel}`;
+
+      Array.from(bandTableBody.children).forEach(row => {
+        row.classList.toggle('hit', Math.abs(parseFloat(row.dataset.us) - us) < 0.01);
+      });
+      Array.from(cupTableBody.children).forEach(row => {
+        row.classList.toggle('hit', parseInt(row.dataset.index, 10) === cupIndex);
+      });
+    }
+
+    bandSystemSelect.addEventListener('input', () => { populateBandValues(); convert(); });
+    bandValueSelect.addEventListener('input', convert);
+    cupSystemSelect.addEventListener('input', () => { populateCupValues(); convert(); });
+    cupValueSelect.addEventListener('input', convert);
+
+    populateSelects();
+    buildBandTable();
+    buildCupTable();
+    convert();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

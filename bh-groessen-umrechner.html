@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BH-Größen-Umrechner – DE, EU, USA, UK, Italien, Frankreich</title>
+  <meta name="description" content="BH-Größen kostenlos umrechnen zwischen Deutschland/EU, USA, UK, Italien und Frankreich – Bandgröße und Cup-Größe, inklusive Umrechnungstabellen und Erklärung der Cup-Buchstaben." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/bh-groessen-umrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <meta name="theme-color" content="#d81b60" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Einheitenrechner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html" />
+  <meta property="og:site_name" content="Einheitenrechner" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="BH-Größen-Umrechner – DE, EU, USA, UK, Italien, Frankreich" />
+  <meta property="og:description" content="BH-Größen kostenlos umrechnen zwischen Deutschland/EU, USA, UK, Italien und Frankreich – Bandgröße und Cup-Größe, inklusive Umrechnungstabellen und Erklärung der Cup-Buchstaben." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BH-Größen-Umrechner – DE, EU, USA, UK, Italien, Frankreich" />
+  <meta name="twitter:description" content="BH-Größen kostenlos umrechnen zwischen Deutschland/EU, USA, UK, Italien und Frankreich – Bandgröße und Cup-Größe, inklusive Umrechnungstabellen und Erklärung der Cup-Buchstaben." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #d81b60;
+      --color-primary-hover: #9c1049;
+      --color-primary-soft: #fbdce8;
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    .ref-table th, .ref-table td {
+      text-align: left;
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .ref-table tr.hit td { background: var(--color-primary-soft); font-weight: 600; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BH-Größen-Umrechner",
+      "url": "https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html",
+      "description": "BH-Größen kostenlos umrechnen zwischen Deutschland/EU, USA, UK, Italien und Frankreich – Bandgröße und Cup-Größe, inklusive Umrechnungstabellen und Erklärung der Cup-Buchstaben.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (webbasiert)",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Einheitenrechner",
+        "url": "https://tvoepel.github.io/Calculator_webseite/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://tvoepel.github.io/Calculator_webseite/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BH-Größen-Umrechner",
+          "item": "https://tvoepel.github.io/Calculator_webseite/bh-groessen-umrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie rechne ich eine US-BH-Größe in eine EU-Größe um?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Bandgröße rechnest du mit EU-Bandgröße = US-Bandgröße × 2,5 − 10 um, z. B. wird aus US 34 die EU-Bandgröße 75. Die Cup-Größe bleibt bis Cup D gleich (A–D sind identisch), ab Cup DD/E weichen die Buchstaben zwischen den Ländern ab."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist die deutsche BH-Größe dasselbe wie die EU-Größe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Deutschland verwendet direkt die europäische Bandgrößen-Nummerierung (Unterbrustumfang in cm, auf 5 cm gerundet) ohne Abweichung. Frankreich und Italien nutzen dagegen eigene, versetzte Nummerierungen für dieselbe physische Größe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum unterscheiden sich die Cup-Buchstaben zwischen den Ländern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bis Cup D verwenden USA, UK und Kontinentaleuropa (DE/EU/FR/IT) dieselben Buchstaben. Ab Cup DD/E haben sich historisch unterschiedliche Buchstabenfolgen etabliert: US DD/E entspricht UK DD und EU/FR/IT E, US DDD/F entspricht UK E und EU/FR/IT F, und so weiter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel größer ist ein Cup als der nächste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jeder Cup-Schritt entspricht etwa 2,5 cm (1 Zoll) Differenz zwischen Ober- und Unterbrustumfang. AA steht für 0 cm Differenz, A für ca. 2,5 cm, B für ca. 5 cm, C für ca. 7,5 cm und so weiter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie messe ich meine BH-Größe richtig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für die Bandgröße misst du den Unterbrustumfang waagerecht direkt unter der Brust, für den Cup den Oberbrustumfang an der stärksten Stelle der Brust. Die Differenz zwischen beiden Maßen bestimmt die Cup-Größe."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Startseite Einheitenrechner">
+        <span class="logo-mark">BH</span>
+        <span>BH-Größen-Umrechner</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Alle Umrechner</a>
+        <span class="pill">Mode &amp; Alltag</span>
+
+        <nav class="lang-switch" aria-label="Sprache wählen">
+          <a href="bh-groessen-umrechner.html" class="lang-active" aria-current="page">DE</a>
+          <a href="nl/bh-groessen-umrechner.html" hreflang="nl">NL</a>
+          <a href="fr/bh-groessen-umrechner.html" hreflang="fr">FR</a>
+          <a href="en/bh-groessen-umrechner.html" hreflang="en">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>BH-Größen zwischen Ländern umrechnen</h1>
+      <p>Wähle dein System und deine Größe – Bandgröße und Cup-Größe werden direkt in Deutschland/EU, USA, UK, Italien und Frankreich umgerechnet. Deutschland und die EU nutzen dieselbe Nummerierung, Frankreich und Italien eigene Systeme.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Umrechner</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="bandSystem">Dein System</label>
+            <select id="bandSystem"></select>
+          </div>
+          <div>
+            <label for="bandValue">Bandgröße</label>
+            <select id="bandValue"></select>
+          </div>
+        </div>
+        <div class="row" style="margin-top: var(--space-2);">
+          <div>
+            <label for="cupSystem">Cup-System</label>
+            <select id="cupSystem"></select>
+          </div>
+          <div>
+            <label for="cupValue">Cup-Größe</label>
+            <select id="cupValue"></select>
+          </div>
+        </div>
+        <div class="meta">
+          <span id="resultText"></span>
+        </div>
+      </div>
+      <div class="ad-slot ad-slot--inline">Anzeige / AdSense / Affiliate-Platzhalter</div>
+    </section>
+
+    <div class="grid" style="margin-top: var(--space-6);">
+      <section class="card">
+        <h2 class="section-title">Bandgrößen-Tabelle</h2>
+        <table class="ref-table" id="bandTable">
+          <thead><tr><th>DE</th><th>EU</th><th>Frankreich</th><th>Italien</th><th>USA / UK</th></tr></thead>
+          <tbody id="bandTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Cup-Tabelle</h2>
+        <table class="ref-table" id="cupTable">
+          <thead><tr><th>DE / EU / FR / IT</th><th>USA</th><th>UK</th></tr></thead>
+          <tbody id="cupTableBody"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formel &amp; Referenzwerte</h2>
+      <div class="formula">Bandgröße (Unterbrustumfang), Basis = US/UK-Bandgröße in Zoll
+EU-/DE-Bandgröße   = US-Bandgröße × 2,5 − 10
+Frankreich-Bandgröße = US-Bandgröße × 2,5 + 10
+Italien-Bandgröße   = (US-Bandgröße − 28) ÷ 2 + 1
+
+Cup-Größe: jeder Buchstabe/Schritt ≈ 2,5 cm (1 Zoll) Differenz zwischen Ober- und Unterbrustumfang.
+Bis Cup D identisch in allen Systemen. Ab Cup DD/E:
+US DD/E = UK DD = DE/EU/FR/IT E
+US DDD/F = UK E = DE/EU/FR/IT F
+US G = UK F = DE/EU/FR/IT G
+US H = UK FF = DE/EU/FR/IT H</div>
+      <p class="footer-note">Beispiel: US/UK 34D entspricht DE/EU 75D, Frankreich 95D und Italien 4D. US/UK 34DD/E entspricht dagegen DE/EU 75E, aber UK 34DD (nicht "E").</p>
+      <p class="source-links">Quellen: <a href="https://de.wikipedia.org/wiki/BH-Gr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – BH-Größe</a>, <a href="https://de.wikipedia.org/wiki/Bekleidungsgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Bekleidungsgröße</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Alle unterstützten BH-Größensysteme</h2>
+      <div class="seo-text">
+        <p>Unterstützte Bandgrößen-Systeme: Deutschland/EU (60–100), Frankreich (80–120), Italien (1–9), USA/UK (28–44). Unterstützte Cup-Systeme: Kontinentaleuropa (DE/EU/FR/IT: AA–H), USA (AA–H, inkl. DD/E und DDD/F), UK (AA–FF).</p>
+        <p>Deutschland folgt direkt der europäischen Bandgrößen-Norm, deshalb sind DE- und EU-Werte immer identisch. Frankreich und Italien verwenden davon abweichende, eigene Nummerierungen für dieselbe physische Größe.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Praxisbezug: Wann du BH-Größen umrechnen musst</h2>
+      <div class="seo-text">
+        <p>Beim Online-Shopping bei internationalen Dessous-Marken (US, UK, Frankreich, Italien) sind Größen oft nur im jeweiligen Landessystem angegeben – ein Umrechnungsfehler bei der Cup-Größe führt schnell zu einer falsch sitzenden Passform.</p>
+        <p>Auf Reisen oder beim Einkauf im Ausland hilft die Umrechnung, die richtige Größe im Laden zu finden, ohne anprobieren zu müssen.</p>
+        <p>Auch beim Vergleich von Größentabellen verschiedener Hersteller ist es hilfreich zu wissen, dass ein "E"-Cup in Kontinentaleuropa nicht dasselbe ist wie ein "E"-Cup in den USA.</p>
+      </div>
+    </section>
+
+    <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Anzeige / AdSense / Affiliate-Platzhalter</div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Häufige Fragen</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Wie rechne ich eine US-BH-Größe in eine EU-Größe um?</summary><p>Die Bandgröße rechnest du mit EU-Bandgröße = US-Bandgröße × 2,5 − 10 um, z. B. wird aus US 34 die EU-Bandgröße 75. Die Cup-Größe bleibt bis Cup D gleich (A–D sind identisch), ab Cup DD/E weichen die Buchstaben zwischen den Ländern ab.</p></details>
+        <details class="faq-item"><summary>Ist die deutsche BH-Größe dasselbe wie die EU-Größe?</summary><p>Ja. Deutschland verwendet direkt die europäische Bandgrößen-Nummerierung (Unterbrustumfang in cm, auf 5 cm gerundet) ohne Abweichung. Frankreich und Italien nutzen dagegen eigene, versetzte Nummerierungen für dieselbe physische Größe.</p></details>
+        <details class="faq-item"><summary>Warum unterscheiden sich die Cup-Buchstaben zwischen den Ländern?</summary><p>Bis Cup D verwenden USA, UK und Kontinentaleuropa (DE/EU/FR/IT) dieselben Buchstaben. Ab Cup DD/E haben sich historisch unterschiedliche Buchstabenfolgen etabliert: US DD/E entspricht UK DD und EU/FR/IT E, US DDD/F entspricht UK E und EU/FR/IT F, und so weiter.</p></details>
+        <details class="faq-item"><summary>Wie viel größer ist ein Cup als der nächste?</summary><p>Jeder Cup-Schritt entspricht etwa 2,5 cm (1 Zoll) Differenz zwischen Ober- und Unterbrustumfang. AA steht für 0 cm Differenz, A für ca. 2,5 cm, B für ca. 5 cm, C für ca. 7,5 cm und so weiter.</p></details>
+        <details class="faq-item"><summary>Wie messe ich meine BH-Größe richtig?</summary><p>Für die Bandgröße misst du den Unterbrustumfang waagerecht direkt unter der Brust, für den Cup den Oberbrustumfang an der stärksten Stelle der Brust. Die Differenz zwischen beiden Maßen bestimmt die Cup-Größe.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Ähnliche Umrechner</h2>
+      <div class="related-grid">
+        <a href="kleidergroesse.html">Kleidergrößen-Umrechner →</a>
+        <a href="schuhgroesse.html">Schuhgrößen-Umrechner →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Einheitenrechner</span>
+      <nav>
+        <a href="index.html">Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="converter.js"></script>
+  <script>
+    // Bandgröße: Basis = US/UK-Bandgröße in Zoll (28-44, gerade Zahlen)
+    const US_BANDS = [28, 30, 32, 34, 36, 38, 40, 42, 44];
+    function bandToUs(system, value) {
+      const v = parseFloat(value);
+      if (system === 'us' || system === 'uk') return v;
+      if (system === 'de' || system === 'eu') return (v - 60) / 2.5 + 28;
+      if (system === 'fr') return (v - 80) / 2.5 + 28;
+      if (system === 'it') return (v - 1) * 2 + 28;
+    }
+    function bandFromUs(system, us) {
+      if (system === 'us' || system === 'uk') return us;
+      if (system === 'de' || system === 'eu') return us * 2.5 - 10;
+      if (system === 'fr') return us * 2.5 + 10;
+      if (system === 'it') return (us - 28) / 2 + 1;
+    }
+    const BAND_SYSTEMS = {
+      de: { label: 'Deutschland (DE)', values: US_BANDS.map(us => bandFromUs('de', us)) },
+      eu: { label: 'EU', values: US_BANDS.map(us => bandFromUs('eu', us)) },
+      fr: { label: 'Frankreich', values: US_BANDS.map(us => bandFromUs('fr', us)) },
+      it: { label: 'Italien', values: US_BANDS.map(us => bandFromUs('it', us)) },
+      us: { label: 'USA', values: US_BANDS },
+      uk: { label: 'UK', values: US_BANDS }
+    };
+
+    // Cup-Buchstaben: Index 0 = AA, 1 = A, 2 = B, ... aufsteigend
+    const CUP_LETTERS = {
+      continental: ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+      us: ['AA', 'A', 'B', 'C', 'D', 'DD/E', 'DDD/F', 'G', 'H'],
+      uk: ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF']
+    };
+    const CUP_SYSTEMS = {
+      continental: 'Kontinentaleuropa (DE/EU/FR/IT)',
+      us: 'USA',
+      uk: 'UK'
+    };
+
+    const bandSystemSelect = document.getElementById('bandSystem');
+    const bandValueSelect = document.getElementById('bandValue');
+    const cupSystemSelect = document.getElementById('cupSystem');
+    const cupValueSelect = document.getElementById('cupValue');
+    const resultText = document.getElementById('resultText');
+    const bandTableBody = document.getElementById('bandTableBody');
+    const cupTableBody = document.getElementById('cupTableBody');
+
+    function populateSelects() {
+      Object.entries(BAND_SYSTEMS).forEach(([key, sys]) => {
+        bandSystemSelect.add(new Option(sys.label, key));
+      });
+      bandSystemSelect.value = 'us';
+      populateBandValues();
+
+      Object.entries(CUP_SYSTEMS).forEach(([key, label]) => {
+        cupSystemSelect.add(new Option(label, key));
+      });
+      cupSystemSelect.value = 'us';
+      populateCupValues();
+    }
+
+    function populateBandValues() {
+      bandValueSelect.innerHTML = '';
+      const sys = BAND_SYSTEMS[bandSystemSelect.value];
+      sys.values.forEach(v => bandValueSelect.add(new Option(formatNumber(v, 1), v)));
+      bandValueSelect.selectedIndex = 3;
+    }
+
+    function populateCupValues() {
+      cupValueSelect.innerHTML = '';
+      const letters = CUP_LETTERS[cupSystemSelect.value];
+      letters.forEach((l, i) => cupValueSelect.add(new Option(l, i)));
+      cupValueSelect.selectedIndex = 4;
+    }
+
+    function buildBandTable() {
+      bandTableBody.innerHTML = '';
+      US_BANDS.forEach(us => {
+        const row = document.createElement('tr');
+        row.dataset.us = us;
+        row.innerHTML = `<td>${formatNumber(bandFromUs('de', us), 0)}</td><td>${formatNumber(bandFromUs('eu', us), 0)}</td><td>${formatNumber(bandFromUs('fr', us), 0)}</td><td>${formatNumber(bandFromUs('it', us), 0)}</td><td>${us}</td>`;
+        bandTableBody.appendChild(row);
+      });
+    }
+
+    function buildCupTable() {
+      cupTableBody.innerHTML = '';
+      CUP_LETTERS.continental.forEach((_, i) => {
+        const row = document.createElement('tr');
+        row.dataset.index = i;
+        row.innerHTML = `<td>${CUP_LETTERS.continental[i]}</td><td>${CUP_LETTERS.us[i]}</td><td>${CUP_LETTERS.uk[i]}</td>`;
+        cupTableBody.appendChild(row);
+      });
+    }
+
+    function convert() {
+      const bandSystem = bandSystemSelect.value;
+      const us = bandToUs(bandSystem, bandValueSelect.value);
+      const cupSystem = cupSystemSelect.value;
+      const cupIndex = parseInt(cupValueSelect.value, 10);
+
+      const deLabel = `DE/EU ${formatNumber(bandFromUs('de', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const frLabel = `FR ${formatNumber(bandFromUs('fr', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const itLabel = `IT ${formatNumber(bandFromUs('it', us), 0)}${CUP_LETTERS.continental[cupIndex]}`;
+      const usLabel = `US ${formatNumber(us, 0)}${CUP_LETTERS.us[cupIndex]}`;
+      const ukLabel = `UK ${formatNumber(us, 0)}${CUP_LETTERS.uk[cupIndex]}`;
+
+      resultText.textContent = `${deLabel} = ${frLabel} = ${itLabel} = ${usLabel} = ${ukLabel}`;
+
+      Array.from(bandTableBody.children).forEach(row => {
+        row.classList.toggle('hit', Math.abs(parseFloat(row.dataset.us) - us) < 0.01);
+      });
+      Array.from(cupTableBody.children).forEach(row => {
+        row.classList.toggle('hit', parseInt(row.dataset.index, 10) === cupIndex);
+      });
+    }
+
+    bandSystemSelect.addEventListener('input', () => { populateBandValues(); convert(); });
+    bandValueSelect.addEventListener('input', convert);
+    cupSystemSelect.addEventListener('input', () => { populateCupValues(); convert(); });
+    cupValueSelect.addEventListener('input', convert);
+
+    populateSelects();
+    buildBandTable();
+    buildCupTable();
+    convert();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="sw-register.js" defer></script>
+</body>
+</html>
