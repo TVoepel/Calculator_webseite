@@ -226,7 +226,7 @@
       <h2 class="section-title">Formule &amp; referentiewaarden</h2>
       <div class="formula">Bandmaat (onderborstomvang), basis = VS/UK-bandmaat in inch
 EU-/DE-bandmaat   = VS-bandmaat × 2,5 − 10
-Frankrijk-bandmaat = VS-bandmaat × 2,5 + 10
+Frankrijk-bandmaat = VS-bandmaat × 2,5 + 5
 Italië-bandmaat    = (VS-bandmaat − 28) ÷ 2 + 1
 
 Cupmaat: elke letter/stap ≈ 2,5 cm (1 inch) verschil tussen boven- en onderborstomvang.
@@ -235,14 +235,14 @@ US DD/E = UK DD = DE/EU/FR/IT E
 US DDD/F = UK E = DE/EU/FR/IT F
 US G = UK F = DE/EU/FR/IT G
 US H = UK FF = DE/EU/FR/IT H</div>
-      <p class="footer-note">Voorbeeld: VS/UK 34D komt overeen met DE/EU 75D, Frankrijk 95D en Italië 4D. VS/UK 34DD/E komt echter overeen met DE/EU 75E, maar UK 34DD (niet "E").</p>
+      <p class="footer-note">Voorbeeld: VS/UK 34D komt overeen met DE/EU 75D, Frankrijk 90D en Italië 4D. VS/UK 34DD/E komt echter overeen met DE/EU 75E, maar UK 34DD (niet "E").</p>
       <p class="source-links">Bronnen: <a href="https://de.wikipedia.org/wiki/BH-Gr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – BH-maat</a>, <a href="https://de.wikipedia.org/wiki/Bekleidungsgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Kledingmaat</a></p>
     </section>
 
     <section class="card seo-card">
       <h2 class="section-title">Alle ondersteunde BH-maatsystemen</h2>
       <div class="seo-text">
-        <p>Ondersteunde bandmaat-systemen: Duitsland/EU (60–100), Frankrijk (80–120), Italië (1–9), VS/UK (28–44). Ondersteunde cup-systemen: continentaal Europa (DE/EU/FR/IT: AA–H), VS (AA–H, incl. DD/E en DDD/F), UK (AA–FF).</p>
+        <p>Ondersteunde bandmaat-systemen: Duitsland/EU (60–100), Frankrijk (75–115), Italië (1–9), VS/UK (28–44). Ondersteunde cup-systemen: continentaal Europa (DE/EU/FR/IT: AA–H), VS (AA–H, incl. DD/E en DDD/F), UK (AA–FF).</p>
         <p>Duitsland volgt direct de Europese bandmaat-norm, daarom zijn DE- en EU-waarden altijd identiek. Frankrijk en Italië gebruiken hiervan afwijkende, eigen nummeringen voor dezelfde fysieke maat.</p>
       </div>
     </section>
@@ -296,13 +296,13 @@ US H = UK FF = DE/EU/FR/IT H</div>
       const v = parseFloat(value);
       if (system === 'us' || system === 'uk') return v;
       if (system === 'de' || system === 'eu') return (v - 60) / 2.5 + 28;
-      if (system === 'fr') return (v - 80) / 2.5 + 28;
+      if (system === 'fr') return (v - 75) / 2.5 + 28;
       if (system === 'it') return (v - 1) * 2 + 28;
     }
     function bandFromUs(system, us) {
       if (system === 'us' || system === 'uk') return us;
       if (system === 'de' || system === 'eu') return us * 2.5 - 10;
-      if (system === 'fr') return us * 2.5 + 10;
+      if (system === 'fr') return us * 2.5 + 5;
       if (system === 'it') return (us - 28) / 2 + 1;
     }
     const BAND_SYSTEMS = {

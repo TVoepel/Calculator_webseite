@@ -226,7 +226,7 @@
       <h2 class="section-title">Formule &amp; valeurs de référence</h2>
       <div class="formula">Tour de dos (tour sous poitrine), base = tour de dos US/UK en pouces
 Tour de dos EU/DE   = tour de dos US × 2,5 − 10
-Tour de dos France = tour de dos US × 2,5 + 10
+Tour de dos France = tour de dos US × 2,5 + 5
 Tour de dos Italie   = (tour de dos US − 28) ÷ 2 + 1
 
 Taille de bonnet : chaque lettre/étape ≈ 2,5 cm (1 pouce) de différence entre tour de poitrine et tour de dos.
@@ -235,14 +235,14 @@ US DD/E = UK DD = DE/EU/FR/IT E
 US DDD/F = UK E = DE/EU/FR/IT F
 US G = UK F = DE/EU/FR/IT G
 US H = UK FF = DE/EU/FR/IT H</div>
-      <p class="footer-note">Exemple : US/UK 34D correspond à DE/EU 75D, France 95D et Italie 4D. US/UK 34DD/E correspond en revanche à DE/EU 75E, mais à UK 34DD (et non « E »).</p>
+      <p class="footer-note">Exemple : US/UK 34D correspond à DE/EU 75D, France 90D et Italie 4D. US/UK 34DD/E correspond en revanche à DE/EU 75E, mais à UK 34DD (et non « E »).</p>
       <p class="source-links">Sources : <a href="https://de.wikipedia.org/wiki/BH-Gr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – BH-Größe</a>, <a href="https://de.wikipedia.org/wiki/Bekleidungsgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Bekleidungsgröße</a></p>
     </section>
 
     <section class="card seo-card">
       <h2 class="section-title">Tous les systèmes de tailles de soutien-gorge pris en charge</h2>
       <div class="seo-text">
-        <p>Systèmes de tour de dos pris en charge : Allemagne/EU (60–100), France (80–120), Italie (1–9), USA/UK (28–44). Systèmes de bonnet pris en charge : Europe continentale (DE/EU/FR/IT : AA–H), USA (AA–H, dont DD/E et DDD/F), UK (AA–FF).</p>
+        <p>Systèmes de tour de dos pris en charge : Allemagne/EU (60–100), France (75–115), Italie (1–9), USA/UK (28–44). Systèmes de bonnet pris en charge : Europe continentale (DE/EU/FR/IT : AA–H), USA (AA–H, dont DD/E et DDD/F), UK (AA–FF).</p>
         <p>L'Allemagne suit directement la norme européenne du tour de dos, c'est pourquoi les valeurs DE et EU sont toujours identiques. La France et l'Italie utilisent des numérotations propres et différentes pour la même taille physique.</p>
       </div>
     </section>
@@ -296,13 +296,13 @@ US H = UK FF = DE/EU/FR/IT H</div>
       const v = parseFloat(value);
       if (system === 'us' || system === 'uk') return v;
       if (system === 'de' || system === 'eu') return (v - 60) / 2.5 + 28;
-      if (system === 'fr') return (v - 80) / 2.5 + 28;
+      if (system === 'fr') return (v - 75) / 2.5 + 28;
       if (system === 'it') return (v - 1) * 2 + 28;
     }
     function bandFromUs(system, us) {
       if (system === 'us' || system === 'uk') return us;
       if (system === 'de' || system === 'eu') return us * 2.5 - 10;
-      if (system === 'fr') return us * 2.5 + 10;
+      if (system === 'fr') return us * 2.5 + 5;
       if (system === 'it') return (us - 28) / 2 + 1;
     }
     const BAND_SYSTEMS = {

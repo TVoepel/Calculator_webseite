@@ -226,7 +226,7 @@
       <h2 class="section-title">Formula &amp; reference values</h2>
       <div class="formula">Band size (underbust measurement), base = US/UK band size in inches
 EU/DE band size   = US band size × 2.5 − 10
-France band size = US band size × 2.5 + 10
+France band size = US band size × 2.5 + 5
 Italy band size   = (US band size − 28) ÷ 2 + 1
 
 Cup size: each letter/step ≈ 2.5 cm (1 inch) of difference between bust and underbust measurement.
@@ -235,14 +235,14 @@ US DD/E = UK DD = DE/EU/FR/IT E
 US DDD/F = UK E = DE/EU/FR/IT F
 US G = UK F = DE/EU/FR/IT G
 US H = UK FF = DE/EU/FR/IT H</div>
-      <p class="footer-note">Example: US/UK 34D corresponds to DE/EU 75D, France 95D and Italy 4D. US/UK 34DD/E, on the other hand, corresponds to DE/EU 75E, but UK 34DD (not "E").</p>
+      <p class="footer-note">Example: US/UK 34D corresponds to DE/EU 75D, France 90D and Italy 4D. US/UK 34DD/E, on the other hand, corresponds to DE/EU 75E, but UK 34DD (not "E").</p>
       <p class="source-links">Sources: <a href="https://de.wikipedia.org/wiki/BH-Gr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – BH-Größe</a>, <a href="https://de.wikipedia.org/wiki/Bekleidungsgr%C3%B6%C3%9Fe" target="_blank" rel="noopener noreferrer">Wikipedia – Bekleidungsgröße</a></p>
     </section>
 
     <section class="card seo-card">
       <h2 class="section-title">All supported bra size systems</h2>
       <div class="seo-text">
-        <p>Supported band size systems: Germany/EU (60–100), France (80–120), Italy (1–9), USA/UK (28–44). Supported cup systems: continental Europe (DE/EU/FR/IT: AA–H), USA (AA–H, including DD/E and DDD/F), UK (AA–FF).</p>
+        <p>Supported band size systems: Germany/EU (60–100), France (75–115), Italy (1–9), USA/UK (28–44). Supported cup systems: continental Europe (DE/EU/FR/IT: AA–H), USA (AA–H, including DD/E and DDD/F), UK (AA–FF).</p>
         <p>Germany follows the European band size standard directly, so DE and EU values are always identical. France and Italy use their own, different numbering for the same physical size.</p>
       </div>
     </section>
@@ -296,13 +296,13 @@ US H = UK FF = DE/EU/FR/IT H</div>
       const v = parseFloat(value);
       if (system === 'us' || system === 'uk') return v;
       if (system === 'de' || system === 'eu') return (v - 60) / 2.5 + 28;
-      if (system === 'fr') return (v - 80) / 2.5 + 28;
+      if (system === 'fr') return (v - 75) / 2.5 + 28;
       if (system === 'it') return (v - 1) * 2 + 28;
     }
     function bandFromUs(system, us) {
       if (system === 'us' || system === 'uk') return us;
       if (system === 'de' || system === 'eu') return us * 2.5 - 10;
-      if (system === 'fr') return us * 2.5 + 10;
+      if (system === 'fr') return us * 2.5 + 5;
       if (system === 'it') return (us - 28) / 2 + 1;
     }
     const BAND_SYSTEMS = {
