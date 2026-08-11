@@ -358,6 +358,12 @@ input[readonly] { background: var(--color-surface-2); }
   color: var(--color-text-muted);
   background: linear-gradient(180deg, #fcfbf8, #f4f1ec);
   font-size: var(--text-sm);
+  /* Reserve space matching common ad-unit heights so real AdSense units
+     don't cause layout shift (CLS) when they replace this placeholder. */
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ad-slot--inline { margin-top: var(--space-6); }
 
@@ -433,6 +439,9 @@ input[readonly] { background: var(--color-surface-2); }
 }
 .tool-grid .ad-slot {
   grid-column: 1 / -1;
+  /* Extra margin on top of the grid gap so ad-slots sit further from the
+     nearest card link, reducing accidental-click risk once real ads load. */
+  margin-block: 4rem;
 }
 .tool-card {
   background: var(--color-surface);

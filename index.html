@@ -538,7 +538,12 @@
           const position = idx + 1;
           const completesBlock = position % 3 === 0;
           const isLast = position === visible.length;
-          if (completesBlock || (isLast && !completesBlock)) {
+          // Only add a trailing ad for a leftover group of 2 — a
+          // leftover of just 1 card would put a single converter next
+          // to its own ad (1:1 ratio), which is too ad-heavy for very
+          // small categories.
+          const trailingPair = isLast && !completesBlock && visible.length % 3 === 2;
+          if (completesBlock || trailingPair) {
             const ad = document.createElement('div');
             ad.className = 'ad-slot';
             ad.textContent = AD_TEXT;
