@@ -528,6 +528,7 @@
     (function () {
       const chips = document.querySelectorAll('.category-chip');
       const cards = document.querySelectorAll('.tool-card');
+      const gridAds = document.querySelectorAll('.tool-grid > .ad-slot');
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
@@ -537,6 +538,7 @@
           cards.forEach(card => {
             card.hidden = cat !== 'all' && card.dataset.category !== cat;
           });
+          gridAds.forEach(ad => { ad.hidden = cat !== 'all'; });
         });
       });
     })();
