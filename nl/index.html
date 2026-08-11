@@ -93,8 +93,18 @@
 
     <section>
       <h2 class="section-title">Beschikbare omrekentools</h2>
+      <div class="category-filter" role="group" aria-label="Filteren op categorie">
+        <button type="button" class="category-chip is-active" data-category="all" aria-pressed="true">Alle (22)</button>
+        <button type="button" class="category-chip" data-category="everyday" aria-pressed="false">Dagelijks &amp; Klussen (6)</button>
+        <button type="button" class="category-chip" data-category="science" aria-pressed="false">Wetenschap &amp; Techniek (4)</button>
+        <button type="button" class="category-chip" data-category="health" aria-pressed="false">Gezondheid &amp; Medisch (2)</button>
+        <button type="button" class="category-chip" data-category="automotive" aria-pressed="false">Auto &amp; Voertuig (4)</button>
+        <button type="button" class="category-chip" data-category="shopping" aria-pressed="false">Shopping &amp; Mode (3)</button>
+        <button type="button" class="category-chip" data-category="lifestyle" aria-pressed="false">Lifestyle &amp; Hobby (2)</button>
+        <button type="button" class="category-chip" data-category="tech" aria-pressed="false">Techniek &amp; IT (1)</button>
+      </div>
       <div class="tool-grid">
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#006064;">L</div>
             <div>
@@ -111,7 +121,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#ef6c00;">G</div>
             <div>
@@ -128,7 +138,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#4e342e;">V</div>
             <div>
@@ -145,7 +155,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#7b1fa2;">T</div>
             <div>
@@ -162,7 +172,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#283593;">A</div>
             <div>
@@ -179,7 +189,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="everyday">
           <div class="tool-header">
             <div class="tool-icon" style="background:#c62828;">S</div>
             <div>
@@ -196,7 +206,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#0d47a1;">E</div>
             <div>
@@ -213,7 +223,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="tech">
           <div class="tool-header">
             <div class="tool-icon" style="background:#37474f;">D</div>
             <div>
@@ -230,7 +240,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#ad1457;">c</div>
             <div>
@@ -247,7 +257,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="health">
           <div class="tool-header">
             <div class="tool-icon" style="background:#b71c1c;">Bz</div>
             <div>
@@ -264,7 +274,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="automotive">
           <div class="tool-header">
             <div class="tool-icon" style="background:#00695c;">F</div>
             <div>
@@ -281,7 +291,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="automotive">
           <div class="tool-header">
             <div class="tool-icon" style="background:#1b5e20;">EV</div>
             <div>
@@ -298,7 +308,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#827717;">ρ</div>
             <div>
@@ -315,7 +325,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="shopping">
           <div class="tool-header">
             <div class="tool-icon" style="background:#bf360c;">Sc</div>
             <div>
@@ -332,7 +342,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="health">
           <div class="tool-header">
             <div class="tool-icon" style="background:#4527a0;">B</div>
             <div>
@@ -349,7 +359,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="automotive">
           <div class="tool-header">
             <div class="tool-icon" style="background:#455a64;">Nm</div>
             <div>
@@ -366,7 +376,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="lifestyle">
           <div class="tool-header">
             <div class="tool-icon" style="background:#6d4c41;">%</div>
             <div>
@@ -383,7 +393,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="lifestyle">
           <div class="tool-header">
             <div class="tool-icon" style="background:#212121;">EV</div>
             <div>
@@ -400,7 +410,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="science">
           <div class="tool-header">
             <div class="tool-icon" style="background:#004d40;">pH</div>
             <div>
@@ -417,7 +427,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="shopping">
           <div class="tool-header">
             <div class="tool-icon" style="background:#880e4f;">Kl</div>
             <div>
@@ -434,7 +444,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="automotive">
           <div class="tool-header">
             <div class="tool-icon" style="background:#311b92;">PS</div>
             <div>
@@ -451,7 +461,7 @@
           </div>
         </article>
 
-        <article class="tool-card">
+        <article class="tool-card" data-category="shopping">
           <div class="tool-header">
             <div class="tool-icon" style="background:#01579b;">TV</div>
             <div>
@@ -490,7 +500,23 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  
+    (function () {
+      const chips = document.querySelectorAll('.category-chip');
+      const cards = document.querySelectorAll('.tool-card');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+          chip.classList.add('is-active');
+          chip.setAttribute('aria-pressed', 'true');
+          const cat = chip.dataset.category;
+          cards.forEach(card => {
+            card.hidden = cat !== 'all' && card.dataset.category !== cat;
+          });
+        });
+      });
+    })();
+</script>
   <script src="../sw-register.js" defer></script>
 </body>
 </html>
