@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Data Size Converter – Bytes, KB, MB, GB & More</title>
+  <meta name="description" content="Convert digital data sizes for free: bits, bytes, kilobytes, megabytes, gigabytes, terabytes – including binary units (KiB, MiB, GiB, TiB)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/en/datenumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/datenumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/datenumrechner.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/datenumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/datenumrechner.html" />
+  <meta name="theme-color" content="#37474f" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Unit Converter" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/en/datenumrechner.html" />
+  <meta property="og:site_name" content="Unit Converter" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:title" content="Data Size Converter – Bytes, KB, MB, GB & More" />
+  <meta property="og:description" content="Convert digital data sizes for free: bits, bytes, kilobytes, megabytes, gigabytes, terabytes – including binary units (KiB, MiB, GiB, TiB)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Size Converter – Bytes, KB, MB, GB & More" />
+  <meta name="twitter:description" content="Convert digital data sizes for free: bits, bytes, kilobytes, megabytes, gigabytes, terabytes – including binary units (KiB, MiB, GiB, TiB)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #37474f;
+      --color-primary-hover: #1c262b;
+      --color-primary-soft: #dfe4e6;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Data Size Converter",
+      "url": "https://tvoepel.github.io/Calculator_webseite/en/datenumrechner.html",
+      "description": "Convert digital data sizes for free: bits, bytes, kilobytes, megabytes, gigabytes, terabytes – including binary units (KiB, MiB, GiB, TiB).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (web-based)",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Unit Converter",
+        "url": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data Size Converter",
+          "item": "https://tvoepel.github.io/Calculator_webseite/en/datenumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is my hard drive smaller than advertised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manufacturers calculate 1 TB = 1000 GB (decimal, SI prefixes), but Windows displays storage in GiB (binary, base 1024). A 1 TB hard drive therefore shows only about 931 GiB in Explorer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between Mbit and MB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 byte equals 8 bits. Internet speeds are given in Mbit/s (megabits), file sizes in MB (megabytes) – so 100 Mbit/s is only 12.5 MB/s of download speed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a kibibyte (KiB)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A kibibyte (KiB) equals exactly 1024 bytes (2¹⁰) and was introduced by the IEC to clearly distinguish binary prefixes from decimal ones (1 kB = 1000 bytes)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a download take at 100 Mbit/s?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 100 Mbit/s (= 12.5 MB/s theoretically, somewhat less in practice), downloading a 5 GB file takes roughly 400 seconds, or about 6–7 minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many GB is a terabyte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 terabyte (TB, decimal) equals 1000 GB. Its binary counterpart, the tebibyte (TiB), has 1024 GiB instead."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Unit Converter home">
+        <span class="logo-mark">D</span>
+        <span>Data Size Converter</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← All Converters</a>
+        <span class="pill">IT &amp; internet</span>
+
+        <nav class="lang-switch" aria-label="Choose language">
+          <a href="../datenumrechner.html" hreflang="de">DE</a>
+          <a href="../nl/datenumrechner.html" hreflang="nl">NL</a>
+          <a href="../fr/datenumrechner.html" hreflang="fr">FR</a>
+          <a href="datenumrechner.html" class="lang-active" aria-current="page">EN</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convert data sizes quickly</h1>
+      <p>Convert between bits, bytes, kilobytes, megabytes, gigabytes, and terabytes – including the binary units KiB, MiB, GiB, and TiB, plus bit rates for download speeds.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Converter</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Value</label>
+              <input id="fromValue" type="number" value="1" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">From</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Swap units</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Result</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">To</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText">1 gigabyte = 1,000 megabytes</span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Ad / AdSense / Affiliate Placeholder</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Ad Space</h2>
+        <div class="ad-slot">Ad / AdSense / Affiliate Placeholder</div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Popular Conversions</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="gigabyte,megabyte,1">GB to MB</button>
+        <button type="button" data-preset="megabyte,gigabyte,1000">MB to GB</button>
+        <button type="button" data-preset="gigabyte,gibibyte,1">GB to GiB</button>
+        <button type="button" data-preset="megabit,megabyte,100">Mbit to MB (download speed)</button>
+        <button type="button" data-preset="byte,bit,1">Byte to bit</button>
+        <button type="button" data-preset="terabyte,gigabyte,1">TB to GB</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula &amp; Reference Values</h2>
+      <div class="formula">Result = value × factor(from) ÷ factor(to), base unit = 1 byte
+
+Decimal (SI, base 1000):  1 kB = 1000 B, 1 MB = 1000 kB, 1 GB = 1000 MB
+Binary (IEC, base 1024):  1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB
+1 byte = 8 bits</div>
+      <p class="note">Operating systems and manufacturers use these prefixes inconsistently: hard drive manufacturers usually calculate decimally (1 TB = 1000 GB), while RAM, for example, is traditionally given in binary. This converter clearly distinguishes between the two systems (kB/MB/GB = decimal, KiB/MiB/GiB = binary).</p>
+          <p class="source-links">Sources: <a href="https://physics.nist.gov/cuu/Units/binary.html" target="_blank" rel="noopener noreferrer">NIST – Reference on binary prefixes</a>, <a href="https://www.iec.ch/prefixes-binary-multiples" target="_blank" rel="noopener noreferrer">IEC – Prefixes for binary multiples</a>, <a href="https://de.wikipedia.org/wiki/Byte" target="_blank" rel="noopener noreferrer">Wikipedia – Byte</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">All Supported Data Units</h2>
+      <div class="seo-text">
+        <p>With this data size converter, you can directly convert bits, bytes, kilobits, kilobytes, kibibytes, megabits, megabytes, mebibytes, gigabits, gigabytes, gibibytes, terabytes, and tebibytes.</p>
+        <p>Bit units (kbit, Mbit, Gbit) are mostly used for transfer speeds (internet, network), while byte units (kB, MB, GB) are used for file sizes and storage space.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">In Practice: When You Need to Convert Data Sizes</h2>
+      <div class="seo-text">
+        <p>Internet providers advertise download speeds in Mbit/s – but you calculate a file's actual download time using MB or GB, which easily leads to confusion.</p>
+        <p>Storage manufacturers calculate hard drive and SSD capacity decimally (1 TB = 1000 GB), but operating systems often display free space in binary (GiB) – which is why a new hard drive looks smaller in Explorer than what's printed on the box.</p>
+        <p>For streaming, cloud storage, and mobile data plans, converting between units helps you gauge your actual data usage realistically.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Ad / AdSense / Affiliate Placeholder</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Why is my hard drive smaller than advertised?</summary><p>Manufacturers calculate 1 TB = 1000 GB (decimal, SI prefixes), but Windows displays storage in GiB (binary, base 1024). A 1 TB hard drive therefore shows only about 931 GiB in Explorer.</p></details>
+        <details class="faq-item"><summary>What's the difference between Mbit and MB?</summary><p>1 byte equals 8 bits. Internet speeds are given in Mbit/s (megabits), file sizes in MB (megabytes) – so 100 Mbit/s is only 12.5 MB/s of download speed.</p></details>
+        <details class="faq-item"><summary>What is a kibibyte (KiB)?</summary><p>A kibibyte (KiB) equals exactly 1024 bytes (2¹⁰) and was introduced by the IEC to clearly distinguish binary prefixes from decimal ones (1 kB = 1000 bytes).</p></details>
+        <details class="faq-item"><summary>How long does a download take at 100 Mbit/s?</summary><p>At 100 Mbit/s (= 12.5 MB/s theoretically, somewhat less in practice), downloading a 5 GB file takes roughly 400 seconds, or about 6–7 minutes.</p></details>
+        <details class="faq-item"><summary>How many GB is a terabyte?</summary><p>1 terabyte (TB, decimal) equals 1000 GB. Its binary counterpart, the tebibyte (TiB), has 1024 GiB instead.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Related Converters</h2>
+      <div class="related-grid">
+        <a href="energieumrechner.html">Energy Converter →</a>
+        <a href="geschwindigkeitumrechner.html">Speed Converter →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Unit Converter</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../impressum.html">Legal Notice (DE)</a>
+        <a href="../datenschutz.html">Privacy Policy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      bit: { label: 'Bit (b)', factor: 0.125 },
+      byte: { label: 'Byte (B)', factor: 1 },
+      kilobit: { label: 'Kilobit (kbit)', factor: 125 },
+      kilobyte: { label: 'Kilobyte (kB, decimal)', factor: 1000 },
+      kibibyte: { label: 'Kibibyte (KiB, binary)', factor: 1024 },
+      megabit: { label: 'Megabit (Mbit)', factor: 125000 },
+      megabyte: { label: 'Megabyte (MB, decimal)', factor: 1000000 },
+      mebibyte: { label: 'Mebibyte (MiB, binary)', factor: 1048576 },
+      gigabit: { label: 'Gigabit (Gbit)', factor: 125000000 },
+      gigabyte: { label: 'Gigabyte (GB, decimal)', factor: 1000000000 },
+      gibibyte: { label: 'Gibibyte (GiB, binary)', factor: 1073741824 },
+      terabyte: { label: 'Terabyte (TB, decimal)', factor: 1000000000000 },
+      tebibyte: { label: 'Tebibyte (TiB, binary)', factor: 1099511627776 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'gigabyte',
+      defaultTo: 'megabyte',
+      decimals: 8
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
