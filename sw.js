@@ -1,6 +1,6 @@
 // Einfacher Cache-First-Service-Worker mit Laufzeit-Caching.
 // CACHE_VERSION bei jeder inhaltlichen Änderung hochzählen, damit alte Caches verworfen werden.
-const CACHE_VERSION = 'v7';
+const CACHE_VERSION = 'v8';
 const CACHE_NAME = 'einheitenrechner-' + CACHE_VERSION;
 
 const PRECACHE_URLS = [
