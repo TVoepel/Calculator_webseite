@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Convertitore di gradazione alcolica – Vol% ↔ Proof US/UK</title>
+  <meta name="description" content="Converti la gradazione alcolica: Vol% (ABV) in Proof US e Proof UK – più calcolo della quantità di alcol puro (mL/grammi) da volume e Vol%." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/it/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/alkoholgehalt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/alkoholgehalt.html" />
+  <meta name="theme-color" content="#6d4c41" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertitore di Unità" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/it/alkoholgehalt.html" />
+  <meta property="og:site_name" content="Convertitore di Unità" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:title" content="Convertitore di gradazione alcolica – Vol% ↔ Proof US/UK" />
+  <meta property="og:description" content="Converti la gradazione alcolica: Vol% (ABV) in Proof US e Proof UK, più calcolo della quantità di alcol puro." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Convertitore di gradazione alcolica – Vol% ↔ Proof US/UK" />
+  <meta name="twitter:description" content="Converti la gradazione alcolica e calcola la quantità di alcol puro." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #6d4c41;
+      --color-primary-hover: #442f28;
+      --color-primary-soft: #e6dbd7;
+    }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Convertitore di gradazione alcolica",
+      "url": "https://tvoepel.github.io/Calculator_webseite/it/alkoholgehalt.html",
+      "description": "Converti la gradazione alcolica: Vol% (ABV) in Proof US e Proof UK, più calcolo della quantità di alcol puro.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basato sul web)",
+      "inLanguage": "it",
+      "isPartOf": { "@type": "WebSite", "name": "Convertitore di Unità", "url": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Pagina iniziale", "item": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Convertitore di gradazione alcolica", "item": "https://tvoepel.github.io/Calculator_webseite/it/alkoholgehalt.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Qual è la differenza tra Vol% e Proof?", "acceptedAnswer": { "@type": "Answer", "text": "Vol% indica direttamente la percentuale di alcol (ad es. 40 % di vodka = 40 mL di alcol per 100 mL). Il Proof US è il doppio del valore in Vol% (40 % = 80 Proof), il Proof UK (storico) corrisponde a Vol% × 1,75." } },
+        { "@type": "Question", "name": "Quanti grammi di alcol puro contiene una birra?", "acceptedAnswer": { "@type": "Answer", "text": "500 mL di birra al 5 % Vol contengono 500 × 0,05 = 25 mL di alcol puro. Con una densità dell'etanolo di circa 0,789 g/mL, ciò corrisponde a circa 19,7 g di alcol puro." } },
+        { "@type": "Question", "name": "Come si diluisce l'alcol per ottenere una concentrazione più bassa?", "acceptedAnswer": { "@type": "Answer", "text": "Con la formula di diluizione c₁ × V₁ = c₂ × V₂. Esempio: 1 L di distillato al 50 % dà, con 0,25 L di acqua, 1,25 L al 40 % Vol." } },
+        { "@type": "Question", "name": "Come si misura la gradazione alcolica nella distillazione casalinga?", "acceptedAnswer": { "@type": "Answer", "text": "Con un alcolometro (densimetro) direttamente nel distillato, oppure calcolando a partire dalla densità prima e dopo la fermentazione. Una regola pratica comune è ABV ≈ (densità iniziale − densità residua) × 131,25 – un'approssimazione semplificata, non una formula fisica esatta." } },
+        { "@type": "Question", "name": "Perché il Proof US e il Proof UK differiscono?", "acceptedAnswer": { "@type": "Answer", "text": "Gli Stati Uniti definiscono il Proof dal 1848 esattamente come il doppio del valore in Vol%. Il sistema britannico storico del Proof (prima del 1980) si basava su un metodo di prova con polvere da sparo e dava il fattore 1,75 – dal 1980 anche il Regno Unito usa solo il Vol%." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Pagina iniziale Convertitore di Unità">
+        <span class="logo-mark">%</span>
+        <span>Convertitore di gradazione alcolica</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Torna a tutti i convertitori</a>
+        <span class="pill">Cucina e piacere</span>
+
+        <nav class="lang-switch" aria-label="Scegli la lingua">
+          <a href="../alkoholgehalt.html" hreflang="de">DE</a>
+          <a href="../nl/alkoholgehalt.html" hreflang="nl">NL</a>
+          <a href="../fr/alkoholgehalt.html" hreflang="fr">FR</a>
+          <a href="../en/alkoholgehalt.html" hreflang="en">EN</a>
+          <a href="alkoholgehalt.html" class="lang-active" aria-current="page">IT</a>
+          <a href="../es/alkoholgehalt.html" hreflang="es">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Converti la gradazione alcolica: Vol% ↔ Proof</h1>
+      <p>Converti tra Vol% (ABV), Proof US e il Proof UK storico – e calcola la quantità di alcol puro in mL e grammi a partire dal volume della bevanda e dal Vol%.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Convertitore Vol% ↔ Proof</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Valore</label>
+              <input id="fromValue" type="number" value="40" step="any" min="0" />
+            </div>
+            <div>
+              <label for="fromUnit">Da</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Scambia unità</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Risultato</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">A</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Calcola la quantità di alcol puro</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="volumeInput">Volume della bevanda (mL)</label>
+              <input id="volumeInput" type="number" value="500" step="any" min="0" />
+            </div>
+            <div>
+              <label for="abvInput">Gradazione alcolica (Vol%)</label>
+              <input id="abvInput" type="number" value="5" step="any" min="0" max="100" />
+            </div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="alcoholResult">–</span>
+            <span>Alcol puro (mL / grammi)</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversioni popolari</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="vol,us_proof,40">40 Vol% in Proof US</button>
+        <button type="button" data-preset="us_proof,vol,80">80 Proof US in Vol%</button>
+        <button type="button" data-preset="vol,uk_proof,57">57 Vol% in Proof UK</button>
+        <button type="button" data-preset="uk_proof,vol,100">100 Proof UK in Vol%</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula e fonti</h2>
+      <div class="formula">Vol% (ABV) = volume di alcol ÷ volume totale × 100
+
+Proof US = Vol% × 2
+Proof UK (storico, prima del 1980) = Vol% × 1,75
+
+Quantità di alcol puro:
+mL di alcol = volume della bevanda [mL] × Vol% ÷ 100
+Grammi di alcol = mL di alcol × 0,789 (densità dell'etanolo a 20 °C)</div>
+      <p class="note">Una regola pratica comune per la produzione casalinga di birra/distillati è ABV ≈ (densità iniziale − densità residua) × 131,25 – è un'approssimazione semplificata, comune nella pratica, e non una formula fisica esatta.</p>
+      <p class="source-links">Fonti: <a href="https://de.wikipedia.org/wiki/Alkoholgehalt" target="_blank" rel="noopener noreferrer">Wikipedia – Gradazione alcolica (DE)</a>, <a href="https://de.wikipedia.org/wiki/Ethanol" target="_blank" rel="noopener noreferrer">Wikipedia – Etanolo (densità) (DE)</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        Questo calcolatore ha finalità informative generali. Non sostituisce una misurazione ufficiale (ad es. a fini fiscali) e non è un invito al consumo di alcol – ti invitiamo a consumare responsabilmente.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Applicazione pratica</h2>
+      <div class="seo-text">
+        <p>Le bottiglie di superalcolici statunitensi indicano spesso la gradazione alcolica anche in Proof – la conversione aiuta a confrontarla con le indicazioni europee in Vol%.</p>
+        <p>Con questo strumento è possibile convertire anche le ricette di cocktail nella gradazione alcolica effettiva della bevanda finita, ad es. 50 mL di rum (40 %) in 200 mL di cocktail danno il 10 % Vol nella bevanda totale.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Qual è la differenza tra Vol% e Proof?</summary><p>Vol% indica direttamente la percentuale di alcol (ad es. 40 % di vodka = 40 mL di alcol per 100 mL). Il Proof US è il doppio del valore in Vol% (40 % = 80 Proof), il Proof UK (storico) corrisponde a Vol% × 1,75.</p></details>
+        <details class="faq-item"><summary>Quanti grammi di alcol puro contiene una birra?</summary><p>500 mL di birra al 5 % Vol contengono 500 × 0,05 = 25 mL di alcol puro. Con una densità dell'etanolo di circa 0,789 g/mL, ciò corrisponde a circa 19,7 g di alcol puro.</p></details>
+        <details class="faq-item"><summary>Come si diluisce l'alcol per ottenere una concentrazione più bassa?</summary><p>Con la formula di diluizione c₁ × V₁ = c₂ × V₂. Esempio: 1 L di distillato al 50 % dà, con 0,25 L di acqua, 1,25 L al 40 % Vol.</p></details>
+        <details class="faq-item"><summary>Come si misura la gradazione alcolica nella distillazione casalinga?</summary><p>Con un alcolometro (densimetro) direttamente nel distillato, oppure calcolando a partire dalla densità prima e dopo la fermentazione. Una regola pratica comune è ABV ≈ (densità iniziale − densità residua) × 131,25 – un'approssimazione semplificata, non una formula fisica esatta.</p></details>
+        <details class="faq-item"><summary>Perché il Proof US e il Proof UK differiscono?</summary><p>Gli Stati Uniti definiscono il Proof dal 1848 esattamente come il doppio del valore in Vol%. Il sistema britannico storico del Proof (prima del 1980) si basava su un metodo di prova con polvere da sparo e dava il fattore 1,75 – dal 1980 anche il Regno Unito usa solo il Vol%.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertitori simili</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Convertitore di volume →</a>
+        <a href="dichte.html">Convertitore di densità →</a>
+        <a href="konzentrationsumrechner.html">Convertitore di concentrazione →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertitore di Unità</span>
+      <nav>
+        <a href="index.html">Pagina iniziale</a>
+        <a href="../impressum.html">Note legali (DE)</a>
+        <a href="../datenschutz.html">Privacy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      vol: { label: 'Vol% (ABV)', factor: 1 },
+      us_proof: { label: 'Proof US', factor: 0.5 },
+      uk_proof: { label: 'Proof UK (storico)', factor: 1 / 1.75 }
+    };
+
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'vol',
+      defaultTo: 'us_proof',
+      decimals: 4
+    });
+
+    const volumeInput = document.getElementById('volumeInput');
+    const abvInput = document.getElementById('abvInput');
+    const alcoholResult = document.getElementById('alcoholResult');
+    const ETHANOL_DENSITY = 0.789;
+
+    function calcAlcohol() {
+      const v = parseFloat(volumeInput.value);
+      const abv = parseFloat(abvInput.value);
+      if (!Number.isFinite(v) || !Number.isFinite(abv)) {
+        alcoholResult.textContent = '–';
+        return;
+      }
+      const mlAlcohol = v * abv / 100;
+      const gAlcohol = mlAlcohol * ETHANOL_DENSITY;
+      alcoholResult.textContent = `${formatNumber(mlAlcohol, 1)} mL / ${formatNumber(gAlcohol, 1)} g`;
+    }
+
+    [volumeInput, abvInput].forEach(el => el.addEventListener('input', calcAlcohol));
+    calcAlcohol();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

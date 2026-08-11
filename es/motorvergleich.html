@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Comparación de motores – CV, kW, par motor y relación peso/potencia</title>
+  <meta name="description" content="Compara dos motores de vehículos: convierte CV a kW, calcula y compara la relación peso/potencia (kg/kW) y el par motor específico (Nm/tonelada)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/es/motorvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/motorvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/motorvergleich.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/motorvergleich.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/motorvergleich.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/motorvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/motorvergleich.html" />
+  <meta name="theme-color" content="#311b92" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Conversor de Unidades" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/es/motorvergleich.html" />
+  <meta property="og:site_name" content="Conversor de Unidades" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:title" content="Comparación de motores – CV, kW, par motor y relación peso/potencia" />
+  <meta property="og:description" content="Compara dos motores de vehículos según la relación peso/potencia y el par motor específico." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comparación de motores – CV, kW, par motor y relación peso/potencia" />
+  <meta name="twitter:description" content="Compara dos motores de vehículos." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #311b92;
+      --color-primary-hover: #1a0e52;
+      --color-primary-soft: #e1dcf5;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Comparación de motores",
+      "url": "https://tvoepel.github.io/Calculator_webseite/es/motorvergleich.html",
+      "description": "Compara dos motores de vehículos según la relación peso/potencia y el par motor específico.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basado en web)",
+      "inLanguage": "es",
+      "isPartOf": { "@type": "WebSite", "name": "Conversor de Unidades", "url": "https://tvoepel.github.io/Calculator_webseite/es/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tvoepel.github.io/Calculator_webseite/es/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Comparación de motores", "item": "https://tvoepel.github.io/Calculator_webseite/es/motorvergleich.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cómo se comparan dos motores de forma justa?", "acceptedAnswer": { "@type": "Answer", "text": "Además de la potencia pura (kW/CV) y el par motor (Nm), la relación peso/potencia (kg por kW) es más reveladora para la aceleración, ya que incluye el peso del vehículo. Un coche ligero con menos CV puede ser así más rápido que un coche pesado con más CV." } },
+        { "@type": "Question", "name": "¿Cuál es la diferencia entre CV y kW?", "acceptedAnswer": { "@type": "Answer", "text": "1 CV (caballo de vapor) equivale exactamente a 0,735498875 kW, y 1 kW equivale aproximadamente a 1,359621617 CV. El CV es la unidad más antigua, todavía habitual en el lenguaje coloquial en Alemania, mientras que el kW es la unidad SI de potencia." } },
+        { "@type": "Question", "name": "¿Por qué los coches eléctricos suelen acelerar más rápido a pesar de tener menos CV?", "acceptedAnswer": { "@type": "Answer", "text": "Los motores eléctricos entregan su par máximo ya desde 0 revoluciones por minuto, mientras que los motores de combustión solo alcanzan su par máximo a regímenes más altos. Esto se nota especialmente al arrancar." } },
+        { "@type": "Question", "name": "¿Se puede calcular el tiempo de 0 a 100 km/h solo a partir de la potencia y el peso?", "acceptedAnswer": { "@type": "Answer", "text": "No de forma fiable. El tiempo de aceleración real depende además de la tracción (integral o trasera), la relación de marchas, la aerodinámica y las limitaciones de software. La relación peso/potencia y el par motor específico correlacionan con la aceleración, pero no sustituyen los valores medidos por el fabricante." } },
+        { "@type": "Question", "name": "¿Qué se considera una buena relación peso/potencia?", "acceptedAnswer": { "@type": "Answer", "text": "Los coches cotidianos suelen tener entre 10 y 15 kg/kW, los modelos deportivos entre 5 y 8 kg/kW, y algunos superdeportivos incluso menos de 3 kg/kW. Cuanto más bajo es el valor, más potencia hay disponible por kilogramo de peso del vehículo." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Inicio Conversor de Unidades">
+        <span class="logo-mark">PS</span>
+        <span>Comparación de motores</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Volver a todos los conversores</a>
+        <span class="pill">Coches y técnica</span>
+
+        <nav class="lang-switch" aria-label="Elegir idioma">
+          <a href="../motorvergleich.html" hreflang="de">DE</a>
+          <a href="../nl/motorvergleich.html" hreflang="nl">NL</a>
+          <a href="../fr/motorvergleich.html" hreflang="fr">FR</a>
+          <a href="../en/motorvergleich.html" hreflang="en">EN</a>
+          <a href="../it/motorvergleich.html" hreflang="it">IT</a>
+          <a href="motorvergleich.html" class="lang-active" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Compara motores por potencia &amp; par motor</h1>
+      <p>Convierte CV a kW y compara dos vehículos según la relación peso/potencia (kg/kW) y el par motor específico (Nm/tonelada) – más reveladores que la simple cifra de CV. Para la comparación de costes entre combustión y eléctrico, consulta nuestra <a href="antriebsvergleich.html">comparación de propulsión</a> independiente.</p>
+    </section>
+
+    <div class="card">
+      <h2 class="section-title">Convertir CV ↔ kW</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="fromValue">Valor</label>
+            <input id="fromValue" type="number" value="150" step="any" />
+          </div>
+          <div>
+            <label for="fromUnit">De</label>
+            <select id="fromUnit"></select>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <button class="swap" id="swapBtn" type="button">⇅ Intercambiar unidades</button>
+        </div>
+        <div class="row">
+          <div>
+            <label for="toValue">Resultado</label>
+            <input id="toValue" type="text" readonly />
+          </div>
+          <div>
+            <label for="toUnit">A</label>
+            <select id="toUnit"></select>
+          </div>
+        </div>
+        <div class="meta"><span id="resultText"></span></div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: var(--space-6);">
+      <section class="card">
+        <h2 class="section-title">Vehículo A</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psA">Potencia (CV)</label><input id="psA" type="number" value="150" step="any" min="1" /></div>
+            <div><label for="nmA">Par motor (Nm)</label><input id="nmA" type="number" value="250" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightA">Peso (kg)</label><input id="weightA" type="number" value="1400" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioA">–</span><span>Relación peso/potencia</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueA">–</span><span>Par motor específico</span></div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Vehículo B</h2>
+        <div class="converter">
+          <div class="row">
+            <div><label for="psB">Potencia (CV)</label><input id="psB" type="number" value="250" step="any" min="1" /></div>
+            <div><label for="nmB">Par motor (Nm)</label><input id="nmB" type="number" value="500" step="any" min="1" /></div>
+          </div>
+          <div class="row">
+            <div><label for="weightB">Peso (kg)</label><input id="weightB" type="number" value="1900" step="any" min="1" /></div>
+            <div></div>
+          </div>
+          <div class="result-row"><span class="result-highlight" id="ratioB">–</span><span>Relación peso/potencia</span></div>
+          <div class="result-row"><span class="result-highlight" id="specTorqueB">–</span><span>Par motor específico</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <div class="compare" id="compareText" style="border-top:none; padding-top:0; margin-top:0;">Introduce arriba la potencia, el par motor y el peso de ambos vehículos.</div>
+      <div class="ad-slot ad-slot--inline" style="margin-top: var(--space-4);">Anuncio / AdSense / Marcador de afiliados</div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Fórmula &amp; fuentes</h2>
+      <div class="formula">1 CV = 0,735498875 kW (exacto, 75 kgf·m/s con la aceleración normal de la gravedad de 9,80665 m/s²)
+1 kW = 1,359621617 CV
+
+Relación peso/potencia = peso del vehículo [kg] ÷ potencia [kW]
+Par motor específico = par motor [Nm] ÷ peso del vehículo [t]</div>
+      <p class="note">Deliberadamente <strong>sin</strong> fórmula de estimación de 0 a 100 km/h: la aceleración real depende además de la tracción, la relación de marchas, la aerodinámica y el software, y no se puede calcular de forma fiable solo a partir de la potencia y el peso. La relación peso/potencia y el par motor específico son indicadores aproximados, no una previsión de tiempo.</p>
+      <p class="source-links">Fuentes: <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – Folleto del SI</a>, <a href="https://www.adac.de/" target="_blank" rel="noopener noreferrer">ADAC – Base de datos de vehículos</a>, <a href="https://de.wikipedia.org/wiki/Leistungsgewicht" target="_blank" rel="noopener noreferrer">Wikipedia – Relación peso/potencia</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">En la práctica</h2>
+      <div class="seo-text">
+        <p>Un coche pequeño de 110 CV y 1000 kg (valor kg/kW ~12,4) puede resultar notablemente más ágil que una gran berlina de 190 CV pero 1800 kg (valor kg/kW ~12,9) – a pesar de tener bastantes más CV, la relación peso/potencia es casi igual.</p>
+        <p>Al circular con remolque o a plena carga, el peso efectivo aumenta y con él el valor kg/kW de forma notable – esto explica por qué los vehículos cargados aceleran de forma perceptiblemente más lenta.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Anuncio / AdSense / Marcador de afiliados</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>¿Cómo se comparan dos motores de forma justa?</summary><p>Además de la potencia pura (kW/CV) y el par motor (Nm), la relación peso/potencia (kg por kW) es más reveladora para la aceleración, ya que incluye el peso del vehículo. Un coche ligero con menos CV puede ser así más rápido que un coche pesado con más CV.</p></details>
+        <details class="faq-item"><summary>¿Cuál es la diferencia entre CV y kW?</summary><p>1 CV (caballo de vapor) equivale exactamente a 0,735498875 kW, y 1 kW equivale aproximadamente a 1,359621617 CV. El CV es la unidad más antigua, todavía habitual en el lenguaje coloquial en Alemania, mientras que el kW es la unidad SI de potencia.</p></details>
+        <details class="faq-item"><summary>¿Por qué los coches eléctricos suelen acelerar más rápido a pesar de tener menos CV?</summary><p>Los motores eléctricos entregan su par máximo ya desde 0 revoluciones por minuto, mientras que los motores de combustión solo alcanzan su par máximo a regímenes más altos. Esto se nota especialmente al arrancar.</p></details>
+        <details class="faq-item"><summary>¿Se puede calcular el tiempo de 0 a 100 km/h solo a partir de la potencia y el peso?</summary><p>No de forma fiable. El tiempo de aceleración real depende además de la tracción (integral o trasera), la relación de marchas, la aerodinámica y las limitaciones de software. La relación peso/potencia y el par motor específico correlacionan con la aceleración, pero no sustituyen los valores medidos por el fabricante.</p></details>
+        <details class="faq-item"><summary>¿Qué se considera una buena relación peso/potencia?</summary><p>Los coches cotidianos suelen tener entre 10 y 15 kg/kW, los modelos deportivos entre 5 y 8 kg/kW, y algunos superdeportivos incluso menos de 3 kg/kW. Cuanto más bajo es el valor, más potencia hay disponible por kilogramo de peso del vehículo.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversores similares</h2>
+      <div class="related-grid">
+        <a href="drehmoment.html">Conversor de par motor →</a>
+        <a href="antriebsvergleich.html">Comparación de propulsión (costes) →</a>
+        <a href="geschwindigkeitumrechner.html">Conversor de velocidad →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Conversor de Unidades</span>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="../impressum.html">Aviso legal (DE)</a>
+        <a href="../datenschutz.html">Privacidad (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      kw: { label: 'Kilovatio (kW)', factor: 1 },
+      ps: { label: 'CV', factor: 0.735498875 }
+    };
+    createConverter({
+      units,
+      convert: linearConvert,
+      defaultFrom: 'ps',
+      defaultTo: 'kw',
+      decimals: 4
+    });
+
+    const PS_TO_KW = 0.735498875;
+    const fields = ['psA', 'nmA', 'weightA', 'psB', 'nmB', 'weightB'].reduce((acc, id) => {
+      acc[id] = document.getElementById(id);
+      return acc;
+    }, {});
+    const ratioA = document.getElementById('ratioA');
+    const specTorqueA = document.getElementById('specTorqueA');
+    const ratioB = document.getElementById('ratioB');
+    const specTorqueB = document.getElementById('specTorqueB');
+    const compareText = document.getElementById('compareText');
+
+    function computeVehicle(ps, nm, weight) {
+      const kw = ps * PS_TO_KW;
+      const kgPerKw = weight / kw;
+      const nmPerTonne = nm / (weight / 1000);
+      return { kw, kgPerKw, nmPerTonne };
+    }
+
+    function calculate() {
+      const psA = parseFloat(fields.psA.value), nmA = parseFloat(fields.nmA.value), wA = parseFloat(fields.weightA.value);
+      const psB = parseFloat(fields.psB.value), nmB = parseFloat(fields.nmB.value), wB = parseFloat(fields.weightB.value);
+      if (![psA, nmA, wA, psB, nmB, wB].every(v => Number.isFinite(v) && v > 0)) {
+        ratioA.textContent = ratioB.textContent = specTorqueA.textContent = specTorqueB.textContent = '–';
+        compareText.textContent = 'Por favor, rellena todos los campos con valores válidos.';
+        return;
+      }
+      const a = computeVehicle(psA, nmA, wA);
+      const b = computeVehicle(psB, nmB, wB);
+
+      ratioA.textContent = `${formatNumber(a.kgPerKw, 1)} kg/kW`;
+      ratioB.textContent = `${formatNumber(b.kgPerKw, 1)} kg/kW`;
+      specTorqueA.textContent = `${formatNumber(a.nmPerTonne, 0)} Nm/t`;
+      specTorqueB.textContent = `${formatNumber(b.nmPerTonne, 0)} Nm/t`;
+
+      let text;
+      if (a.kgPerKw < b.kgPerKw) {
+        const factor = b.kgPerKw / a.kgPerKw;
+        text = `<strong>Vehículo A</strong> tiene la mejor relación peso/potencia (${formatNumber(factor, 2)}× mejor que el vehículo B) y debería acelerar de forma más ágil.`;
+      } else if (b.kgPerKw < a.kgPerKw) {
+        const factor = a.kgPerKw / b.kgPerKw;
+        text = `<strong>Vehículo B</strong> tiene la mejor relación peso/potencia (${formatNumber(factor, 2)}× mejor que el vehículo A) y debería acelerar de forma más ágil.`;
+      } else {
+        text = 'Ambos vehículos tienen una relación peso/potencia idéntica.';
+      }
+      text += ' Nota: esto es una aproximación – la aceleración real depende además de la tracción, la caja de cambios y la aerodinámica.';
+      compareText.innerHTML = text;
+    }
+
+    Object.values(fields).forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Combustión vs. eléctrico – Energía y costes por 100 km</title>
+  <meta name="description" content="Compara el consumo de energía y los costes por 100 km de coches de combustión (gasolina, diésel) con los de coches eléctricos, en kWh/100 km y euros/100 km." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/es/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/antriebsvergleich.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/antriebsvergleich.html" />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Conversor de Unidades" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/es/antriebsvergleich.html" />
+  <meta property="og:site_name" content="Conversor de Unidades" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:title" content="Combustión vs. eléctrico – Energía y costes por 100 km" />
+  <meta property="og:description" content="Compara el consumo de energía y los costes por 100 km de coches de combustión (gasolina, diésel) con los de coches eléctricos, en kWh/100 km y euros/100 km." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Combustión vs. eléctrico – Energía y costes por 100 km" />
+  <meta name="twitter:description" content="Compara el consumo de energía y los costes por 100 km de coches de combustión (gasolina, diésel) con los de coches eléctricos, en kWh/100 km y euros/100 km." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #1b5e20;
+      --color-primary-hover: #0d3711;
+      --color-primary-soft: #e8f5e9;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Comparación de propulsión: combustión vs. eléctrico",
+      "url": "https://tvoepel.github.io/Calculator_webseite/es/antriebsvergleich.html",
+      "description": "Compara el consumo de energía y los costes por 100 km de coches de combustión (gasolina, diésel) con los de coches eléctricos, en kWh/100 km y euros/100 km.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basado en web)",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Conversor de Unidades",
+        "url": "https://tvoepel.github.io/Calculator_webseite/es/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tvoepel.github.io/Calculator_webseite/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Comparación de propulsión: combustión vs. eléctrico",
+          "item": "https://tvoepel.github.io/Calculator_webseite/es/antriebsvergleich.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es un coche eléctrico más barato de mantener que uno de combustión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En cuanto a los costes energéticos puros por 100 km, un coche eléctrico cargado en casa suele quedar muy por debajo de un coche de combustión comparable. Sin embargo, si se usan sobre todo cargadores rápidos públicos y caros, esta ventaja puede reducirse considerablemente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos kWh consume un coche eléctrico por 100 km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La mayoría de los turismos eléctricos se sitúan entre 15 y 22 kWh/100 km, según el tamaño del vehículo, el estilo de conducción, la temperatura exterior y la velocidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué un coche eléctrico consume más en invierno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El frío reduce la eficiencia de la batería y la calefacción del habitáculo necesita energía adicional, lo que puede aumentar notablemente el consumo por 100 km en invierno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos kWh aporta energéticamente 1 litro de gasolina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un litro de gasolina contiene energéticamente unos 8,9–9,0 kWh, un litro de diésel unos 9,8 kWh – bastante más que la energía eléctrica que necesita un coche eléctrico para recorrer la misma distancia, aunque con un rendimiento menor en el motor de combustión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se incluyen en esta calculadora las pérdidas de carga del coche eléctrico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, esta calculadora compara únicamente los costes energéticos a partir del consumo indicado. Las pérdidas de carga (habitualmente unos pocos puntos porcentuales) no se muestran por separado y elevarían ligeramente el coste real."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="logo" href="index.html" aria-label="Inicio Conversor de Unidades">
+        <span class="logo-mark">EV</span>
+        <span>Comparación de propulsión</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Volver a todos los conversores</a>
+        <span class="pill">Energía y costes / 100 km</span>
+
+        <nav class="lang-switch" aria-label="Elegir idioma">
+          <a href="../antriebsvergleich.html" hreflang="de">DE</a>
+          <a href="../nl/antriebsvergleich.html" hreflang="nl">NL</a>
+          <a href="../fr/antriebsvergleich.html" hreflang="fr">FR</a>
+          <a href="../en/antriebsvergleich.html" hreflang="en">EN</a>
+          <a href="../it/antriebsvergleich.html" hreflang="it">IT</a>
+          <a href="antriebsvergleich.html" class="lang-active" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Compara combustión y eléctrico de forma justa</h1>
+      <p>Indica el consumo de tu coche de combustión en L/100 km y el de tu coche eléctrico en kWh/100 km, junto con los precios actuales de combustible y electricidad. La calculadora te muestra el consumo de energía y los costes por 100 km uno junto al otro.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Entradas y resultados</h2>
+        <div class="subgrid">
+          <div class="two-col">
+            <div>
+              <h3>Combustión</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="iceFuelType">Combustible</label>
+                  <select id="iceFuelType">
+                    <option value="super_e5">Gasolina Super (E5/E10)</option>
+                    <option value="super_plus">Gasolina Super Plus (E5)</option>
+                    <option value="diesel">Diésel</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iceConsumption">Consumo (L/100 km)</label>
+                  <input id="iceConsumption" type="number" step="0.1" min="0" value="6.5" />
+                </div>
+                <div>
+                  <label for="icePrice">Precio del combustible (€/L)</label>
+                  <input id="icePrice" type="number" step="0.01" min="0" value="1.85" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Coche eléctrico</h3>
+              <div class="subgrid">
+                <div>
+                  <label for="evConsumption">Consumo (kWh/100 km)</label>
+                  <input id="evConsumption" type="number" step="0.1" min="0" value="18" />
+                </div>
+                <div>
+                  <label for="evPrice">Precio de la electricidad (€/kWh)</label>
+                  <input id="evPrice" type="number" step="0.01" min="0" value="0.35" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Resultado combustión</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="iceKwhDisplay">– kWh/100 km</span>
+                  <span>Consumo de energía combustión</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="iceCostDisplay">– €/100 km</span>
+                  <span>Costes de combustible por 100 km</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Resultado eléctrico</h3>
+              <div class="subgrid">
+                <div class="result-row">
+                  <span class="result-highlight" id="evKwhDisplay">– kWh/100 km</span>
+                  <span>Consumo de energía eléctrico</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-highlight" id="evCostDisplay">– €/100 km</span>
+                  <span>Costes de electricidad por 100 km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare" id="compareText">
+            Introduce tus valores arriba para ver la comparación.
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Espacio publicitario: lugar para un anuncio (AdSense, venta directa o banner de afiliados).</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Supuestos y fórmulas</h2>
+        <div class="formula">Calculamos con contenidos energéticos típicos (poder calorífico inferior, promedios redondeados):
+
+- Gasolina Super (E5/E10/Super Plus): aprox. 8,9–9,0 kWh por litro
+- Diésel: aprox. 9,8 kWh por litro
+
+Fórmulas:
+
+1) Consumo de energía combustión:
+   kWh/100 km = consumo (L/100 km) × kWh/L
+
+2) Costes combustión:
+   €/100 km = consumo (L/100 km) × precio del combustible (€/L)
+
+3) Costes eléctrico:
+   €/100 km = consumo (kWh/100 km) × precio de la electricidad (€/kWh)</div>
+        <p class="note">
+          Los contenidos energéticos reales de los combustibles varían ligeramente según su composición (gasolina aprox. 8,7–9,1 kWh/L, diésel aprox. 9,7–9,9 kWh/L). Los promedios utilizados aquí sirven para una comparación aproximada y no sustituyen un dato exacto del fabricante. Las pérdidas de carga del coche eléctrico (habitualmente unos pocos puntos porcentuales) no se muestran por separado en el cálculo de los costes de electricidad.
+        </p>
+        <p class="source-links">Fuentes: <a href="https://www.umweltbundesamt.de/system/files/medien/1410/publikationen/2019-03-18_texte_25-2019_wltp.pdf" target="_blank" rel="noopener noreferrer">Umweltbundesamt – Publicaciones sobre combustibles y emisiones</a>, <a href="https://www.adac.de/rund-ums-fahrzeug/auto-kaufen-verkaufen/neuwagenkauf/co2-label-pkw-effizienzklassen/" target="_blank" rel="noopener noreferrer">ADAC – Guía del coche eléctrico</a>, <a href="https://de.wikipedia.org/wiki/Elektroauto" target="_blank" rel="noopener noreferrer">Wikipedia – Coche eléctrico</a></p>
+      </aside>
+    </div>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Indicaciones sobre la comparación de propulsión</h2>
+      <div class="seo-text">
+        <p>Con esta calculadora puedes comparar directamente el consumo de energía y los costes energéticos puros de vehículos de combustión y coches eléctricos. Para ello, introduce el consumo en L/100 km y kWh/100 km, así como los precios actuales de combustible y electricidad.</p>
+        <p>Así verás de un vistazo cómo afecta a tus condiciones individuales un cambio de gasolina o diésel a un coche eléctrico. Especialmente con precios de la energía fluctuantes, una comparación transparente por 100 km es útil para evaluar mejor las decisiones de compra.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">En la práctica: combustión o eléctrico – lo que importa</h2>
+      <div class="seo-text">
+        <p>Que un coche eléctrico compense económicamente depende en gran medida de tu propio precio de la electricidad (wallbox en casa frente a un cargador rápido caro fuera de casa) y del precio del combustible en tu zona – esta calculadora hace transparente la comparación pura de costes energéticos.</p>
+        <p>Quien carga mucho en casa con electricidad nocturna barata o con placas solares propias obtiene costes por 100 km notablemente más bajos que cargando en cargadores rápidos públicos.</p>
+        <p>Para un cálculo de costes completo (coste total de propiedad) también deberían tenerse en cuenta, además de los costes energéticos, el precio de compra, la depreciación, el mantenimiento y el seguro – esta calculadora cubre deliberadamente solo los costes energéticos por 100 km.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Anuncio / AdSense / Marcador de afiliados</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>¿Es un coche eléctrico más barato de mantener que uno de combustión?</summary><p>En cuanto a los costes energéticos puros por 100 km, un coche eléctrico cargado en casa suele quedar muy por debajo de un coche de combustión comparable. Sin embargo, si se usan sobre todo cargadores rápidos públicos y caros, esta ventaja puede reducirse considerablemente.</p></details>
+        <details class="faq-item"><summary>¿Cuántos kWh consume un coche eléctrico por 100 km?</summary><p>La mayoría de los turismos eléctricos se sitúan entre 15 y 22 kWh/100 km, según el tamaño del vehículo, el estilo de conducción, la temperatura exterior y la velocidad.</p></details>
+        <details class="faq-item"><summary>¿Por qué un coche eléctrico consume más en invierno?</summary><p>El frío reduce la eficiencia de la batería y la calefacción del habitáculo necesita energía adicional, lo que puede aumentar notablemente el consumo por 100 km en invierno.</p></details>
+        <details class="faq-item"><summary>¿Cuántos kWh aporta energéticamente 1 litro de gasolina?</summary><p>Un litro de gasolina contiene energéticamente unos 8,9–9,0 kWh, un litro de diésel unos 9,8 kWh – bastante más que la energía eléctrica que necesita un coche eléctrico para recorrer la misma distancia, aunque con un rendimiento menor en el motor de combustión.</p></details>
+        <details class="faq-item"><summary>¿Se incluyen en esta calculadora las pérdidas de carga del coche eléctrico?</summary><p>No, esta calculadora compara únicamente los costes energéticos a partir del consumo indicado. Las pérdidas de carga (habitualmente unos pocos puntos porcentuales) no se muestran por separado y elevarían ligeramente el coste real.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversores similares</h2>
+      <div class="related-grid">
+        <a href="treibstoffverbrauch-umrechner.html">Conversor de consumo de combustible →</a>
+        <a href="energieumrechner.html">Conversor de energía →</a>
+        <a href="geschwindigkeitumrechner.html">Conversor de velocidad →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Conversor de Unidades</span>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="../impressum.html">Aviso legal (DE)</a>
+        <a href="../datenschutz.html">Privacidad (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script>
+    const fuelTypes = {
+      super_e5:   { kwhPerLiter: 8.9 },
+      super_plus: { kwhPerLiter: 9.0 },
+      diesel:     { kwhPerLiter: 9.8 }
+    };
+
+    const iceFuelType    = document.getElementById('iceFuelType');
+    const iceConsumption = document.getElementById('iceConsumption');
+    const icePrice       = document.getElementById('icePrice');
+    const evConsumption  = document.getElementById('evConsumption');
+    const evPrice        = document.getElementById('evPrice');
+
+    const iceKwhDisplay  = document.getElementById('iceKwhDisplay');
+    const iceCostDisplay = document.getElementById('iceCostDisplay');
+    const evKwhDisplay   = document.getElementById('evKwhDisplay');
+    const evCostDisplay  = document.getElementById('evCostDisplay');
+    const compareText    = document.getElementById('compareText');
+
+    function fmt(num, decimals = 2) {
+      if (!Number.isFinite(num)) return '–';
+      return new Intl.NumberFormat('de-DE', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(num);
+    }
+
+    function recalc() {
+      const fuel = fuelTypes[iceFuelType.value];
+      const iceCons = parseFloat(iceConsumption.value);
+      const iceP    = parseFloat(icePrice.value);
+      const evCons  = parseFloat(evConsumption.value);
+      const evP     = parseFloat(evPrice.value);
+
+      if (Number.isNaN(iceCons) || Number.isNaN(iceP) ||
+          Number.isNaN(evCons) || Number.isNaN(evP)) {
+        compareText.textContent = 'Por favor, rellena todos los campos con valores numéricos válidos.';
+        return;
+      }
+
+      const iceKwhPer100  = iceCons * fuel.kwhPerLiter;
+      const iceCostPer100 = iceCons * iceP;
+      const evKwhPer100   = evCons;
+      const evCostPer100  = evCons * evP;
+
+      iceKwhDisplay.textContent  = `${fmt(iceKwhPer100)} kWh/100 km`;
+      iceCostDisplay.textContent = `${fmt(iceCostPer100)} €/100 km`;
+      evKwhDisplay.textContent   = `${fmt(evKwhPer100)} kWh/100 km`;
+      evCostDisplay.textContent  = `${fmt(evCostPer100)} €/100 km`;
+
+      let text = '';
+      const kwhRatio  = iceKwhPer100 / evKwhPer100;
+      const costRatio = iceCostPer100 / evCostPer100;
+
+      if (Number.isFinite(kwhRatio) && Number.isFinite(costRatio) && evKwhPer100 > 0 && evCostPer100 > 0) {
+        if (kwhRatio > 1) {
+          text += `El <strong>coche de combustión</strong> necesita aproximadamente ${fmt(kwhRatio, 1)} veces más energía que el <strong>coche eléctrico</strong> por 100 km. `;
+        } else {
+          text += `El <strong>coche eléctrico</strong> necesita aproximadamente ${fmt(1 / kwhRatio, 1)} veces más energía que el <strong>coche de combustión</strong> por 100 km (según los valores introducidos). `;
+        }
+
+        if (costRatio > 1) {
+          text += `En cuanto a costes, el <strong>coche de combustión</strong> es aproximadamente ${fmt(costRatio, 1)} veces más caro por 100 km.`;
+        } else {
+          text += `En cuanto a costes, el <strong>coche eléctrico</strong> es aproximadamente ${fmt(1 / costRatio, 1)} veces más caro por 100 km.`;
+        }
+      } else {
+        text = 'Los valores introducidos no permiten una comparación significativa (revisa los valores en 0).';
+      }
+
+      compareText.innerHTML = text;
+    }
+
+    [iceFuelType, iceConsumption, icePrice, evConsumption, evPrice]
+      .forEach(el => el.addEventListener('input', recalc));
+
+    recalc();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Calcolatore IMC &amp; fabbisogno calorico – IMC, BMR, TDEE</title>
+  <meta name="description" content="Calcola gratis il tuo IMC, inquadralo nelle categorie OMS e determina il tuo fabbisogno calorico giornaliero (BMR/TDEE) secondo le formule di Mifflin-St Jeor e Harris-Benedict." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/it/bmi.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/bmi.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/bmi.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/bmi.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/bmi.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/bmi.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/bmi.html" />
+  <meta name="theme-color" content="#4527a0" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertitore di Unità" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/it/bmi.html" />
+  <meta property="og:site_name" content="Convertitore di Unità" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:title" content="Calcolatore IMC &amp; fabbisogno calorico – IMC, BMR, TDEE" />
+  <meta property="og:description" content="Calcola gratis il tuo IMC, inquadralo nelle categorie OMS e determina il tuo fabbisogno calorico giornaliero (BMR/TDEE)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calcolatore IMC &amp; fabbisogno calorico" />
+  <meta name="twitter:description" content="Calcola gratis IMC, BMR e fabbisogno calorico giornaliero." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #4527a0;
+      --color-primary-hover: #2c1a68;
+      --color-primary-soft: #e3dbf5;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+    .disclaimer {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calcolatore IMC & fabbisogno calorico",
+      "url": "https://tvoepel.github.io/Calculator_webseite/it/bmi.html",
+      "description": "Calcola gratis il tuo IMC, inquadralo nelle categorie OMS e determina il tuo fabbisogno calorico giornaliero (BMR/TDEE).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basato sul web)",
+      "inLanguage": "it",
+      "isPartOf": { "@type": "WebSite", "name": "Convertitore di Unità", "url": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Pagina iniziale", "item": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Calcolatore IMC & fabbisogno calorico", "item": "https://tvoepel.github.io/Calculator_webseite/it/bmi.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Come calcolo il mio IMC?", "acceptedAnswer": { "@type": "Answer", "text": "IMC = peso (kg) ÷ altezza (m)². Esempio: 75 kg ÷ (1,75 m)² = 24,5 (normopeso secondo la classificazione OMS)." } },
+        { "@type": "Question", "name": "Quali sono le categorie di IMC secondo l'OMS?", "acceptedAnswer": { "@type": "Answer", "text": "Sotto 18,5 sottopeso, 18,5–24,9 normopeso, 25–29,9 sovrappeso (preobesità), 30–34,9 obesità di grado I, 35–39,9 obesità di grado II, da 40 in su obesità di grado III." } },
+        { "@type": "Question", "name": "Cos'è il metabolismo basale (BMR)?", "acceptedAnswer": { "@type": "Answer", "text": "Il metabolismo basale (Basal Metabolic Rate) è la quantità di energia di cui il corpo ha bisogno a completo riposo per le funzioni vitali. La formula di Mifflin-St Jeor (1990) è oggi considerata più accurata della più vecchia formula di Harris-Benedict." } },
+        { "@type": "Question", "name": "Come calcolo il mio fabbisogno calorico giornaliero (TDEE)?", "acceptedAnswer": { "@type": "Answer", "text": "TDEE = metabolismo basale (BMR) × fattore di attività. Il fattore va da 1,2 (poco movimento) a 1,9 (lavoro fisico molto intenso più allenamento)." } },
+        { "@type": "Question", "name": "L'IMC è un indicatore di salute affidabile?", "acceptedAnswer": { "@type": "Answer", "text": "L'IMC non tiene conto né della massa muscolare né della corporatura o della distribuzione del grasso e può risultare fuorviante per persone molto muscolose o molto snelle. Serve come orientamento generale, non come diagnosi medica." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Pagina iniziale Convertitore di Unità">
+        <span class="logo-mark">B</span>
+        <span>IMC &amp; fabbisogno calorico</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Torna a tutti i convertitori</a>
+        <span class="pill">Salute &amp; fitness</span>
+
+        <nav class="lang-switch" aria-label="Scegli la lingua">
+          <a href="../bmi.html" hreflang="de">DE</a>
+          <a href="../nl/bmi.html" hreflang="nl">NL</a>
+          <a href="../fr/bmi.html" hreflang="fr">FR</a>
+          <a href="../en/bmi.html" hreflang="en">EN</a>
+          <a href="bmi.html" class="lang-active" aria-current="page">IT</a>
+          <a href="../es/bmi.html" hreflang="es">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Calcola IMC, metabolismo basale &amp; fabbisogno calorico</h1>
+      <p>Calcola il tuo indice di massa corporea con classificazione OMS e il tuo fabbisogno calorico giornaliero (metabolismo basale × fattore di attività) secondo la moderna formula di Mifflin-St Jeor.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Dati inseriti</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="weightInput">Peso (kg)</label>
+              <input id="weightInput" type="number" value="75" step="0.1" min="1" />
+            </div>
+            <div>
+              <label for="heightInput">Altezza (cm)</label>
+              <input id="heightInput" type="number" value="175" step="0.1" min="50" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="ageInput">Età (anni)</label>
+              <input id="ageInput" type="number" value="35" step="1" min="1" max="120" />
+            </div>
+            <div>
+              <label for="genderInput">Sesso (per la formula del BMR)</label>
+              <select id="genderInput">
+                <option value="m">Maschile</option>
+                <option value="f">Femminile</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div style="grid-column: 1 / -1;">
+              <label for="activityInput">Livello di attività</label>
+              <select id="activityInput">
+                <option value="1.2">Sedentario, poco movimento (1,2)</option>
+                <option value="1.375">Leggermente attivo, 1–3× sport/settimana (1,375)</option>
+                <option value="1.55" selected>Moderatamente attivo, 3–5× sport/settimana (1,55)</option>
+                <option value="1.725">Molto attivo, 6–7× sport/settimana (1,725)</option>
+                <option value="1.9">Estremamente attivo, lavoro fisico + allenamento (1,9)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-row">
+              <span class="result-highlight" id="bmiResult">–</span>
+              <span id="bmiCategory">IMC &amp; categoria</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrResult">–</span>
+              <span>Metabolismo basale (Mifflin-St Jeor)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="bmrHbResult">–</span>
+              <span>Metabolismo basale (Harris-Benedict, per confronto)</span>
+            </div>
+            <div class="result-row">
+              <span class="result-highlight" id="tdeeResult">–</span>
+              <span>Fabbisogno calorico giornaliero (TDEE)</span>
+            </div>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Categorie IMC (OMS)</h2>
+        <table class="ref-table">
+          <thead><tr><th>IMC</th><th>Categoria</th></tr></thead>
+          <tbody>
+            <tr><td>&lt; 18,5</td><td>Sottopeso</td></tr>
+            <tr><td>18,5–24,9</td><td>Normopeso</td></tr>
+            <tr><td>25,0–29,9</td><td>Sovrappeso (preobesità)</td></tr>
+            <tr><td>30,0–34,9</td><td>Obesità di grado I</td></tr>
+            <tr><td>35,0–39,9</td><td>Obesità di grado II</td></tr>
+            <tr><td>≥ 40,0</td><td>Obesità di grado III</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formule &amp; fonti</h2>
+      <div class="formula">IMC = peso [kg] ÷ altezza [m]²
+
+Mifflin-St Jeor (1990), metabolismo basale in kcal/giorno:
+  Uomini: BMR = 10 × peso[kg] + 6,25 × altezza[cm] − 5 × età − 5
+  Donne:  BMR = 10 × peso[kg] + 6,25 × altezza[cm] − 5 × età − 161
+
+Harris-Benedict, rivista nel 1984 (per confronto):
+  Uomini: BMR = 88,362 + 13,397 × peso + 4,799 × altezza − 5,677 × età
+  Donne:  BMR = 447,593 + 9,247 × peso + 3,098 × altezza − 4,330 × età
+
+TDEE = BMR × fattore di attività (da 1,2 a 1,9)</div>
+      <p class="note">La formula di Mifflin-St Jeor è oggi generalmente considerata dalla scienza dell'alimentazione più accurata della più vecchia formula di Harris-Benedict e viene qui mostrata come risultato principale.</p>
+      <p class="source-links">Fonti: <a href="https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations" target="_blank" rel="noopener noreferrer">OMS – Indice di massa corporea</a>, <a href="https://de.wikipedia.org/wiki/Body-Mass-Index" target="_blank" rel="noopener noreferrer">Wikipedia – Indice di massa corporea</a>, <a href="https://de.wikipedia.org/wiki/Grundumsatz" target="_blank" rel="noopener noreferrer">Wikipedia – Metabolismo basale</a></p>
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        ⚠️ Questi valori servono esclusivamente come orientamento generale e non sostituiscono la valutazione di un medico o di un nutrizionista qualificato. IMC e BMR non tengono conto né della massa muscolare né di fattori di salute individuali. Per domande sul tuo peso corporeo o sul tuo piano alimentare, rivolgiti a un medico o a un nutrizionista qualificato.
+      </div>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Applicazione pratica</h2>
+      <div class="seo-text">
+        <p>Per una perdita di peso realistica, un deficit calorico di circa 500 kcal/giorno è considerato una regola empirica comune per perdere circa 0,5 kg a settimana – il tuo TDEE è qui il valore di partenza da cui si sottrae il deficit.</p>
+        <p>Gli sportivi di forza e resistenza usano spesso il TDEE per pianificare l'apporto calorico adatto alla costruzione muscolare (leggero surplus) o alle fasi di definizione (deficit).</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Come calcolo il mio IMC?</summary><p>IMC = peso (kg) ÷ altezza (m)². Esempio: 75 kg ÷ (1,75 m)² = 24,5 (normopeso secondo la classificazione OMS).</p></details>
+        <details class="faq-item"><summary>Quali sono le categorie di IMC secondo l'OMS?</summary><p>Sotto 18,5 sottopeso, 18,5–24,9 normopeso, 25–29,9 sovrappeso (preobesità), 30–34,9 obesità di grado I, 35–39,9 obesità di grado II, da 40 in su obesità di grado III.</p></details>
+        <details class="faq-item"><summary>Cos'è il metabolismo basale (BMR)?</summary><p>Il metabolismo basale (Basal Metabolic Rate) è la quantità di energia di cui il corpo ha bisogno a completo riposo per le funzioni vitali. La formula di Mifflin-St Jeor (1990) è oggi considerata più accurata della più vecchia formula di Harris-Benedict.</p></details>
+        <details class="faq-item"><summary>Come calcolo il mio fabbisogno calorico giornaliero (TDEE)?</summary><p>TDEE = metabolismo basale (BMR) × fattore di attività. Il fattore va da 1,2 (poco movimento) a 1,9 (lavoro fisico molto intenso più allenamento).</p></details>
+        <details class="faq-item"><summary>L'IMC è un indicatore di salute affidabile?</summary><p>L'IMC non tiene conto né della massa muscolare né della corporatura o della distribuzione del grasso e può risultare fuorviante per persone molto muscolose o molto snelle. Serve come orientamento generale, non come diagnosi medica.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertitori simili</h2>
+      <div class="related-grid">
+        <a href="gewichtumrechner.html">Convertitore di peso →</a>
+        <a href="energieumrechner.html">Convertitore di energia →</a>
+        <a href="blutzuckerumrechner.html">Convertitore di glicemia →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertitore di Unità</span>
+      <nav>
+        <a href="index.html">Pagina iniziale</a>
+        <a href="../impressum.html">Note legali (DE)</a>
+        <a href="../datenschutz.html">Privacy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const heightInput = document.getElementById('heightInput');
+    const ageInput = document.getElementById('ageInput');
+    const genderInput = document.getElementById('genderInput');
+    const activityInput = document.getElementById('activityInput');
+    const bmiResult = document.getElementById('bmiResult');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmrResult = document.getElementById('bmrResult');
+    const bmrHbResult = document.getElementById('bmrHbResult');
+    const tdeeResult = document.getElementById('tdeeResult');
+
+    function bmiCategoryFor(bmi) {
+      if (bmi < 18.5) return 'Sottopeso';
+      if (bmi < 25) return 'Normopeso';
+      if (bmi < 30) return 'Sovrappeso (preobesità)';
+      if (bmi < 35) return 'Obesità di grado I';
+      if (bmi < 40) return 'Obesità di grado II';
+      return 'Obesità di grado III';
+    }
+
+    function calculate() {
+      const w = parseFloat(weightInput.value);
+      const hCm = parseFloat(heightInput.value);
+      const age = parseFloat(ageInput.value);
+      const gender = genderInput.value;
+      const activity = parseFloat(activityInput.value);
+
+      if (![w, hCm, age, activity].every(Number.isFinite) || w <= 0 || hCm <= 0 || age <= 0) {
+        bmiResult.textContent = '–';
+        bmiCategory.textContent = 'Inserisci valori validi.';
+        bmrResult.textContent = '–';
+        bmrHbResult.textContent = '–';
+        tdeeResult.textContent = '–';
+        return;
+      }
+
+      const hM = hCm / 100;
+      const bmi = w / (hM * hM);
+      bmiResult.textContent = formatNumber(bmi, 1);
+      bmiCategory.textContent = `Categoria IMC (OMS): ${bmiCategoryFor(bmi)}`;
+
+      const bmr = gender === 'm'
+        ? 10 * w + 6.25 * hCm - 5 * age + 5
+        : 10 * w + 6.25 * hCm - 5 * age - 161;
+      bmrResult.textContent = `${formatNumber(bmr, 0)} kcal/giorno`;
+
+      const bmrHb = gender === 'm'
+        ? 88.362 + 13.397 * w + 4.799 * hCm - 5.677 * age
+        : 447.593 + 9.247 * w + 3.098 * hCm - 4.330 * age;
+      bmrHbResult.textContent = `${formatNumber(bmrHb, 0)} kcal/giorno`;
+
+      const tdee = bmr * activity;
+      tdeeResult.textContent = `${formatNumber(tdee, 0)} kcal/giorno`;
+    }
+
+    [weightInput, heightInput, ageInput, genderInput, activityInput].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

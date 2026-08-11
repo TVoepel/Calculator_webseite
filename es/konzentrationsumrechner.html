@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Conversor de concentración – mol/L, g/L, ppm, mg/dL y más</title>
+  <meta name="description" content="Convierte concentraciones químicas: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, y molalidad (mol/kg). Con cálculo de la masa molar a partir de la fórmula o del nombre del compuesto (nitrato, sulfato, fosfato, amonio, glutamato, creatinina y muchos más)." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/es/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/konzentrationsumrechner.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/konzentrationsumrechner.html" />
+  <meta name="theme-color" content="#ad1457" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Conversor de Unidades" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/es/konzentrationsumrechner.html" />
+  <meta property="og:site_name" content="Conversor de Unidades" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:title" content="Conversor de concentración – mol/L, g/L, ppm, mg/dL y más" />
+  <meta property="og:description" content="Convierte concentraciones químicas: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, y molalidad (mol/kg). Con cálculo de la masa molar a partir de la fórmula o del nombre del compuesto (nitrato, sulfato, fosfato, amonio, glutamato, creatinina y muchos más)." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Conversor de concentración – mol/L, g/L, ppm, mg/dL y más" />
+  <meta name="twitter:description" content="Convierte concentraciones químicas: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, y molalidad (mol/kg). Con cálculo de la masa molar a partir de la fórmula o del nombre del compuesto (nitrato, sulfato, fosfato, amonio, glutamato, creatinina y muchos más)." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #ad1457;
+      --color-primary-hover: #740d3a;
+      --color-primary-soft: #fbdce8;
+    }
+    .status-line {
+      font-size: var(--text-sm);
+      margin-top: var(--space-2);
+      min-height: 1.4em;
+    }
+    .status-ok { color: var(--color-primary); font-weight: 600; }
+    .status-error { color: #b3261e; font-weight: 600; }
+    .status-muted { color: var(--color-text-muted); }
+    .compound-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+    .compound-table th, .compound-table td {
+      text-align: left;
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Conversor de concentración",
+      "url": "https://tvoepel.github.io/Calculator_webseite/es/konzentrationsumrechner.html",
+      "description": "Convierte concentraciones químicas: mol/L, mmol/L, g/L, mg/L, mg/dL, ppm, y molalidad (mol/kg). Con cálculo de la masa molar a partir de la fórmula o del nombre del compuesto (nitrato, sulfato, fosfato, amonio, glutamato, creatinina y muchos más).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basado en web)",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Conversor de Unidades",
+        "url": "https://tvoepel.github.io/Calculator_webseite/es/index.html"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://tvoepel.github.io/Calculator_webseite/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conversor de concentración",
+          "item": "https://tvoepel.github.io/Calculator_webseite/es/konzentrationsumrechner.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula la masa molar de un compuesto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La masa molar es la suma de las masas atómicas de todos los átomos de la fórmula química, p. ej. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre mol/L y mg/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "mol/L (concentración molar) cuenta las partículas independientemente de su masa, mg/L (concentración másica) mide el peso por litro. La conversión se realiza a través de la masa molar: masa = cantidad de sustancia × masa molar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa ppm en los valores del agua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ppm (partes por millón) corresponde aproximadamente a mg/L en disoluciones acuosas diluidas, ya que la densidad del agua es cercana a 1 kg/L. En otros disolventes o concentraciones elevadas esta aproximación deja de ser válida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula la masa molar de un hidrato como MgSO4·7H2O?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se suma la masa molar del compuesto base (MgSO₄) y la masa molar del agua de cristalización, multiplicada por el número de moléculas de agua (aquí 7 × 18,015 g/mol para 7 H₂O)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La carga de un ion (p. ej. SO4²⁻) cambia la masa molar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prácticamente no: la masa del electrón es insignificante en comparación con la masa total de un ion, por lo que las masas molares de los iones se calculan de la forma habitual a partir de la suma de las masas atómicas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre molaridad y molalidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La molaridad (mol/L) relaciona la cantidad de sustancia con el volumen de la disolución final, la molalidad (mol/kg) con la masa del disolvente puro. La molalidad es independiente de la temperatura (la masa no cambia con la temperatura), mientras que la molaridad depende ligeramente de ella, ya que el volumen del líquido varía con la temperatura. La conversión entre ambas requiere además la densidad de la disolución."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Inicio Conversor de Unidades">
+        <span class="logo-mark">c</span>
+        <span>Conversor de concentración</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Volver a todos los conversores</a>
+        <span class="pill">Química &amp; laboratorio</span>
+
+        <nav class="lang-switch" aria-label="Elegir idioma">
+          <a href="../konzentrationsumrechner.html" hreflang="de">DE</a>
+          <a href="../nl/konzentrationsumrechner.html" hreflang="nl">NL</a>
+          <a href="../fr/konzentrationsumrechner.html" hreflang="fr">FR</a>
+          <a href="../en/konzentrationsumrechner.html" hreflang="en">EN</a>
+          <a href="../it/konzentrationsumrechner.html" hreflang="it">IT</a>
+          <a href="konzentrationsumrechner.html" class="lang-active" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convierte concentraciones químicas</h1>
+      <p>Convierte entre unidades molares (mol/L, mmol/L, µmol/L, nmol/L) y unidades de masa (g/L, mg/L, mg/dL, mg/mL, ppm …). Para convertir entre unidades molares y de masa se necesita la masa molar – introduce para ello el nombre de un compuesto, una fórmula química o directamente un número.</p>
+    </section>
+
+    <div class="grid grid--wide">
+      <section class="card">
+        <h2 class="section-title">Conversor</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="substanceInput">Compuesto, fórmula o masa molar</label>
+              <input id="substanceInput" type="text" placeholder="p. ej. nitrato, NaCl, MgSO4·7H2O" list="compoundList" value="Nitrato" />
+              <datalist id="compoundList"></datalist>
+            </div>
+            <div>
+              <label for="molarMassInput">Masa molar (g/mol)</label>
+              <input id="molarMassInput" type="number" step="any" min="0" />
+            </div>
+          </div>
+          <div class="status-line" id="substanceStatus"></div>
+
+          <div class="row" id="densityRow" style="display:none;">
+            <div>
+              <label for="densityInput">Densidad de la disolución ρ (kg/L, solo para la molalidad)</label>
+              <input id="densityInput" type="number" step="any" min="0" value="1.000" />
+            </div>
+            <div class="status-line" style="align-self:end;">Aproximación para disoluciones acuosas diluidas: ρ ≈ 1,00 kg/L</div>
+          </div>
+
+          <div class="row" style="margin-top: var(--space-2);">
+            <div>
+              <label for="fromValue">Valor</label>
+              <input id="fromValue" type="number" value="50" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">De</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Intercambiar unidades</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultado</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">A</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--inline">Anuncio / AdSense / Marcador de afiliados</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Compuestos conocidos</h2>
+        <table class="compound-table">
+          <thead><tr><th>Nombre</th><th>Fórmula</th><th>M (g/mol)</th></tr></thead>
+          <tbody id="compoundTableBody"></tbody>
+        </table>
+        <p class="note">Valores determinados mediante el cálculo de fórmula incorporado (suma de las masas atómicas). Las cargas iónicas (⁻/⁺) prácticamente no modifican la masa molar (masa del electrón insignificante) y por eso se ignoran.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversiones populares</h2>
+      <div class="quicklinks">
+        <button type="button" data-preset="Nitrato,50,mg_l,mmol_l">Nitrato: 50 mg/L a mmol/L</button>
+        <button type="button" data-preset="Sulfato,100,mg_l,mmol_l">Sulfato: 100 mg/L a mmol/L</button>
+        <button type="button" data-preset="Fosfato,2,mg_l,umol_l">Fosfato: 2 mg/L a µmol/L</button>
+        <button type="button" data-preset="Amonio,0.5,mg_l,umol_l">Amonio: 0,5 mg/L a µmol/L</button>
+        <button type="button" data-preset="Creatinina,1.2,mg_dl,umol_l">Creatinina: 1,2 mg/dL a µmol/L</button>
+        <button type="button" data-preset="Glutamina,5,mg_dl,mmol_l">Glutamina: 5 mg/dL a mmol/L</button>
+        <button type="button" data-preset="NaCl,58.44,g_l,mol_kg">NaCl: 58,44 g/L a mol/kg (molalidad)</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Fórmulas y notas sobre la sintaxis</h2>
+      <div class="formula">Concentración másica [g/L] = concentración molar [mol/L] × masa molar [g/mol]
+Concentración molar [mol/L] = concentración másica [g/L] ÷ masa molar [g/mol]
+
+Molalidad ↔ molaridad (se necesita además la densidad de la disolución ρ en kg/L):
+Molaridad c [mol/L] = molalidad b [mol/kg] × ρ ÷ (1 + b × masa molar ÷ 1000)
+Molalidad b [mol/kg] = molaridad c [mol/L] ÷ (ρ − c × masa molar ÷ 1000)
+
+Sintaxis de la fórmula:
+- Símbolos de elementos en mayúscula, 2ª letra opcional en minúscula (Na, Cl, Fe, Ca)
+- Paréntesis ( ) y [ ] con multiplicador, p. ej. Ca3(PO4)2, Fe2(SO4)3
+- Hidratos con · o *, p. ej. MgSO4·7H2O, CuSO4*5H2O
+- Cargas opcionales con ^, p. ej. SO4^2-, NH4^+ (la carga no modifica la masa molar)</div>
+      <p class="note">Para ppm/ppb se usa la aproximación habitual en disoluciones acuosas diluidas: 1 ppm ≈ 1 mg/L (densidad de la disolución ≈ 1 kg/L). En disoluciones muy concentradas, otros disolventes o mezclas de gases (ppm en volumen) esta aproximación no es válida.</p>
+      <p class="note">Cálculo de control: para la creatinina (M = 113,12 g/mol) se obtiene el factor de conversión bien conocido en química clínica µmol/L = mg/dL × 88,4 – coincide exactamente con este conversor.</p>
+      <p class="note">La molalidad se refiere a la masa del <strong>disolvente</strong> (mol/kg), la molaridad al volumen de la <strong>disolución</strong> (mol/L) – por eso la conversión requiere además la densidad de la disolución. Para disoluciones acuosas diluidas, ρ ≈ 1,00 kg/L es una aproximación habitual; en disoluciones más concentradas la densidad real se aparta notablemente de ese valor.</p>
+          <p class="source-links">Fuentes: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Tabla periódica y pesos atómicos estándar</a>, <a href="https://www.bipm.org/en/publications/si-brochure" target="_blank" rel="noopener noreferrer">BIPM – Folleto del SI (definición del mol)</a>, <a href="https://de.wikipedia.org/wiki/Stoffmengenkonzentration" target="_blank" rel="noopener noreferrer">Wikipedia – Concentración molar</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Todas las unidades de concentración admitidas</h2>
+      <div class="seo-text">
+        <p>Unidades molares: mol/L, mmol/L, µmol/L, nmol/L. Unidades de masa: g/L, mg/L, µg/L, mg/dL, mg/mL, µg/mL, ppm, ppb. Unidades molales: mol/kg, mmol/kg (requiere además la densidad de la disolución).</p>
+        <p>Compuestos incorporados: nitrato, nitrito, sulfato, fosfato, amonio, glutamato, glutamina, creatinina, creatina. El resto de sustancias se pueden introducir como fórmula química (p. ej. NaCl, C6H12O6, CaCO3) o directamente como valor numérico de la masa molar.</p>
+      </div>
+    </section>
+
+        <section class="card seo-card">
+      <h2 class="section-title">Aplicación práctica: cuándo necesitas convertir concentraciones</h2>
+      <div class="seo-text">
+        <p>En el acuario, los valores de nitrato, nitrito, fosfato y amonio suelen medirse en mg/L – pero los límites científicos o los análisis de laboratorio a menudo indican los mismos valores en mmol/L.</p>
+        <p>Los resultados de laboratorio (p. ej. electrolitos, creatinina) se expresan según el país y el laboratorio en mg/dL o en mmol/L o µmol/L, lo que dificulta la comparación de valores.</p>
+        <p>En la enseñanza de la química y en el laboratorio, la conversión entre concentración molar (mol/L) y concentración másica (g/L) a través de la masa molar es uno de los cálculos más fundamentales.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Anuncio / AdSense / Marcador de afiliados</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>¿Cómo se calcula la masa molar de un compuesto?</summary><p>La masa molar es la suma de las masas atómicas de todos los átomos de la fórmula química, p. ej. NaCl = 22,990 (Na) + 35,45 (Cl) = 58,44 g/mol.</p></details>
+        <details class="faq-item"><summary>¿Cuál es la diferencia entre mol/L y mg/L?</summary><p>mol/L (concentración molar) cuenta las partículas independientemente de su masa, mg/L (concentración másica) mide el peso por litro. La conversión se realiza a través de la masa molar: masa = cantidad de sustancia × masa molar.</p></details>
+        <details class="faq-item"><summary>¿Qué significa ppm en los valores del agua?</summary><p>ppm (partes por millón) corresponde aproximadamente a mg/L en disoluciones acuosas diluidas, ya que la densidad del agua es cercana a 1 kg/L. En otros disolventes o concentraciones elevadas esta aproximación deja de ser válida.</p></details>
+        <details class="faq-item"><summary>¿Cómo se calcula la masa molar de un hidrato como MgSO4·7H2O?</summary><p>Se suma la masa molar del compuesto base (MgSO₄) y la masa molar del agua de cristalización, multiplicada por el número de moléculas de agua (aquí 7 × 18,015 g/mol para 7 H₂O).</p></details>
+        <details class="faq-item"><summary>¿La carga de un ion (p. ej. SO4²⁻) cambia la masa molar?</summary><p>Prácticamente no: la masa del electrón es insignificante en comparación con la masa total de un ion, por lo que las masas molares de los iones se calculan de la forma habitual a partir de la suma de las masas atómicas.</p></details>
+        <details class="faq-item"><summary>¿Cuál es la diferencia entre molaridad y molalidad?</summary><p>La molaridad (mol/L) relaciona la cantidad de sustancia con el volumen de la disolución final, la molalidad (mol/kg) con la masa del disolvente puro. La molalidad es independiente de la temperatura (la masa no cambia con la temperatura), mientras que la molaridad depende ligeramente de ella, ya que el volumen del líquido varía con la temperatura. La conversión entre ambas requiere además la densidad de la disolución.</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversores similares</h2>
+      <div class="related-grid">
+        <a href="volumenumrechner.html">Conversor de volumen →</a>
+        <a href="gewichtumrechner.html">Conversor de peso →</a>
+        <a href="blutzuckerumrechner.html">Conversor de glucosa en sangre →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Conversor de Unidades</span>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="../impressum.html">Aviso legal (DE)</a>
+        <a href="../datenschutz.html">Privacidad (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    // Masas atómicas estándar (g/mol), valores convencionales IUPAC (redondeados)
+    const atomicWeights = {
+      H: 1.008, He: 4.003, Li: 6.94, Be: 9.012, B: 10.81, C: 12.011, N: 14.007, O: 15.999,
+      F: 18.998, Ne: 20.180, Na: 22.990, Mg: 24.305, Al: 26.982, Si: 28.085, P: 30.974,
+      S: 32.06, Cl: 35.45, Ar: 39.948, K: 39.098, Ca: 40.078, Sc: 44.956, Ti: 47.867,
+      V: 50.942, Cr: 51.996, Mn: 54.938, Fe: 55.845, Co: 58.933, Ni: 58.693, Cu: 63.546,
+      Zn: 65.38, Ga: 69.723, Ge: 72.630, As: 74.922, Se: 78.971, Br: 79.904, Kr: 83.798,
+      Rb: 85.468, Sr: 87.62, Y: 88.906, Zr: 91.224, Nb: 92.906, Mo: 95.95, Ru: 101.07,
+      Rh: 102.91, Pd: 106.42, Ag: 107.87, Cd: 112.41, In: 114.82, Sn: 118.71, Sb: 121.76,
+      Te: 127.60, I: 126.90, Xe: 131.29, Cs: 132.91, Ba: 137.33, W: 183.84, Pt: 195.08,
+      Au: 196.97, Hg: 200.59, Pb: 207.2, Bi: 208.98
+    };
+
+    function parseSimpleFormula(formula) {
+      let i = 0;
+      function parseElementSymbol() {
+        const match = /^[A-Z][a-z]?/.exec(formula.slice(i));
+        if (!match) throw new Error(`Carácter inesperado en la posición ${i + 1}: «${formula[i]}»`);
+        i += match[0].length;
+        return match[0];
+      }
+      function parseNumber() {
+        const match = /^\d+/.exec(formula.slice(i));
+        if (!match) return 1;
+        i += match[0].length;
+        return parseInt(match[0], 10);
+      }
+      function parseGroup() {
+        let mass = 0;
+        while (i < formula.length) {
+          const ch = formula[i];
+          if (ch === '(' || ch === '[') {
+            const closeCh = ch === '(' ? ')' : ']';
+            i++;
+            const subMass = parseGroup();
+            if (formula[i] !== closeCh) throw new Error(`Paréntesis «${ch}» sin cerrar`);
+            i++;
+            mass += subMass * parseNumber();
+          } else if (ch === ')' || ch === ']') {
+            break;
+          } else if (/[A-Z]/.test(ch)) {
+            const symbol = parseElementSymbol();
+            const weight = atomicWeights[symbol];
+            if (weight === undefined) throw new Error(`Elemento desconocido: «${symbol}»`);
+            mass += weight * parseNumber();
+          } else {
+            throw new Error(`Carácter inesperado: «${ch}»`);
+          }
+        }
+        return mass;
+      }
+      const result = parseGroup();
+      if (i !== formula.length) throw new Error('La fórmula no se pudo leer por completo.');
+      if (result <= 0) throw new Error('La fórmula no da una masa molar válida.');
+      return result;
+    }
+
+    function stripCharge(str) {
+      str = str.replace(/[+-]+$/, '');
+      str = str.replace(/\^\d*$/, '');
+      return str;
+    }
+
+    // Calcula la masa molar (g/mol) de una fórmula, incluidos paréntesis, hidratos (·/*) y carga opcional (^)
+    function parseFormula(input) {
+      const clean = input.replace(/\s+/g, '');
+      if (!clean) throw new Error('No se ha introducido ninguna fórmula.');
+      const parts = clean.split(/[·*]/).filter(Boolean);
+      let totalMass = 0;
+      for (const rawPart of parts) {
+        let part = rawPart;
+        let multiplier = 1;
+        const m = /^(\d+)(.+)$/.exec(part);
+        if (m) { multiplier = parseInt(m[1], 10); part = m[2]; }
+        part = stripCharge(part);
+        totalMass += multiplier * parseSimpleFormula(part);
+      }
+      return Math.round(totalMass * 10000) / 10000;
+    }
+
+    // Compuestos conocidos: nombre alemán/español -> fórmula química (la carga se ignora para la masa molar)
+    const compoundDictionary = {
+      nitrat: { formula: 'NO3', display: 'Nitrato', symbol: 'NO₃⁻' },
+      nitrato: { formula: 'NO3', display: 'Nitrato', symbol: 'NO₃⁻' },
+      nitrit: { formula: 'NO2', display: 'Nitrito', symbol: 'NO₂⁻' },
+      nitrito: { formula: 'NO2', display: 'Nitrito', symbol: 'NO₂⁻' },
+      sulfat: { formula: 'SO4', display: 'Sulfato', symbol: 'SO₄²⁻' },
+      sulfato: { formula: 'SO4', display: 'Sulfato', symbol: 'SO₄²⁻' },
+      phosphat: { formula: 'PO4', display: 'Fosfato', symbol: 'PO₄³⁻' },
+      fosfato: { formula: 'PO4', display: 'Fosfato', symbol: 'PO₄³⁻' },
+      ammonium: { formula: 'NH4', display: 'Amonio', symbol: 'NH₄⁺' },
+      amonio: { formula: 'NH4', display: 'Amonio', symbol: 'NH₄⁺' },
+      glutamat: { formula: 'C5H8NO4', display: 'Glutamato', symbol: 'C₅H₈NO₄⁻' },
+      glutamato: { formula: 'C5H8NO4', display: 'Glutamato', symbol: 'C₅H₈NO₄⁻' },
+      glutamin: { formula: 'C5H10N2O3', display: 'Glutamina', symbol: 'C₅H₁₀N₂O₃' },
+      glutamina: { formula: 'C5H10N2O3', display: 'Glutamina', symbol: 'C₅H₁₀N₂O₃' },
+      kreatinin: { formula: 'C4H7N3O', display: 'Creatinina', symbol: 'C₄H₇N₃O' },
+      creatinina: { formula: 'C4H7N3O', display: 'Creatinina', symbol: 'C₄H₇N₃O' },
+      kreatin: { formula: 'C4H9N3O2', display: 'Creatina', symbol: 'C₄H₉N₃O₂' },
+      creatina: { formula: 'C4H9N3O2', display: 'Creatina', symbol: 'C₄H₉N₃O₂' }
+    };
+
+    function normalizeKey(str) {
+      return str.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
+    function lookupSubstance(raw) {
+      const trimmed = raw.trim();
+      if (!trimmed) return { error: 'Introduce un compuesto, una fórmula o una masa molar.' };
+      const key = normalizeKey(trimmed);
+      if (compoundDictionary[key]) {
+        const entry = compoundDictionary[key];
+        try {
+          const mass = parseFormula(entry.formula);
+          return { mass, message: `✓ ${entry.display} (${entry.symbol}) reconocido, M = ${formatNumber(mass, 4)} g/mol` };
+        } catch (e) {
+          return { error: e.message };
+        }
+      }
+      try {
+        const mass = parseFormula(trimmed);
+        return { mass, message: `✓ Fórmula reconocida, M = ${formatNumber(mass, 4)} g/mol` };
+      } catch (e) {
+        return { error: `${e.message} Introduce la masa molar manualmente a la derecha.` };
+      }
+    }
+
+    // Unidades: 'molar' (base mol/L) y 'mass' (base g/L)
+    const unitGroups = [
+      {
+        label: 'Molar (necesita masa molar para las unidades de masa)',
+        units: [
+          { key: 'mol_l', label: 'mol/L', kind: 'molar', factor: 1 },
+          { key: 'mmol_l', label: 'mmol/L', kind: 'molar', factor: 0.001 },
+          { key: 'umol_l', label: 'µmol/L', kind: 'molar', factor: 0.000001 },
+          { key: 'nmol_l', label: 'nmol/L', kind: 'molar', factor: 0.000000001 }
+        ]
+      },
+      {
+        label: 'Masa',
+        units: [
+          { key: 'g_l', label: 'g/L', kind: 'mass', factor: 1 },
+          { key: 'mg_l', label: 'mg/L', kind: 'mass', factor: 0.001 },
+          { key: 'ug_l', label: 'µg/L', kind: 'mass', factor: 0.000001 },
+          { key: 'mg_dl', label: 'mg/dL', kind: 'mass', factor: 0.01 },
+          { key: 'mg_ml', label: 'mg/mL', kind: 'mass', factor: 1 },
+          { key: 'ug_ml', label: 'µg/mL', kind: 'mass', factor: 0.001 },
+          { key: 'ppm', label: 'ppm (≈ mg/L en agua)', kind: 'mass', factor: 0.001 },
+          { key: 'ppb', label: 'ppb (≈ µg/L en agua)', kind: 'mass', factor: 0.000001 }
+        ]
+      },
+      {
+        label: 'Molal (necesita masa molar Y densidad de la disolución)',
+        units: [
+          { key: 'mol_kg', label: 'mol/kg (molal)', kind: 'molal', factor: 1 },
+          { key: 'mmol_kg', label: 'mmol/kg (molal)', kind: 'molal', factor: 0.001 }
+        ]
+      }
+    ];
+
+    const units = {};
+    unitGroups.forEach(g => g.units.forEach(u => { units[u.key] = u; }));
+
+    const substanceInput = document.getElementById('substanceInput');
+    const molarMassInput = document.getElementById('molarMassInput');
+    const densityInput = document.getElementById('densityInput');
+    const densityRow = document.getElementById('densityRow');
+    const substanceStatus = document.getElementById('substanceStatus');
+    const fromValue = document.getElementById('fromValue');
+    const toValue = document.getElementById('toValue');
+    const fromUnit = document.getElementById('fromUnit');
+    const toUnit = document.getElementById('toUnit');
+    const resultText = document.getElementById('resultText');
+    const swapBtn = document.getElementById('swapBtn');
+    const compoundList = document.getElementById('compoundList');
+    const compoundTableBody = document.getElementById('compoundTableBody');
+
+    function populateSelects() {
+      [fromUnit, toUnit].forEach(select => {
+        unitGroups.forEach(group => {
+          const optgroup = document.createElement('optgroup');
+          optgroup.label = group.label;
+          group.units.forEach(u => optgroup.appendChild(new Option(u.label, u.key)));
+          select.appendChild(optgroup);
+        });
+      });
+      fromUnit.value = 'mg_l';
+      toUnit.value = 'mmol_l';
+    }
+
+    function populateCompoundList() {
+      const seen = new Set();
+      Object.values(compoundDictionary).forEach(entry => {
+        if (seen.has(entry.display)) return;
+        seen.add(entry.display);
+        compoundList.appendChild(new Option(entry.display));
+        const mass = parseFormula(entry.formula);
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${entry.display}</td><td>${entry.symbol}</td><td>${formatNumber(mass, 3)}</td>`;
+        compoundTableBody.appendChild(row);
+      });
+    }
+
+    function updateSubstance() {
+      const result = lookupSubstance(substanceInput.value);
+      if (result.error) {
+        substanceStatus.textContent = result.error;
+        substanceStatus.className = 'status-line status-error';
+      } else {
+        molarMassInput.value = result.mass;
+        substanceStatus.textContent = result.message;
+        substanceStatus.className = 'status-line status-ok';
+      }
+      convert();
+    }
+
+    // Convierte una unidad cualquiera a la base molar (mol/L).
+    // Molar: factor directo. Masa: mediante la masa molar M. Molal: mediante la masa molar M Y la densidad de la disolución ρ (kg/L),
+    // fórmula: c [mol/L] = b [mol/kg] × ρ [kg/L] / (1 + b × M / 1000)
+    function toMolarBase(value, unit, M, rho) {
+      const raw = value * unit.factor;
+      if (unit.kind === 'molar') return raw;
+      if (unit.kind === 'mass') return raw / M;
+      // molal
+      return (raw * rho) / (1 + (raw * M) / 1000);
+    }
+
+    // Convierte desde la base molar (mol/L) a la unidad de destino (inversa de toMolarBase).
+    // Inversa molal: b [mol/kg] = c [mol/L] / (ρ − c × M / 1000)
+    function fromMolarBase(molPerL, unit, M, rho) {
+      if (unit.kind === 'molar') return molPerL / unit.factor;
+      if (unit.kind === 'mass') return (molPerL * M) / unit.factor;
+      const denom = rho - (molPerL * M) / 1000;
+      const b = molPerL / denom;
+      return b / unit.factor;
+    }
+
+    function convert() {
+      const value = parseFloat(fromValue.value);
+      const from = units[fromUnit.value];
+      const to = units[toUnit.value];
+      densityRow.style.display = (from.kind === 'molal' || to.kind === 'molal') ? 'grid' : 'none';
+      if (Number.isNaN(value)) {
+        toValue.value = '';
+        resultText.textContent = 'Introduce un valor numérico válido.';
+        return;
+      }
+      let result;
+      if (from.kind === to.kind) {
+        result = (value * from.factor) / to.factor;
+      } else {
+        const needsM = from.kind !== 'molar' || to.kind !== 'molar';
+        const needsRho = from.kind === 'molal' || to.kind === 'molal';
+        const M = parseFloat(molarMassInput.value);
+        if (needsM && (!Number.isFinite(M) || M <= 0)) {
+          toValue.value = '';
+          resultText.textContent = 'Para esta conversión se necesita una masa molar válida (ver el campo arriba a la derecha).';
+          return;
+        }
+        const rho = parseFloat(densityInput.value);
+        if (needsRho && (!Number.isFinite(rho) || rho <= 0)) {
+          toValue.value = '';
+          resultText.textContent = 'Para la molalidad se necesita además una densidad de disolución válida (kg/L).';
+          return;
+        }
+        const molPerL = toMolarBase(value, from, M, rho);
+        result = fromMolarBase(molPerL, to, M, rho);
+      }
+      toValue.value = formatNumber(result, 6);
+      resultText.textContent = `${formatNumber(value, 6)} ${from.label} = ${formatNumber(result, 6)} ${to.label}`;
+    }
+
+    swapBtn.addEventListener('click', () => {
+      const a = fromUnit.value;
+      fromUnit.value = toUnit.value;
+      toUnit.value = a;
+      convert();
+    });
+
+    [fromValue, fromUnit, toUnit, molarMassInput, densityInput].forEach(el => el.addEventListener('input', convert));
+    substanceInput.addEventListener('input', updateSubstance);
+
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const [substance, value, from, to] = btn.dataset.preset.split(',');
+        substanceInput.value = substance;
+        fromValue.value = value;
+        fromUnit.value = from;
+        toUnit.value = to;
+        updateSubstance();
+      });
+    });
+
+    populateSelects();
+    populateCompoundList();
+    updateSubstance();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

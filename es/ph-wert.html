@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Conversor de pH – pH ↔ [H⁺] y Henderson-Hasselbalch</title>
+  <meta name="description" content="Convierte el valor de pH: pH ↔ concentración de H+, pH ↔ pOH. Además, calculadora de Henderson-Hasselbalch para soluciones tampón a partir del pKa y la proporción." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/es/ph-wert.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/ph-wert.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/ph-wert.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/ph-wert.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/ph-wert.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/ph-wert.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/ph-wert.html" />
+  <meta name="theme-color" content="#004d40" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Conversor de Unidades" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/es/ph-wert.html" />
+  <meta property="og:site_name" content="Conversor de Unidades" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:title" content="Conversor de pH – pH ↔ [H⁺] y Henderson-Hasselbalch" />
+  <meta property="og:description" content="Convierte el pH y calcula soluciones tampón con la ecuación de Henderson-Hasselbalch." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Conversor de pH – pH ↔ [H⁺] y Henderson-Hasselbalch" />
+  <meta name="twitter:description" content="Convierte el pH y calcula soluciones tampón." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #004d40;
+      --color-primary-hover: #00251a;
+      --color-primary-soft: #d6e6e3;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Conversor de pH",
+      "url": "https://tvoepel.github.io/Calculator_webseite/es/ph-wert.html",
+      "description": "Convierte el pH y calcula soluciones tampón con la ecuación de Henderson-Hasselbalch.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basado en web)",
+      "inLanguage": "es",
+      "isPartOf": { "@type": "WebSite", "name": "Conversor de Unidades", "url": "https://tvoepel.github.io/Calculator_webseite/es/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tvoepel.github.io/Calculator_webseite/es/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Conversor de pH", "item": "https://tvoepel.github.io/Calculator_webseite/es/ph-wert.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cómo se calcula el pH a partir de la concentración de H+?", "acceptedAnswer": { "@type": "Answer", "text": "pH = −log₁₀[H⁺]. Ejemplo: [H⁺] = 10⁻⁷ mol/L da un pH de 7 (neutro, como el agua pura a 25 °C)." } },
+        { "@type": "Question", "name": "¿Qué es la ecuación de Henderson-Hasselbalch?", "acceptedAnswer": { "@type": "Answer", "text": "pH = pKa + log₁₀([A⁻]/[HA]). Calcula el valor de pH de una solución tampón a partir del pKa del ácido y la proporción entre base y ácido." } },
+        { "@type": "Question", "name": "¿Cómo se prepara una solución tampón con un pH determinado?", "acceptedAnswer": { "@type": "Answer", "text": "Se elige un ácido cuyo pKa esté lo más cerca posible del pH deseado y se calcula con la ecuación de Henderson-Hasselbalch la proporción necesaria entre base y ácido: proporción = 10^(pH − pKa)." } },
+        { "@type": "Question", "name": "¿Cuál es la relación entre el pH y el pOH?", "acceptedAnswer": { "@type": "Answer", "text": "A 25 °C se cumple pH + pOH = 14, ya que el producto iónico del agua Kw = 10⁻¹⁴. A otras temperaturas, este valor varía ligeramente." } },
+        { "@type": "Question", "name": "¿Qué significa la capacidad tampón?", "acceptedAnswer": { "@type": "Answer", "text": "La capacidad tampón describe cuánto ácido o base se puede añadir antes de que el pH cambie de forma perceptible. Es máxima cuando pH ≈ pKa (proporción base:ácido cercana a 1:1)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Inicio Conversor de Unidades">
+        <span class="logo-mark">pH</span>
+        <span>Conversor de pH</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Volver a todos los conversores</a>
+        <span class="pill">Química y laboratorio</span>
+
+        <nav class="lang-switch" aria-label="Elegir idioma">
+          <a href="../ph-wert.html" hreflang="de">DE</a>
+          <a href="../nl/ph-wert.html" hreflang="nl">NL</a>
+          <a href="../fr/ph-wert.html" hreflang="fr">FR</a>
+          <a href="../en/ph-wert.html" hreflang="en">EN</a>
+          <a href="../it/ph-wert.html" hreflang="it">IT</a>
+          <a href="ph-wert.html" class="lang-active" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Convertir el pH y calcular soluciones tampón</h1>
+      <p>Convierte entre pH, concentración de H⁺, pOH y concentración de OH⁻, y calcula soluciones tampón con la ecuación de Henderson-Hasselbalch.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Conversor de pH</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="fromValue">Valor</label>
+              <input id="fromValue" type="number" value="7" step="any" />
+            </div>
+            <div>
+              <label for="fromUnit">De</label>
+              <select id="fromUnit"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center;">
+            <button class="swap" id="swapBtn" type="button">⇅ Intercambiar unidades</button>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="toValue">Resultado</label>
+              <input id="toValue" type="text" readonly />
+            </div>
+            <div>
+              <label for="toUnit">A</label>
+              <select id="toUnit"></select>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span id="resultText"></span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Anuncio / AdSense / Marcador de afiliados</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Valores de pKa habituales (25 °C)</h2>
+        <table class="ref-table">
+          <thead><tr><th>Ácido</th><th>pKa</th></tr></thead>
+          <tbody>
+            <tr><td>Ácido acético</td><td>4,76</td></tr>
+            <tr><td>Ácido carbónico (pKa1)</td><td>6,35</td></tr>
+            <tr><td>Ácido fosfórico (pKa2)</td><td>7,20</td></tr>
+            <tr><td>Amonio (NH₄⁺)</td><td>9,25</td></tr>
+            <tr><td>Ácido cítrico (pKa1)</td><td>3,13</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Henderson-Hasselbalch: calcular una solución tampón</h2>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="pkaInput">pKa del ácido</label>
+            <input id="pkaInput" type="number" value="4.76" step="any" />
+          </div>
+          <div>
+            <label for="ratioInput">Proporción [A⁻]/[HA] (base/ácido)</label>
+            <input id="ratioInput" type="number" value="1" step="any" min="0.0001" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="phFromRatio">–</span>
+          <span>pH resultante</span>
+        </div>
+
+        <div class="row" style="margin-top: var(--space-3);">
+          <div>
+            <label for="targetPhInput">pH objetivo deseado</label>
+            <input id="targetPhInput" type="number" value="5" step="any" />
+          </div>
+          <div></div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="ratioFromPh">–</span>
+          <span>Proporción [A⁻]/[HA] necesaria para este pH (con el pKa anterior)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Fórmula y fuentes</h2>
+      <div class="formula">pH = −log₁₀[H⁺]
+pOH = −log₁₀[OH⁻]
+pH + pOH = 14 (a 25 °C, Kw = 10⁻¹⁴)
+
+Henderson-Hasselbalch: pH = pKa + log₁₀([A⁻] ÷ [HA])
+Proporción necesaria: [A⁻]/[HA] = 10^(pH − pKa)</div>
+      <p class="note">La capacidad tampón es máxima cuando el pH está cerca del valor de pKa (proporción cercana a 1:1); fuera de ±1 unidad de pH alrededor del pKa, un tampón apenas hace efecto.</p>
+      <p class="source-links">Fuentes: <a href="https://iupac.org/what-we-do/periodic-table-of-elements/" target="_blank" rel="noopener noreferrer">IUPAC – Gold Book (definición de pH)</a>, <a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener noreferrer">NIST</a>, <a href="https://de.wikipedia.org/wiki/PH-Wert" target="_blank" rel="noopener noreferrer">Wikipedia – Valor de pH (DE)</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Aplicación práctica</h2>
+      <div class="seo-text">
+        <p>En el laboratorio se utiliza a menudo un tampón de acetato (pKa 4,76) o un tampón de fosfato (pKa 7,20) para mantener una solución estable a un pH determinado, por ejemplo para reacciones enzimáticas o cultivos celulares.</p>
+        <p>El agua de acuarios y piscinas se comprueba regularmente en cuanto a su pH; la conversión entre pH y concentración de H⁺ ayuda a valorar de forma realista pequeños cambios de pH (que se sitúan en una escala logarítmica).</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Anuncio / AdSense / Marcador de afiliados</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>¿Cómo se calcula el pH a partir de la concentración de H+?</summary><p>pH = −log₁₀[H⁺]. Ejemplo: [H⁺] = 10⁻⁷ mol/L da un pH de 7 (neutro, como el agua pura a 25 °C).</p></details>
+        <details class="faq-item"><summary>¿Qué es la ecuación de Henderson-Hasselbalch?</summary><p>pH = pKa + log₁₀([A⁻]/[HA]). Calcula el valor de pH de una solución tampón a partir del pKa del ácido y la proporción entre base y ácido.</p></details>
+        <details class="faq-item"><summary>¿Cómo se prepara una solución tampón con un pH determinado?</summary><p>Se elige un ácido cuyo pKa esté lo más cerca posible del pH deseado y se calcula con la ecuación de Henderson-Hasselbalch la proporción necesaria entre base y ácido: proporción = 10^(pH − pKa).</p></details>
+        <details class="faq-item"><summary>¿Cuál es la relación entre el pH y el pOH?</summary><p>A 25 °C se cumple pH + pOH = 14, ya que el producto iónico del agua Kw = 10⁻¹⁴. A otras temperaturas, este valor varía ligeramente.</p></details>
+        <details class="faq-item"><summary>¿Qué significa la capacidad tampón?</summary><p>La capacidad tampón describe cuánto ácido o base se puede añadir antes de que el pH cambie de forma perceptible. Es máxima cuando pH ≈ pKa (proporción base:ácido cercana a 1:1).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Conversores similares</h2>
+      <div class="related-grid">
+        <a href="konzentrationsumrechner.html">Conversor de concentración →</a>
+        <a href="dichte.html">Conversor de densidad →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Conversor de Unidades</span>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="../impressum.html">Aviso legal (DE)</a>
+        <a href="../datenschutz.html">Privacidad (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const units = {
+      ph: { label: 'pH', toBase: v => v, fromBase: v => v },
+      h_conc: { label: '[H⁺] (mol/L)', toBase: v => -Math.log10(v), fromBase: ph => Math.pow(10, -ph) },
+      poh: { label: 'pOH', toBase: v => 14 - v, fromBase: ph => 14 - ph },
+      oh_conc: { label: '[OH⁻] (mol/L)', toBase: v => 14 + Math.log10(v), fromBase: ph => Math.pow(10, ph - 14) }
+    };
+
+    createConverter({
+      units,
+      convert: (value, from, to) => to.fromBase(from.toBase(value)),
+      defaultFrom: 'ph',
+      defaultTo: 'h_conc',
+      decimals: 10
+    });
+
+    const pkaInput = document.getElementById('pkaInput');
+    const ratioInput = document.getElementById('ratioInput');
+    const phFromRatio = document.getElementById('phFromRatio');
+    const targetPhInput = document.getElementById('targetPhInput');
+    const ratioFromPh = document.getElementById('ratioFromPh');
+
+    function calcBuffer() {
+      const pka = parseFloat(pkaInput.value);
+      const ratio = parseFloat(ratioInput.value);
+      const targetPh = parseFloat(targetPhInput.value);
+
+      if (Number.isFinite(pka) && Number.isFinite(ratio) && ratio > 0) {
+        const ph = pka + Math.log10(ratio);
+        phFromRatio.textContent = formatNumber(ph, 2);
+      } else {
+        phFromRatio.textContent = '–';
+      }
+
+      if (Number.isFinite(pka) && Number.isFinite(targetPh)) {
+        const neededRatio = Math.pow(10, targetPh - pka);
+        ratioFromPh.textContent = formatNumber(neededRatio, 4);
+      } else {
+        ratioFromPh.textContent = '–';
+      }
+    }
+
+    [pkaInput, ratioInput, targetPhInput].forEach(el => el.addEventListener('input', calcBuffer));
+    calcBuffer();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>

@@ -1,10 +1,12 @@
-// Gemeinsame Umrechner-Engine für alle Einheitenrechner-Seiten (DE/NL/FR/EN).
-const LOCALE_BY_LANG = { de: 'de-DE', nl: 'nl-NL', fr: 'fr-FR', en: 'en-US' };
+// Gemeinsame Umrechner-Engine für alle Einheitenrechner-Seiten (DE/NL/FR/EN/IT/ES).
+const LOCALE_BY_LANG = { de: 'de-DE', nl: 'nl-NL', fr: 'fr-FR', en: 'en-US', it: 'it-IT', es: 'es-ES' };
 const INVALID_NUMBER_MSG = {
   de: 'Bitte einen gültigen Zahlenwert eingeben.',
   nl: 'Voer een geldige numerieke waarde in.',
   fr: 'Veuillez saisir une valeur numérique valide.',
-  en: 'Please enter a valid numeric value.'
+  en: 'Please enter a valid numeric value.',
+  it: 'Inserisci un valore numerico valido.',
+  es: 'Introduce un valor numérico válido.'
 };
 
 function formatNumber(num, maxFractionDigits = 10) {

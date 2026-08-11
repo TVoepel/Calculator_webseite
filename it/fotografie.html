@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Calcolatore di esposizione fotografica – EV, diaframma, tempo e ISO</title>
+  <meta name="description" content="Calcola il valore di esposizione (EV) da diaframma, tempo di scatto e ISO. Inoltre calcolatore per l'esposizione equivalente in caso di modifica del diaframma o dell'ISO." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="canonical" href="https://tvoepel.github.io/Calculator_webseite/it/fotografie.html" />
+  <link rel="alternate" hreflang="de" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <link rel="alternate" hreflang="nl" href="https://tvoepel.github.io/Calculator_webseite/nl/fotografie.html" />
+  <link rel="alternate" hreflang="fr" href="https://tvoepel.github.io/Calculator_webseite/fr/fotografie.html" />
+  <link rel="alternate" hreflang="en" href="https://tvoepel.github.io/Calculator_webseite/en/fotografie.html" />
+  <link rel="alternate" hreflang="it" href="https://tvoepel.github.io/Calculator_webseite/it/fotografie.html" />
+  <link rel="alternate" hreflang="es" href="https://tvoepel.github.io/Calculator_webseite/es/fotografie.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tvoepel.github.io/Calculator_webseite/fotografie.html" />
+  <meta name="theme-color" content="#212121" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Convertitore di Unità" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tvoepel.github.io/Calculator_webseite/it/fotografie.html" />
+  <meta property="og:site_name" content="Convertitore di Unità" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="nl_NL" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:title" content="Calcolatore di esposizione fotografica – EV, diaframma, tempo e ISO" />
+  <meta property="og:description" content="Calcola il valore di esposizione (EV) e determina l'esposizione equivalente in caso di modifica del diaframma o dell'ISO." />
+  <meta property="og:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calcolatore di esposizione fotografica – EV, diaframma, tempo e ISO" />
+  <meta name="twitter:description" content="Calcola il valore di esposizione e l'esposizione equivalente." />
+  <meta name="twitter:image" content="https://tvoepel.github.io/Calculator_webseite/og-image.png" />
+  <style>
+    :root {
+      --color-primary: #212121;
+      --color-primary-hover: #000000;
+      --color-primary-soft: #e0e0e0;
+    }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+    .ref-table th, .ref-table td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Calcolatore di esposizione fotografica",
+      "url": "https://tvoepel.github.io/Calculator_webseite/it/fotografie.html",
+      "description": "Calcola il valore di esposizione (EV) e determina l'esposizione equivalente in caso di modifica del diaframma o dell'ISO.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (basato sul web)",
+      "inLanguage": "it",
+      "isPartOf": { "@type": "WebSite", "name": "Convertitore di Unità", "url": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Pagina iniziale", "item": "https://tvoepel.github.io/Calculator_webseite/it/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Calcolatore di esposizione fotografica", "item": "https://tvoepel.github.io/Calculator_webseite/it/fotografie.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Che cos'è il valore di esposizione (EV)?", "acceptedAnswer": { "@type": "Answer", "text": "Il valore di esposizione (Exposure Value) riassume diaframma e tempo di scatto in un unico numero che descrive la quantità di luce di uno scatto. EV 15 corrisponde ad es. a una giornata di sole, EV 5 a un interno buio." } },
+        { "@type": "Question", "name": "Quanta più luce lascia passare il diaframma f/2.8 rispetto a f/5.6?", "acceptedAnswer": { "@type": "Answer", "text": "A parità di tempo, f/2.8 lascia passare circa 4 volte più luce rispetto a f/5.6 (2 stop di differenza, ogni stop raddoppia o dimezza la quantità di luce)." } },
+        { "@type": "Question", "name": "Che relazione c'è tra ISO 100 e ISO 1600?", "acceptedAnswer": { "@type": "Answer", "text": "ISO 1600 è 4 stop (2⁴ = 16 volte) più sensibile di ISO 100, quindi richiede solo un sedicesimo della quantità di luce per la stessa esposizione – tuttavia solitamente con un rumore digitale nettamente maggiore." } },
+        { "@type": "Question", "name": "Che cos'è un'esposizione equivalente?", "acceptedAnswer": { "@type": "Answer", "text": "Due combinazioni di diaframma, tempo e ISO sono equivalenti se lasciano passare la stessa quantità di luce sul sensore (stesso EV). Se il diaframma viene chiuso (più profondità di campo), il tempo di scatto deve essere allungato oppure l'ISO aumentato per ottenere la stessa esposizione." } },
+        { "@type": "Question", "name": "Che cos'è il triangolo dell'esposizione?", "acceptedAnswer": { "@type": "Answer", "text": "Diaframma, tempo di scatto e ISO formano insieme il triangolo dell'esposizione: ogni modifica di un valore richiede un adeguamento degli altri per mantenere la stessa esposizione – allo stesso tempo ogni valore influenza anche la profondità di campo (diaframma), la sfocatura da movimento (tempo) e il rumore digitale (ISO)." } }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <main class="wrap wrap--narrow">
+    <div class="topbar">
+      <a class="logo" href="index.html" aria-label="Pagina iniziale Convertitore di Unità">
+        <span class="logo-mark">EV</span>
+        <span>Calcolatore di esposizione</span>
+      </a>
+      <div class="meta">
+        <a class="nav-home" href="index.html">← Torna a tutti i convertitori</a>
+        <span class="pill">Fotografia</span>
+
+        <nav class="lang-switch" aria-label="Scegli la lingua">
+          <a href="../fotografie.html" hreflang="de">DE</a>
+          <a href="../nl/fotografie.html" hreflang="nl">NL</a>
+          <a href="../fr/fotografie.html" hreflang="fr">FR</a>
+          <a href="../en/fotografie.html" hreflang="en">EN</a>
+          <a href="fotografie.html" class="lang-active" aria-current="page">IT</a>
+          <a href="../es/fotografie.html" hreflang="es">ES</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Calcola il valore di esposizione e l'esposizione equivalente</h1>
+      <p>Calcola il valore di esposizione (EV) da diaframma, tempo di scatto e ISO, e determina il nuovo tempo di scatto adatto quando modifichi il diaframma o l'ISO.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2 class="section-title">Calcola il valore di esposizione (EV)</h2>
+        <div class="converter">
+          <div class="row">
+            <div>
+              <label for="apertureInput">Diaframma (f/)</label>
+              <input id="apertureInput" type="number" value="8" step="any" min="0.5" />
+            </div>
+            <div>
+              <label for="shutterInput">Tempo di scatto (secondi)</label>
+              <input id="shutterInput" type="number" value="0.01" step="any" min="0.00001" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="isoInput">ISO</label>
+              <input id="isoInput" type="number" value="100" step="any" min="1" />
+            </div>
+            <div></div>
+          </div>
+          <div class="result-row">
+            <span class="result-highlight" id="evResult">–</span>
+            <span id="evCondition">Valore di esposizione (EV, riferito a ISO 100)</span>
+          </div>
+        </div>
+        <div class="ad-slot ad-slot--inline">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+      </section>
+
+      <aside class="card">
+        <h2 class="section-title">Valori EV indicativi approssimativi</h2>
+        <table class="ref-table">
+          <thead><tr><th>EV</th><th>Situazione luminosa</th></tr></thead>
+          <tbody>
+            <tr><td>−6</td><td>Luce stellare</td></tr>
+            <tr><td>0</td><td>Luna piena</td></tr>
+            <tr><td>5</td><td>Interno, illuminazione normale</td></tr>
+            <tr><td>9</td><td>Tramonto</td></tr>
+            <tr><td>12</td><td>Giornata nuvolosa</td></tr>
+            <tr><td>15</td><td>Giornata di sole (regola Sunny-16)</td></tr>
+            <tr><td>16</td><td>Spiaggia/neve, sole pieno</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Valori indicativi approssimativi a scopo orientativo – le condizioni di luce reali variano notevolmente.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Calcola l'esposizione equivalente</h2>
+      <p class="note" style="margin-top:0;">Inserisci le tue impostazioni attuali e modifica il diaframma o l'ISO – viene calcolato il nuovo tempo di scatto adatto per la stessa esposizione.</p>
+      <div class="converter">
+        <div class="row">
+          <div>
+            <label for="curAperture">Diaframma attuale (f/)</label>
+            <input id="curAperture" type="number" value="8" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="curShutter">Tempo attuale (s)</label>
+            <input id="curShutter" type="number" value="0.01" step="any" min="0.00001" />
+          </div>
+          <div>
+            <label for="curIso">ISO attuale</label>
+            <input id="curIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="newAperture">Nuovo diaframma (f/)</label>
+            <input id="newAperture" type="number" value="11" step="any" min="0.5" />
+          </div>
+          <div>
+            <label for="newIso">Nuovo ISO</label>
+            <input id="newIso" type="number" value="100" step="any" min="1" />
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-highlight" id="equivResult">–</span>
+          <span>Nuovo tempo di scatto necessario per la stessa esposizione</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Formula e fonti</h2>
+      <div class="formula">EV (riferito a ISO 100) = log₂(numero f² ÷ tempo di scatto ÷ (ISO ÷ 100))
+
+Esposizione equivalente (stesso EV):
+Nuovo tempo = Vecchio tempo × (Nuovo diaframma² ÷ Vecchio diaframma²) × (Vecchio ISO ÷ Nuovo ISO)</div>
+      <p class="note">La serie classica dei diaframmi segue incrementi di √2: f/1.0 – 1.4 – 2 – 2.8 – 4 – 5.6 – 8 – 11 – 16 – 22 – 32. Ogni stop dimezza o raddoppia la quantità di luce trasmessa.</p>
+      <p class="source-links">Fonti: <a href="https://de.wikipedia.org/wiki/Lichtwert" target="_blank" rel="noopener noreferrer">Wikipedia – Valore di esposizione (EV) (DE)</a>, <a href="https://de.wikipedia.org/wiki/Blendenzahl" target="_blank" rel="noopener noreferrer">Wikipedia – Numero f (DE)</a></p>
+    </section>
+
+    <section class="card seo-card">
+      <h2 class="section-title">Applicazioni pratiche</h2>
+      <div class="seo-text">
+        <p>Passando da un obiettivo con f/2.8 a uno con apertura massima f/5.6 (2 stop più scuro), devi quadruplicare il tempo di scatto oppure quadruplicare l'ISO per ottenere la stessa esposizione.</p>
+        <p>Per le lunghe esposizioni con filtri ND (ad es. 6 stop), l'esposizione equivalente aiuta a convertire un tempo di scatto normale nel tempo fortemente allungato con il filtro.</p>
+      </div>
+    </section>
+
+        <!-- ad-slot-before-faq -->
+    <div class="ad-slot" style="margin-top: var(--space-6);">Spazio pubblicitario / AdSense / Segnaposto affiliazione</div>
+
+<section class="card seo-card">
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Che cos'è il valore di esposizione (EV)?</summary><p>Il valore di esposizione (Exposure Value) riassume diaframma e tempo di scatto in un unico numero che descrive la quantità di luce di uno scatto. EV 15 corrisponde ad es. a una giornata di sole, EV 5 a un interno buio.</p></details>
+        <details class="faq-item"><summary>Quanta più luce lascia passare il diaframma f/2.8 rispetto a f/5.6?</summary><p>A parità di tempo, f/2.8 lascia passare circa 4 volte più luce rispetto a f/5.6 (2 stop di differenza, ogni stop raddoppia o dimezza la quantità di luce).</p></details>
+        <details class="faq-item"><summary>Che relazione c'è tra ISO 100 e ISO 1600?</summary><p>ISO 1600 è 4 stop (2⁴ = 16 volte) più sensibile di ISO 100, quindi richiede solo un sedicesimo della quantità di luce per la stessa esposizione – tuttavia solitamente con un rumore digitale nettamente maggiore.</p></details>
+        <details class="faq-item"><summary>Che cos'è un'esposizione equivalente?</summary><p>Due combinazioni di diaframma, tempo e ISO sono equivalenti se lasciano passare la stessa quantità di luce sul sensore (stesso EV). Se il diaframma viene chiuso (più profondità di campo), il tempo di scatto deve essere allungato oppure l'ISO aumentato per ottenere la stessa esposizione.</p></details>
+        <details class="faq-item"><summary>Che cos'è il triangolo dell'esposizione?</summary><p>Diaframma, tempo di scatto e ISO formano insieme il triangolo dell'esposizione: ogni modifica di un valore richiede un adeguamento degli altri per mantenere la stessa esposizione – allo stesso tempo ogni valore influenza anche la profondità di campo (diaframma), la sfocatura da movimento (tempo) e il rumore digitale (ISO).</p></details>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top: var(--space-6);">
+      <h2 class="section-title">Convertitori simili</h2>
+      <div class="related-grid">
+        <a href="index.html">Tutti i convertitori →</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Convertitore di Unità</span>
+      <nav>
+        <a href="index.html">Pagina iniziale</a>
+        <a href="../impressum.html">Note legali (DE)</a>
+        <a href="../datenschutz.html">Privacy (DE)</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../converter.js"></script>
+  <script>
+    const apertureInput = document.getElementById('apertureInput');
+    const shutterInput = document.getElementById('shutterInput');
+    const isoInput = document.getElementById('isoInput');
+    const evResult = document.getElementById('evResult');
+    const evCondition = document.getElementById('evCondition');
+
+    function calcEv() {
+      const n = parseFloat(apertureInput.value);
+      const t = parseFloat(shutterInput.value);
+      const iso = parseFloat(isoInput.value);
+      if (![n, t, iso].every(Number.isFinite) || n <= 0 || t <= 0 || iso <= 0) {
+        evResult.textContent = '–';
+        return;
+      }
+      const ev = Math.log2((n * n) / t / (iso / 100));
+      evResult.textContent = formatNumber(ev, 2);
+      evCondition.textContent = 'Valore di esposizione (EV, riferito a ISO 100)';
+    }
+    [apertureInput, shutterInput, isoInput].forEach(el => el.addEventListener('input', calcEv));
+    calcEv();
+
+    const curAperture = document.getElementById('curAperture');
+    const curShutter = document.getElementById('curShutter');
+    const curIso = document.getElementById('curIso');
+    const newAperture = document.getElementById('newAperture');
+    const newIso = document.getElementById('newIso');
+    const equivResult = document.getElementById('equivResult');
+
+    function formatShutter(t) {
+      if (t >= 1) return formatNumber(t, 2) + ' s';
+      const denom = 1 / t;
+      return '1/' + formatNumber(denom, denom < 10 ? 1 : 0) + ' s';
+    }
+
+    function calcEquiv() {
+      const n1 = parseFloat(curAperture.value);
+      const t1 = parseFloat(curShutter.value);
+      const iso1 = parseFloat(curIso.value);
+      const n2 = parseFloat(newAperture.value);
+      const iso2 = parseFloat(newIso.value);
+      if (![n1, t1, iso1, n2, iso2].every(Number.isFinite) || n1 <= 0 || t1 <= 0 || iso1 <= 0 || n2 <= 0 || iso2 <= 0) {
+        equivResult.textContent = '–';
+        return;
+      }
+      const t2 = t1 * (n2 * n2) / (n1 * n1) * (iso1 / iso2);
+      equivResult.textContent = formatShutter(t2);
+    }
+    [curAperture, curShutter, curIso, newAperture, newIso].forEach(el => el.addEventListener('input', calcEquiv));
+    calcEquiv();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="../sw-register.js" defer></script>
+</body>
+</html>
